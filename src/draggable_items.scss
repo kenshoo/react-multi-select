@@ -1,0 +1,16 @@
+@import '../../../resources/scss/globals';
+
+$placeholder_height: 30px;
+
+.list_items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item_placeholder {
+  height: $placeholder_height;
+  color: $color-black;
+  border: 1px dashed $palette_gray_50;
+  background-color: $palette_gray_1;
+}

@@ -1,0 +1,20 @@
+@import '../../../resources/scss/globals';
+
+$list_font_size: 12px;
+$list_width: 250px;
+
+.list_items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.no_items {
+  font-size: $list_font_size;
+  color: $palette_gray_300;
+  display: flex;
+  height: 100%;
+  min-width: $list_width;
+  align-items: center;
+  justify-content: center;
+}

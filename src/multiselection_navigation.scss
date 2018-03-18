@@ -1,0 +1,20 @@
+@import '../../../resources/scss/colors.scss';
+$button_size: 30px;
+
+.multiselection_navigation {
+	display: initial;
+	width: $button_size;
+	justify-content: center;
+}
+
+.multiselection_navigation_control {
+	font-size: 14px;
+	cursor: pointer;
+	width: $button_size !important;
+	min-width: $button_size !important;
+	height: $button_size;
+	line-height: $button_size;
+	border: 1px solid $palette_gray_400;
+	padding: 0 !important;
+	margin: 0 7px 10px 0;
+}

@@ -1,0 +1,19 @@
+{
+    "presets": ["babel-preset-react", "babel-preset-env", "stage-2"],
+    "plugins": ["transform-object-rest-spread"],
+
+    "env": {
+         "test": {
+               "plugins": [
+                 [
+                   "babel-plugin-webpack-loaders",
+                   {
+                     "config": "./test.webpack.config.js",
+                     "verbose": false
+                   }
+                 ],
+                 "rewire"
+               ]
+         }
+    }
+}

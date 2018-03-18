@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItems component passes prop to group case all group items selected 1`] = `
+<ul
+  className="kn-multiselection_items__list_items"
+>
+  <li
+    className="kn-multiselection_group__list_group"
+  >
+    <a
+      className="kn-multiselection_group__group_select_all"
+      onClick={[Function]}
+    >
+      Select All
+    </a>
+    <span
+      className="kn-bootstrap_tooltip__content"
+      onBlur={[Function]}
+      onClick={null}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    >
+      <span>
+        Group 1
+      </span>
+    </span>
+  </li>
+  first
+  second
+</ul>
+`;
+
+exports[`ListItems component passes prop to group case no group items selected 1`] = `
+<ul
+  className="kn-multiselection_items__list_items"
+>
+  <li
+    className="kn-multiselection_group__list_group"
+  >
+    <a
+      className="kn-multiselection_group__group_select_all"
+      onClick={[Function]}
+    >
+      Select All
+    </a>
+    <span
+      className="kn-bootstrap_tooltip__content"
+      onBlur={[Function]}
+      onClick={null}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    >
+      <span>
+        Group 1
+      </span>
+    </span>
+  </li>
+  first
+</ul>
+`;
+
+exports[`ListItems component passes prop to group case several group items selected 1`] = `
+<ul
+  className="kn-multiselection_items__list_items"
+>
+  <li
+    className="kn-multiselection_group__list_group"
+  >
+    <a
+      className="kn-multiselection_group__group_select_all"
+      onClick={[Function]}
+    >
+      Select All
+    </a>
+    <span
+      className="kn-bootstrap_tooltip__content"
+      onBlur={[Function]}
+      onClick={null}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    >
+      <span>
+        Group 1
+      </span>
+    </span>
+  </li>
+  first
+  second
+</ul>
+`;
+
+exports[`ListItems component renders right amount of groups 1`] = `
+<ul
+  className="kn-multiselection_items__list_items"
+>
+  <li
+    className="kn-multiselection_group__list_group"
+  >
+    <a
+      className="kn-multiselection_group__group_select_all"
+      onClick={[Function]}
+    >
+      Select All
+    </a>
+    <span
+      className="kn-bootstrap_tooltip__content"
+      onBlur={[Function]}
+      onClick={null}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    >
+      <span>
+        Group 1
+      </span>
+    </span>
+  </li>
+  <span
+    className="test-item"
+  >
+    first
+  </span>
+</ul>
+`;
+
+exports[`ListItems component renders with items 1`] = `
+<ul
+  className="kn-multiselection_items__list_items"
+>
+  <span
+    className="test-item"
+  >
+    processed-first
+  </span>
+  <span
+    className="test-item"
+  >
+    processed-second
+  </span>
+</ul>
+`;
+
+exports[`ListItems component renders with items of group 1`] = `
+<ul
+  className="kn-multiselection_items__list_items"
+>
+  <li
+    className="kn-multiselection_group__list_group"
+  >
+    <a
+      className="kn-multiselection_group__group_select_all"
+      onClick={[Function]}
+    >
+      Select All
+    </a>
+    <span
+      className="kn-bootstrap_tooltip__content"
+      onBlur={[Function]}
+      onClick={null}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    >
+      <span>
+        Group 1
+      </span>
+    </span>
+  </li>
+  <span
+    className="test-item"
+  >
+    processed-first
+  </span>
+  <span
+    className="test-item"
+  >
+    processed-second
+  </span>
+</ul>
+`;
+
+exports[`ListItems component renders without items 1`] = `
+<div
+  className="kn-multiselection_items__no_items"
+>
+  testEmptyText
+</div>
+`;
+
+exports[`ListItems component renders without items and with search term 1`] = `
+<div
+  className="kn-multiselection_items__no_items"
+>
+  testFilterResultsText
+</div>
+`;

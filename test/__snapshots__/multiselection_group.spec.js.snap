@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListGroup component renders by default 1`] = `
+<li
+  className="kn-multiselection_group__list_group"
+>
+  <a
+    className="kn-multiselection_group__group_select_all"
+    onClick={[Function]}
+  >
+    Select All
+  </a>
+  <BootstrapTooltip
+    forceDelay={300}
+    forcePlacement="bottom"
+    tooltipContent="Group"
+  >
+    <span>
+      Group
+    </span>
+  </BootstrapTooltip>
+</li>
+`;
+
+exports[`ListGroup component renders by input props 1`] = `
+<li
+  className="kn-multiselection_group__list_group"
+>
+  <a
+    className="kn-multiselection_group__group_select_all"
+    onClick={[Function]}
+  >
+    testSelectGroupLabel
+  </a>
+  <BootstrapTooltip
+    forceDelay={300}
+    forcePlacement="bottom"
+    tooltipContent="testLabel"
+  >
+    <span>
+      testLabel
+    </span>
+  </BootstrapTooltip>
+</li>
+`;
