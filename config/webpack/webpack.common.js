@@ -1,13 +1,10 @@
 const path = require("path");
 const { babelLoader, cssLoader, mdLoader, pngLoader, jsonLoader, svgLoader } = require("./loaders");
-const { ignorePlugin } = require("./plugins");
 
 module.exports = {
   entry: {
-    index: "./src/index.js",
-    table: "./src/components/table/index.js",
+    index: "./index.js"
   },
-  plugins: [ignorePlugin],
   externals: {
     react: "react",
     "react-dom": "react-dom"
@@ -15,7 +12,7 @@ module.exports = {
   output: {
     filename: "[name].js",
     path: path.resolve(process.cwd(), "dist"),
-    library: "kenshoo-shared",
+    library: "@kenshooui/react-multi-select",
     libraryTarget: "commonjs2"
   },
   module: {
