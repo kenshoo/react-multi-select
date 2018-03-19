@@ -1,5 +1,7 @@
 # Multi select
 
+[![Build Status](https://travis-ci.org/kenshoo/react-multi-select.svg?branch=master)](https://travis-ci.org/kenshoo/react-multi-select) [![GitHub version](https://badge.fury.io/gh/kenshoo%2Freact-multi-select.svg)](https://badge.fury.io/gh/kenshoo%2Freact-multi-select)
+
 **Kenshoo multi select component**
 
 Multi select is a straight forward component that helps a user select multiple items in a clear and filterable way.
