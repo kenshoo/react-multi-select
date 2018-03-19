@@ -6,6 +6,8 @@
 
 Multi select is a straight forward component that helps a user select multiple items in a clear and filterable way.
 
+![Preview](preview.png?raw=true "Preview")
+
 ## Installation
  
  **Installation using npm:**
