@@ -9,6 +9,7 @@
   "scripts": {
     "build": "webpack --config config/webpack/webpack.dev.js",
     "build:stats": "NODE_ENV=production webpack  --config config/webpack/webpack.prod.js -p --bail --json > stats.json",
+    "build:production": "webpack --config config/webpack/webpack.prod.js",
     "test": "cross-env BABEL_DISABLE_CACHE=1 jest --config config/jest/jest.config.json",
     "test:watch": "cross-env BABEL_DISABLE_CACHE=1 jest --watchAll --config config/jest/jest.config.json",
     "storybook": "start-storybook -p 6006",
@@ -52,6 +53,7 @@
     "jest-sandbox": "^1.1.1",
     "jsdom": "^11.3.0",
     "json-loader": "^0.5.4",
+    "lodash": "^4.17.5",
     "node-sass": "^4.5.0",
     "nodemon": "^1.9.1",
     "postcss-loader": "^2.0.6",
@@ -71,8 +73,7 @@
     "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^2.2.0",
     "webpack-merge": "^4.1.2",
-    "webpack-strip": "^0.1.0",
-    "lodash": "^4.17.5"
+    "webpack-strip": "^0.1.0"
   },
   "peerDependencies": {
     "react": "^15.0.0-0 || ^16.0.0",
