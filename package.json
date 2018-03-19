@@ -71,7 +71,8 @@
     "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^2.2.0",
     "webpack-merge": "^4.1.2",
-    "webpack-strip": "^0.1.0"
+    "webpack-strip": "^0.1.0",
+    "lodash": "^4.17.5"
   },
   "peerDependencies": {
     "react": "^15.0.0-0 || ^16.0.0",
@@ -80,7 +81,9 @@
   "dependencies": {
     "classnames": "2.2.5",
     "material-ui": "^1.0.0-beta.25",
-    "prop-types": "^15.5.8"
+    "prop-types": "^15.5.8",
+    "react-virtualized": "^9.18.5",
+    "react-waypoint": "^8.0.1"
   },
   "release": {
     "debug": false,

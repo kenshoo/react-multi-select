@@ -1,3 +1,1 @@
-import MultiSelectionList from './multiselection_list';
-
-export const MultiSelection = MultiSelectionList;
+export { default } from "./react_multi_select";
