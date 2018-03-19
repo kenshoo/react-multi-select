@@ -6,7 +6,7 @@ import "./app.scss";
 const req = require.context('../stories', true, /\.stories\.js$/);
 
 setOptions({
-    name: 'Kenshoo Shared',
+    name: 'React Multi Select',
     url: 'https://github.com/kenshoo/react-multi-select',
     goFullScreen: false,
     showLeftPanel: true,

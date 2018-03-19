@@ -2,7 +2,7 @@
   "name": "@kenshooui/react-multi-select",
   "version": "0.0.0-development",
   "description": "React Multi Select",
-  "repository": "https://github.com/kenshoo/react-shared.git",
+  "repository": "https://github.com/kenshoo/react-multi-select.git",
   "author": "Kenshoo",
   "license": "MIT",
   "main": "index.js",

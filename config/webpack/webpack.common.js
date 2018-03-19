@@ -3,7 +3,7 @@ const { babelLoader, cssLoader, mdLoader, pngLoader, jsonLoader, svgLoader } = r
 
 module.exports = {
   entry: {
-    index: "./index.js"
+    index: "./src/index.js"
   },
   externals: {
     react: "react",
