@@ -1,17 +1,60 @@
-# Multi selection list
+# Multi select
 
-Kenshoo multi selection list component.
+**Kenshoo multi select component**
 
+Multi select is a straight forward component that helps a user select multiple items in a clear and filterable way.
 
-<!-- example -->
+## Installation
+ 
+ **Installation using npm:**
+ 
+ ```
+ npm install @kenhooui/react-multi-select --save
+ ```
+
+ **Installation using Yarn:**
+ 
+  ```
+  yarn add @kenhooui/react-multi-select
+  ```
+  
+  
+ 
+ ## How to use 
+ 
 ```jsx
-import {MultiSelectionList} from 'kenshoo-shared';
+import React, { Component } from "react";
+import MultiSelect from "@kenhooui/react-multi-select";
 
-const Something = () => (
-    <div>
-        <MultiSelectionList items={[{id:1}, {id:2}, {id:3}]} />
-    </div>
-);
+class Example extends Component {
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+    this.state = {
+      items: [
+        { id: 0, label: "item 1" },
+        { id: 2, label: "item 2" },
+        { id: 3, label: "item 3" },
+        { id: 4, label: "item 4" }
+      ],
+      selectedItems: []
+    };
+  }
+
+  handleChange(selectedItems) {
+    this.setState({ selectedItems });
+  }
+  render() {
+    const { items, selectedItems } = this.state;
+    return (
+      <MultiSelect
+        items={items}
+        selectedItems={selectedItems}
+        onChange={this.handleChange}
+      />
+    );
+  }
+}
 ```
 
 
@@ -20,7 +63,7 @@ const Something = () => (
 | Name                            | Type                  | Default                                          | Description                                                                                                                                       |
 |:-----                           |:-----                 |:-----                                            |:-----                                                                                                                                             |
 | `items`                         | `List`                | []                                               | list of items .                                                                                                                                   |
-| `selectedIds`                   | `Array`               | []                                               | selected list to start with (subgroup of items). 
+| `selectedItems`                 | `Array`               | []                                               | selected list to start with (subgroup of items). 
 | `searchPlaceholder`             | `String`              | 'Search...'                                      | Search box place holder                                                                                                                           |
 | `emptyText`                     | `String`              | 'No items...'                                    | Text to display when list is empty                                                                                                                |
 | `sortFn`                        | `function`            | undefined                                        | list item auto sorting (on items changed)                                                                                                         |
@@ -31,3 +74,11 @@ const Something = () => (
 | `sumItemsInPageForLazyLoad`     | `number`              | 100                                              | actual for lazyLoad props - sum of list items for single page                                                                                     |
 | `msDelayOnChangeFilter`         | `number`              | null -(if lazyload true by default passed 600 ms)| onChange is delayed before performing a function as the number of ms this value contains                                                          |
 | `withSelectAll`                 | `boolean`             | false                                            | toggle to show select All option in list.
+
+
+  
+## Compatibility
+  
+  - React 16 or newer
+  
+  
