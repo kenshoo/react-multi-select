@@ -20,9 +20,6 @@ module.exports = (storybookBaseConfig, configType) => {
 						test:  /\.js$/,
 						exclude: /node_modules/
 				}, {
-						test: /\.png$/,
-						loader: "url-loader?limit=10000&mimetype=image/png"
-				}, {
 						test: /\.md$/,
 						loader: "raw-loader"
 				}, {
@@ -39,10 +36,9 @@ module.exports = (storybookBaseConfig, configType) => {
 								"sass-loader"
 						]
 				}, {
-          test: /\.svg$/,
           loader: "svg-inline-loader?classPrefix"
         }],
-		}
+		};
 
 		return storybookBaseConfig;
 };

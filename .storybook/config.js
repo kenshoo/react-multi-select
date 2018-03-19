@@ -7,7 +7,7 @@ const req = require.context('../stories', true, /\.stories\.js$/);
 
 setOptions({
     name: 'Kenshoo Shared',
-    url: 'https://github.com/kenshoo/react-shared',
+    url: 'https://github.com/kenshoo/react-multi-select',
     goFullScreen: false,
     showLeftPanel: true,
     showDownPanel: true,
