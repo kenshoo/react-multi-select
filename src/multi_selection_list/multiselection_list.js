@@ -8,18 +8,12 @@ import xor from "lodash/xor";
 import PropTypes from "prop-types";
 import Waypoint from "react-waypoint";
 import classNames from "classnames/bind";
-import isEmpty from "is-empty";
-import Input from "../input/input_text";
 import styles from "./multiselection_list.scss";
-import * as Themes from "../../themes/themes";
-import { DotsLoader } from "../../components/loaders/dots";
-import ListNavigation from "./multiselection_navigation";
-import ListItems from "./multiselection_items";
-import BootstrapTooltip from "../tooltip/bootstraptooltip/bootstrap_tooltip";
-import { getIconClass } from "../../common/icons/icons";
+import { LinearProgress } from "material-ui/Progress";
 import { MOVE } from "./multiselection_list.constants";
-import VirtualizedListItems from "./multiselection_virtualized_items";
 import { isAllSelected } from "./multiselection_list_utils";
+import VirtualizedListItems from "./virtualized_items/multiselection_virtualized_items";
+import TextField from "material-ui/TextField";
 
 export const DEFAULT_MS_DELAY_ONCHANGE_FOR_LAZY_LOADING = 600;
 
@@ -48,7 +42,12 @@ class MultiSelectionList extends PureComponent {
     this.item.bind(this);
   }
 
-  componentWillReceiveProps({ items, selectedIds, customFilter }) {
+  componentWillReceiveProps({
+    items,
+    selectedIds,
+    customFilter,
+    isRemoteFilter
+  }) {
     if (
       this.isItemsNotChanged(this.props.items, items) &&
       xor(selectedIds, this.props.selectedIds).length == 0
@@ -56,7 +55,7 @@ class MultiSelectionList extends PureComponent {
       return;
     }
 
-    if (customFilter) {
+    if (customFilter || isRemoteFilter) {
       this.setState(
         {
           items,
@@ -322,7 +321,7 @@ class MultiSelectionList extends PureComponent {
   loader() {
     return (
       <div className={styles.loader_container}>
-        <DotsLoader />
+        <LinearProgress color="primary" />
       </div>
     );
   }
@@ -372,27 +371,6 @@ class MultiSelectionList extends PureComponent {
     };
   }
 
-  listNavigation() {
-    const disabledNavigation = {
-      up:
-        !this.isSelectedSingleItem() ||
-        this.isSelectedFirstItem() ||
-        this.state.searchTerm,
-
-      down:
-        !this.isSelectedSingleItem() ||
-        this.isSelectedLastItem() ||
-        this.state.searchTerm
-    };
-
-    return (
-      <ListNavigation
-        onNavigationClick={this.moveItem.bind(this)}
-        disabledNavigation={disabledNavigation}
-      />
-    );
-  }
-
   isSelectedSingleItem() {
     return (
       this.state.selected &&
@@ -416,12 +394,7 @@ class MultiSelectionList extends PureComponent {
   listFilter() {
     const {
       searchPlaceholder,
-      loading,
-      searchInputClassName,
-      searchIconClassName,
       searchWrapperClassName,
-      msDelayOnChangeFilter,
-      lazyLoad
     } = this.props;
 
     return (
@@ -431,43 +404,15 @@ class MultiSelectionList extends PureComponent {
           searchWrapperClassName
         )}
       >
-        <Input
+        <TextField
+          id="search"
+          label="Search"
+          placeholder={searchPlaceholder}
           value={this.state.searchTerm}
           onChange={this.onSearchTermChange}
-          placeholder={searchPlaceholder}
-          disabled={loading}
-          theme={Themes.kgraynew}
-          type="text"
-          iconName="search"
-          className={searchInputClassName}
-          iconClassName={searchIconClassName}
-          msDelayOnChange={
-            isEmpty(msDelayOnChangeFilter) && !isEmpty(lazyLoad)
-              ? DEFAULT_MS_DELAY_ONCHANGE_FOR_LAZY_LOADING
-              : msDelayOnChangeFilter
-          }
-          autoFocusForRerender={!isEmpty(lazyLoad)}
+          margin="normal"
         />
       </div>
-    );
-  }
-
-  errorTooltip(tooltipMessage) {
-    const helpClass = classNames(getIconClass("questionmark"));
-    const tooltipContent = (
-      <div className={classNames(styles.list_error_tooltip)}>
-        {tooltipMessage}
-      </div>
-    );
-
-    return (
-      <BootstrapTooltip
-        tooltipContent={tooltipContent}
-        forcePlacement={"bottom"}
-        forceDelay={300}
-      >
-        &nbsp;<span className={helpClass} />
-      </BootstrapTooltip>
     );
   }
 
@@ -481,12 +426,8 @@ class MultiSelectionList extends PureComponent {
       selectAllClassName,
       displaySelectAllFn,
       lazyLoad,
-      withNavigation,
-      isItemLockedFn,
-      groups,
       filterResultsText,
       emptyText,
-      isVirtualized,
       listHeight,
       listRowHeight
     } = this.props;
@@ -499,7 +440,6 @@ class MultiSelectionList extends PureComponent {
     return (
       <div className={styles.multi_selection_list}>
         {withSearch && this.listFilter()}
-        {withNavigation && this.listNavigation()}
 
         <div className={styles.list_box}>
           {withSelectAll && (
@@ -513,7 +453,7 @@ class MultiSelectionList extends PureComponent {
 
           {loading ? (
             <div className={listContainerClass}>{this.loader()}</div>
-          ) : isVirtualized ? (
+          ) : (
             <div className={listContainerClass}>
               <VirtualizedListItems
                 ref={list => {
@@ -530,34 +470,7 @@ class MultiSelectionList extends PureComponent {
               />
               {lazyLoad && this.waypoint()}
             </div>
-          ) : (
-            <div className={listContainerClass}>
-              <ListItems
-                groups={groups}
-                items={this.state.items}
-                selected={this.state.selected}
-                itemDisplayFn={this.item.bind(this)}
-                filterResultsText={filterResultsText}
-                emptyText={emptyText}
-                searchTerm={this.state.searchTerm}
-                onSelectGroupClick={this.onSelectGroupClick}
-                onDeselectGroupClick={this.onDeselectGroupClick}
-                withNavigation={withNavigation}
-                isItemLockedFn={isItemLockedFn}
-                dragSelectedItems={this.dragSelectedItems.bind(this)}
-                selectGroupLabel={this.props.selectGroupLabel}
-                deselectGroupLabel={this.props.deselectGroupLabel}
-              />
-              {lazyLoad && this.waypoint()}
-            </div>
           )}
-          {error &&
-            error.errorMessage && (
-              <span className={styles.list_error_message}>
-                {error.errorMessage}
-                {error.errorTooltip && this.errorTooltip(error.errorTooltip)}
-              </span>
-            )}
         </div>
       </div>
     );
@@ -583,7 +496,8 @@ MultiSelectionList.propTypes = {
   onEnter: PropTypes.func,
   groups: PropTypes.array,
   sumItemsInPageForLazyLoad: PropTypes.number,
-  msDelayOnChangeFilter: PropTypes.number
+  msDelayOnChangeFilter: PropTypes.number,
+  isRemoteFilter: PropTypes.bool
 };
 
 MultiSelectionList.defaultProps = {
@@ -592,8 +506,8 @@ MultiSelectionList.defaultProps = {
   searchPlaceholder: "Search...",
   emptyText: "No items...",
   filterResultsText: "No available items...",
-  selectGroupLabel: "Select All",
-  deselectGroupLabel: "Deselect All",
+  selectGroupLabel: "Select all",
+  deselectGroupLabel: "Deselect all",
   displayFn: item => item.id,
   isItemLockedFn: item => false,
   displaySelectAllFn: selectedAll =>
@@ -614,7 +528,7 @@ MultiSelectionList.defaultProps = {
   withNavigation: false,
   groups: [],
   sumItemsInPageForLazyLoad: 100,
-  isVirtualized: false
+  isRemoteFilter: false
 };
 
 export default MultiSelectionList;

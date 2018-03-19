@@ -2,7 +2,6 @@ import React, { PureComponent } from "react";
 import styles from "./multiselection_virtualized_items.scss";
 import { AutoSizer, List } from "react-virtualized";
 import PropTypes from "prop-types";
-import CheckboxListToList from "../checkboxlisttolist/checkbox_list_to_list";
 
 export const OVERSCAN_ROW_COUNT = 10;
 

@@ -1,3 +1,3 @@
-import MultiSelectionList from './multiselection_list';
+import ReactMultiSelect from "./react_multi_select";
 
-export const MultiSelection = MultiSelectionList;
+export const ReactMultiSelect = ReactMultiSelect;
