@@ -92,5 +92,8 @@
     "verifyConditions": {
       "path": "./semantic_release/verifyConditions"
     }
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

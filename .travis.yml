@@ -7,7 +7,8 @@ script:
  - npm test
 
 after_success:
-  npm run build-storybook
+ - npm run build-storybook
+ - npm run semantic-release
 
 deploy:
   local-dir: "./storybook-static"
