@@ -12,27 +12,46 @@ import {
 import ReactMultiSelect from "../src/react_multi_select";
 import { withKnobs, boolean } from "@storybook/addon-knobs";
 
-storiesOf("Test component", module)
+const messages = {
+  [SOURCE_SEARCH_PLACEHOLDER]: "Search...",
+  [SOURCE_NO_ITEMS]: "No items...",
+  [DESTINATION_NO_ITEMS]: "No items...",
+  [DESTINATION_HEADER_NONE]: "None",
+  [DESTINATION_HEADER_SELECTED]: "Selected",
+  [DESTINATION_HEADER_SELECT_ALL]: "Select all",
+  [DESTINATION_HEADER_CLEAR_ALL]: "Clear all"
+};
+
+storiesOf("React Multi Select", module)
   .addDecorator(withKnobs)
-  .add("React Multi Select", () => {
-    const ITEMS = [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(i => ({
+  .add("Simple", () => {
+    const items = [1, 2, 4, 5, 6, 7, 8, 9, 10].map(i => ({
       id: i,
       label: `Item ${i}`
     }));
 
-    const messages = {
-      [SOURCE_SEARCH_PLACEHOLDER]: "Search...",
-      [SOURCE_NO_ITEMS]: "No items...",
-      [DESTINATION_NO_ITEMS]: "No items...",
-      [DESTINATION_HEADER_NONE]: "None",
-      [DESTINATION_HEADER_SELECTED]: "Selected",
-      [DESTINATION_HEADER_SELECT_ALL]: "Select all",
-      [DESTINATION_HEADER_CLEAR_ALL]: "Clear all"
-    };
+    return (
+      <ReactMultiSelect
+        items={items}
+        messages={messages}
+        loading={boolean("Loading", false)}
+        onChange={action("onChange")}
+        showSearch={boolean("Show search", true)}
+        showSelectAll={boolean("Show select all", true)}
+      />
+    );
+  })
+  .add("Large Data", () => {
+    const items = Array.apply(null, { length: 20000 }).map((i, index) => {
+      return {
+        id: index,
+        label: `Item ${index}`
+      };
+    });
 
     return (
       <ReactMultiSelect
-        items={ITEMS}
+        items={items}
         messages={messages}
         loading={boolean("Loading", false)}
         onChange={action("onChange")}
