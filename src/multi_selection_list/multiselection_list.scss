@@ -1,7 +1,7 @@
 $item_font_color: #666666;
 $item_padding: 10px;
 $grouped_item_padding: 20px;
-$item_height: 30px;
+$item_height: 40px;
 $list_height: 218px;
 $navigation_list_height: 178px;
 $list_width: 250px;
@@ -10,6 +10,7 @@ $list_error_color: #FF3333;
 
 .multi_selection_list {
   color: $item_font_color;
+  border: 1px solid #DDDDDD;
 }
 
 .list_filter_container {
@@ -17,47 +18,21 @@ $list_error_color: #FF3333;
   position: relative;
 }
 
-.list_box {
-  position: relative;
+.search_icon {
+  padding: 15px;
+  padding-bottom: 0;
 }
 
-.select_all {
-  border: 1px solid #DDDDDD;
-  border-bottom: 0;
-  height: $item_height;
-  line-height: $item_height;
-  padding: 0 $item_padding;
-  color: $item_font_color;
-  font-size: $list_font_size;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #DFF8E5;
-    color: #ffffff;
-  }
+.list_box {
+  position: relative;
 }
 
 .list_container {
   height: $list_height;
   overflow-y: auto;
-  border: 1px solid #DDDDDD;
   min-width: $list_width;
   position: relative;
   outline: none;
-
-  &.error {
-    border-color: $list_error_color;
-    border-left: $list_error_color 1px solid
-  }
-}
-
-.list_error_message {
-  position: absolute;
-  left: 0;
-  bottom: -19px;
-  color: $list_error_color;
-  font-size: $list_font_size;
-  line-height: $list_font_size;
 }
 
 .list_error_tooltip {
@@ -84,7 +59,7 @@ $list_error_color: #FF3333;
   }
 
   &.selected {
-    background-color: #23a082;
+    background-color: #f3f3f3;
     color: #ffffff;
   }
 
@@ -113,4 +88,24 @@ $list_error_color: #FF3333;
   top: 0;
   left: 0;
   z-index: 99;
+}
+
+.search_wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  margin-left: 12px;
+}
+
+.select_all {
+  border: 1px solid #DDDDDD;
+  border-left: 0;
+  border-right: 0;
+  padding: 0 10px;
+  height: 40px;
+  line-height: 40px;
+
+  &:hover {
+    background-color: #f3f3f3;
+  }
 }
