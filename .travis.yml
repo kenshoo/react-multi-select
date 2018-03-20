@@ -14,8 +14,8 @@ deploy:
     script: yarn semantic-release
     on:
       branch: master
-  local-dir: "./storybook-static"
   - provider: pages
+    local-dir: "./storybook-static"
     skip-cleanup: true
     github-token: $GH_TOKEN
     keep-history: true
