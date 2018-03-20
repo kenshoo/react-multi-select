@@ -4,7 +4,10 @@
 
 **Kenshoo multi select component**
 
+**[react-multi-select demo](https://kenshoo.github.io/react-multi-select)**
+
 Multi select is a straight forward component that helps a user select multiple items in a clear and filterable way.
+
 
 ![Preview](preview.png?raw=true "Preview")
 
