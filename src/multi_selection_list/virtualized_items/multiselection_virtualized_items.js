@@ -22,6 +22,7 @@ export default class VirtualizedListItems extends PureComponent {
     this.noRowsRenderer = this.noRowsRenderer.bind(this);
     this.rowRenderer = this.rowRenderer.bind(this);
   }
+
   triggerForceUpdateGrid() {
     this.listRef.forceUpdateGrid();
   }

@@ -14,8 +14,7 @@ import { MOVE } from "./multiselection_list.constants";
 import { isAllSelected } from "./multiselection_list_utils";
 import VirtualizedListItems from "./virtualized_items/multiselection_virtualized_items";
 import TextField from "material-ui/TextField";
-
-export const DEFAULT_MS_DELAY_ONCHANGE_FOR_LAZY_LOADING = 600;
+import Icon from "material-ui/Icon";
 
 class MultiSelectionList extends PureComponent {
   constructor(props) {
@@ -37,8 +36,6 @@ class MultiSelectionList extends PureComponent {
     this.handleExternalFilter = this.handleExternalFilter.bind(this);
     this.onSearchTermChange = this.onSearchTermChange.bind(this);
     this.changeSelectedState = this.changeSelectedState.bind(this);
-    this.moveItem.bind(this);
-    this.dragSelectedItems.bind(this);
     this.item.bind(this);
   }
 
@@ -87,9 +84,7 @@ class MultiSelectionList extends PureComponent {
   }
 
   componentDidUpdate() {
-    if (this.props.isVirtualized) {
-      this.virtualizedListItemsRef.triggerForceUpdateGrid();
-    }
+    this.virtualizedListItemsRef.triggerForceUpdateGrid();
   }
 
   isItemsNotChanged(prevItems, nextItems) {
@@ -255,14 +250,9 @@ class MultiSelectionList extends PureComponent {
   }
 
   onSelectedChange() {
-    const { groups, isVirtualized } = this.props;
-    const withGrouping = groups && groups.length > 0;
     this.props.onSelect(this.state.selected);
     this.alignSelectedAll();
-
-    if (!withGrouping) {
-      this.sortItems();
-    }
+    this.sortItems();
   }
 
   sortItems() {
@@ -270,17 +260,6 @@ class MultiSelectionList extends PureComponent {
     const { sortFn } = this.props;
 
     this.setState({ items: sortFn(items) });
-  }
-
-  sortByGroups(items) {
-    const { sortFn, groups } = this.props;
-    const sortedItems = sortFn(items);
-    return groups.reduce((accumulator, group) => {
-      const groupItems = sortedItems.filter(({ id }) =>
-        group.itemIds.includes(id)
-      );
-      return accumulator.concat(groupItems);
-    }, []);
   }
 
   alignSelectedAll() {
@@ -295,14 +274,10 @@ class MultiSelectionList extends PureComponent {
   }
 
   item(item) {
-    const isGrouped = this.props.groups && this.props.groups.length > 0;
     const isSelected = this.state.selected.includes(item.id);
-    const isLocked = this.props.isItemLockedFn(item);
     const classes = classNames(styles.list_item, this.props.itemClassName, {
-      [styles.locked]: isLocked,
       [styles.selected]: isSelected,
-      [this.props.selectedItemClassName]: isSelected,
-      [styles.grouped]: isGrouped
+      [this.props.selectedItemClassName]: isSelected
     });
 
     return (
@@ -334,68 +309,8 @@ class MultiSelectionList extends PureComponent {
       : this.handleFilter(newValue);
   }
 
-  dragSelectedItems(hoverIndex) {
-    const { selected } = this.state;
-    const items = [...this.state.items];
-
-    const newItemsList = items.filter(item => !selected.includes(item.id));
-    const selectedItems = items.filter(item => selected.includes(item.id));
-    const aboveHoverIndexCount = items.filter(
-      (item, index) => selected.includes(item.id) && index < hoverIndex
-    ).length;
-    const targetIndex = hoverIndex - aboveHoverIndexCount;
-    newItemsList.splice(targetIndex, 0, ...selectedItems);
-
-    this.setState({ items: newItemsList }, this.onOrderChanged);
-  }
-
-  moveItem(direction) {
-    return () => {
-      if (!this.state.selected || !this.state.selected.length) return;
-
-      const selectedItemId = this.state.selected[0];
-      const oldLocation = findIndex(this.state.items, { id: selectedItemId });
-      const newLocation =
-        direction == MOVE.UP ? oldLocation - 1 : oldLocation + 1;
-      const selectedItem = this.state.items[oldLocation];
-
-      const newItemsList = without(this.state.items, selectedItem);
-      newItemsList.splice(newLocation, 0, selectedItem);
-
-      this.setState(
-        {
-          items: newItemsList
-        },
-        this.onOrderChanged
-      );
-    };
-  }
-
-  isSelectedSingleItem() {
-    return (
-      this.state.selected &&
-      this.state.selected.length &&
-      this.state.selected.length == 1
-    );
-  }
-
-  isSelectedFirstItem() {
-    const { isItemLockedFn } = this.props;
-    const lockedItemsCount = this.state.items.filter(isItemLockedFn).length;
-    const id = this.state.selected[0];
-    return findIndex(this.state.items, { id }) == lockedItemsCount;
-  }
-
-  isSelectedLastItem() {
-    const id = this.state.selected[0];
-    return findIndex(this.state.items, { id }) == this.state.items.length - 1;
-  }
-
   listFilter() {
-    const {
-      searchPlaceholder,
-      searchWrapperClassName,
-    } = this.props;
+    const { searchPlaceholder, searchWrapperClassName } = this.props;
 
     return (
       <div
@@ -406,12 +321,12 @@ class MultiSelectionList extends PureComponent {
       >
         <TextField
           id="search"
-          label="Search"
           placeholder={searchPlaceholder}
           value={this.state.searchTerm}
           onChange={this.onSearchTermChange}
           margin="normal"
         />
+        <Icon className={styles.search_icon}>search</Icon>
       </div>
     );
   }
@@ -494,7 +409,6 @@ MultiSelectionList.propTypes = {
   onOrderChanged: PropTypes.func,
   onFilterChange: PropTypes.func,
   onEnter: PropTypes.func,
-  groups: PropTypes.array,
   sumItemsInPageForLazyLoad: PropTypes.number,
   msDelayOnChangeFilter: PropTypes.number,
   isRemoteFilter: PropTypes.bool
@@ -526,7 +440,6 @@ MultiSelectionList.defaultProps = {
   onFilterChange: () => {},
   onEnter: () => {},
   withNavigation: false,
-  groups: [],
   sumItemsInPageForLazyLoad: 100,
   isRemoteFilter: false
 };

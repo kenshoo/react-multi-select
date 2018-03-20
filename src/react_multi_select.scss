@@ -1,6 +1,7 @@
 .wrapper {
   display: flex;
   position: relative;
+  min-width: 420px;
 }
 
 .checkbox_control {
@@ -17,40 +18,19 @@
   z-index: 99;
 }
 
-.item_icon {
-  margin-right: 10px;
-  font-size: 14px;
-  line-height: 14px;
-
-  &:after {
-    vertical-align: middle;
-  }
-}
-
-.source_list {
+.list_container {
   width: 50%;
 }
 
 .search_wrapper {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 0;
+  margin-left: 22px;
 
   &:hover .search_icon {
     color: #ffffff;
   }
-}
-
-.search_input {
-  border-color: #DDDDDD !important;
-  border-bottom: 0;
-  height: 45px;
-  padding-left: 20px;
-  padding-right: 35px;
-}
-
-.search_input:hover:enabled,
-.search_input:active:enabled,
-.search_input:focus:enabled {
-  border-color: #DDDDDD !important;
 }
 
 .search_icon {
@@ -60,15 +40,6 @@
   color: #666666;
 }
 
-.source_item_common {
-  input[type="checkbox"] + label {
-    pointer-events: none;
-
-    & > span {
-      color: #666666;
-    }
-  }
-}
 
 .select_all {
   padding: 0 20px;
@@ -81,11 +52,10 @@
 }
 
 .source_items_wrapper {
-  height: 322px;
+  height: 323px;
 }
 
 .source_item {
-  @extend .source_item_common;
   height: 40px;
   line-height: 40px;
   padding: 0 20px;
@@ -102,19 +72,11 @@
   & > span {
     width: 100%;
   }
-
-  input[type="checkbox"] + label {
-    & > span {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      height: 17px;
-      line-height: 17px;
-    }
-  }
 }
 
-.destination_list {
-  width: 50%;
+.remove_selected_icon {
+  margin-right: 12px;
+  margin-top: 7px;
 }
 
 .selected_header {
@@ -122,11 +84,10 @@
   justify-content: space-between;
   border: 1px solid #DDDDDD;
   border-width: 1px 1px 0 0;
-  height: 45px;
+  height: 51px;
   padding: 0 20px;
   align-items: center;
   font-size: 12px;
-  color: #ffffff;
 
   .clear_all {
     color: #666666;
@@ -142,7 +103,7 @@
 .dst_item {
   height: 40px;
   line-height: 40px;
-  padding: 0 20px;
+  padding: 0 10px;
   transition: none;
 
   &:hover:not(.selected_dst_item) {

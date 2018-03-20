@@ -1,5 +1,5 @@
 $list_font_size: 12px;
-$list_width: 250px;
+$list_width: 180px;
 
 .list_item {
   list-style: none;
@@ -8,6 +8,7 @@ $list_width: 250px;
 }
 
 .no_items {
+  font-size: $list_font_size;
   font-size: $list_font_size;
   color: #999999;
   display: flex;

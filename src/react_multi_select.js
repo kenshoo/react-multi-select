@@ -3,6 +3,7 @@ import classnames from "classnames";
 import PropTypes from "prop-types";
 import { LinearProgress } from "material-ui/Progress";
 import styles from "./react_multi_select.scss";
+import Icon from "material-ui/Icon";
 import {
   filterItems,
   unionItemsForListToList
@@ -38,7 +39,7 @@ const displaySelectedItem = item => (
   <div className={styles.dst_item_content}>
     <div className={styles.dst_item_text}>{item.label}</div>
     <span className={styles.remove_button} />
-    <div>Clear icon</div>
+    <Icon className={styles.remove_selected_icon}>close</Icon>
   </div>
 );
 
@@ -211,10 +212,7 @@ export default class ReactMultiSelect extends PureComponent {
         searchPlaceholder={messages[SOURCE_SEARCH_PLACEHOLDER]}
         emptyText={messages[SOURCE_NO_ITEMS]}
         searchWrapperClassName={styles.search_wrapper}
-        searchInputClassName={classnames(
-          styles.search_input,
-          searchInputClassName
-        )}
+        searchInputClassName={classnames(searchInputClassName)}
         searchIconClassName={styles.search_icon}
         selectAllClassName={classnames(styles.select_all, selectAllClassName)}
         className={classnames(
@@ -232,14 +230,14 @@ export default class ReactMultiSelect extends PureComponent {
 
     return (
       <div className={classnames(styles.wrapper, wrapperClassName)}>
-        <div className={styles.source_list}>{this.renderSourceList()}</div>
-        <div className={styles.destination_list}>
+        <div className={styles.list_container}>{this.renderSourceList()}</div>
+        <div className={styles.list_container}>
           {this.renderDestinationInfo()}
           {this.renderDestinationList()}
         </div>
         {loading && (
           <div className={styles.loader_container}>
-            <LinearProgress color="primary" />
+            <LinearProgress />
           </div>
         )}
       </div>
