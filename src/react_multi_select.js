@@ -29,7 +29,13 @@ const displayItem = ({ isItemSelected }) => item => {
   return (
     <FormControlLabel
       className={styles.checkbox_control}
-      control={<Checkbox value={item.label} checked={isItemSelected(item)} />}
+      control={
+        <Checkbox
+          value={item.label}
+          checked={isItemSelected(item)}
+          color="primary"
+        />
+      }
       label={item.label}
     />
   );
@@ -70,7 +76,6 @@ export default class ReactMultiSelect extends PureComponent {
       filteredItems: items
     });
   }
-
   onClear() {
     if (this.state.selectedItems.length) {
       this.setSelectedItems([]);
@@ -114,21 +119,19 @@ export default class ReactMultiSelect extends PureComponent {
     return (
       <FormControlLabel
         className={styles.checkbox_control}
-        control={<Checkbox checked={selectedAll} />}
+        control={<Checkbox checked={selectedAll} color="primary" />}
         label={this.props.messages[DESTINATION_HEADER_SELECT_ALL]}
       />
     );
   };
 
   renderDestinationInfo() {
-    const { selectedHeaderClassName, messages } = this.props;
+    const { messages } = this.props;
 
     const { selectedItems } = this.state;
 
     return (
-      <div
-        className={classnames(styles.selected_header, selectedHeaderClassName)}
-      >
+      <div className={styles.selected_header}>
         <div>
           {`${selectedItems.length || messages[DESTINATION_HEADER_NONE]} ` +
             messages[DESTINATION_HEADER_SELECTED]}
@@ -173,7 +176,6 @@ export default class ReactMultiSelect extends PureComponent {
           dstItemsWrapperClassName
         )}
         itemClassName={styles.dst_item}
-        selectedItemClassName={styles.selected_dst_item}
       />
     );
   }
@@ -186,15 +188,13 @@ export default class ReactMultiSelect extends PureComponent {
       listRowHeight,
       searchFilterDelay,
       showSearch,
-      showSelectAll,
-      searchInputClassName,
-      selectAllClassName,
-      sourceItemsWrapperClassName
+      showSelectAll
     } = this.props;
     const { filteredItems } = this.state;
 
     return (
       <MultiSelectionList
+        className={styles.source_items_wrapper}
         ref={list => (this.srcList = list)}
         items={filteredItems}
         onSelect={this.select}
@@ -211,16 +211,6 @@ export default class ReactMultiSelect extends PureComponent {
         msDelayOnChangeFilter={searchFilterDelay}
         searchPlaceholder={messages[SOURCE_SEARCH_PLACEHOLDER]}
         emptyText={messages[SOURCE_NO_ITEMS]}
-        searchWrapperClassName={styles.search_wrapper}
-        searchInputClassName={classnames(searchInputClassName)}
-        searchIconClassName={styles.search_icon}
-        selectAllClassName={classnames(styles.select_all, selectAllClassName)}
-        className={classnames(
-          styles.source_items_wrapper,
-          sourceItemsWrapperClassName
-        )}
-        itemClassName={styles.source_item}
-        selectedItemClassName={styles.selected_source_item}
       />
     );
   }

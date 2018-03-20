@@ -3,14 +3,12 @@ import pull from "lodash/pull";
 import find from "lodash/find";
 import findIndex from "lodash/findIndex";
 import union from "lodash/union";
-import without from "lodash/without";
 import xor from "lodash/xor";
 import PropTypes from "prop-types";
 import Waypoint from "react-waypoint";
 import classNames from "classnames/bind";
 import styles from "./multiselection_list.scss";
 import { LinearProgress } from "material-ui/Progress";
-import { MOVE } from "./multiselection_list.constants";
 import { isAllSelected } from "./multiselection_list_utils";
 import VirtualizedListItems from "./virtualized_items/multiselection_virtualized_items";
 import TextField from "material-ui/TextField";
@@ -310,13 +308,13 @@ class MultiSelectionList extends PureComponent {
   }
 
   listFilter() {
-    const { searchPlaceholder, searchWrapperClassName } = this.props;
+    const { searchPlaceholder } = this.props;
 
     return (
       <div
         className={classNames(
           styles.list_filter_container,
-          searchWrapperClassName
+          styles.search_wrapper
         )}
       >
         <TextField
@@ -347,29 +345,21 @@ class MultiSelectionList extends PureComponent {
       listRowHeight
     } = this.props;
 
-    const listContainerClasses = classNames.bind(styles)("list_container", {
-      error: error && error.hasErrors
-    });
-
-    const listContainerClass = classNames(listContainerClasses, className);
     return (
       <div className={styles.multi_selection_list}>
         {withSearch && this.listFilter()}
 
         <div className={styles.list_box}>
           {withSelectAll && (
-            <div
-              className={classNames(styles.select_all, selectAllClassName)}
-              onClick={this.onSelectAllClick}
-            >
+            <div className={styles.select_all} onClick={this.onSelectAllClick}>
               {displaySelectAllFn(this.state.selectedAll)}
             </div>
           )}
 
           {loading ? (
-            <div className={listContainerClass}>{this.loader()}</div>
+            <div>{this.loader()}</div>
           ) : (
-            <div className={listContainerClass}>
+            <div>
               <VirtualizedListItems
                 ref={list => {
                   this.virtualizedListItemsRef = list;
