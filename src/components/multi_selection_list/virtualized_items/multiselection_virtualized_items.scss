@@ -1,5 +1,7 @@
-$list_font_size: 12px;
-$list_width: 180px;
+@import "../../../resources/globals";
+
+$list_font_size: $font-300;
+$list_width: $space-860;
 
 .list_item {
   list-style: none;
@@ -10,7 +12,7 @@ $list_width: 180px;
 .no_items {
   font-size: $list_font_size;
   font-size: $list_font_size;
-  color: #999999;
+  color: $grey-450;
   display: flex;
   height: 100%;
   min-width: $list_width;
