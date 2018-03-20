@@ -10,8 +10,8 @@ after_success:
  - yarn build-storybook
 
 deploy:
-  provider: pages
   local-dir: "./storybook-static"
+  provider: pages
   skip-cleanup: true
   github-token: $GH_TOKEN
   keep-history: true
