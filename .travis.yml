@@ -10,16 +10,16 @@ after_success:
  - yarn build-storybook
 
 deploy:
+  provider: script
+  script: yarn semantic-release
+  on:
+    branch: master
+
+deploy:
   local-dir: "./storybook-static"
   provider: pages
   skip-cleanup: true
   github-token: $GH_TOKEN
   keep-history: true
-  on:
-    branch: master
-    
-deploy:
-  provider: script
-  script: yarn semantic-release
   on:
     branch: master
