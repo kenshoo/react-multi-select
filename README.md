@@ -1,6 +1,6 @@
 # Multi select
 
-[![Build Status](https://travis-ci.org/kenshoo/react-multi-select.svg?branch=master)](https://travis-ci.org/kenshoo/react-multi-select) [![GitHub version](https://badge.fury.io/gh/kenshoo%2Freact-multi-select.svg)](https://badge.fury.io/gh/kenshoo%2Freact-multi-select)
+[![Build Status](https://travis-ci.org/kenshoo/react-multi-select.svg?branch=master)](https://travis-ci.org/kenshoo/react-multi-select) [![npm version](https://badge.fury.io/js/%40kenshooui%2Freact-multi-select.svg)](https://badge.fury.io/js/%40kenshooui%2Freact-multi-select)
 
 **Kenshoo multi select component**
 
