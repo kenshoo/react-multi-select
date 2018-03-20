@@ -3,18 +3,21 @@ node_js:
   - "8"
 
 script:
- - npm run build:production
- - npm test
+ - yarn build:production
+ - yarn test
 
 after_success:
- - npm run build-storybook
- - npm run semantic-release
+ - yarn build-storybook
 
 deploy:
-  local-dir: "./storybook-static"
-  provider: pages
-  skip-cleanup: true
-  github-token: $GH_TOKEN
-  keep-history: true
-  on:
-    branch: master
+  - provider: pages
+      local-dir: "./storybook-static"
+      skip-cleanup: true
+      github-token: $GH_TOKEN
+      keep-history: true
+      on:
+        branch: master
+  - provider: script
+      script: yarn semantic-release
+      on:
+        branch: master
