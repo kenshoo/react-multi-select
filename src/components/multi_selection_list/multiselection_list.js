@@ -10,7 +10,8 @@ import styles from "./multiselection_list.scss";
 import { LinearProgress } from "material-ui/Progress";
 import { isAllSelected } from "./multiselection_list_utils";
 import VirtualizedListItems from "./virtualized_items/multiselection_virtualized_items";
-import TextField from "material-ui/TextField";
+import { FormControl } from 'material-ui/Form';
+import Input, { InputAdornment } from 'material-ui/Input';
 import Icon from "material-ui/Icon";
 
 class MultiSelectionList extends PureComponent {
@@ -225,21 +226,25 @@ class MultiSelectionList extends PureComponent {
     const { searchPlaceholder } = this.props;
 
     return (
-      <div
+      <FormControl
         className={classNames(
           styles.list_filter_container,
           styles.search_wrapper
         )}
+        fullWidth
       >
-        <TextField
+        <Input
           id="search"
-          placeholder={searchPlaceholder}
           value={this.state.searchTerm}
+          placeholder={searchPlaceholder}
           onChange={this.onSearchTermChange}
-          margin="normal"
-        />
-        <Icon className={styles.search_icon}>search</Icon>
-      </div>
+          className={styles.input}
+          endAdornment={
+            <InputAdornment position="end">
+              <Icon>search</Icon>
+            </InputAdornment>
+          }/>
+      </FormControl>
     );
   }
 

@@ -76,9 +76,16 @@ $list_font_size: $font-default;
 
 .search_wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-bottom: 0;
-  margin-left: $space-12;
+  height: $space-50 + 1;
+}
+
+.input {
+  height: $space-50;
+  padding: 0 $space-12;
+  display: flex;
+  align-items: center;
 }
 
 .select_all {
