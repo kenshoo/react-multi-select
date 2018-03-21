@@ -8,7 +8,9 @@
 
 Multi select is a straight forward component that helps a user select multiple items in a clear and filterable way.
 
-<img src="preview.gif?raw=true" width="400" />
+<div style="text-align:center">
+    <img src="preview.gif?raw=true" width="600" />
+</div>
 
 ## Installation
  
