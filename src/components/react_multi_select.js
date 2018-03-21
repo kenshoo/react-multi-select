@@ -77,10 +77,7 @@ export default class ReactMultiSelect extends PureComponent {
     });
   }
   onClear() {
-    if (this.state.selectedItems.length) {
-      this.setSelectedItems([]);
-      this.props.onChange([]);
-    }
+    this.state.selectedItems.length && this.setSelectedItems([]);
   }
 
   setSelectedItems(selectedItems) {
