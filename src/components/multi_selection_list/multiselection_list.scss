@@ -1,10 +1,10 @@
 @import "../../resources/globals";
 
 $item_font_color: $grey-600;
-$item_padding: $space-100;
-$grouped_item_padding: $space-400;
-$item_height: $space-700;
-$list_font_size: $font-300;
+$item_padding: $space-10;
+$grouped_item_padding: $space-20;
+$item_height: $space-40;
+$list_font_size: $font-default;
 
 .multi_selection_list {
   color: $item_font_color;
@@ -75,15 +75,15 @@ $list_font_size: $font-300;
   display: flex;
   justify-content: space-between;
   margin-bottom: 0;
-  margin-left: $space-200;
+  margin-left: $space-12;
 }
 
 .select_all {
   border: $border-1 solid $grey-350;
   border-left: 0;
   border-right: 0;
-  padding: 0 $space-100;
-  height: $space-700;
+  padding: 0 $space-10;
+  height: $space-40;
   line-height: $lineheight-40;
 
   &:hover {
