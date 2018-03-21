@@ -11,7 +11,7 @@ import {
 import {
   DESTINATION_HEADER_CLEAR_ALL,
   DESTINATION_HEADER_NONE,
-  DESTINATION_HEADER_SELECT_ALL,
+  SOURCE_HEADER_SELECT_ALL,
   DESTINATION_HEADER_SELECTED,
   DESTINATION_NO_ITEMS,
   SOURCE_NO_ITEMS,
@@ -45,7 +45,7 @@ const displaySelectedItem = (item, props) => (
   <div className={styles.destination_item_content}>
     <div className={styles.destination_item_text}>{item.label}</div>
     <span className={styles.remove_button} />
-    <Icon className={styles.remove_selected_icon}>{props.closeIcon}</Icon>
+    <Icon className={styles.remove_selected_icon}>{props.deleteIcon}</Icon>
   </div>
 );
 
@@ -116,8 +116,14 @@ export default class ReactMultiSelect extends PureComponent {
     return (
       <FormControlLabel
         className={styles.checkbox_control}
-        control={<Checkbox checked={selectedAll} color="primary" indeterminate={selectedAll === 'partial'}/>}
-        label={this.props.messages[DESTINATION_HEADER_SELECT_ALL]}
+        control={
+          <Checkbox
+            checked={selectedAll}
+            color="primary"
+            indeterminate={selectedAll === "partial"}
+          />
+        }
+        label={this.props.messages[SOURCE_HEADER_SELECT_ALL]}
       />
     );
   };
@@ -253,7 +259,7 @@ ReactMultiSelect.propTypes = {
   showSearch: PropTypes.bool,
   showSelectAll: PropTypes.bool,
   searchIcon: PropTypes.string,
-  closeIcon: PropTypes.string
+  deleteIcon: PropTypes.string
 };
 
 ReactMultiSelect.defaultProps = {
@@ -262,7 +268,7 @@ ReactMultiSelect.defaultProps = {
   showSearch: true,
   showSelectAll: true,
   searchIcon: "search",
-  closeIcon: "close",
+  deleteIcon: "close",
   listHeight: ITEMS_LIST_HEIGHT,
   selectedListHeight: SELECTED_ITEMS_LIST_HEIGHT,
   listRowHeight: LIST_ROW_HEIGHT,
@@ -272,7 +278,7 @@ ReactMultiSelect.defaultProps = {
     [DESTINATION_NO_ITEMS]: "No items...",
     [DESTINATION_HEADER_NONE]: "None",
     [DESTINATION_HEADER_SELECTED]: "Selected",
-    [DESTINATION_HEADER_SELECT_ALL]: "Select all",
+    [SOURCE_HEADER_SELECT_ALL]: "Select all",
     [DESTINATION_HEADER_CLEAR_ALL]: "Clear all"
   }
 };

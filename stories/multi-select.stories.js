@@ -3,7 +3,7 @@ import { action, storiesOf } from "@storybook/react";
 import {
   DESTINATION_HEADER_CLEAR_ALL,
   DESTINATION_HEADER_NONE,
-  DESTINATION_HEADER_SELECT_ALL,
+  SOURCE_HEADER_SELECT_ALL,
   DESTINATION_HEADER_SELECTED,
   DESTINATION_NO_ITEMS,
   SOURCE_NO_ITEMS,
@@ -19,7 +19,7 @@ const custom_messages = {
   [DESTINATION_NO_ITEMS]: "No entries available...",
   [DESTINATION_HEADER_NONE]: "Nothing",
   [DESTINATION_HEADER_SELECTED]: "Checked",
-  [DESTINATION_HEADER_SELECT_ALL]: "Check all",
+  [SOURCE_HEADER_SELECT_ALL]: "Check all",
   [DESTINATION_HEADER_CLEAR_ALL]: "Uncheck all"
 };
 
@@ -74,7 +74,7 @@ storiesOf("React Multi Select", module)
         wrapperClassName={customStyle.wrapper}
         listHeight={500}
         selectedListHeight={540}
-        closeIcon={"delete"}
+        deleteIcon={"delete"}
         searchIcon={"star"}
         loading={boolean("Loading", false)}
         onChange={action("onChange")}
