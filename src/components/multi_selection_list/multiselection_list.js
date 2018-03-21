@@ -204,30 +204,35 @@ class MultiSelectionList extends PureComponent {
   }
 
   listFilter() {
-    const { searchPlaceholder, searchIcon } = this.props;
+    const { searchPlaceholder, searchIcon, searchComponent } = this.props;
 
-    return (
-      <FormControl
-        className={classNames(
-          styles.list_filter_container,
-          styles.search_wrapper
-        )}
-        fullWidth
-      >
-        <Input
-          id="search"
-          value={this.state.searchTerm}
-          placeholder={searchPlaceholder}
-          onChange={this.onSearchTermChange}
-          className={styles.input}
-          endAdornment={
-            <InputAdornment position="end">
-              <Icon>{searchIcon}</Icon>
-            </InputAdornment>
-          }
-        />
-      </FormControl>
-    );
+      return (
+              searchComponent ?
+                  React.cloneElement(searchComponent, {
+                      value: this.state.searchTerm,
+                      onChange: this.onSearchTermChange
+                  }) :
+                  <FormControl
+                      className={classNames(
+                          styles.list_filter_container,
+                          styles.search_wrapper
+                      )}
+                      fullWidth
+                  >
+                      <Input
+                          id="search"
+                          value={this.state.searchTerm}
+                          placeholder={searchPlaceholder}
+                          onChange={this.onSearchTermChange}
+                          className={styles.input}
+                          endAdornment={
+                              <InputAdornment position="end">
+                                  <Icon>{searchIcon}</Icon>
+                              </InputAdornment>
+                          }
+                      />
+                  </FormControl>
+      );
   }
 
   render() {

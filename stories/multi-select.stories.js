@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import { action, storiesOf } from "@storybook/react";
 import {
   DESTINATION_HEADER_CLEAR_ALL,
@@ -11,6 +11,8 @@ import {
 } from "../src/components/react_multi_select_messages";
 import ReactMultiSelect from "../src/components/react_multi_select";
 import { boolean, withKnobs } from "@storybook/addon-knobs";
+import Icon from "material-ui/Icon";
+import Input from "material-ui/Input";
 import customStyle from "./custom_style.scss";
 
 const custom_messages = {
@@ -74,8 +76,7 @@ storiesOf("React Multi Select", module)
         wrapperClassName={customStyle.wrapper}
         listHeight={500}
         selectedListHeight={540}
-        deleteIcon={"delete"}
-        searchIcon={"star"}
+        messages={messages}
         loading={boolean("Loading", false)}
         onChange={action("onChange")}
         showSearch={boolean("Show search", true)}
@@ -120,4 +121,33 @@ storiesOf("React Multi Select", module)
         showSelectAll={boolean("Show select all", true)}
       />
     );
-  });
+  })
+    .add("display custom selected item", () => {
+        const items = Array.apply(null, {length: 10}).map((i, index) => ({
+            id: index,
+            value: `item ${index}`,
+            label: <div><Icon>star</Icon>{`Item ${index}`}</div>
+        }));
+
+        const selectedItemFunc = () => <div>selected</div>;
+
+        class SearchComponent extends Component {
+            render() {
+                return (
+                    <div>custom search <Input value={this.props.value} onChange={this.props.onChange}/></div>
+                );
+            }
+        }
+
+        return (
+            <ReactMultiSelect
+                selectedItemFunc={selectedItemFunc}
+                items={items}
+                loading={boolean("Loading", false)}
+                onChange={action("onChange")}
+                showSearch={boolean("Show search", true)}
+                showSelectAll={boolean("Show select all", true)}
+                searchComponent={<SearchComponent/>}
+            />
+        );
+});

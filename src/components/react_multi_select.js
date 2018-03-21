@@ -157,7 +157,8 @@ export default class ReactMultiSelect extends PureComponent {
       messages,
       listRowHeight,
       selectedListHeight,
-      dstItemsWrapperClassName
+      dstItemsWrapperClassName,
+        selectedItemFunc
     } = this.props;
     const { selectedItems } = this.state;
 
@@ -171,7 +172,7 @@ export default class ReactMultiSelect extends PureComponent {
         listHeight={selectedListHeight}
         listRowHeight={listRowHeight}
         emptyText={messages[DESTINATION_NO_ITEMS]}
-        displayFn={displayFn => displaySelectedItem(displayFn, this.props)}
+        displayFn={selectedItemFunc ? selectedItemFunc : displayFn => displaySelectedItem(displayFn, this.props)}
         className={classnames(
           styles.destination_items_wrapper,
           dstItemsWrapperClassName
@@ -188,7 +189,8 @@ export default class ReactMultiSelect extends PureComponent {
       listRowHeight,
       showSearch,
       showSelectAll,
-      searchIcon
+      searchIcon,
+      searchComponent
     } = this.props;
     const { filteredItems } = this.state;
 
@@ -199,6 +201,7 @@ export default class ReactMultiSelect extends PureComponent {
         items={filteredItems}
         onSelect={this.select}
         withSearch={showSearch}
+        searchComponent={searchComponent}
         withSelectAll={showSelectAll}
         displayFn={displayItem({ isItemSelected: this.isItemSelected })}
         filterFn={filterItems}
@@ -257,7 +260,8 @@ ReactMultiSelect.propTypes = {
   showSearch: PropTypes.bool,
   showSelectAll: PropTypes.bool,
   searchIcon: PropTypes.string,
-  deleteIcon: PropTypes.string
+  deleteIcon: PropTypes.string,
+    displaySelectedItemFunc: PropTypes.func
 };
 
 ReactMultiSelect.defaultProps = {
