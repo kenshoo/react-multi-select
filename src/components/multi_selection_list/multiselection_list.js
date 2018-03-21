@@ -197,7 +197,6 @@ class MultiSelectionList extends PureComponent {
         key={item.id}
         onDragStart={this.selectItem(item)}
         onClick={this.toggleItemSelected(item)}
-        onDoubleClick={this.selectSingle(item)}
       >
         {this.props.displayFn(item)}
       </li>
