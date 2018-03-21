@@ -13,16 +13,6 @@ import ReactMultiSelect from "../src/components/react_multi_select";
 import { boolean, withKnobs } from "@storybook/addon-knobs";
 import customStyle from "./custom_style.scss";
 
-const messages = {
-  [SOURCE_SEARCH_PLACEHOLDER]: "Search...",
-  [SOURCE_NO_ITEMS]: "No items...",
-  [DESTINATION_NO_ITEMS]: "No items...",
-  [DESTINATION_HEADER_NONE]: "None",
-  [DESTINATION_HEADER_SELECTED]: "Selected",
-  [DESTINATION_HEADER_SELECT_ALL]: "Select all",
-  [DESTINATION_HEADER_CLEAR_ALL]: "Clear all"
-};
-
 const custom_messages = {
   [SOURCE_SEARCH_PLACEHOLDER]: "Find...",
   [SOURCE_NO_ITEMS]: "No entries available...",
@@ -44,7 +34,6 @@ storiesOf("React Multi Select", module)
     return (
       <ReactMultiSelect
         items={items}
-        messages={messages}
         loading={boolean("Loading", false)}
         onChange={action("onChange")}
         showSearch={boolean("Show search", true)}
@@ -85,7 +74,8 @@ storiesOf("React Multi Select", module)
         wrapperClassName={customStyle.wrapper}
         listHeight={500}
         selectedListHeight={540}
-        messages={messages}
+        closeIcon={"delete"}
+        searchIcon={"star"}
         loading={boolean("Loading", false)}
         onChange={action("onChange")}
         showSearch={boolean("Show search", true)}
@@ -106,7 +96,6 @@ storiesOf("React Multi Select", module)
         items={items}
         listHeight={500}
         selectedListHeight={448}
-        messages={messages}
         loading={boolean("Loading", false)}
         onChange={action("onChange")}
         showSearch={false}
@@ -125,7 +114,6 @@ storiesOf("React Multi Select", module)
     return (
       <ReactMultiSelect
         items={items}
-        messages={messages}
         loading={boolean("Loading", false)}
         onChange={action("onChange")}
         showSearch={boolean("Show search", true)}
