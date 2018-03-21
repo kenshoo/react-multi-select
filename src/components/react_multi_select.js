@@ -116,7 +116,7 @@ export default class ReactMultiSelect extends PureComponent {
     return (
       <FormControlLabel
         className={styles.checkbox_control}
-        control={<Checkbox checked={selectedAll} color="primary" />}
+        control={<Checkbox checked={selectedAll} color="primary" indeterminate={selectedAll === 'partial'}/>}
         label={this.props.messages[DESTINATION_HEADER_SELECT_ALL]}
       />
     );
