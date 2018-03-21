@@ -1,16 +1,14 @@
-$item_font_color: #666666;
-$item_padding: 10px;
-$grouped_item_padding: 20px;
-$item_height: 40px;
-$list_height: 218px;
-$navigation_list_height: 178px;
-$list_width: 250px;
-$list_font_size: 12px;
-$list_error_color: #FF3333;
+@import "../../resources/globals";
+
+$item_font_color: $grey-600;
+$item_padding: $space-10;
+$grouped_item_padding: $space-20;
+$item_height: $space-40;
+$list_font_size: $font-default;
 
 .multi_selection_list {
   color: $item_font_color;
-  border: 1px solid #DDDDDD;
+  border: $border-1 solid $grey-350;
 }
 
 .list_filter_container {
@@ -28,15 +26,9 @@ $list_error_color: #FF3333;
 }
 
 .list_container {
-  height: $list_height;
   overflow-y: auto;
-  min-width: $list_width;
   position: relative;
   outline: none;
-}
-
-.list_error_tooltip {
-  max-width: 250px;
 }
 
 .list_item {
@@ -59,24 +51,13 @@ $list_error_color: #FF3333;
   }
 
   &.selected {
-    background-color: #f3f3f3;
-    color: #ffffff;
-  }
-
-  &.grouped {
-    padding-left: 10px;
-    width: initial;
+    background-color: $grey-200;
+    color: $color-white;
   }
 
   &:hover:not(.selected) {
-    background-color: #DFF8E5;
-    color: #ffffff;
-  }
-
-  &.locked, &.locked:hover {
-    cursor: default;
-    color: #b4b4b4;
-    background: #f3f3f3;
+    background-color: $blue-100;
+    color: $color-white;
   }
 }
 
@@ -84,7 +65,7 @@ $list_error_color: #FF3333;
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(#000000, 0.5);
+  background-color: rgba($color-black, 0.5);
   top: 0;
   left: 0;
   z-index: 99;
@@ -94,18 +75,18 @@ $list_error_color: #FF3333;
   display: flex;
   justify-content: space-between;
   margin-bottom: 0;
-  margin-left: 12px;
+  margin-left: $space-12;
 }
 
 .select_all {
-  border: 1px solid #DDDDDD;
+  border: $border-1 solid $grey-350;
   border-left: 0;
   border-right: 0;
-  padding: 0 10px;
-  height: 40px;
-  line-height: 40px;
+  padding: 0 $space-10;
+  height: $space-40;
+  line-height: $lineheight-40;
 
   &:hover {
-    background-color: #f3f3f3;
+    background-color: $grey-200;
   }
 }

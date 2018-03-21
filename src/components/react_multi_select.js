@@ -42,8 +42,8 @@ const displayItem = ({ isItemSelected }) => item => {
 };
 
 const displaySelectedItem = item => (
-  <div className={styles.dst_item_content}>
-    <div className={styles.dst_item_text}>{item.label}</div>
+  <div className={styles.destination_item_content}>
+    <div className={styles.destination_item_text}>{item.label}</div>
     <span className={styles.remove_button} />
     <Icon className={styles.remove_selected_icon}>close</Icon>
   </div>
@@ -131,7 +131,7 @@ export default class ReactMultiSelect extends PureComponent {
     const { selectedItems } = this.state;
 
     return (
-      <div className={styles.selected_header}>
+      <div className={styles.destination_header}>
         <div>
           {`${selectedItems.length || messages[DESTINATION_HEADER_NONE]} ` +
             messages[DESTINATION_HEADER_SELECTED]}
@@ -172,10 +172,10 @@ export default class ReactMultiSelect extends PureComponent {
         emptyText={messages[DESTINATION_NO_ITEMS]}
         displayFn={displaySelectedItem}
         className={classnames(
-          styles.dst_items_wrapper,
+          styles.destination_items_wrapper,
           dstItemsWrapperClassName
         )}
-        itemClassName={styles.dst_item}
+        itemClassName={styles.destination_item}
       />
     );
   }

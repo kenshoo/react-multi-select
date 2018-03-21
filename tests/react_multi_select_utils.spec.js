@@ -1,7 +1,7 @@
 import {
   filterItems,
   unionItemsForListToList
-} from "../src/react_multi_select_utils";
+} from "../src/components/react_multi_select_utils";
 
 describe("react_multi_select_utils", () => {
   describe("filterItems", () => {

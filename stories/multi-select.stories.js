@@ -8,8 +8,8 @@ import {
   DESTINATION_NO_ITEMS,
   SOURCE_NO_ITEMS,
   SOURCE_SEARCH_PLACEHOLDER
-} from "../src/react_multi_select_messages";
-import ReactMultiSelect from "../src/react_multi_select";
+} from "../src/components/react_multi_select_messages";
+import ReactMultiSelect from "../src/components/react_multi_select";
 import { withKnobs, boolean } from "@storybook/addon-knobs";
 
 const messages = {
@@ -41,8 +41,8 @@ storiesOf("React Multi Select", module)
       />
     );
   })
-  .add("Large Data", () => {
-    const items = Array.apply(null, { length: 20000 }).map((i, index) => {
+  .add("Large Data (7000 items)", () => {
+    const items = Array.apply(null, { length: 7000 }).map((i, index) => {
       return {
         id: index,
         label: `Item ${index}`
