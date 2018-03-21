@@ -9,6 +9,9 @@ $list_font_size: $font-default;
 .multi_selection_list {
   color: $item_font_color;
   border: $border-1 solid $grey-350;
+  &:first-of-type {
+    border-right: 0;
+  }
 }
 
 .list_filter_container {

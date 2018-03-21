@@ -4,10 +4,10 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  outline: none;
 }
 
 .no_items {
-  font-size: $font-default;
   font-size: $font-default;
   color: $grey-450;
   display: flex;
