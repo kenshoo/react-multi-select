@@ -22,7 +22,7 @@ import { FormControlLabel } from "material-ui/Form";
 import MultiSelectionList from "./multi_selection_list/multiselection_list";
 
 export const ITEMS_LIST_HEIGHT = 320;
-export const SELECTED_ITEMS_LIST_HEIGHT = 360;
+export const SELECTED_ITEMS_LIST_HEIGHT = 361;
 export const LIST_ROW_HEIGHT = 40;
 
 const displayItem = ({ isItemSelected }) => item => {
