@@ -11,7 +11,7 @@ import {
 import {
   DESTINATION_HEADER_CLEAR_ALL,
   DESTINATION_HEADER_NONE,
-  DESTINATION_HEADER_SELECT_ALL,
+  SOURCE_HEADER_SELECT_ALL,
   DESTINATION_HEADER_SELECTED,
   DESTINATION_NO_ITEMS,
   SOURCE_NO_ITEMS,
@@ -41,11 +41,11 @@ const displayItem = ({ isItemSelected }) => item => {
   );
 };
 
-const displaySelectedItem = item => (
+const displaySelectedItem = (item, props) => (
   <div className={styles.destination_item_content}>
     <div className={styles.destination_item_text}>{item.label}</div>
     <span className={styles.remove_button} />
-    <Icon className={styles.remove_selected_icon}>close</Icon>
+    <Icon className={styles.remove_selected_icon}>{props.deleteIcon}</Icon>
   </div>
 );
 
@@ -116,8 +116,14 @@ export default class ReactMultiSelect extends PureComponent {
     return (
       <FormControlLabel
         className={styles.checkbox_control}
-        control={<Checkbox checked={selectedAll} color="primary" indeterminate={selectedAll === 'partial'}/>}
-        label={this.props.messages[DESTINATION_HEADER_SELECT_ALL]}
+        control={
+          <Checkbox
+            checked={selectedAll}
+            color="primary"
+            indeterminate={selectedAll === "partial"}
+          />
+        }
+        label={this.props.messages[SOURCE_HEADER_SELECT_ALL]}
       />
     );
   };
@@ -149,7 +155,6 @@ export default class ReactMultiSelect extends PureComponent {
   renderDestinationList() {
     const {
       messages,
-      errors,
       listRowHeight,
       selectedListHeight,
       dstItemsWrapperClassName
@@ -162,12 +167,11 @@ export default class ReactMultiSelect extends PureComponent {
         withSelectAll={false}
         items={selectedItems}
         onSelect={this.deselectItem}
-        error={errors.dest}
         isVirtualized={true}
         listHeight={selectedListHeight}
         listRowHeight={listRowHeight}
         emptyText={messages[DESTINATION_NO_ITEMS]}
-        displayFn={displaySelectedItem}
+        displayFn={displayFn => displaySelectedItem(displayFn, this.props)}
         className={classnames(
           styles.destination_items_wrapper,
           dstItemsWrapperClassName
@@ -180,12 +184,12 @@ export default class ReactMultiSelect extends PureComponent {
   renderSourceList() {
     const {
       messages,
-      errors,
       listHeight,
       listRowHeight,
       searchFilterDelay,
       showSearch,
-      showSelectAll
+      showSelectAll,
+      searchIcon
     } = this.props;
     const { filteredItems } = this.state;
 
@@ -200,7 +204,6 @@ export default class ReactMultiSelect extends PureComponent {
         displayFn={displayItem({ isItemSelected: this.isItemSelected })}
         filterFn={filterItems}
         displaySelectAllFn={this.displaySelectAll}
-        error={errors.src}
         filterSelected={false}
         isVirtualized={true}
         listHeight={listHeight}
@@ -208,6 +211,7 @@ export default class ReactMultiSelect extends PureComponent {
         msDelayOnChangeFilter={searchFilterDelay}
         searchPlaceholder={messages[SOURCE_SEARCH_PLACEHOLDER]}
         emptyText={messages[SOURCE_NO_ITEMS]}
+        searchIcon={searchIcon}
       />
     );
   }
@@ -238,8 +242,7 @@ ReactMultiSelect.propTypes = {
       id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
       value: PropTypes.string,
       label: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
-        .isRequired,
-      icons: PropTypes.arrayOf(PropTypes.string)
+        .isRequired
     })
   ).isRequired,
   selectedItems: PropTypes.arrayOf(
@@ -247,28 +250,35 @@ ReactMultiSelect.propTypes = {
       id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
       value: PropTypes.string,
       label: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
-        .isRequired,
-      icons: PropTypes.arrayOf(PropTypes.string)
+        .isRequired
     })
   ),
   loading: PropTypes.bool,
   messages: PropTypes.object,
-  errors: PropTypes.object,
   onChange: PropTypes.func,
   showSearch: PropTypes.bool,
-  showSelectAll: PropTypes.bool
+  showSelectAll: PropTypes.bool,
+  searchIcon: PropTypes.string,
+  deleteIcon: PropTypes.string
 };
 
 ReactMultiSelect.defaultProps = {
   items: [],
   selectedItems: [],
-  errors: {
-    src: {},
-    dest: {}
-  },
   showSearch: true,
   showSelectAll: true,
+  searchIcon: "search",
+  deleteIcon: "close",
   listHeight: ITEMS_LIST_HEIGHT,
   selectedListHeight: SELECTED_ITEMS_LIST_HEIGHT,
-  listRowHeight: LIST_ROW_HEIGHT
+  listRowHeight: LIST_ROW_HEIGHT,
+  messages: {
+    [SOURCE_SEARCH_PLACEHOLDER]: "Search...",
+    [SOURCE_NO_ITEMS]: "No items...",
+    [DESTINATION_NO_ITEMS]: "No items...",
+    [DESTINATION_HEADER_NONE]: "None",
+    [DESTINATION_HEADER_SELECTED]: "Selected",
+    [SOURCE_HEADER_SELECT_ALL]: "Select all",
+    [DESTINATION_HEADER_CLEAR_ALL]: "Clear all"
+  }
 };
