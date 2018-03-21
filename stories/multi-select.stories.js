@@ -1,5 +1,5 @@
 import React from "react";
-import { storiesOf, action } from "@storybook/react";
+import { action, storiesOf } from "@storybook/react";
 import {
   DESTINATION_HEADER_CLEAR_ALL,
   DESTINATION_HEADER_NONE,
@@ -10,7 +10,8 @@ import {
   SOURCE_SEARCH_PLACEHOLDER
 } from "../src/components/react_multi_select_messages";
 import ReactMultiSelect from "../src/components/react_multi_select";
-import { withKnobs, boolean } from "@storybook/addon-knobs";
+import { boolean, withKnobs } from "@storybook/addon-knobs";
+import customStyle from "./custom_style.scss";
 
 const messages = {
   [SOURCE_SEARCH_PLACEHOLDER]: "Search...",
@@ -22,12 +23,22 @@ const messages = {
   [DESTINATION_HEADER_CLEAR_ALL]: "Clear all"
 };
 
+const custom_messages = {
+  [SOURCE_SEARCH_PLACEHOLDER]: "Find...",
+  [SOURCE_NO_ITEMS]: "No entries available...",
+  [DESTINATION_NO_ITEMS]: "No entries available...",
+  [DESTINATION_HEADER_NONE]: "Nothing",
+  [DESTINATION_HEADER_SELECTED]: "Checked",
+  [DESTINATION_HEADER_SELECT_ALL]: "Check all",
+  [DESTINATION_HEADER_CLEAR_ALL]: "Uncheck all"
+};
+
 storiesOf("React Multi Select", module)
   .addDecorator(withKnobs)
   .add("Simple", () => {
-    const items = [1, 2, 4, 5, 6, 7, 8, 9, 10].map(i => ({
-      id: i,
-      label: `Item ${i}`
+    const items = Array.apply(null, { length: 10 }).map((i, index) => ({
+      id: index,
+      label: `Item ${index}`
     }));
 
     return (
@@ -38,6 +49,68 @@ storiesOf("React Multi Select", module)
         onChange={action("onChange")}
         showSearch={boolean("Show search", true)}
         showSelectAll={boolean("Show select all", true)}
+      />
+    );
+  })
+  .add("Custom Messages", () => {
+    const items = Array.apply(null, { length: 10 }).map((i, index) => {
+      return {
+        id: index,
+        label: `Item ${index}`
+      };
+    });
+
+    return (
+      <ReactMultiSelect
+        items={items}
+        messages={custom_messages}
+        loading={boolean("Loading", false)}
+        onChange={action("onChange")}
+        showSearch={boolean("Show search", true)}
+        showSelectAll={boolean("Show select all", true)}
+      />
+    );
+  })
+  .add("Custom Styling", () => {
+    const items = Array.apply(null, { length: 50 }).map((i, index) => {
+      return {
+        id: index,
+        label: `Item ${index}`
+      };
+    });
+
+    return (
+      <ReactMultiSelect
+        items={items}
+        wrapperClassName={customStyle.wrapper}
+        listHeight={500}
+        selectedListHeight={540}
+        messages={messages}
+        loading={boolean("Loading", false)}
+        onChange={action("onChange")}
+        showSearch={boolean("Show search", true)}
+        showSelectAll={boolean("Show select all", true)}
+      />
+    );
+  })
+  .add("Toggle Search and Select all", () => {
+    const items = Array.apply(null, { length: 50 }).map((i, index) => {
+      return {
+        id: index,
+        label: `Item ${index}`
+      };
+    });
+
+    return (
+      <ReactMultiSelect
+        items={items}
+        listHeight={500}
+        selectedListHeight={448}
+        messages={messages}
+        loading={boolean("Loading", false)}
+        onChange={action("onChange")}
+        showSearch={false}
+        showSelectAll={false}
       />
     );
   })
