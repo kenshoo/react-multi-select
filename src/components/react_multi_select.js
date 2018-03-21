@@ -186,7 +186,6 @@ export default class ReactMultiSelect extends PureComponent {
       messages,
       listHeight,
       listRowHeight,
-      searchFilterDelay,
       showSearch,
       showSelectAll,
       searchIcon
@@ -208,7 +207,6 @@ export default class ReactMultiSelect extends PureComponent {
         isVirtualized={true}
         listHeight={listHeight}
         listRowHeight={listRowHeight}
-        msDelayOnChangeFilter={searchFilterDelay}
         searchPlaceholder={messages[SOURCE_SEARCH_PLACEHOLDER]}
         emptyText={messages[SOURCE_NO_ITEMS]}
         searchIcon={searchIcon}
