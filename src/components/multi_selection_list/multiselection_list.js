@@ -5,7 +5,6 @@ import findIndex from "lodash/findIndex";
 import union from "lodash/union";
 import xor from "lodash/xor";
 import PropTypes from "prop-types";
-import Waypoint from "react-waypoint";
 import classNames from "classnames/bind";
 import styles from "./multiselection_list.scss";
 import { LinearProgress } from "material-ui/Progress";
@@ -28,10 +27,6 @@ class MultiSelectionList extends PureComponent {
 
     this.handleFilter = this.handleFilter.bind(this);
     this.onSelectAllClick = this.onSelectAllClick.bind(this);
-    this.onSelectGroupClick = this.onSelectGroupClick.bind(this);
-    this.onDeselectGroupClick = this.onDeselectGroupClick.bind(this);
-    this.onEnter = this.onEnter.bind(this);
-    this.handleExternalFilter = this.handleExternalFilter.bind(this);
     this.onSearchTermChange = this.onSearchTermChange.bind(this);
     this.changeSelectedState = this.changeSelectedState.bind(this);
     this.item.bind(this);
@@ -39,29 +34,12 @@ class MultiSelectionList extends PureComponent {
 
   componentWillReceiveProps({
     items,
-    selectedIds,
-    customFilter,
-    isRemoteFilter
+    selectedIds
   }) {
     if (
       this.isItemsNotChanged(this.props.items, items) &&
-      xor(selectedIds, this.props.selectedIds).length == 0
+      xor(selectedIds, this.props.selectedIds).length === 0
     ) {
-      return;
-    }
-
-    if (customFilter || isRemoteFilter) {
-      this.setState(
-        {
-          items,
-          selectedAll: this.calculateSelectedAll(this.state.selected, items)
-        },
-        () => {
-          if (this.state.searchTerm) {
-            this.handleFilter(this.state.searchTerm);
-          }
-        }
-      );
       return;
     }
 
@@ -82,25 +60,15 @@ class MultiSelectionList extends PureComponent {
   }
 
   componentDidUpdate() {
-    this.virtualizedListItemsRef.triggerForceUpdateGrid();
+      this.virtualizedListItemsRef.triggerForceUpdateGrid();
   }
 
   isItemsNotChanged(prevItems, nextItems) {
-    return nextItems === prevItems || xor(nextItems, prevItems).length == 0;
-  }
-
-  onEnter(props) {
-    if (this.state.items.length >= this.props.sumItemsInPageForLazyLoad) {
-      this.props.onEnter(props, this.state.items.length, this.state.searchTerm);
-    }
+    return nextItems === prevItems || xor(nextItems, prevItems).length === 0;
   }
 
   selectItem(item) {
     return () => {
-      if (this.props.isItemLockedFn(item)) {
-        return;
-      }
-
       const { id } = item;
       if (this.state.selected.includes(id)) {
         return;
@@ -113,20 +81,15 @@ class MultiSelectionList extends PureComponent {
     };
   }
 
-  waypoint() {
-    return <Waypoint onEnter={this.onEnter} />;
-  }
-
   handleMultiSelect(id) {
     const selected = [...this.state.selected];
     const clickedIndex = findIndex(this.state.items, { id });
     const { lastSelectedIndex, items } = this.state;
-    const { isItemLockedFn } = this.props;
 
     const fromIndex = Math.min(
       clickedIndex,
       lastSelectedIndex == null
-        ? items.filter(isItemLockedFn).length
+        ? 0
         : lastSelectedIndex
     );
     const toIndex = Math.max(clickedIndex, lastSelectedIndex);
@@ -142,10 +105,6 @@ class MultiSelectionList extends PureComponent {
 
   toggleItemSelected(item) {
     return e => {
-      if (this.props.isItemLockedFn(item)) {
-        return;
-      }
-
       const { id } = item;
       if (e.shiftKey) {
         return this.handleMultiSelect(id);
@@ -170,22 +129,15 @@ class MultiSelectionList extends PureComponent {
 
   selectSingle(item) {
     return () => {
-      if (this.props.isItemLockedFn(item)) {
-        return;
-      }
-
       const { id } = item;
-      const { onDoubleClick } = this.props;
-
       this.setState({ selected: [id] }, () => {
         this.onSelectedChange();
-        onDoubleClick();
       });
     };
   }
 
   handleFilter(value, forceFilterSelected = false) {
-    const { items, filterFn } = this.props;
+    const { items, filterFn, filterSelected } = this.props;
     const { selected } = this.state;
 
     const newList = items.filter(filterFn(value));
@@ -194,20 +146,11 @@ class MultiSelectionList extends PureComponent {
       {
         items: newList,
         searchTerm: value,
-        ...(this.props.filterSelected || forceFilterSelected
+        ...(filterSelected || forceFilterSelected
           ? { selected: selected.filter(id => find(newList, { id })) }
           : {})
       },
       this.onSelectedChange
-    );
-  }
-
-  handleExternalFilter(value) {
-    this.setState(
-      {
-        searchTerm: value
-      },
-      this.props.onFilterChange(value)
     );
   }
 
@@ -225,24 +168,6 @@ class MultiSelectionList extends PureComponent {
     this.setState({ selected: newSelected }, this.onSelectedChange);
   }
 
-  onSelectGroupClick(groupItemIds) {
-    const { items, selected } = this.state;
-    const newSelected = items
-      .map(({ id }) => id)
-      .filter(id => groupItemIds.includes(id));
-
-    this.setState(
-      { selected: union(selected, newSelected) },
-      this.onSelectedChange
-    );
-  }
-
-  onDeselectGroupClick(groupItemIds) {
-    const { selected } = this.state;
-    const newSelected = selected.filter(id => !groupItemIds.includes(id));
-    this.setState({ selected: newSelected }, this.onSelectedChange);
-  }
-
   onOrderChanged() {
     this.props.onOrderChanged(this.state.items);
   }
@@ -250,14 +175,6 @@ class MultiSelectionList extends PureComponent {
   onSelectedChange() {
     this.props.onSelect(this.state.selected);
     this.alignSelectedAll();
-    this.sortItems();
-  }
-
-  sortItems() {
-    const { items } = this.state;
-    const { sortFn } = this.props;
-
-    this.setState({ items: sortFn(items) });
   }
 
   alignSelectedAll() {
@@ -300,11 +217,8 @@ class MultiSelectionList extends PureComponent {
   }
 
   onSearchTermChange(event) {
-    const { lazyLoad } = this.props;
     const newValue = event.target.value;
-    lazyLoad
-      ? this.handleExternalFilter(newValue)
-      : this.handleFilter(newValue);
+    this.handleFilter(newValue);
   }
 
   listFilter() {
@@ -338,7 +252,6 @@ class MultiSelectionList extends PureComponent {
       withSelectAll,
       selectAllClassName,
       displaySelectAllFn,
-      lazyLoad,
       filterResultsText,
       emptyText,
       listHeight,
@@ -373,7 +286,6 @@ class MultiSelectionList extends PureComponent {
                 emptyText={emptyText}
                 searchTerm={this.state.searchTerm}
               />
-              {lazyLoad && this.waypoint()}
             </div>
           )}
         </div>
@@ -391,17 +303,12 @@ MultiSelectionList.propTypes = {
   displayFn: PropTypes.func,
   displaySelectAllFn: PropTypes.func,
   filterFn: PropTypes.func,
-  sortFn: PropTypes.func,
-  onDoubleClick: PropTypes.func,
   withSearch: PropTypes.bool,
   filterSelected: PropTypes.bool,
   onSelect: PropTypes.func,
   onOrderChanged: PropTypes.func,
   onFilterChange: PropTypes.func,
-  onEnter: PropTypes.func,
-  sumItemsInPageForLazyLoad: PropTypes.number,
   msDelayOnChangeFilter: PropTypes.number,
-  isRemoteFilter: PropTypes.bool
 };
 
 MultiSelectionList.defaultProps = {
@@ -410,10 +317,7 @@ MultiSelectionList.defaultProps = {
   searchPlaceholder: "Search...",
   emptyText: "No items...",
   filterResultsText: "No available items...",
-  selectGroupLabel: "Select all",
-  deselectGroupLabel: "Deselect all",
   displayFn: item => item.id,
-  isItemLockedFn: item => false,
   displaySelectAllFn: selectedAll =>
     `${(selectedAll === true && "✓") ||
       ((selectedAll === "partial" && "-") || "")} All`,
@@ -421,17 +325,11 @@ MultiSelectionList.defaultProps = {
     String(item.id)
       .toLowerCase()
       .includes(value.toLowerCase()),
-  onDoubleClick: () => {},
   withSearch: true,
   filterSelected: true,
-  sortFn: items => items,
   onSelect: () => {},
   onOrderChanged: () => {},
-  onFilterChange: () => {},
-  onEnter: () => {},
-  withNavigation: false,
-  sumItemsInPageForLazyLoad: 100,
-  isRemoteFilter: false
+  onFilterChange: () => {}
 };
 
 export default MultiSelectionList;
