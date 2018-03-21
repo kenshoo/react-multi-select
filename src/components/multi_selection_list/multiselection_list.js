@@ -10,8 +10,8 @@ import styles from "./multiselection_list.scss";
 import { LinearProgress } from "material-ui/Progress";
 import { isAllSelected } from "./multiselection_list_utils";
 import VirtualizedListItems from "./virtualized_items/multiselection_virtualized_items";
-import { FormControl } from 'material-ui/Form';
-import Input, { InputAdornment } from 'material-ui/Input';
+import { FormControl } from "material-ui/Form";
+import Input, { InputAdornment } from "material-ui/Input";
 import Icon from "material-ui/Icon";
 
 class MultiSelectionList extends PureComponent {
@@ -33,10 +33,7 @@ class MultiSelectionList extends PureComponent {
     this.item.bind(this);
   }
 
-  componentWillReceiveProps({
-    items,
-    selectedIds
-  }) {
+  componentWillReceiveProps({ items, selectedIds }) {
     if (
       this.isItemsNotChanged(this.props.items, items) &&
       xor(selectedIds, this.props.selectedIds).length === 0
@@ -61,7 +58,7 @@ class MultiSelectionList extends PureComponent {
   }
 
   componentDidUpdate() {
-      this.virtualizedListItemsRef.triggerForceUpdateGrid();
+    this.virtualizedListItemsRef.triggerForceUpdateGrid();
   }
 
   isItemsNotChanged(prevItems, nextItems) {
@@ -89,9 +86,7 @@ class MultiSelectionList extends PureComponent {
 
     const fromIndex = Math.min(
       clickedIndex,
-      lastSelectedIndex == null
-        ? 0
-        : lastSelectedIndex
+      lastSelectedIndex == null ? 0 : lastSelectedIndex
     );
     const toIndex = Math.max(clickedIndex, lastSelectedIndex);
 
@@ -223,7 +218,7 @@ class MultiSelectionList extends PureComponent {
   }
 
   listFilter() {
-    const { searchPlaceholder } = this.props;
+    const { searchPlaceholder, searchIcon } = this.props;
 
     return (
       <FormControl
@@ -241,21 +236,19 @@ class MultiSelectionList extends PureComponent {
           className={styles.input}
           endAdornment={
             <InputAdornment position="end">
-              <Icon>search</Icon>
+              <Icon>{searchIcon}</Icon>
             </InputAdornment>
-          }/>
+          }
+        />
       </FormControl>
     );
   }
 
   render() {
     const {
-      error,
-      className,
       loading,
       withSearch,
       withSelectAll,
-      selectAllClassName,
       displaySelectAllFn,
       filterResultsText,
       emptyText,
@@ -313,7 +306,7 @@ MultiSelectionList.propTypes = {
   onSelect: PropTypes.func,
   onOrderChanged: PropTypes.func,
   onFilterChange: PropTypes.func,
-  msDelayOnChangeFilter: PropTypes.number,
+  msDelayOnChangeFilter: PropTypes.number
 };
 
 MultiSelectionList.defaultProps = {
