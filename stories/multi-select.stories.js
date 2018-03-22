@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { action, storiesOf } from "@storybook/react";
 import {
   DESTINATION_HEADER_CLEAR_ALL,
@@ -11,6 +11,8 @@ import {
 } from "../src/components/react_multi_select_messages";
 import ReactMultiSelect from "../src/components/react_multi_select";
 import { boolean, withKnobs } from "@storybook/addon-knobs";
+import Icon from "material-ui/Icon";
+import Input from "material-ui/Input";
 import customStyle from "./custom_style.scss";
 
 const custom_messages = {
@@ -74,8 +76,6 @@ storiesOf("React Multi Select", module)
         wrapperClassName={customStyle.wrapper}
         listHeight={500}
         selectedListHeight={540}
-        deleteIcon={"delete"}
-        searchIcon={"star"}
         loading={boolean("Loading", false)}
         onChange={action("onChange")}
         showSearch={boolean("Show search", true)}
@@ -118,6 +118,43 @@ storiesOf("React Multi Select", module)
         onChange={action("onChange")}
         showSearch={boolean("Show search", true)}
         showSelectAll={boolean("Show select all", true)}
+      />
+    );
+  })
+  .add("With custom components", () => {
+    const items = Array.apply(null, { length: 10 }).map((i, index) => ({
+      id: index,
+      value: `item ${index}`,
+      label: (
+        <div>
+          <Icon>star</Icon>
+          {`Item ${index}`}
+        </div>
+      )
+    }));
+
+    const displaySelectedItemFunc = item => (
+      <div>{`selected: ${item.value}`}</div>
+    );
+
+    const searchRenderer = ({ searchTerm, onSearchTermChange }) => {
+      return (
+        <div>
+          custom search{" "}
+          <input value={searchTerm} onChange={onSearchTermChange} />
+        </div>
+      );
+    };
+
+    return (
+      <ReactMultiSelect
+        displaySelectedItemFunc={displaySelectedItemFunc}
+        items={items}
+        loading={boolean("Loading", false)}
+        onChange={action("onChange")}
+        showSearch={boolean("Show search", true)}
+        showSelectAll={boolean("Show select all", true)}
+        searchRenderer={searchRenderer}
       />
     );
   });
