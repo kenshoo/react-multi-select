@@ -52,8 +52,6 @@
     "jest-junit": "^3.1.0",
     "jest-sandbox": "^1.1.1",
     "jsdom": "^11.3.0",
-    "json-loader": "^0.5.4",
-    "lodash": "^4.17.5",
     "node-sass": "^4.5.0",
     "nodemon": "^1.9.1",
     "postcss-loader": "^2.0.6",
@@ -68,8 +66,7 @@
     "semantic-release": "^8.2.0",
     "storybook-readme": "3.0.6",
     "style-loader": "^0.18.2",
-    "svg-inline-loader": "^0.8.0",
-    "webpack": "^3.6.0",
+    "webpack": "^4.2.0",
     "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^2.2.0",
     "webpack-merge": "^4.1.2",
@@ -81,6 +78,7 @@
   },
   "dependencies": {
     "classnames": "2.2.5",
+    "lodash": "^4.17.5",
     "material-ui": "^1.0.0-beta.25",
     "prop-types": "^15.5.8",
     "react-virtualized": "^9.18.5"

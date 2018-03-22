@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
 import styles from "./multiselection_virtualized_items.scss";
-import { AutoSizer, List } from "react-virtualized";
+import { AutoSizer } from "react-virtualized/dist/commonjs/AutoSizer";
+import { List } from "react-virtualized/dist/commonjs/List";
 import PropTypes from "prop-types";
 
 export const OVERSCAN_ROW_COUNT = 10;
