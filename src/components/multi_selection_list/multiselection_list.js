@@ -10,9 +10,7 @@ import styles from "./multiselection_list.scss";
 import { LinearProgress } from "material-ui/Progress";
 import { isAllSelected } from "./multiselection_list_utils";
 import VirtualizedListItems from "./virtualized_items/multiselection_virtualized_items";
-import { FormControl } from "material-ui/Form";
-import Input, { InputAdornment } from "material-ui/Input";
-import Icon from "material-ui/Icon";
+import Search from './search/search';
 
 class MultiSelectionList extends PureComponent {
   constructor(props) {
@@ -123,6 +121,15 @@ class MultiSelectionList extends PureComponent {
     };
   }
 
+  selectSingle(item) {
+    return () => {
+      const { id } = item;
+      this.setState({ selected: [id] }, () => {
+        this.onSelectedChange();
+      });
+    };
+  }
+
   handleFilter(value, forceFilterSelected = false) {
     const { items, filterFn, filterSelected } = this.props;
     const { selected } = this.state;
@@ -153,6 +160,10 @@ class MultiSelectionList extends PureComponent {
         : union(selected, items.map(({ id }) => id));
 
     this.setState({ selected: newSelected }, this.onSelectedChange);
+  }
+
+  onOrderChanged() {
+    this.props.onOrderChanged(this.state.items);
   }
 
   onSelectedChange() {
@@ -203,38 +214,6 @@ class MultiSelectionList extends PureComponent {
     this.handleFilter(newValue);
   }
 
-  listFilter() {
-    const { searchPlaceholder, searchIcon, searchComponent } = this.props;
-
-      return (
-              searchComponent ?
-                  React.cloneElement(searchComponent, {
-                      value: this.state.searchTerm,
-                      onChange: this.onSearchTermChange
-                  }) :
-                  <FormControl
-                      className={classNames(
-                          styles.list_filter_container,
-                          styles.search_wrapper
-                      )}
-                      fullWidth
-                  >
-                      <Input
-                          id="search"
-                          value={this.state.searchTerm}
-                          placeholder={searchPlaceholder}
-                          onChange={this.onSearchTermChange}
-                          className={styles.input}
-                          endAdornment={
-                              <InputAdornment position="end">
-                                  <Icon>{searchIcon}</Icon>
-                              </InputAdornment>
-                          }
-                      />
-                  </FormControl>
-      );
-  }
-
   render() {
     const {
       loading,
@@ -244,12 +223,18 @@ class MultiSelectionList extends PureComponent {
       filterResultsText,
       emptyText,
       listHeight,
-      listRowHeight
+      listRowHeight,
+      searchRenderer
     } = this.props;
+
+    const SearchRenderer = searchRenderer;
 
     return (
       <div className={styles.multi_selection_list}>
-        {withSearch && this.listFilter()}
+          {withSearch &&
+          <div className={styles.search_wrapper}>
+              <SearchRenderer searchTerm={this.state.searchTerm} onSearchTermChange={this.onSearchTermChange}/>
+          </div>}
 
         <div className={styles.list_box}>
           {withSelectAll && (
@@ -286,7 +271,6 @@ class MultiSelectionList extends PureComponent {
 MultiSelectionList.propTypes = {
   items: PropTypes.array,
   selectedIds: PropTypes.array,
-  searchPlaceholder: PropTypes.string,
   emptyText: PropTypes.string,
   filterResultsText: PropTypes.string,
   displayFn: PropTypes.func,
@@ -294,13 +278,16 @@ MultiSelectionList.propTypes = {
   filterFn: PropTypes.func,
   withSearch: PropTypes.bool,
   filterSelected: PropTypes.bool,
-  onSelect: PropTypes.func
+  onSelect: PropTypes.func,
+  onOrderChanged: PropTypes.func,
+  onFilterChange: PropTypes.func,
+  msDelayOnChangeFilter: PropTypes.number,
+  searchRenderer: PropTypes.func
 };
 
 MultiSelectionList.defaultProps = {
   items: [],
   selectedIds: [],
-  searchPlaceholder: "Search...",
   emptyText: "No items...",
   filterResultsText: "No available items...",
   displayFn: item => item.id,
@@ -313,7 +300,10 @@ MultiSelectionList.defaultProps = {
       .includes(value.toLowerCase()),
   withSearch: true,
   filterSelected: true,
-  onSelect: () => {}
+  onSelect: () => {},
+  onOrderChanged: () => {},
+  onFilterChange: () => {},
+  searchRenderer: Search
 };
 
 export default MultiSelectionList;

@@ -31,7 +31,7 @@ const displayItem = ({ isItemSelected }) => item => {
       className={styles.checkbox_control}
       control={
         <Checkbox
-          value={item.label}
+          value={item.value}
           checked={isItemSelected(item)}
           color="primary"
         />
@@ -158,7 +158,7 @@ export default class ReactMultiSelect extends PureComponent {
       listRowHeight,
       selectedListHeight,
       dstItemsWrapperClassName,
-        selectedItemFunc
+      selectedItemRenderer
     } = this.props;
     const { selectedItems } = this.state;
 
@@ -172,7 +172,7 @@ export default class ReactMultiSelect extends PureComponent {
         listHeight={selectedListHeight}
         listRowHeight={listRowHeight}
         emptyText={messages[DESTINATION_NO_ITEMS]}
-        displayFn={selectedItemFunc ? selectedItemFunc : displayFn => displaySelectedItem(displayFn, this.props)}
+        displayFn={selectedItemRenderer  ? item => selectedItemRenderer(item) : displayFn => displaySelectedItem(displayFn, this.props)}
         className={classnames(
           styles.destination_items_wrapper,
           dstItemsWrapperClassName
@@ -190,7 +190,7 @@ export default class ReactMultiSelect extends PureComponent {
       showSearch,
       showSelectAll,
       searchIcon,
-      searchComponent
+      searchRenderer
     } = this.props;
     const { filteredItems } = this.state;
 
@@ -201,7 +201,7 @@ export default class ReactMultiSelect extends PureComponent {
         items={filteredItems}
         onSelect={this.select}
         withSearch={showSearch}
-        searchComponent={searchComponent}
+        searchRenderer={searchRenderer}
         withSelectAll={showSelectAll}
         displayFn={displayItem({ isItemSelected: this.isItemSelected })}
         filterFn={filterItems}
@@ -261,7 +261,8 @@ ReactMultiSelect.propTypes = {
   showSelectAll: PropTypes.bool,
   searchIcon: PropTypes.string,
   deleteIcon: PropTypes.string,
-    displaySelectedItemFunc: PropTypes.func
+  searchRenderer: PropTypes.func,
+  selectedItemRenderer: PropTypes.func
 };
 
 ReactMultiSelect.defaultProps = {

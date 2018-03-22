@@ -129,25 +129,23 @@ storiesOf("React Multi Select", module)
             label: <div><Icon>star</Icon>{`Item ${index}`}</div>
         }));
 
-        const selectedItemFunc = () => <div>selected</div>;
+        const displaySelectedItemFunc = (item) => <div>{`selected: ${item.value}`}</div>;
 
-        class SearchComponent extends Component {
-            render() {
-                return (
-                    <div>custom search <Input value={this.props.value} onChange={this.props.onChange}/></div>
-                );
-            }
-        }
+        const searchRenderer = ({searchTerm, onSearchTermChange}) => {
+            return (
+                <div>custom search <input value={searchTerm} onChange={onSearchTermChange}/></div>
+            );
+        };
 
         return (
             <ReactMultiSelect
-                selectedItemFunc={selectedItemFunc}
+                displaySelectedItemFunc={displaySelectedItemFunc}
                 items={items}
                 loading={boolean("Loading", false)}
                 onChange={action("onChange")}
                 showSearch={boolean("Show search", true)}
                 showSelectAll={boolean("Show select all", true)}
-                searchComponent={<SearchComponent/>}
+                searchRenderer={searchRenderer}
             />
         );
 });

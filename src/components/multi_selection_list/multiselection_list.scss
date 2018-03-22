@@ -14,11 +14,6 @@ $list_font_size: $font-default;
   }
 }
 
-.list_filter_container {
-  margin-bottom: 10px;
-  position: relative;
-}
-
 .search_icon {
   padding: 15px;
   padding-bottom: 0;
@@ -74,20 +69,6 @@ $list_font_size: $font-default;
   z-index: 99;
 }
 
-.search_wrapper {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 0;
-  height: $space-50 + 1;
-}
-
-.input {
-  height: $space-50;
-  padding: 0 $space-12;
-  display: flex;
-  align-items: center;
-}
-
 .select_all {
   border: $border-1 solid $grey-350;
   border-left: 0;
@@ -99,4 +80,13 @@ $list_font_size: $font-default;
   &:hover {
     background-color: $grey-200;
   }
+}
+
+.search_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0;
+  height: $space-50 + 1;
+  border-right: $border-1 solid $grey-350;
+  width: 100%;
 }
