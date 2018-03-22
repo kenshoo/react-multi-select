@@ -10,7 +10,7 @@ import styles from "./multiselection_list.scss";
 import { LinearProgress } from "material-ui/Progress";
 import { isAllSelected } from "./multiselection_list_utils";
 import VirtualizedListItems from "./virtualized_items/multiselection_virtualized_items";
-import Search from './search/search';
+import Search from "./search/search";
 
 class MultiSelectionList extends PureComponent {
   constructor(props) {
@@ -121,15 +121,6 @@ class MultiSelectionList extends PureComponent {
     };
   }
 
-  selectSingle(item) {
-    return () => {
-      const { id } = item;
-      this.setState({ selected: [id] }, () => {
-        this.onSelectedChange();
-      });
-    };
-  }
-
   handleFilter(value, forceFilterSelected = false) {
     const { items, filterFn, filterSelected } = this.props;
     const { selected } = this.state;
@@ -160,10 +151,6 @@ class MultiSelectionList extends PureComponent {
         : union(selected, items.map(({ id }) => id));
 
     this.setState({ selected: newSelected }, this.onSelectedChange);
-  }
-
-  onOrderChanged() {
-    this.props.onOrderChanged(this.state.items);
   }
 
   onSelectedChange() {
@@ -231,10 +218,14 @@ class MultiSelectionList extends PureComponent {
 
     return (
       <div className={styles.multi_selection_list}>
-          {withSearch &&
+        {withSearch && (
           <div className={styles.search_wrapper}>
-              <SearchRenderer searchTerm={this.state.searchTerm} onSearchTermChange={this.onSearchTermChange}/>
-          </div>}
+            <SearchRenderer
+              searchTerm={this.state.searchTerm}
+              onSearchTermChange={this.onSearchTermChange}
+            />
+          </div>
+        )}
 
         <div className={styles.list_box}>
           {withSelectAll && (
@@ -279,7 +270,6 @@ MultiSelectionList.propTypes = {
   withSearch: PropTypes.bool,
   filterSelected: PropTypes.bool,
   onSelect: PropTypes.func,
-  onOrderChanged: PropTypes.func,
   onFilterChange: PropTypes.func,
   msDelayOnChangeFilter: PropTypes.number,
   searchRenderer: PropTypes.func
@@ -301,7 +291,6 @@ MultiSelectionList.defaultProps = {
   withSearch: true,
   filterSelected: true,
   onSelect: () => {},
-  onOrderChanged: () => {},
   onFilterChange: () => {},
   searchRenderer: Search
 };
