@@ -12,7 +12,7 @@ setOptions({
     showLeftPanel: true,
     showDownPanel: true,
     showSearchBox: false,
-    downPanelInRight: true,
+    downPanelInRight: false,
     sortStoriesByKind: false,
 });
 
