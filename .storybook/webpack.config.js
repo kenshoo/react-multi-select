@@ -18,9 +18,6 @@ module.exports = (storybookBaseConfig, configType) => {
 						test: /\.md$/,
 						loader: "raw-loader"
 				}, {
-						test: /\.json$/,
-						loader: 'json-loader'
-				}, {
 						test: /\.css$/,
 						loader: 'style-loader!css-loader'
 				}, {
@@ -30,10 +27,7 @@ module.exports = (storybookBaseConfig, configType) => {
 								"css-loader?modules&importLoaders=1&localIdentName=kn-[name]__[local]___[hash:base64:5]",
 								"sass-loader"
 						]
-				}, {
-                    test: /\.svg$/,
-          loader: "svg-inline-loader?classPrefix"
-        }],
+				}],
 		};
 
 		return storybookBaseConfig;

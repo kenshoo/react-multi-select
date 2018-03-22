@@ -16,6 +16,6 @@ module.exports = {
     libraryTarget: "commonjs2"
   },
   module: {
-    rules: [babelLoader, cssLoader, mdLoader, pngLoader, jsonLoader, svgLoader]
+    rules: [babelLoader, cssLoader]
   }
 };

@@ -7,6 +7,11 @@
 .babelrc
 .eslintrc
 .storybook
+storybook-static
+tests
+.travis.yml
+junit.xml
+preview.gif
 mentionk.yml
 preview.png
 test.webpack.config.js
