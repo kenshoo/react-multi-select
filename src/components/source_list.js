@@ -95,7 +95,8 @@ SourceList.defaultProps = {
   calculatedHeight: 400,
   itemHeight: 40,
   selectedIds: [],
-  filteredItems: []
+  filteredItems: [],
+  messages: {}
 };
 
 export default SourceList;

@@ -1,0 +1,375 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SourceList can remove search 1`] = `
+<Column>
+  <SelectAll
+    height={40}
+    isAllSelected={false}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
+    selectedIds={Array []}
+  />
+  <ItemsList
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`SourceList can remove select all 1`] = `
+<Column>
+  <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+  />
+  <ItemsList
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`SourceList custom itemRenderer 1`] = `
+<Column>
+  <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+  />
+  <SelectAll
+    height={40}
+    isAllSelected={false}
+    onClick={undefined}
+    renderer={[MockFunction mockedComponent]}
+    selectAllMessage="Select All"
+    selectedIds={Array []}
+  />
+  <ItemsList
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[MockFunction mockedComponent]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`SourceList custom messages 1`] = `
+<Column>
+  <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Find..."
+  />
+  <SelectAll
+    height={40}
+    isAllSelected={false}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Check all"
+    selectedIds={Array []}
+  />
+  <ItemsList
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage="No entries available..."
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`SourceList custom noItemsRenderer 1`] = `
+<Column>
+  <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+  />
+  <SelectAll
+    height={40}
+    isAllSelected={false}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
+    selectedIds={Array []}
+  />
+  <ItemsList
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[MockFunction mockedComponent]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`SourceList custom searchRenderer 1`] = `
+<Column>
+  <mockConstructor
+    onChange={undefined}
+    searchIcon={undefined}
+    searchPlaceholder={undefined}
+  />
+  <SelectAll
+    height={40}
+    isAllSelected={false}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
+    selectedIds={Array []}
+  />
+  <ItemsList
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`SourceList custom selectAllRenderer 1`] = `
+<Column>
+  <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+  />
+  <mockConstructor
+    height={40}
+    isAllSelected={false}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage={undefined}
+    selectedIds={Array []}
+  />
+  <ItemsList
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`SourceList default snapshot 1`] = `
+<Column>
+  <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+  />
+  <SelectAll
+    height={40}
+    isAllSelected={false}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
+    selectedIds={Array []}
+  />
+  <ItemsList
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`SourceList passed filterItems 1`] = `
+<Column>
+  <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+  />
+  <SelectAll
+    height={40}
+    isAllSelected={false}
+    onClick={[MockFunction filterItems]}
+    renderer={[Function]}
+    selectAllMessage="Select All"
+    selectedIds={Array []}
+  />
+  <ItemsList
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`SourceList passed selectAllItems 1`] = `
+<Column>
+  <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+  />
+  <SelectAll
+    height={40}
+    isAllSelected={false}
+    onClick={[MockFunction selectAllItems]}
+    renderer={[Function]}
+    selectAllMessage="Select All"
+    selectedIds={Array []}
+  />
+  <ItemsList
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`SourceList passed selectItem 1`] = `
+<Column>
+  <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+  />
+  <SelectAll
+    height={40}
+    isAllSelected={false}
+    onClick={[MockFunction selectItem]}
+    renderer={[Function]}
+    selectAllMessage="Select All"
+    selectedIds={Array []}
+  />
+  <ItemsList
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`SourceList passed selectedIds 1`] = `
+<Column>
+  <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+  />
+  <SelectAll
+    height={40}
+    isAllSelected={false}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
+    selectedIds={
+      Array [
+        1,
+        2,
+      ]
+    }
+  />
+  <ItemsList
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={
+      Array [
+        1,
+        2,
+      ]
+    }
+  />
+</Column>
+`;
+
+exports[`SourceList passed selectedItems 1`] = `
+<Column>
+  <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+  />
+  <SelectAll
+    height={40}
+    isAllSelected={false}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
+    selectedIds={Array []}
+  />
+  <ItemsList
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;

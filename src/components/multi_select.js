@@ -9,7 +9,7 @@ import DestinationList from "./destination_list";
 import styles from "./multi_select.scss";
 import Loader from "./loader/loader";
 
-class MultiSelect extends PureComponent {
+export class MultiSelect extends PureComponent {
   static propTypes = {
     selectedItems: PropTypes.array,
     filteredItems: PropTypes.array,

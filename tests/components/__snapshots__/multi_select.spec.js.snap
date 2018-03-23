@@ -1,0 +1,705 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiSelect can remove search 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <SourceList
+    calculatedHeight={360}
+    filterItems={undefined}
+    filteredItems={Array []}
+    getList={undefined}
+    isAllSelected={false}
+    itemHeight={40}
+    itemRenderer={[Function]}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    searchIcon={undefined}
+    searchRenderer={[Function]}
+    selectAllItems={undefined}
+    selectAllRenderer={[Function]}
+    selectItem={undefined}
+    selectedIds={Array []}
+    showSearch={false}
+    showSelectAll={true}
+  />
+  <DestinationList
+    clearAll={undefined}
+    height={400}
+    itemHeight={40}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    selectedIds={Array []}
+    selectedItemRenderer={[Function]}
+    selectedItems={Array []}
+    selectionStatusRenderer={[Function]}
+    unselectItem={undefined}
+  />
+</div>
+`;
+
+exports[`MultiSelect can remove select all 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <SourceList
+    calculatedHeight={355}
+    filterItems={undefined}
+    filteredItems={Array []}
+    getList={undefined}
+    isAllSelected={false}
+    itemHeight={40}
+    itemRenderer={[Function]}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    searchIcon={undefined}
+    searchRenderer={[Function]}
+    selectAllItems={undefined}
+    selectAllRenderer={[Function]}
+    selectItem={undefined}
+    selectedIds={Array []}
+    showSearch={true}
+    showSelectAll={false}
+  />
+  <DestinationList
+    clearAll={undefined}
+    height={400}
+    itemHeight={40}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    selectedIds={Array []}
+    selectedItemRenderer={[Function]}
+    selectedItems={Array []}
+    selectionStatusRenderer={[Function]}
+    unselectItem={undefined}
+  />
+</div>
+`;
+
+exports[`MultiSelect custom itemRenderer 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <SourceList
+    calculatedHeight={315}
+    filterItems={undefined}
+    filteredItems={Array []}
+    getList={undefined}
+    isAllSelected={false}
+    itemHeight={40}
+    itemRenderer={[MockFunction mockedComponent]}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    searchIcon={undefined}
+    searchRenderer={[Function]}
+    selectAllItems={undefined}
+    selectAllRenderer={[Function]}
+    selectItem={undefined}
+    selectedIds={Array []}
+    showSearch={true}
+    showSelectAll={true}
+  />
+  <DestinationList
+    clearAll={undefined}
+    height={400}
+    itemHeight={40}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    selectedIds={Array []}
+    selectedItemRenderer={[Function]}
+    selectedItems={Array []}
+    selectionStatusRenderer={[Function]}
+    unselectItem={undefined}
+  />
+</div>
+`;
+
+exports[`MultiSelect custom messages 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <SourceList
+    calculatedHeight={315}
+    filterItems={undefined}
+    filteredItems={Array []}
+    getList={undefined}
+    isAllSelected={false}
+    itemHeight={40}
+    itemRenderer={[Function]}
+    messages={
+      Object {
+        "clearAllMessage": "Uncheck all",
+        "noItemsMessage": "No entries available...",
+        "noneSelectedMessage": "Nothing",
+        "searchPlaceholder": "Find...",
+        "selectAllMessage": "Check all",
+        "selectedMessage": "Checked",
+      }
+    }
+    noItemsRenderer={[Function]}
+    searchIcon={undefined}
+    searchRenderer={[Function]}
+    selectAllItems={undefined}
+    selectAllRenderer={[Function]}
+    selectItem={undefined}
+    selectedIds={Array []}
+    showSearch={true}
+    showSelectAll={true}
+  />
+  <DestinationList
+    clearAll={undefined}
+    height={400}
+    itemHeight={40}
+    messages={
+      Object {
+        "clearAllMessage": "Uncheck all",
+        "noItemsMessage": "No entries available...",
+        "noneSelectedMessage": "Nothing",
+        "searchPlaceholder": "Find...",
+        "selectAllMessage": "Check all",
+        "selectedMessage": "Checked",
+      }
+    }
+    noItemsRenderer={[Function]}
+    selectedIds={Array []}
+    selectedItemRenderer={[Function]}
+    selectedItems={Array []}
+    selectionStatusRenderer={[Function]}
+    unselectItem={undefined}
+  />
+</div>
+`;
+
+exports[`MultiSelect custom noItemsRenderer 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <SourceList
+    calculatedHeight={315}
+    filterItems={undefined}
+    filteredItems={Array []}
+    getList={undefined}
+    isAllSelected={false}
+    itemHeight={40}
+    itemRenderer={[Function]}
+    messages={Object {}}
+    noItemsRenderer={[MockFunction mockedComponent]}
+    searchIcon={undefined}
+    searchRenderer={[Function]}
+    selectAllItems={undefined}
+    selectAllRenderer={[Function]}
+    selectItem={undefined}
+    selectedIds={Array []}
+    showSearch={true}
+    showSelectAll={true}
+  />
+  <DestinationList
+    clearAll={undefined}
+    height={400}
+    itemHeight={40}
+    messages={Object {}}
+    noItemsRenderer={[MockFunction mockedComponent]}
+    selectedIds={Array []}
+    selectedItemRenderer={[Function]}
+    selectedItems={Array []}
+    selectionStatusRenderer={[Function]}
+    unselectItem={undefined}
+  />
+</div>
+`;
+
+exports[`MultiSelect custom searchRenderer 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <SourceList
+    calculatedHeight={315}
+    filterItems={undefined}
+    filteredItems={Array []}
+    getList={undefined}
+    isAllSelected={false}
+    itemHeight={40}
+    itemRenderer={[Function]}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    searchIcon={undefined}
+    searchRenderer={[MockFunction mockedComponent]}
+    selectAllItems={undefined}
+    selectAllRenderer={[Function]}
+    selectItem={undefined}
+    selectedIds={Array []}
+    showSearch={true}
+    showSelectAll={true}
+  />
+  <DestinationList
+    clearAll={undefined}
+    height={400}
+    itemHeight={40}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    selectedIds={Array []}
+    selectedItemRenderer={[Function]}
+    selectedItems={Array []}
+    selectionStatusRenderer={[Function]}
+    unselectItem={undefined}
+  />
+</div>
+`;
+
+exports[`MultiSelect custom selectAllRenderer 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <SourceList
+    calculatedHeight={315}
+    filterItems={undefined}
+    filteredItems={Array []}
+    getList={undefined}
+    isAllSelected={false}
+    itemHeight={40}
+    itemRenderer={[Function]}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    searchIcon={undefined}
+    searchRenderer={[Function]}
+    selectAllItems={undefined}
+    selectAllRenderer={[MockFunction mockedComponent]}
+    selectItem={undefined}
+    selectedIds={Array []}
+    showSearch={true}
+    showSelectAll={true}
+  />
+  <DestinationList
+    clearAll={undefined}
+    height={400}
+    itemHeight={40}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    selectedIds={Array []}
+    selectedItemRenderer={[Function]}
+    selectedItems={Array []}
+    selectionStatusRenderer={[Function]}
+    unselectItem={undefined}
+  />
+</div>
+`;
+
+exports[`MultiSelect default snapshot 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <SourceList
+    calculatedHeight={315}
+    filterItems={undefined}
+    filteredItems={Array []}
+    getList={undefined}
+    isAllSelected={false}
+    itemHeight={40}
+    itemRenderer={[Function]}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    searchIcon={undefined}
+    searchRenderer={[Function]}
+    selectAllItems={undefined}
+    selectAllRenderer={[Function]}
+    selectItem={undefined}
+    selectedIds={Array []}
+    showSearch={true}
+    showSelectAll={true}
+  />
+  <DestinationList
+    clearAll={undefined}
+    height={400}
+    itemHeight={40}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    selectedIds={Array []}
+    selectedItemRenderer={[Function]}
+    selectedItems={Array []}
+    selectionStatusRenderer={[Function]}
+    unselectItem={undefined}
+  />
+</div>
+`;
+
+exports[`MultiSelect displays Loader when loading 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <Loader />
+</div>
+`;
+
+exports[`MultiSelect displays custom Loader when loading 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <mockConstructor />
+</div>
+`;
+
+exports[`MultiSelect passed clearAll 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <SourceList
+    calculatedHeight={315}
+    filterItems={undefined}
+    filteredItems={Array []}
+    getList={undefined}
+    isAllSelected={false}
+    itemHeight={40}
+    itemRenderer={[Function]}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    searchIcon={undefined}
+    searchRenderer={[Function]}
+    selectAllItems={undefined}
+    selectAllRenderer={[Function]}
+    selectItem={undefined}
+    selectedIds={Array []}
+    showSearch={true}
+    showSelectAll={true}
+  />
+  <DestinationList
+    clearAll={[MockFunction clearAll]}
+    height={400}
+    itemHeight={40}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    selectedIds={Array []}
+    selectedItemRenderer={[Function]}
+    selectedItems={Array []}
+    selectionStatusRenderer={[Function]}
+    unselectItem={undefined}
+  />
+</div>
+`;
+
+exports[`MultiSelect passed filterItems 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <SourceList
+    calculatedHeight={315}
+    filterItems={undefined}
+    filteredItems={Array []}
+    getList={undefined}
+    isAllSelected={false}
+    itemHeight={40}
+    itemRenderer={[Function]}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    searchIcon={undefined}
+    searchRenderer={[Function]}
+    selectAllItems={[MockFunction filterItems]}
+    selectAllRenderer={[Function]}
+    selectItem={undefined}
+    selectedIds={Array []}
+    showSearch={true}
+    showSelectAll={true}
+  />
+  <DestinationList
+    clearAll={undefined}
+    height={400}
+    itemHeight={40}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    selectedIds={Array []}
+    selectedItemRenderer={[Function]}
+    selectedItems={Array []}
+    selectionStatusRenderer={[Function]}
+    unselectItem={undefined}
+  />
+</div>
+`;
+
+exports[`MultiSelect passed selectAllItems 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <SourceList
+    calculatedHeight={315}
+    filterItems={undefined}
+    filteredItems={Array []}
+    getList={undefined}
+    isAllSelected={false}
+    itemHeight={40}
+    itemRenderer={[Function]}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    searchIcon={undefined}
+    searchRenderer={[Function]}
+    selectAllItems={[MockFunction selectAllItems]}
+    selectAllRenderer={[Function]}
+    selectItem={undefined}
+    selectedIds={Array []}
+    showSearch={true}
+    showSelectAll={true}
+  />
+  <DestinationList
+    clearAll={undefined}
+    height={400}
+    itemHeight={40}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    selectedIds={Array []}
+    selectedItemRenderer={[Function]}
+    selectedItems={Array []}
+    selectionStatusRenderer={[Function]}
+    unselectItem={undefined}
+  />
+</div>
+`;
+
+exports[`MultiSelect passed selectItem 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <SourceList
+    calculatedHeight={315}
+    filterItems={undefined}
+    filteredItems={Array []}
+    getList={undefined}
+    isAllSelected={false}
+    itemHeight={40}
+    itemRenderer={[Function]}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    searchIcon={undefined}
+    searchRenderer={[Function]}
+    selectAllItems={[MockFunction selectItem]}
+    selectAllRenderer={[Function]}
+    selectItem={undefined}
+    selectedIds={Array []}
+    showSearch={true}
+    showSelectAll={true}
+  />
+  <DestinationList
+    clearAll={undefined}
+    height={400}
+    itemHeight={40}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    selectedIds={Array []}
+    selectedItemRenderer={[Function]}
+    selectedItems={Array []}
+    selectionStatusRenderer={[Function]}
+    unselectItem={undefined}
+  />
+</div>
+`;
+
+exports[`MultiSelect passed selectedIds 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <SourceList
+    calculatedHeight={315}
+    filterItems={undefined}
+    filteredItems={Array []}
+    getList={undefined}
+    isAllSelected={false}
+    itemHeight={40}
+    itemRenderer={[Function]}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    searchIcon={undefined}
+    searchRenderer={[Function]}
+    selectAllItems={undefined}
+    selectAllRenderer={[Function]}
+    selectItem={undefined}
+    selectedIds={Array []}
+    showSearch={true}
+    showSelectAll={true}
+  />
+  <DestinationList
+    clearAll={undefined}
+    height={400}
+    itemHeight={40}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    selectedIds={Array []}
+    selectedItemRenderer={[Function]}
+    selectedItems={Array []}
+    selectionStatusRenderer={[Function]}
+    unselectItem={undefined}
+  />
+</div>
+`;
+
+exports[`MultiSelect passed selectedItems 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <SourceList
+    calculatedHeight={315}
+    filterItems={undefined}
+    filteredItems={Array []}
+    getList={undefined}
+    isAllSelected={false}
+    itemHeight={40}
+    itemRenderer={[Function]}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    searchIcon={undefined}
+    searchRenderer={[Function]}
+    selectAllItems={undefined}
+    selectAllRenderer={[Function]}
+    selectItem={undefined}
+    selectedIds={
+      Array [
+        undefined,
+        undefined,
+      ]
+    }
+    showSearch={true}
+    showSelectAll={true}
+  />
+  <DestinationList
+    clearAll={undefined}
+    height={400}
+    itemHeight={40}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    selectedIds={
+      Array [
+        undefined,
+        undefined,
+      ]
+    }
+    selectedItemRenderer={[Function]}
+    selectedItems={
+      Array [
+        1,
+        2,
+      ]
+    }
+    selectionStatusRenderer={[Function]}
+    unselectItem={undefined}
+  />
+</div>
+`;
+
+exports[`MultiSelect passed unselectItem 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <SourceList
+    calculatedHeight={315}
+    filterItems={undefined}
+    filteredItems={Array []}
+    getList={undefined}
+    isAllSelected={false}
+    itemHeight={40}
+    itemRenderer={[Function]}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    searchIcon={undefined}
+    searchRenderer={[Function]}
+    selectAllItems={undefined}
+    selectAllRenderer={[Function]}
+    selectItem={undefined}
+    selectedIds={Array []}
+    showSearch={true}
+    showSelectAll={true}
+  />
+  <DestinationList
+    clearAll={undefined}
+    height={400}
+    itemHeight={40}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    selectedIds={Array []}
+    selectedItemRenderer={[Function]}
+    selectedItems={Array []}
+    selectionStatusRenderer={[Function]}
+    unselectItem={[MockFunction unselectItem]}
+  />
+</div>
+`;

@@ -74,7 +74,9 @@ describe("ItemsList", () => {
   });
 
   test("shows checked Items if items are present", () => {
-    const wrapper = mount(<List width={100} items={items} selectedIds={[12]} />);
+    const wrapper = mount(
+      <List width={100} items={items} selectedIds={[12]} />
+    );
     const itemsWrapper = wrapper.find(Item);
     expect(itemsWrapper.at(0).prop("checked")).toBe(false);
     expect(itemsWrapper.at(1).prop("checked")).toBe(true);
@@ -90,7 +92,7 @@ describe("ItemsList", () => {
 
   test("click will trigger onClick", () => {
     const onClick = jest.fn();
-    const wrapper = mount(<List width={100} items={items} onClick={onClick}/>);
+    const wrapper = mount(<List width={100} items={items} onClick={onClick} />);
     const itemsWrapper = wrapper.find(Item);
     itemsWrapper.at(0).simulate("click");
     expect(onClick).toHaveBeenCalledTimes(1);
@@ -98,7 +100,7 @@ describe("ItemsList", () => {
 
   test("click will trigger onClick with id param", () => {
     const onClick = jest.fn();
-    const wrapper = mount(<List width={100} items={items} onClick={onClick}/>);
+    const wrapper = mount(<List width={100} items={items} onClick={onClick} />);
     const itemsWrapper = wrapper.find(Item);
     itemsWrapper.at(0).simulate("click");
     expect(onClick).toHaveBeenCalledWith(5);

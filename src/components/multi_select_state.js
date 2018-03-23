@@ -6,7 +6,9 @@ const withMultiSelectState = WrappedComponent =>
       filterFunction: value => item =>
         String(item.label)
           .toLowerCase()
-          .includes(value.toLowerCase())
+          .includes(value.toLowerCase()),
+      items: [],
+      selectedItems: []
     };
 
     constructor(props) {
@@ -63,7 +65,6 @@ const withMultiSelectState = WrappedComponent =>
     selectAllItems() {
       const { filteredItems } = this.state;
       const itemsToSelect = this.isAllSelected() ? [] : filteredItems;
-
       this.setState({ selectedItems: itemsToSelect }, this.handleChange);
     }
 
@@ -82,7 +83,7 @@ const withMultiSelectState = WrappedComponent =>
     handleChange() {
       const { onChange } = this.props;
       const { selectedItems } = this.state;
-      this.list.update();
+      this.list && this.list.update();
       onChange && onChange(selectedItems);
     }
 
