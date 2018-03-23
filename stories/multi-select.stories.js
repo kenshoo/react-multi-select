@@ -16,7 +16,7 @@ const custom_messages = {
 
 storiesOf("React Multi Select", module)
   .addDecorator(withKnobs)
-  .add("Simple", () => {
+  .add("Default view", () => {
     const items = Array.apply(null, { length: 10 }).map((i, index) => ({
       id: index,
       label: `Item ${index}`
@@ -32,7 +32,24 @@ storiesOf("React Multi Select", module)
       />
     );
   })
-  .add("Custom Messages", () => {
+  .add("Preselected Items", () => {
+    const items = Array.apply(null, { length: 10 }).map((i, index) => ({
+      id: index,
+      label: `Item ${index}`
+    }));
+
+    return (
+      <ReactMultiSelect
+        items={items}
+        selectedItems={[{ id: 3, label: "Item 3" }]}
+        loading={boolean("Loading", false)}
+        onChange={action("onChange")}
+        showSearch={boolean("Show search", true)}
+        showSelectAll={boolean("Show select all", true)}
+      />
+    );
+  })
+  .add("With Custom Messages", () => {
     const items = Array.apply(null, { length: 10 }).map((i, index) => {
       return {
         id: index,
@@ -51,7 +68,7 @@ storiesOf("React Multi Select", module)
       />
     );
   })
-  .add("Custom Styling", () => {
+  .add("With Custom Styling", () => {
     const items = Array.apply(null, { length: 50 }).map((i, index) => {
       return {
         id: index,
@@ -72,7 +89,7 @@ storiesOf("React Multi Select", module)
       />
     );
   })
-  .add("Toggle Search and Select all", () => {
+  .add("Without Search and Select all", () => {
     const items = Array.apply(null, { length: 50 }).map((i, index) => {
       return {
         id: index,
@@ -92,7 +109,7 @@ storiesOf("React Multi Select", module)
       />
     );
   })
-  .add("Large Data (7000 items)", () => {
+  .add("With Large Data (7000 items)", () => {
     const items = Array.apply(null, { length: 7000 }).map((i, index) => {
       return {
         id: index,

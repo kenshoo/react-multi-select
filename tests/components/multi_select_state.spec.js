@@ -81,4 +81,15 @@ describe("withMultiSelectState", () => {
     wrapper.update();
     expect(wrapper.prop("filteredItems")).toEqual([ITEM_3]);
   });
+
+  test("can define selected items externally", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const wrapper = shallow(
+      <ConditionalComponent items={items} selectedItems={[ITEM_2]} />
+    );
+    expect(wrapper.prop("selectedItems")).toEqual([ITEM_2]);
+    wrapper.setProps({ selectedItems: [ITEM_3] });
+    wrapper.update();
+    expect(wrapper.prop("selectedItems")).toEqual([ITEM_3]);
+  });
 });

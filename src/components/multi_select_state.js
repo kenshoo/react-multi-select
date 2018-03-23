@@ -21,8 +21,14 @@ const withMultiSelectState = WrappedComponent =>
       this.clearAll = this.clearAll.bind(this);
       this.handleChange = this.handleChange.bind(this);
 
-      const { items } = props;
-      this.state = { selectedItems: [], items, filteredItems: items };
+      const { items, selectedItems } = props;
+      this.state = { selectedItems, items, filteredItems: items };
+    }
+
+    componentWillReceiveProps(nextProps) {
+      if (this.props.selectedItems !== nextProps.selectedItems) {
+        this.setState({ selectedItems: nextProps.selectedItems });
+      }
     }
 
     selectItem(id) {
