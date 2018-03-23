@@ -29,14 +29,14 @@ $color-black: #000000;
 $grey-600: #666666;
 $grey-450: #999999;
 $grey-420: #b4b4b4;
+$grey-400: #CDCDCD;
 $grey-350: #dddddd;
+$grey-300: #EDEDED;
 $grey-200: #f3f3f3;
 $grey-100: #f7f7f7;
 
 $blue-100: #D9ECF1;
 $blue-200: #008BBF;
-
-
 
 $border-color: $grey-350;
 $default-color: $grey-600;
@@ -46,4 +46,7 @@ $clickable-color: $blue-200;
 
 $hover-background-color: $grey-200;
 $selected-background-color: $grey-100;
+$scroll_background: $grey-400;
+$scroll_border_color: $grey-300;
+$scroll_track_background: $color-white;
 
