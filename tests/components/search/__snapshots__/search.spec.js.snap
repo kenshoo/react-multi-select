@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search default snapshot 1`] = `
+<div
+  className="search"
+>
+  <input
+    className="input"
+    onChange={undefined}
+    placeholder="Search..."
+    type="text"
+  />
+  <div
+    className="icon"
+  >
+    <MdSearch />
+  </div>
+</div>
+`;
+
+exports[`Search snapshot with custom search icon 1`] = `
+<div
+  className="search"
+>
+  <input
+    className="input"
+    onChange={undefined}
+    placeholder="Search..."
+    type="text"
+  />
+  <div
+    className="icon"
+  >
+    <Icon />
+  </div>
+</div>
+`;
+
+exports[`Search snapshot with placeholder 1`] = `
+<div
+  className="search"
+>
+  <input
+    className="input"
+    onChange={undefined}
+    placeholder="new placeholder text"
+    type="text"
+  />
+  <div
+    className="icon"
+  >
+    <MdSearch />
+  </div>
+</div>
+`;

@@ -77,27 +77,117 @@ class Example extends Component {
 | `messages`                      | `Object`              | {}                                               | custom messages. Please see below for the availabale messages                                                                                                                          
 | `showSearch   `                 | `boolean`             | true                                             | toggle to show search option.                                        
 | `showSelectAll`                 | `boolean`             | true                                             | toggle to show select All option in list.
-| `searchIcon`                    | `String`              | 'search'                                         | search items icon. Options are available here: https://material.io/icons
-| `deleteIcon`                    | `String`              | 'close'                                          | selected items delete icon. Options are available here: https://material.io/icons
 | `wrapperClassName`              | `String`              | ''                                               | wrapper class name. Used for customizing the style
-| `listHeight`                    | `number`              | 320                                              | available items list height
-| `selectedListHeight`            | `number`              | 361                                              | selected items list height
-| `selectedListHeight`            | `number`              | 40                                               | list item height
+| `height`                        | `number`              | 400                                              | available items list height
+| `itemHeight`                    | `number`              | 40                                               | the height of an item in the list
+| `filterFunction`                | `function`            | based on label                                   | The function used to filter items based on the search query
+| `searchRenderer`                | `Component`           |                                                  | Component to replace the default Search component
+| `selectedItemRenderer`          | `Component`           |                                                  | Component to replace the default selected item component in the destination list
+| `loaderRenderer`                | `Component`           |                                                  | Component to replace the default loader component
+| `selectAllRenderer`             | `Component`           |                                                  | Component to replace the default select all component
+| `itemRenderer`                  | `Component`           |                                                  | Component to replace the default item component in the source list
+
 
 ## Customization
+
+#### Renderers
+
+You can replace the renderes of the following components:
+
+<br/>
+
+**Item**
+
+Use the `itemRenderer` to replace the default component.
+
+Each item receives the following props:
+
+`item` - holds your item data
+
+`height` - receives the height defined by the list
+
+`onClick` - the event to toggle selection on the component
+
+`checked` - indicates if the item is selected
+
+`indeterminate` - used by the select all component to display indeterminate mode
+
+<br/>
+
+**Select All**
+
+Use the `selectAllRenderer` to replace the default component.
+
+The Select All component receives the following props:
+
+`height` - receives the height defined by the parent
+
+`onClick` - Triggers the select all/clear all event on click
+
+`isAllSelected` - Indicates that all items are selected
+  
+`selectAllMessage` - Defines the message for the Select All component
+  
+`selectedIds` - holds a list of ids of all the selected items
+
+<br/>
+
+**Selected Item**
+
+Use the `selectAllRenderer` to replace the default component.
+
+
+The Selected Item component receives the following props:
+ 
+`item` - holds your item data
+
+`height` - receives the height defined by the list
+
+<br/>
+
+**Search**
+
+Use the `searchRenderer` to replace the default component.
+
+The Search component receives the following props:
+
+`searchPlaceholder` - defines the message to display in the search placeholder
+
+`onChange` - triggers the action of changing the search value
+
+<br/>
+
+**Loader**
+
+Use the `loaderRenderer` to replace the default component.
+
+Does not receive any props.
+
+<br/>
+
+#### Search Function
+
+In order to accomidate complex item filters, you can provide your own filter method in the `filterFunction` prop.
+
+Example (default):
+```javascript
+value => item =>
+  String(item.label)
+    .toLowerCase()
+    .includes(value.toLowerCase())
+```
 
 #### Messages 
 
 You can use your own messages. Here is the default messages object :
 ```jsx
  messages: {
-    "source.search.placeholder": "Search...",
-    "source.header.selectAll": "Select all",
-    "source.noItems": "No items...",
-    "destination.noItems": "No items...",
-    "destination.header.clearAll": "Clear all",
-    "destination.header.none": "None",
-    "destination.header.selected": "Selected"
+    searchPlaceholder: "Search...",
+    noItemsMessage: "No Items...",
+    noneSelectedMessage: "None Selected",
+    selectedMessage: "delected",
+    selectAllMessage: "Select All",
+    clearAllMessage: "Clear All"
   }
 ```
 

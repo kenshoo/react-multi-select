@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectionStatus default snapshot 1`] = `
+<div
+  className="selection_status"
+>
+  <div
+    className="status"
+  >
+    None Selected
+  </div>
+  <div
+    className="clear_all"
+    onClick={undefined}
+  >
+    
+  </div>
+</div>
+`;
+
+exports[`SelectionStatus snapshot with custom noneSelectedMessage 1`] = `
+<div
+  className="selection_status"
+>
+  <div
+    className="status"
+  >
+    custom no selection message
+  </div>
+  <div
+    className="clear_all"
+    onClick={undefined}
+  >
+    
+  </div>
+</div>
+`;
+
+exports[`SelectionStatus snapshot with selected item 1`] = `
+<div
+  className="selection_status"
+>
+  <div
+    className="status"
+  >
+    3 selected
+  </div>
+  <div
+    className="clear_all"
+    onClick={undefined}
+  >
+    Clear All
+  </div>
+</div>
+`;
+
+exports[`SelectionStatus snapshot with selected items and custom clearAllMessage 1`] = `
+<div
+  className="selection_status"
+>
+  <div
+    className="status"
+  >
+    3 selected
+  </div>
+  <div
+    className="clear_all"
+    onClick={undefined}
+  >
+    custom message
+  </div>
+</div>
+`;
+
+exports[`SelectionStatus snapshot with selected items and custom selectedMessage 1`] = `
+<div
+  className="selection_status"
+>
+  <div
+    className="status"
+  >
+    3 custom selected message
+  </div>
+  <div
+    className="clear_all"
+    onClick={undefined}
+  >
+    Clear All
+  </div>
+</div>
+`;

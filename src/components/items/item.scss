@@ -1,0 +1,23 @@
+@import "../../resources/globals";
+
+.item {
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out;
+  box-sizing: border-box;
+  cursor: pointer;
+  .selected {
+    background-color: $selected-background-color;
+  }
+  &:hover:not(.selected) {
+    background-color: $hover-background-color;
+  }
+}
+
+.selected {
+  background-color: $selected-background-color;
+}
+
+.with_border {
+  border-bottom: 1px solid $border-color;
+}

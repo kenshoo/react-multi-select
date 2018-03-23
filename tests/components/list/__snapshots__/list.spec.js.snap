@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemsList default snapshot 1`] = `
+<List
+  autoHeight={false}
+  className="list"
+  estimatedRowSize={30}
+  height={400}
+  noRowsRenderer={[Function]}
+  onRowsRendered={[Function]}
+  onScroll={[Function]}
+  overscanIndicesGetter={[Function]}
+  overscanRowCount={10}
+  rowCount={0}
+  rowHeight={40}
+  rowRenderer={[Function]}
+  scrollToAlignment="auto"
+  scrollToIndex={-1}
+  style={Object {}}
+  width={100}
+/>
+`;
+
+exports[`ItemsList snapshot with height 1`] = `
+<List
+  autoHeight={false}
+  className="list"
+  estimatedRowSize={30}
+  height={200}
+  noRowsRenderer={[Function]}
+  onRowsRendered={[Function]}
+  onScroll={[Function]}
+  overscanIndicesGetter={[Function]}
+  overscanRowCount={10}
+  rowCount={0}
+  rowHeight={40}
+  rowRenderer={[Function]}
+  scrollToAlignment="auto"
+  scrollToIndex={-1}
+  style={Object {}}
+  width={100}
+/>
+`;
+
+exports[`ItemsList snapshot with offset 1`] = `
+<List
+  autoHeight={false}
+  className="list"
+  estimatedRowSize={30}
+  height={400}
+  noRowsRenderer={[Function]}
+  onRowsRendered={[Function]}
+  onScroll={[Function]}
+  overscanIndicesGetter={[Function]}
+  overscanRowCount={10}
+  rowCount={0}
+  rowHeight={40}
+  rowRenderer={[Function]}
+  scrollToAlignment="auto"
+  scrollToIndex={-1}
+  style={Object {}}
+  width={96}
+/>
+`;
+
+exports[`ItemsList snapshot with rowHeight 1`] = `
+<List
+  autoHeight={false}
+  className="list"
+  estimatedRowSize={30}
+  height={400}
+  noRowsRenderer={[Function]}
+  onRowsRendered={[Function]}
+  onScroll={[Function]}
+  overscanIndicesGetter={[Function]}
+  overscanRowCount={10}
+  rowCount={0}
+  rowHeight={40}
+  rowRenderer={[Function]}
+  scrollToAlignment="auto"
+  scrollToIndex={-1}
+  style={Object {}}
+  width={100}
+/>
+`;

@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectAll default snapshot 1`] = `
+<Item
+  checked={false}
+  height={40}
+  indeterminate={false}
+  item={
+    Object {
+      "label": "Select All",
+    }
+  }
+  onClick={undefined}
+  withBorder={true}
+/>
+`;
+
+exports[`SelectAll snapshot with empty selectedIds with select all 1`] = `
+<Item
+  checked={false}
+  height={40}
+  indeterminate={false}
+  item={
+    Object {
+      "label": "Select All",
+    }
+  }
+  onClick={undefined}
+  withBorder={true}
+/>
+`;
+
+exports[`SelectAll snapshot with empty selectedIds without select all 1`] = `
+<Item
+  checked={false}
+  height={40}
+  indeterminate={false}
+  item={
+    Object {
+      "label": "Select All",
+    }
+  }
+  onClick={undefined}
+  withBorder={true}
+/>
+`;
+
+exports[`SelectAll snapshot with height 1`] = `
+<Item
+  checked={false}
+  height={20}
+  indeterminate={false}
+  item={
+    Object {
+      "label": "Select All",
+    }
+  }
+  onClick={undefined}
+  withBorder={true}
+/>
+`;
+
+exports[`SelectAll snapshot with isSelectAll 1`] = `
+<Item
+  checked={false}
+  height={40}
+  indeterminate={false}
+  item={
+    Object {
+      "label": "Select All",
+    }
+  }
+  onClick={undefined}
+  withBorder={true}
+/>
+`;
+
+exports[`SelectAll snapshot with isSelectAll false 1`] = `
+<Item
+  checked={false}
+  height={40}
+  indeterminate={false}
+  item={
+    Object {
+      "label": "Select All",
+    }
+  }
+  onClick={undefined}
+  withBorder={true}
+/>
+`;
+
+exports[`SelectAll snapshot with selectAllMessage 1`] = `
+<Item
+  checked={false}
+  height={40}
+  indeterminate={false}
+  item={
+    Object {
+      "label": "some test message",
+    }
+  }
+  onClick={undefined}
+  withBorder={true}
+/>
+`;
+
+exports[`SelectAll snapshot with selectedIds with select all should be indeterminate 1`] = `
+<Item
+  checked={false}
+  height={40}
+  indeterminate={true}
+  item={
+    Object {
+      "label": "Select All",
+    }
+  }
+  onClick={undefined}
+  withBorder={true}
+/>
+`;
+
+exports[`SelectAll snapshot with selectedIds without select all should be indeterminate 1`] = `
+<Item
+  checked={false}
+  height={40}
+  indeterminate={true}
+  item={
+    Object {
+      "label": "Select All",
+    }
+  }
+  onClick={undefined}
+  withBorder={true}
+/>
+`;

@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item default snapshot 1`] = `
+<div
+  className="item"
+  onClick={undefined}
+  style={
+    Object {
+      "height": 40,
+    }
+  }
+>
+  <WithStyles(Checkbox)
+    checked={false}
+    color="primary"
+    indeterminate={false}
+    type="checkbox"
+  />
+</div>
+`;
+
+exports[`Item snapshot with border 1`] = `
+<div
+  className="item with_border"
+  onClick={undefined}
+  style={
+    Object {
+      "height": 40,
+    }
+  }
+>
+  <WithStyles(Checkbox)
+    checked={false}
+    color="primary"
+    indeterminate={false}
+    type="checkbox"
+  />
+</div>
+`;
+
+exports[`Item snapshot with checked status 1`] = `
+<div
+  className="item selected"
+  onClick={undefined}
+  style={
+    Object {
+      "height": 40,
+    }
+  }
+>
+  <WithStyles(Checkbox)
+    checked={true}
+    color="primary"
+    indeterminate={false}
+    type="checkbox"
+  />
+</div>
+`;
+
+exports[`Item snapshot with height 1`] = `
+<div
+  className="item"
+  onClick={undefined}
+  style={
+    Object {
+      "height": 20,
+    }
+  }
+>
+  <WithStyles(Checkbox)
+    checked={false}
+    color="primary"
+    indeterminate={false}
+    type="checkbox"
+  />
+</div>
+`;
+
+exports[`Item snapshot with indeterminate and checked status 1`] = `
+<div
+  className="item selected"
+  onClick={undefined}
+  style={
+    Object {
+      "height": 40,
+    }
+  }
+>
+  <WithStyles(Checkbox)
+    checked={true}
+    color="primary"
+    indeterminate={true}
+    type="checkbox"
+  />
+</div>
+`;
+
+exports[`Item snapshot with indeterminate status 1`] = `
+<div
+  className="item"
+  onClick={undefined}
+  style={
+    Object {
+      "height": 40,
+    }
+  }
+>
+  <WithStyles(Checkbox)
+    checked={false}
+    color="primary"
+    indeterminate={true}
+    type="checkbox"
+  />
+</div>
+`;
+
+exports[`Item snapshot with valid item 1`] = `
+<div
+  className="item"
+  onClick={undefined}
+  style={
+    Object {
+      "height": 40,
+    }
+  }
+>
+  <WithStyles(Checkbox)
+    checked={false}
+    color="primary"
+    indeterminate={false}
+    type="checkbox"
+  />
+  Hi
+</div>
+`;

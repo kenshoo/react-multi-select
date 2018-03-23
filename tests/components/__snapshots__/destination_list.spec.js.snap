@@ -1,0 +1,218 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DestinationList custom messages 1`] = `
+<Column>
+  <SelectionStatus
+    clearAll={undefined}
+    clearAllMessage="Uncheck all"
+    noneSelectedMessage="Nothing"
+    selected={Array []}
+    selectedMessage="Checked"
+  />
+  <ItemsList
+    height={355}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage="No entries available..."
+    noItemsRenderer={[Function]}
+    offset={0}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`DestinationList custom noItemsRenderer 1`] = `
+<Column>
+  <SelectionStatus
+    clearAll={undefined}
+    clearAllMessage="Clear All"
+    noneSelectedMessage="None Selected"
+    selected={Array []}
+    selectedMessage="selected"
+  />
+  <ItemsList
+    height={355}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[MockFunction mockedComponent]}
+    offset={0}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`DestinationList custom selectedItemRenderer 1`] = `
+<Column>
+  <SelectionStatus
+    clearAll={undefined}
+    clearAllMessage="Clear All"
+    noneSelectedMessage="None Selected"
+    selected={Array []}
+    selectedMessage="selected"
+  />
+  <ItemsList
+    height={355}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={0}
+    onClick={undefined}
+    renderer={[MockFunction mockedComponent]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`DestinationList custom selectionStatusRenderer 1`] = `
+<Column>
+  <mockConstructor
+    clearAll={undefined}
+    clearAllMessage={undefined}
+    noneSelectedMessage={undefined}
+    selected={Array []}
+    selectedMessage={undefined}
+  />
+  <ItemsList
+    height={355}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={0}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`DestinationList default snapshot 1`] = `
+<Column>
+  <SelectionStatus
+    clearAll={undefined}
+    clearAllMessage="Clear All"
+    noneSelectedMessage="None Selected"
+    selected={Array []}
+    selectedMessage="selected"
+  />
+  <ItemsList
+    height={355}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={0}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`DestinationList passed clearAll 1`] = `
+<Column>
+  <SelectionStatus
+    clearAll={[MockFunction clearAll]}
+    clearAllMessage="Clear All"
+    noneSelectedMessage="None Selected"
+    selected={Array []}
+    selectedMessage="selected"
+  />
+  <ItemsList
+    height={355}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={0}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`DestinationList passed selectedIds 1`] = `
+<Column>
+  <SelectionStatus
+    clearAll={undefined}
+    clearAllMessage="Clear All"
+    noneSelectedMessage="None Selected"
+    selected={
+      Array [
+        1,
+        2,
+      ]
+    }
+    selectedMessage="selected"
+  />
+  <ItemsList
+    height={355}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={0}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`DestinationList passed selectedItems 1`] = `
+<Column>
+  <SelectionStatus
+    clearAll={undefined}
+    clearAllMessage="Clear All"
+    noneSelectedMessage="None Selected"
+    selected={Array []}
+    selectedMessage="selected"
+  />
+  <ItemsList
+    height={355}
+    itemHeight={40}
+    items={
+      Array [
+        1,
+        2,
+      ]
+    }
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={0}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`DestinationList passed unselectItem 1`] = `
+<Column>
+  <SelectionStatus
+    clearAll={undefined}
+    clearAllMessage="Clear All"
+    noneSelectedMessage="None Selected"
+    selected={Array []}
+    selectedMessage="selected"
+  />
+  <ItemsList
+    height={355}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={0}
+    onClick={[MockFunction unselectItem]}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Column default snapshot 1`] = `
+<div
+  className="column"
+/>
+`;
+
+exports[`Column snapshot with children 1`] = `
+<div
+  className="column"
+>
+  <div>
+    Some kind of child
+  </div>
+</div>
+`;
