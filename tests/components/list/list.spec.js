@@ -10,7 +10,7 @@ const items = [{ id: 5, label: "item 0" }, { id: 12, label: "item 1" }];
 const CUSTOM_MESSAGE = "custom message";
 const CustomComponent = () => <div>Custom Component</div>;
 
-describe("ItemsList", () => {
+describe("List", () => {
   test("default snapshot", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(<List width={100} />);
