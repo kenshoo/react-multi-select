@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Column from "./column/column";
-import List from "./list/list";
+import List from "./list/items_list";
 import NoItems from "./items/no_items";
 import Search from "./search/search";
 import SelectAll from "./items/select_all";

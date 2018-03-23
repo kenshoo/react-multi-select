@@ -1,13 +1,12 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
-import { AutoSizer } from "react-virtualized/dist/commonjs/AutoSizer";
 import { List } from "react-virtualized/dist/commonjs/List";
 
 import styles from "./list.scss";
 import Item from "../items/item";
 import NoItems from "../items/no_items";
 
-class ItemsList extends PureComponent {
+class InnerList extends PureComponent {
   static propTypes = {
     renderer: PropTypes.any,
     noItemsRenderer: PropTypes.any,
@@ -33,13 +32,7 @@ class ItemsList extends PureComponent {
     super(props);
     this.rowRenderer = this.rowRenderer.bind(this);
     this.noRowsRenderer = this.noRowsRenderer.bind(this);
-    this.update = this.update.bind(this);
   }
-
-  update() {
-    this.listRef.forceUpdateGrid();
-  }
-
   rowRenderer({ index, isScrolling, key, style }) {
     const { renderer, itemHeight, onClick, items, selectedIds } = this.props;
     const Renderer = renderer;
@@ -64,24 +57,20 @@ class ItemsList extends PureComponent {
   }
 
   render() {
-    const { height, itemHeight, items, offset } = this.props;
+    const { height, itemHeight, items, offset, width, getlistRef } = this.props;
     return (
-      <AutoSizer>
-        {({ width }) => (
-          <List
-            ref={ref => (this.listRef = ref)}
-            className={styles.list}
-            rowRenderer={this.rowRenderer}
-            noRowsRenderer={this.noRowsRenderer}
-            width={width - offset}
-            rowHeight={itemHeight}
-            height={height}
-            rowCount={items.length}
-          />
-        )}
-      </AutoSizer>
+      <List
+        ref={getlistRef}
+        className={styles.list}
+        rowRenderer={this.rowRenderer}
+        noRowsRenderer={this.noRowsRenderer}
+        width={width - offset}
+        rowHeight={itemHeight}
+        height={height}
+        rowCount={items.length}
+      />
     );
   }
 }
 
-export default ItemsList;
+export default InnerList;
