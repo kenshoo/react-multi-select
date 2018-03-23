@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ItemsList default snapshot 1`] = `
+exports[`List default snapshot 1`] = `
 <List
   autoHeight={false}
   className="list"
@@ -21,7 +21,7 @@ exports[`ItemsList default snapshot 1`] = `
 />
 `;
 
-exports[`ItemsList snapshot with height 1`] = `
+exports[`List snapshot with height 1`] = `
 <List
   autoHeight={false}
   className="list"
@@ -42,7 +42,7 @@ exports[`ItemsList snapshot with height 1`] = `
 />
 `;
 
-exports[`ItemsList snapshot with offset 1`] = `
+exports[`List snapshot with offset 1`] = `
 <List
   autoHeight={false}
   className="list"
@@ -63,7 +63,7 @@ exports[`ItemsList snapshot with offset 1`] = `
 />
 `;
 
-exports[`ItemsList snapshot with rowHeight 1`] = `
+exports[`List snapshot with rowHeight 1`] = `
 <List
   autoHeight={false}
   className="list"

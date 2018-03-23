@@ -20,6 +20,7 @@ const withMultiSelectState = WrappedComponent =>
       this.isAllSelected = this.isAllSelected.bind(this);
       this.clearAll = this.clearAll.bind(this);
       this.handleChange = this.handleChange.bind(this);
+      this.getList = this.getList.bind(this);
 
       const { items, selectedItems } = props;
       this.state = { selectedItems, items, filteredItems: items };
@@ -93,6 +94,10 @@ const withMultiSelectState = WrappedComponent =>
       onChange && onChange(selectedItems);
     }
 
+    getList(ref) {
+      this.list = ref;
+    }
+
     render() {
       return (
         <WrappedComponent
@@ -104,7 +109,7 @@ const withMultiSelectState = WrappedComponent =>
           selectAllItems={this.selectAllItems}
           isAllSelected={this.isAllSelected()}
           clearAll={this.clearAll}
-          getList={ref => (this.list = ref)}
+          getList={this.getList}
         />
       );
     }
