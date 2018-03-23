@@ -1,0 +1,11 @@
+@import "../resources/globals";
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background: $color-white;
+  border: 1px solid $border-color;
+  color: $default-color;
+  overflow: hidden;
+}

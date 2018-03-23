@@ -7,9 +7,9 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config config/webpack/webpack.dev.js",
-    "build:stats": "NODE_ENV=production webpack  --config config/webpack/webpack.prod.js -p --bail --json > stats.json",
-    "build:production": "webpack --config config/webpack/webpack.prod.js",
+    "build": "webpack --config config/webpack/webpack.dev.js --mode development",
+    "build:stats": "NODE_ENV=production webpack  --config config/webpack/webpack.prod.js -p --bail --json > stats.json  --mode production",
+    "build:production": "webpack --config config/webpack/webpack.prod.js --mode production",
     "test": "cross-env BABEL_DISABLE_CACHE=1 jest --config config/jest/jest.config.json",
     "test:watch": "cross-env BABEL_DISABLE_CACHE=1 jest --watchAll --config config/jest/jest.config.json",
     "storybook": "start-storybook -p 6006",
@@ -78,9 +78,9 @@
   },
   "dependencies": {
     "classnames": "2.2.5",
-    "lodash": "^4.17.5",
     "material-ui": "^1.0.0-beta.25",
     "prop-types": "^15.5.8",
+    "react-icons": "^2.2.7",
     "react-virtualized": "^9.18.5"
   },
   "release": {

@@ -1,28 +1,17 @@
 import React, { Component } from "react";
 import { action, storiesOf } from "@storybook/react";
-import {
-  DESTINATION_HEADER_CLEAR_ALL,
-  DESTINATION_HEADER_NONE,
-  SOURCE_HEADER_SELECT_ALL,
-  DESTINATION_HEADER_SELECTED,
-  DESTINATION_NO_ITEMS,
-  SOURCE_NO_ITEMS,
-  SOURCE_SEARCH_PLACEHOLDER
-} from "../src/components/react_multi_select_messages";
-import ReactMultiSelect from "../src/components/react_multi_select";
+import ReactMultiSelect from "../src/components/multi_select";
 import { boolean, withKnobs } from "@storybook/addon-knobs";
 import Icon from "material-ui/Icon";
-import Input from "material-ui/Input";
 import customStyle from "./custom_style.scss";
 
 const custom_messages = {
-  [SOURCE_SEARCH_PLACEHOLDER]: "Find...",
-  [SOURCE_NO_ITEMS]: "No entries available...",
-  [DESTINATION_NO_ITEMS]: "No entries available...",
-  [DESTINATION_HEADER_NONE]: "Nothing",
-  [DESTINATION_HEADER_SELECTED]: "Checked",
-  [SOURCE_HEADER_SELECT_ALL]: "Check all",
-  [DESTINATION_HEADER_CLEAR_ALL]: "Uncheck all"
+  searchPlaceholder: "Find...",
+  noItemsMessage: "No entries available...",
+  noneSelectedMessage: "Nothing",
+  selectedMessage: "Checked",
+  selectAllMessage: "Check all",
+  clearAllMessage: "Uncheck all"
 };
 
 storiesOf("React Multi Select", module)

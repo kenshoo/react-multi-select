@@ -1,4 +1,5 @@
 // Fonts
+$font-xlarge: 24px;
 $font-large: 14px;
 $font-default: 12px;
 
@@ -8,6 +9,7 @@ $space-323: 323px;
 $space-300: 300px;
 $space-180: 180px;
 $space-50: 50px;
+$space-45: 45px;
 $space-40: 40px;
 $space-20: 20px;
 $space-12: 12px;
@@ -32,4 +34,16 @@ $grey-200: #f3f3f3;
 $grey-100: #f7f7f7;
 
 $blue-100: #D9ECF1;
+$blue-200: #008BBF;
+
+
+
+$border-color: $grey-350;
+$default-color: $grey-600;
+$main-color: $color-black;
+$placeholder-color: $grey-450;
+$clickable-color: $blue-200;
+
+$hover-background-color: $grey-200;
+$selected-background-color: $grey-100;
 

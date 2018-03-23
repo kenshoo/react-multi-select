@@ -1,0 +1,11 @@
+@import "../../resources/globals";
+
+.column {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  border-right: 1px solid $border-color;
+  &:last-of-type {
+    border: 0;
+  }
+}
