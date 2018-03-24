@@ -21,9 +21,10 @@ const withMultiSelectState = WrappedComponent =>
       this.clearAll = this.clearAll.bind(this);
       this.handleChange = this.handleChange.bind(this);
       this.getList = this.getList.bind(this);
+      this.onKeyUp = this.onKeyUp.bind(this);
 
       const { items, selectedItems } = props;
-      this.state = { selectedItems, items, filteredItems: items };
+      this.state = { selectedItems, items, filteredItems: items, firstItemShiftSelected: null };
     }
 
     componentWillReceiveProps(nextProps) {
@@ -32,20 +33,69 @@ const withMultiSelectState = WrappedComponent =>
       }
     }
 
-    selectItem(id) {
-      const { items } = this.props;
-      const { selectedItems } = this.state;
-      if (!selectedItems.find(item => item.id === id)) {
-        const newSelectedItems = items.filter(
-          item =>
-            item.id === id ||
-            selectedItems.find(selectedItem => item.id === selectedItem.id)
-        );
-        this.setState({ selectedItems: newSelectedItems }, this.handleChange);
-      } else {
-        this.unselectItem(id);
+      handleMultiSelection(id) {
+        const { items } = this.props;
+          const { selectedItems, firstItemShiftSelected, filteredItems } = this.state;
+          let newSelectedItems;
+          if(firstItemShiftSelected == null) {
+              this.setState({ firstItemShiftSelected: id });
+              newSelectedItems = items.filter(
+                  item =>
+                      item.id === id ||
+                      selectedItems.find(selectedItem => item.id === selectedItem.id)
+              );
+          } else {
+              if (id > firstItemShiftSelected) {
+                  newSelectedItems = items.filter(item =>
+                      item.id >= firstItemShiftSelected &&
+                      item.id <= id &&
+                      filteredItems.find(selectedItem => item.id === selectedItem.id) ||
+                      selectedItems.find(selectedItem => item.id === selectedItem.id)
+                  );
+              } else {
+                  newSelectedItems = items.filter(item =>
+                      item.id <= firstItemShiftSelected &&
+                      item.id >= id &&
+                      filteredItems.find(selectedItem => item.id === selectedItem.id) ||
+                      selectedItems.find(selectedItem => item.id === selectedItem.id)
+                  );
+              }
+          }
+          this.setState({selectedItems: newSelectedItems}, this.handleChange);
       }
-    }
+
+      componentDidMount() {
+          ReactDOM.findDOMNode(this).addEventListener('keyup', this.onKeyUp);
+      }
+
+      componentWillUnmount() {
+          ReactDOM.findDOMNode(this).removeEventListener('keyup', this.onKeyUp, false);
+      }
+
+      onKeyUp(event) {
+        if(event.keyCode === 16 && !event.shiftKey) {
+            this.setState({firstItemShiftSelected: null});
+        }
+      }
+
+      selectItem(event, id) {
+          const {items} = this.props;
+          const {selectedItems} = this.state;
+          if (!selectedItems.find(item => item.id === id)) {
+              if (event.shiftKey) {
+                  this.handleMultiSelection(id);
+              } else {
+                  const newSelectedItems = items.filter(
+                      item =>
+                          item.id === id ||
+                          selectedItems.find(selectedItem => item.id === selectedItem.id)
+                  );
+                  this.setState({selectedItems: newSelectedItems}, this.handleChange);
+              }
+          } else {
+              this.unselectItem(id);
+          }
+      }
 
     unselectItem(id) {
       const { selectedItems } = this.state;

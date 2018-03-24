@@ -8,27 +8,31 @@ const CustomComponent = props => <div {...props} />;
 const ITEM_1 = { id: 0, label: "item 0" };
 const ITEM_2 = { id: 1, label: "item 1" };
 const ITEM_3 = { id: 2, label: "item 2" };
+const ITEM_4 = { id: 3, label: "item 3" };
+const ITEM_12 = { id: 12, label: "item 12" };
+const ITEM_22 = { id: 22, label: "item 22" };
+const EVENT = {shiftKey: false};
 
 const items = [ITEM_1, ITEM_2, ITEM_3];
 
 describe("withMultiSelectState", () => {
   test("default initial state", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
-    const wrapper = shallow(<ConditionalComponent />);
+    const wrapper = shallow(<ConditionalComponent />, {disableLifecycleMethods: true});
     expect(wrapper.prop("selectedItems")).toEqual([]);
     expect(wrapper.prop("filteredItems")).toEqual([]);
   });
 
   test("initial state with items", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
-    const wrapper = shallow(<ConditionalComponent items={items} />);
+    const wrapper = shallow(<ConditionalComponent items={items} />, {disableLifecycleMethods: true});
     expect(wrapper.prop("selectedItems")).toEqual([]);
     expect(wrapper.prop("filteredItems")).toEqual(items);
   });
 
   test("can select all items", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
-    const wrapper = shallow(<ConditionalComponent items={items} />);
+    const wrapper = shallow(<ConditionalComponent items={items} />, {disableLifecycleMethods: true});
     wrapper.props().selectAllItems();
     wrapper.update();
     expect(wrapper.prop("selectedItems")).toEqual(items);
@@ -38,7 +42,8 @@ describe("withMultiSelectState", () => {
     const onChange = jest.fn();
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const wrapper = shallow(
-      <ConditionalComponent items={items} onChange={onChange} />
+      <ConditionalComponent items={items} onChange={onChange} />,
+        {disableLifecycleMethods: true}
     );
     wrapper.props().selectAllItems();
     wrapper.update();
@@ -48,7 +53,7 @@ describe("withMultiSelectState", () => {
 
   test("can unselect select all items", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
-    const wrapper = shallow(<ConditionalComponent items={items} />);
+    const wrapper = shallow(<ConditionalComponent items={items} />, {disableLifecycleMethods: true});
     wrapper.props().selectAllItems();
     wrapper.update();
     wrapper.props().selectAllItems();
@@ -60,7 +65,8 @@ describe("withMultiSelectState", () => {
     const onChange = jest.fn();
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const wrapper = shallow(
-      <ConditionalComponent items={items} onChange={onChange} />
+      <ConditionalComponent items={items} onChange={onChange} />,
+        {disableLifecycleMethods: true}
     );
     wrapper.props().selectAllItems();
     wrapper.update();
@@ -72,10 +78,10 @@ describe("withMultiSelectState", () => {
 
   test("can clear all items", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
-    const wrapper = shallow(<ConditionalComponent items={items} />);
-    wrapper.props().selectItem(ITEM_2.id);
+    const wrapper = shallow(<ConditionalComponent items={items} />, {disableLifecycleMethods: true});
+    wrapper.props().selectItem(EVENT, ITEM_2.id);
     wrapper.update();
-    wrapper.props().selectItem(ITEM_1.id);
+    wrapper.props().selectItem(EVENT, ITEM_1.id);
     wrapper.update();
     wrapper.props().clearAll();
     wrapper.update();
@@ -86,11 +92,12 @@ describe("withMultiSelectState", () => {
     const onChange = jest.fn();
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const wrapper = shallow(
-      <ConditionalComponent items={items} onChange={onChange} />
+      <ConditionalComponent items={items} onChange={onChange} />,
+        {disableLifecycleMethods: true}
     );
-    wrapper.props().selectItem(ITEM_2.id);
+    wrapper.props().selectItem(EVENT, ITEM_2.id);
     wrapper.update();
-    wrapper.props().selectItem(ITEM_1.id);
+    wrapper.props().selectItem(EVENT, ITEM_1.id);
     wrapper.update();
     wrapper.props().clearAll();
     wrapper.update();
@@ -100,8 +107,8 @@ describe("withMultiSelectState", () => {
 
   test("can select one item", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
-    const wrapper = shallow(<ConditionalComponent items={items} />);
-    wrapper.props().selectItem(ITEM_1.id);
+    const wrapper = shallow(<ConditionalComponent items={items} />, {disableLifecycleMethods: true});
+    wrapper.props().selectItem(EVENT, ITEM_1.id);
     wrapper.update();
     expect(wrapper.prop("selectedItems")).toEqual([ITEM_1]);
   });
@@ -110,9 +117,10 @@ describe("withMultiSelectState", () => {
     const onChange = jest.fn();
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const wrapper = shallow(
-      <ConditionalComponent items={items} onChange={onChange} />
+      <ConditionalComponent items={items} onChange={onChange} />,
+        {disableLifecycleMethods: true}
     );
-    wrapper.props().selectItem(ITEM_1.id);
+    wrapper.props().selectItem(EVENT, ITEM_1.id);
     wrapper.update();
     expect(onChange).toHaveBeenCalledTimes(1);
     expect(onChange).toHaveBeenCalledWith([ITEM_1]);
@@ -120,10 +128,10 @@ describe("withMultiSelectState", () => {
 
   test("can remove one item on 2nd click", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
-    const wrapper = shallow(<ConditionalComponent items={items} />);
-    wrapper.props().selectItem(ITEM_1.id);
+    const wrapper = shallow(<ConditionalComponent items={items} />, {disableLifecycleMethods: true});
+    wrapper.props().selectItem(EVENT, ITEM_1.id);
     wrapper.update();
-    wrapper.props().selectItem(ITEM_1.id);
+    wrapper.props().selectItem(EVENT, ITEM_1.id);
     wrapper.update();
     expect(wrapper.prop("selectedItems")).toEqual([]);
   });
@@ -132,7 +140,8 @@ describe("withMultiSelectState", () => {
     const onChange = jest.fn();
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const wrapper = shallow(
-      <ConditionalComponent items={items} onChange={onChange} />
+      <ConditionalComponent items={items} onChange={onChange} />,
+        {disableLifecycleMethods: true}
     );
     wrapper.props().selectItem(ITEM_1.id);
     wrapper.update();
@@ -144,17 +153,17 @@ describe("withMultiSelectState", () => {
 
   test("sorts selection", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
-    const wrapper = shallow(<ConditionalComponent items={items} />);
-    wrapper.props().selectItem(ITEM_2.id);
+    const wrapper = shallow(<ConditionalComponent items={items} />, {disableLifecycleMethods: true});
+    wrapper.props().selectItem(EVENT, ITEM_2.id);
     wrapper.update();
-    wrapper.props().selectItem(ITEM_1.id);
+    wrapper.props().selectItem(EVENT, ITEM_1.id);
     wrapper.update();
     expect(wrapper.prop("selectedItems")).toEqual([ITEM_1, ITEM_2]);
   });
 
   test("can filter items", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
-    const wrapper = shallow(<ConditionalComponent items={items} />);
+    const wrapper = shallow(<ConditionalComponent items={items} />, {disableLifecycleMethods: true});
     wrapper.props().filterItems({ target: { value: "2" } });
     wrapper.update();
     expect(wrapper.prop("filteredItems")).toEqual([ITEM_3]);
@@ -163,7 +172,8 @@ describe("withMultiSelectState", () => {
   test("can define selected items externally", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const wrapper = shallow(
-      <ConditionalComponent items={items} selectedItems={[ITEM_2]} />
+      <ConditionalComponent items={items} selectedItems={[ITEM_2]} />,
+        {disableLifecycleMethods: true}
     );
     expect(wrapper.prop("selectedItems")).toEqual([ITEM_2]);
     wrapper.setProps({ selectedItems: [ITEM_3] });
@@ -173,7 +183,7 @@ describe("withMultiSelectState", () => {
 
   test("getList populates list", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
-    const wrapper = shallow(<ConditionalComponent />);
+    const wrapper = shallow(<ConditionalComponent />, {disableLifecycleMethods: true});
     wrapper.props().getList("testRef");
     wrapper.update();
     expect(wrapper.instance().list).toBe("testRef");
@@ -183,9 +193,9 @@ describe("withMultiSelectState", () => {
     const onChange = jest.fn();
     const update = jest.fn();
     const ConditionalComponent = withMultiSelectState(CustomComponent);
-    const wrapper = shallow(<ConditionalComponent onChange={onChange} />);
+    const wrapper = shallow(<ConditionalComponent onChange={onChange} />, {disableLifecycleMethods: true});
     wrapper.props().getList({ update });
-    wrapper.props().selectItem(ITEM_2.id);
+    wrapper.props().selectItem(EVENT, ITEM_2.id);
     wrapper.update();
     expect(onChange).toHaveBeenCalledTimes(1);
     expect(update).toHaveBeenCalledTimes(1);
@@ -195,7 +205,7 @@ describe("withMultiSelectState", () => {
     const state1 = [ITEM_3];
     const state2 = [ITEM_3];
     const ConditionalComponent = withMultiSelectState(CustomComponent);
-    const wrapper = shallow(<ConditionalComponent selectedItems={state1} />);
+    const wrapper = shallow(<ConditionalComponent selectedItems={state1} />, {disableLifecycleMethods: true});
     wrapper.setProps({ selectedItems: state2 });
     wrapper.update();
     expect(wrapper.state().selectedItems).toBe(state2);
@@ -205,9 +215,51 @@ describe("withMultiSelectState", () => {
   test("componentWillReceiveProps will not call setState when selectedItems is the same", () => {
     const state1 = [ITEM_3];
     const ConditionalComponent = withMultiSelectState(CustomComponent);
-    const wrapper = shallow(<ConditionalComponent selectedItems={state1} />);
+    const wrapper = shallow(<ConditionalComponent selectedItems={state1} />, {disableLifecycleMethods: true});
     wrapper.setProps({ selectedItems: state1 });
     wrapper.update();
     expect(wrapper.state().selectedItems).toBe(state1);
   });
+
+    test("can select with shift next items", () => {
+        const ConditionalComponent = withMultiSelectState(CustomComponent);
+        items.push(ITEM_4);
+        const wrapper = shallow(<ConditionalComponent items={items} />, {disableLifecycleMethods: true});
+        EVENT.shiftKey = true;
+        wrapper.props().selectItem(EVENT, ITEM_1.id);
+        wrapper.update();
+        expect(wrapper.prop("selectedItems")).toEqual([ITEM_1]);
+        expect(wrapper.state("firstItemShiftSelected")).toEqual(ITEM_1.id);
+        wrapper.props().selectItem(EVENT, ITEM_4.id);
+        wrapper.update();
+        expect(wrapper.prop("selectedItems")).toEqual([ITEM_1, ITEM_2, ITEM_3, ITEM_4]);
+    });
+
+    test("can select with shift previous items", () => {
+        const ConditionalComponent = withMultiSelectState(CustomComponent);
+        items.push(ITEM_4);
+        const wrapper = shallow(<ConditionalComponent items={items} />, {disableLifecycleMethods: true});
+        EVENT.shiftKey = true;
+        wrapper.props().selectItem(EVENT, ITEM_4.id);
+        wrapper.update();
+        expect(wrapper.prop("selectedItems")).toEqual([ITEM_4]);
+        expect(wrapper.state("firstItemShiftSelected")).toEqual(ITEM_4.id);
+        wrapper.props().selectItem(EVENT, ITEM_2.id);
+        wrapper.update();
+        expect(wrapper.prop("selectedItems")).toEqual([ITEM_2, ITEM_3, ITEM_4]);
+    });
+
+    test("can select with shift and filter", () => {
+        const ConditionalComponent = withMultiSelectState(CustomComponent);
+        items.push(ITEM_4, ITEM_12, ITEM_22);
+        const wrapper = shallow(<ConditionalComponent items={items} />, {disableLifecycleMethods: true});
+        wrapper.props().filterItems({ target: { value: "2" } });
+        wrapper.update();
+        EVENT.shiftKey = true;
+        wrapper.props().selectItem(EVENT, ITEM_3.id);
+        wrapper.update();
+        wrapper.props().selectItem(EVENT, ITEM_22.id);
+        wrapper.update();
+        expect(wrapper.prop("selectedItems")).toEqual([ITEM_3, ITEM_12, ITEM_22]);
+    });
 });
