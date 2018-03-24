@@ -3,15 +3,20 @@
 .item {
   display: flex;
   align-items: center;
-  transition: background-color 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   box-sizing: border-box;
   cursor: pointer;
   .selected {
     background-color: $selected-background-color;
   }
-  &:hover:not(.selected) {
+  &:hover:not(.selected, .disabled) {
     background-color: $hover-background-color;
   }
+}
+
+.disabled {
+  color: $disabled-color;
+  cursor: default;
 }
 
 .selected {

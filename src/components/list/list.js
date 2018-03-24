@@ -15,7 +15,8 @@ class InnerList extends PureComponent {
     offset: PropTypes.number,
     onClick: PropTypes.func,
     selectedIds: PropTypes.arrayOf(PropTypes.number),
-    items: PropTypes.array
+    items: PropTypes.array,
+    disabled: PropTypes.bool
   };
 
   static defaultProps = {
@@ -25,16 +26,34 @@ class InnerList extends PureComponent {
     height: 400,
     offset: 0,
     selectedIds: [],
-    items: []
+    items: [],
+    disabled: false
   };
 
   constructor(props) {
     super(props);
     this.rowRenderer = this.rowRenderer.bind(this);
     this.noRowsRenderer = this.noRowsRenderer.bind(this);
+    this.onClick = this.onClick.bind(this);
   }
+
+  onClick(item) {
+    const { disabled, onClick, selectedIds } = this.props;
+    const checked = selectedIds.includes(item.id);
+    if ((disabled && checked) || !disabled) {
+      onClick(item.id);
+    }
+  }
+
   rowRenderer({ index, isScrolling, key, style }) {
-    const { renderer, itemHeight, onClick, items, selectedIds } = this.props;
+    const {
+      renderer,
+      itemHeight,
+      onClick,
+      items,
+      selectedIds,
+      disabled
+    } = this.props;
     const Renderer = renderer;
     const item = items[index];
     const checked = selectedIds.includes(item.id);
@@ -43,9 +62,14 @@ class InnerList extends PureComponent {
         key={key}
         style={style}
         className={styles.list_item}
-        onClick={() => onClick(item.id)}
+        onClick={() => this.onClick(item)}
       >
-        <Renderer item={item} height={itemHeight} checked={checked} />
+        <Renderer
+          item={item}
+          height={itemHeight}
+          checked={checked}
+          disabled={disabled && !checked}
+        />
       </div>
     );
   }

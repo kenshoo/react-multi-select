@@ -105,4 +105,30 @@ describe("List", () => {
     itemsWrapper.at(0).simulate("click");
     expect(onClick).toHaveBeenCalledWith(5);
   });
+
+  test("click will not trigger onClick if disabled", () => {
+    const onClick = jest.fn();
+    const wrapper = mount(
+      <List width={100} items={items} onClick={onClick} disabled={true} />
+    );
+    const itemsWrapper = wrapper.find(Item);
+    itemsWrapper.at(0).simulate("click");
+    expect(onClick).toHaveBeenCalledTimes(0);
+  });
+
+  test("click will trigger onClick if disabled but also checked", () => {
+    const onClick = jest.fn();
+    const wrapper = mount(
+      <List
+        width={100}
+        items={items}
+        selectedIds={[5]}
+        onClick={onClick}
+        disabled={true}
+      />
+    );
+    const itemsWrapper = wrapper.find(Item);
+    itemsWrapper.at(0).simulate("click");
+    expect(onClick).toHaveBeenCalledTimes(1);
+  });
 });

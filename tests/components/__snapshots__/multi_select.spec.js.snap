@@ -11,6 +11,7 @@ exports[`MultiSelect can remove search 1`] = `
 >
   <SourceList
     calculatedHeight={360}
+    disabled={false}
     filterItems={undefined}
     filteredItems={Array []}
     getList={undefined}
@@ -54,6 +55,7 @@ exports[`MultiSelect can remove select all 1`] = `
 >
   <SourceList
     calculatedHeight={355}
+    disabled={false}
     filterItems={undefined}
     filteredItems={Array []}
     getList={undefined}
@@ -97,6 +99,7 @@ exports[`MultiSelect custom itemRenderer 1`] = `
 >
   <SourceList
     calculatedHeight={315}
+    disabled={false}
     filterItems={undefined}
     filteredItems={Array []}
     getList={undefined}
@@ -140,6 +143,7 @@ exports[`MultiSelect custom messages 1`] = `
 >
   <SourceList
     calculatedHeight={315}
+    disabled={false}
     filterItems={undefined}
     filteredItems={Array []}
     getList={undefined}
@@ -201,6 +205,7 @@ exports[`MultiSelect custom noItemsRenderer 1`] = `
 >
   <SourceList
     calculatedHeight={315}
+    disabled={false}
     filterItems={undefined}
     filteredItems={Array []}
     getList={undefined}
@@ -244,6 +249,7 @@ exports[`MultiSelect custom searchRenderer 1`] = `
 >
   <SourceList
     calculatedHeight={315}
+    disabled={false}
     filterItems={undefined}
     filteredItems={Array []}
     getList={undefined}
@@ -287,6 +293,7 @@ exports[`MultiSelect custom selectAllRenderer 1`] = `
 >
   <SourceList
     calculatedHeight={315}
+    disabled={false}
     filterItems={undefined}
     filteredItems={Array []}
     getList={undefined}
@@ -330,6 +337,7 @@ exports[`MultiSelect default snapshot 1`] = `
 >
   <SourceList
     calculatedHeight={315}
+    disabled={false}
     filterItems={undefined}
     filteredItems={Array []}
     getList={undefined}
@@ -388,6 +396,65 @@ exports[`MultiSelect displays custom Loader when loading 1`] = `
 </div>
 `;
 
+exports[`MultiSelect does not pass disabled if maxSelectedItem has passed 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <SourceList
+    calculatedHeight={360}
+    disabled={false}
+    filterItems={undefined}
+    filteredItems={Array []}
+    getList={undefined}
+    isAllSelected={false}
+    itemHeight={40}
+    itemRenderer={[Function]}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    searchIcon={undefined}
+    searchRenderer={[Function]}
+    selectAllItems={undefined}
+    selectAllRenderer={[Function]}
+    selectItem={undefined}
+    selectedIds={
+      Array [
+        undefined,
+        undefined,
+      ]
+    }
+    showSearch={true}
+    showSelectAll={false}
+  />
+  <DestinationList
+    clearAll={undefined}
+    height={400}
+    itemHeight={40}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    selectedIds={
+      Array [
+        undefined,
+        undefined,
+      ]
+    }
+    selectedItemRenderer={[Function]}
+    selectedItems={
+      Array [
+        1,
+        2,
+      ]
+    }
+    selectionStatusRenderer={[Function]}
+    unselectItem={undefined}
+  />
+</div>
+`;
+
 exports[`MultiSelect passed clearAll 1`] = `
 <div
   className="wrapper"
@@ -399,6 +466,7 @@ exports[`MultiSelect passed clearAll 1`] = `
 >
   <SourceList
     calculatedHeight={315}
+    disabled={false}
     filterItems={undefined}
     filteredItems={Array []}
     getList={undefined}
@@ -442,6 +510,7 @@ exports[`MultiSelect passed filterItems 1`] = `
 >
   <SourceList
     calculatedHeight={315}
+    disabled={false}
     filterItems={undefined}
     filteredItems={Array []}
     getList={undefined}
@@ -485,6 +554,7 @@ exports[`MultiSelect passed selectAllItems 1`] = `
 >
   <SourceList
     calculatedHeight={315}
+    disabled={false}
     filterItems={undefined}
     filteredItems={Array []}
     getList={undefined}
@@ -528,6 +598,7 @@ exports[`MultiSelect passed selectItem 1`] = `
 >
   <SourceList
     calculatedHeight={315}
+    disabled={false}
     filterItems={undefined}
     filteredItems={Array []}
     getList={undefined}
@@ -571,6 +642,7 @@ exports[`MultiSelect passed selectedIds 1`] = `
 >
   <SourceList
     calculatedHeight={315}
+    disabled={false}
     filterItems={undefined}
     filteredItems={Array []}
     getList={undefined}
@@ -614,6 +686,7 @@ exports[`MultiSelect passed selectedItems 1`] = `
 >
   <SourceList
     calculatedHeight={315}
+    disabled={false}
     filterItems={undefined}
     filteredItems={Array []}
     getList={undefined}
@@ -672,6 +745,7 @@ exports[`MultiSelect passed unselectItem 1`] = `
 >
   <SourceList
     calculatedHeight={315}
+    disabled={false}
     filterItems={undefined}
     filteredItems={Array []}
     getList={undefined}
@@ -700,6 +774,65 @@ exports[`MultiSelect passed unselectItem 1`] = `
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
     unselectItem={[MockFunction unselectItem]}
+  />
+</div>
+`;
+
+exports[`MultiSelect passes disabled if maxSelectedItem has passed 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <SourceList
+    calculatedHeight={360}
+    disabled={true}
+    filterItems={undefined}
+    filteredItems={Array []}
+    getList={undefined}
+    isAllSelected={false}
+    itemHeight={40}
+    itemRenderer={[Function]}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    searchIcon={undefined}
+    searchRenderer={[Function]}
+    selectAllItems={undefined}
+    selectAllRenderer={[Function]}
+    selectItem={undefined}
+    selectedIds={
+      Array [
+        undefined,
+        undefined,
+      ]
+    }
+    showSearch={true}
+    showSelectAll={false}
+  />
+  <DestinationList
+    clearAll={undefined}
+    height={400}
+    itemHeight={40}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    selectedIds={
+      Array [
+        undefined,
+        undefined,
+      ]
+    }
+    selectedItemRenderer={[Function]}
+    selectedItems={
+      Array [
+        1,
+        2,
+      ]
+    }
+    selectionStatusRenderer={[Function]}
+    unselectItem={undefined}
   />
 </div>
 `;

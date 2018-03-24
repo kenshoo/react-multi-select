@@ -11,12 +11,14 @@ const Item = ({
   onClick,
   withBorder,
   checked,
-  indeterminate
+  indeterminate,
+  disabled
 }) => (
   <div
     className={classnames(styles.item, {
       [styles.with_border]: withBorder,
-      [styles.selected]: checked
+      [styles.selected]: checked,
+      [styles.disabled]: disabled
     })}
     style={{ height }}
     onClick={onClick}
@@ -26,6 +28,7 @@ const Item = ({
       color="primary"
       checked={checked}
       indeterminate={indeterminate}
+      disabled={disabled}
     />
     {item.label}
   </div>
@@ -36,7 +39,8 @@ Item.propTypes = {
   height: PropTypes.number,
   withBorder: PropTypes.bool,
   checked: PropTypes.bool,
-  indeterminate: PropTypes.bool
+  indeterminate: PropTypes.bool,
+  disabled: PropTypes.bool
 };
 
 Item.defaultProps = {
@@ -44,7 +48,8 @@ Item.defaultProps = {
   height: 40,
   withBorder: false,
   checked: false,
-  indeterminate: false
+  indeterminate: false,
+  disabled: false
 };
 
 export default Item;

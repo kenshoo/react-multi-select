@@ -25,7 +25,8 @@ const SourceList = ({
   filteredItems,
   calculatedHeight,
   selectItem,
-  noItemsRenderer
+  noItemsRenderer,
+  disabled
 }) => {
   const SearchRenderer = searchRenderer;
   const SelectAllRenderer = selectAllRenderer;
@@ -59,6 +60,7 @@ const SourceList = ({
         renderer={itemRenderer}
         noItemsRenderer={noItemsRenderer}
         noItemsMessage={messages.noItemsMessage}
+        disabled={disabled}
       />
     </Column>
   );
@@ -81,7 +83,8 @@ SourceList.propTypes = {
   selectedIds: PropTypes.arrayOf(PropTypes.number),
   selectAllItems: PropTypes.func,
   getList: PropTypes.func,
-  selectItem: PropTypes.func
+  selectItem: PropTypes.func,
+  disabled: PropTypes.bool
 };
 
 SourceList.defaultProps = {
@@ -96,7 +99,8 @@ SourceList.defaultProps = {
   itemHeight: 40,
   selectedIds: [],
   filteredItems: [],
-  messages: {}
+  messages: {},
+  disabled: false
 };
 
 export default SourceList;

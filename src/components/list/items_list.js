@@ -13,7 +13,8 @@ class ItemsList extends PureComponent {
     offset: PropTypes.number,
     onClick: PropTypes.func,
     selectedIds: PropTypes.arrayOf(PropTypes.number),
-    items: PropTypes.array
+    items: PropTypes.array,
+    disabled: PropTypes.bool
   };
 
   static defaultProps = {
@@ -21,7 +22,8 @@ class ItemsList extends PureComponent {
     height: 400,
     offset: 0,
     selectedIds: [],
-    items: []
+    items: [],
+    disabled: false
   };
 
   constructor(props) {
@@ -48,7 +50,8 @@ class ItemsList extends PureComponent {
       noItemsRenderer,
       renderer,
       selectedIds,
-      onClick
+      onClick,
+      disabled
     } = this.props;
     return (
       <AutoSizer>
@@ -68,6 +71,7 @@ class ItemsList extends PureComponent {
             onClick={onClick}
             items={items}
             selectedIds={selectedIds}
+            disabled={disabled}
           />
         )}
       </AutoSizer>

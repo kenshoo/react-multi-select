@@ -43,6 +43,12 @@ describe("Item", () => {
     expect(tree).toMatchSnapshot();
   });
 
+  test("snapshot with disabled", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(<Item disabled={true} />);
+    expect(tree).toMatchSnapshot();
+  });
+
   test("snapshot with height", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(<Item height={20} />);

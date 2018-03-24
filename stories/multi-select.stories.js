@@ -49,6 +49,25 @@ storiesOf("React Multi Select", module)
       />
     );
   })
+  .add("With max selected items", () => {
+    const items = Array.apply(null, { length: 10 }).map((i, index) => {
+      return {
+        id: index,
+        label: `Item ${index}`
+      };
+    });
+
+    return (
+      <ReactMultiSelect
+        items={items}
+        maxSelectedItems={4}
+        loading={boolean("Loading", false)}
+        onChange={action("onChange")}
+        showSearch={boolean("Show search", true)}
+        showSelectAll={boolean("Show select all", true)}
+      />
+    );
+  })
   .add("With Custom Messages", () => {
     const items = Array.apply(null, { length: 10 }).map((i, index) => {
       return {

@@ -80,6 +80,7 @@ class Example extends Component {
 | `wrapperClassName`              | `String`              | ''                                               | wrapper class name. Used for customizing the style
 | `height`                        | `number`              | 400                                              | available items list height
 | `itemHeight`                    | `number`              | 40                                               | the height of an item in the list
+| `maxSelectedItems`              | `number`              |                                                  | defines the maximum items that can be selected. Overrides showSelectAll
 | `filterFunction`                | `function`            | based on label                                   | The function used to filter items based on the search query
 | `searchRenderer`                | `Component`           |                                                  | Component to replace the default Search component
 | `selectedItemRenderer`          | `Component`           |                                                  | Component to replace the default selected item component in the destination list
@@ -111,6 +112,8 @@ Each item receives the following props:
 `checked` - indicates if the item is selected
 
 `indeterminate` - used by the select all component to display indeterminate mode
+
+`disabled` - defines if item should be disabled
 
 <br/>
 
