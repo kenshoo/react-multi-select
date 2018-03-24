@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import { action, storiesOf } from "@storybook/react";
 import ReactMultiSelect from "../src/components/multi_select";
 import { boolean, withKnobs } from "@storybook/addon-knobs";
-import Icon from "material-ui/Icon";
+import TextField from "material-ui/TextField";
+import StarOIcon from "react-icons/lib/md/star-outline";
+import StarIcon from "react-icons/lib/md/star";
+import DeleteIcon from "react-icons/lib/md/delete";
+import Avatar from "material-ui/Avatar";
 import customStyle from "./custom_style.scss";
 
 const custom_messages = {
@@ -150,36 +154,93 @@ storiesOf("React Multi Select", module)
     const items = Array.apply(null, { length: 10 }).map((i, index) => ({
       id: index,
       value: `item ${index}`,
-      label: (
-        <div>
-          <Icon>star</Icon>
-          {`Item ${index}`}
-        </div>
-      )
+      label: `Item ${index}`
     }));
 
-    const displaySelectedItemFunc = item => (
-      <div>{`selected: ${item.value}`}</div>
+    const Item = ({ item, checked }) => (
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          lineHeight: "14px",
+          height: "100%",
+          margin: "12px"
+        }}
+      >
+        <div style={{ fontSize: "24px", margin: "0 12px 0 0" }}>
+          {!checked ? <StarOIcon /> : <StarIcon />}
+        </div>
+        {item.label}
+      </div>
     );
 
-    const searchRenderer = ({ searchTerm, onSearchTermChange }) => {
+    const Search = ({ searchPlaceholder, onChange }) => {
       return (
-        <div>
-          custom search{" "}
-          <input value={searchTerm} onChange={onSearchTermChange} />
-        </div>
+        <TextField
+          placeholder={searchPlaceholder}
+          onChange={onChange}
+          fullWidth
+          style={{ margin: "17px 0 0 0" }}
+        />
       );
     };
 
+    const SelectAll = ({ isAllSelected, onClick }) => (
+      <div
+        onClick={onClick}
+        style={{
+          height: "40px",
+          background: "#e6e4ff",
+          padding: "0 12px",
+          display: "flex",
+          alignItems: "center"
+        }}
+      >
+        {isAllSelected ? "Unselect All" : "Select All"}
+      </div>
+    );
+
+    const SelectedItem = ({ item, height }) => (
+      <div
+        style={{
+          height,
+          display: "flex",
+          alignItems: "center",
+          lineHeight: "14px",
+          padding: "0 12px"
+        }}
+      >
+        <div>{item.label}</div>
+        <div style={{ fontSize: "24px", margin: "0 12px" }}>
+          <DeleteIcon />
+        </div>
+      </div>
+    );
+
+    const SelectionStatus = ({ selected }) => (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-end",
+          padding: "0 12px"
+        }}
+      >
+        <Avatar>{selected.length}</Avatar>
+      </div>
+    );
+
     return (
       <ReactMultiSelect
-        displaySelectedItemFunc={displaySelectedItemFunc}
         items={items}
+        itemRenderer={Item}
+        selectAllRenderer={SelectAll}
+        searchRenderer={Search}
+        selectedItemRenderer={SelectedItem}
+        selectionStatusRenderer={SelectionStatus}
         loading={boolean("Loading", false)}
         onChange={action("onChange")}
         showSearch={boolean("Show search", true)}
         showSelectAll={boolean("Show select all", true)}
-        searchRenderer={searchRenderer}
       />
     );
   });
