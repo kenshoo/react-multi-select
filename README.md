@@ -87,6 +87,8 @@ class Example extends Component {
 | `loaderRenderer`                | `Component`           |                                                  | Component to replace the default loader component
 | `selectAllRenderer`             | `Component`           |                                                  | Component to replace the default select all component
 | `itemRenderer`                  | `Component`           |                                                  | Component to replace the default item component in the source list
+| `selectionStatusRenderer`       | `Component`           |                                                  | Component to replace the default selection status component
+| `noItemsRenderer`               | `Component`           |                                                  | Component to replace the default no items component
 
 
 ## Customization
@@ -160,9 +162,35 @@ The Search component receives the following props:
 
 <br/>
 
+**Selection Status**
+
+Use the `selectionStatusRenderer` to replace the default component.
+
+The Search component receives the following props:
+
+`selected` - an array of all the selected ids
+
+`clearAll` - callback to clear all selected items
+
+`clearAllMessage` - text to display in the clear all text
+
+`noneSelectedMessage` - text to display when no items are selected
+
+`selectedMessage` - text to display when there are items selected
+  
+<br/>
+
 **Loader**
 
 Use the `loaderRenderer` to replace the default component.
+
+Does not receive any props.
+
+<br/>
+
+**No Items**
+
+Use the `noItemsRenderer` to replace the default component.
 
 Does not receive any props.
 
