@@ -10,6 +10,7 @@ exports[`DestinationList custom messages 1`] = `
     selectedMessage="Checked"
   />
   <ItemsList
+    disabled={false}
     height={355}
     itemHeight={40}
     items={Array []}
@@ -33,6 +34,7 @@ exports[`DestinationList custom noItemsRenderer 1`] = `
     selectedMessage="selected"
   />
   <ItemsList
+    disabled={false}
     height={355}
     itemHeight={40}
     items={Array []}
@@ -56,6 +58,7 @@ exports[`DestinationList custom selectedItemRenderer 1`] = `
     selectedMessage="selected"
   />
   <ItemsList
+    disabled={false}
     height={355}
     itemHeight={40}
     items={Array []}
@@ -79,6 +82,7 @@ exports[`DestinationList custom selectionStatusRenderer 1`] = `
     selectedMessage={undefined}
   />
   <ItemsList
+    disabled={false}
     height={355}
     itemHeight={40}
     items={Array []}
@@ -102,6 +106,7 @@ exports[`DestinationList default snapshot 1`] = `
     selectedMessage="selected"
   />
   <ItemsList
+    disabled={false}
     height={355}
     itemHeight={40}
     items={Array []}
@@ -125,6 +130,7 @@ exports[`DestinationList passed clearAll 1`] = `
     selectedMessage="selected"
   />
   <ItemsList
+    disabled={false}
     height={355}
     itemHeight={40}
     items={Array []}
@@ -153,6 +159,7 @@ exports[`DestinationList passed selectedIds 1`] = `
     selectedMessage="selected"
   />
   <ItemsList
+    disabled={false}
     height={355}
     itemHeight={40}
     items={Array []}
@@ -176,6 +183,7 @@ exports[`DestinationList passed selectedItems 1`] = `
     selectedMessage="selected"
   />
   <ItemsList
+    disabled={false}
     height={355}
     itemHeight={40}
     items={
@@ -204,6 +212,7 @@ exports[`DestinationList passed unselectItem 1`] = `
     selectedMessage="selected"
   />
   <ItemsList
+    disabled={false}
     height={355}
     itemHeight={40}
     items={Array []}

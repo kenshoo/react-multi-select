@@ -11,6 +11,7 @@ exports[`SourceList can remove search 1`] = `
     selectedIds={Array []}
   />
   <ItemsList
+    disabled={false}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -32,6 +33,7 @@ exports[`SourceList can remove select all 1`] = `
     searchPlaceholder="Search..."
   />
   <ItemsList
+    disabled={false}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -61,6 +63,7 @@ exports[`SourceList custom itemRenderer 1`] = `
     selectedIds={Array []}
   />
   <ItemsList
+    disabled={false}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -90,6 +93,7 @@ exports[`SourceList custom messages 1`] = `
     selectedIds={Array []}
   />
   <ItemsList
+    disabled={false}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -119,6 +123,7 @@ exports[`SourceList custom noItemsRenderer 1`] = `
     selectedIds={Array []}
   />
   <ItemsList
+    disabled={false}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -148,6 +153,7 @@ exports[`SourceList custom searchRenderer 1`] = `
     selectedIds={Array []}
   />
   <ItemsList
+    disabled={false}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -177,6 +183,7 @@ exports[`SourceList custom selectAllRenderer 1`] = `
     selectedIds={Array []}
   />
   <ItemsList
+    disabled={false}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -206,6 +213,7 @@ exports[`SourceList default snapshot 1`] = `
     selectedIds={Array []}
   />
   <ItemsList
+    disabled={false}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -235,6 +243,7 @@ exports[`SourceList passed filterItems 1`] = `
     selectedIds={Array []}
   />
   <ItemsList
+    disabled={false}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -264,6 +273,7 @@ exports[`SourceList passed selectAllItems 1`] = `
     selectedIds={Array []}
   />
   <ItemsList
+    disabled={false}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -293,6 +303,7 @@ exports[`SourceList passed selectItem 1`] = `
     selectedIds={Array []}
   />
   <ItemsList
+    disabled={false}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -327,6 +338,7 @@ exports[`SourceList passed selectedIds 1`] = `
     }
   />
   <ItemsList
+    disabled={false}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -361,6 +373,7 @@ exports[`SourceList passed selectedItems 1`] = `
     selectedIds={Array []}
   />
   <ItemsList
+    disabled={false}
     height={400}
     itemHeight={40}
     items={Array []}

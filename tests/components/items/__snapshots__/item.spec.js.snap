@@ -13,6 +13,7 @@ exports[`Item default snapshot 1`] = `
   <WithStyles(Checkbox)
     checked={false}
     color="primary"
+    disabled={false}
     indeterminate={false}
     type="checkbox"
   />
@@ -32,6 +33,7 @@ exports[`Item snapshot with border 1`] = `
   <WithStyles(Checkbox)
     checked={false}
     color="primary"
+    disabled={false}
     indeterminate={false}
     type="checkbox"
   />
@@ -51,6 +53,27 @@ exports[`Item snapshot with checked status 1`] = `
   <WithStyles(Checkbox)
     checked={true}
     color="primary"
+    disabled={false}
+    indeterminate={false}
+    type="checkbox"
+  />
+</div>
+`;
+
+exports[`Item snapshot with disabled 1`] = `
+<div
+  className="item disabled"
+  onClick={undefined}
+  style={
+    Object {
+      "height": 40,
+    }
+  }
+>
+  <WithStyles(Checkbox)
+    checked={false}
+    color="primary"
+    disabled={true}
     indeterminate={false}
     type="checkbox"
   />
@@ -70,6 +93,7 @@ exports[`Item snapshot with height 1`] = `
   <WithStyles(Checkbox)
     checked={false}
     color="primary"
+    disabled={false}
     indeterminate={false}
     type="checkbox"
   />
@@ -89,6 +113,7 @@ exports[`Item snapshot with indeterminate and checked status 1`] = `
   <WithStyles(Checkbox)
     checked={true}
     color="primary"
+    disabled={false}
     indeterminate={true}
     type="checkbox"
   />
@@ -108,6 +133,7 @@ exports[`Item snapshot with indeterminate status 1`] = `
   <WithStyles(Checkbox)
     checked={false}
     color="primary"
+    disabled={false}
     indeterminate={true}
     type="checkbox"
   />
@@ -127,6 +153,7 @@ exports[`Item snapshot with valid item 1`] = `
   <WithStyles(Checkbox)
     checked={false}
     color="primary"
+    disabled={false}
     indeterminate={false}
     type="checkbox"
   />

@@ -3,6 +3,7 @@
 exports[`SelectAll default snapshot 1`] = `
 <Item
   checked={false}
+  disabled={false}
   height={40}
   indeterminate={false}
   item={
@@ -18,6 +19,7 @@ exports[`SelectAll default snapshot 1`] = `
 exports[`SelectAll snapshot with empty selectedIds with select all 1`] = `
 <Item
   checked={false}
+  disabled={false}
   height={40}
   indeterminate={false}
   item={
@@ -33,6 +35,7 @@ exports[`SelectAll snapshot with empty selectedIds with select all 1`] = `
 exports[`SelectAll snapshot with empty selectedIds without select all 1`] = `
 <Item
   checked={false}
+  disabled={false}
   height={40}
   indeterminate={false}
   item={
@@ -48,6 +51,7 @@ exports[`SelectAll snapshot with empty selectedIds without select all 1`] = `
 exports[`SelectAll snapshot with height 1`] = `
 <Item
   checked={false}
+  disabled={false}
   height={20}
   indeterminate={false}
   item={
@@ -63,6 +67,7 @@ exports[`SelectAll snapshot with height 1`] = `
 exports[`SelectAll snapshot with isSelectAll 1`] = `
 <Item
   checked={false}
+  disabled={false}
   height={40}
   indeterminate={false}
   item={
@@ -78,6 +83,7 @@ exports[`SelectAll snapshot with isSelectAll 1`] = `
 exports[`SelectAll snapshot with isSelectAll false 1`] = `
 <Item
   checked={false}
+  disabled={false}
   height={40}
   indeterminate={false}
   item={
@@ -93,6 +99,7 @@ exports[`SelectAll snapshot with isSelectAll false 1`] = `
 exports[`SelectAll snapshot with selectAllMessage 1`] = `
 <Item
   checked={false}
+  disabled={false}
   height={40}
   indeterminate={false}
   item={
@@ -108,6 +115,7 @@ exports[`SelectAll snapshot with selectAllMessage 1`] = `
 exports[`SelectAll snapshot with selectedIds with select all should be indeterminate 1`] = `
 <Item
   checked={false}
+  disabled={false}
   height={40}
   indeterminate={true}
   item={
@@ -123,6 +131,7 @@ exports[`SelectAll snapshot with selectedIds with select all should be indetermi
 exports[`SelectAll snapshot with selectedIds without select all should be indeterminate 1`] = `
 <Item
   checked={false}
+  disabled={false}
   height={40}
   indeterminate={true}
   item={

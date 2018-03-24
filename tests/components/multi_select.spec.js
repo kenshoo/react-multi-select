@@ -79,6 +79,18 @@ describe("MultiSelect", () => {
     expect(tree).toMatchSnapshot();
   });
 
+  test("passes disabled if maxSelectedItem has passed", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(<MultiSelect selectedItems={[1, 2]} maxSelectedItems={2}/>);
+    expect(tree).toMatchSnapshot();
+  });
+
+  test("does not pass disabled if maxSelectedItem has passed", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(<MultiSelect selectedItems={[1, 2]} maxSelectedItems={4}/>);
+    expect(tree).toMatchSnapshot();
+  });
+
   test("passed selectAllItems", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
