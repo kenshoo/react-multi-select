@@ -92,5 +92,16 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "keywords": [
+    "multiselect",
+    "form",
+    "input",
+    "listtolist",
+    "react",
+    "react-component",
+    "select",
+    "ui",
+    "multi-select"
+  ]
 }
