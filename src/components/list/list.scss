@@ -2,6 +2,7 @@
 
 .list {
   outline: none;
+  user-select: none;
   @extend .scrollbar;
 }
 
