@@ -30,7 +30,7 @@ const manyItems = generateItems(7000);
 
 storiesOf("React Multi Select", module)
   .addDecorator(withKnobs)
-  .add("Default view", () => {
+  .add("Default view  ", () => {
     return (
       <ReactMultiSelect
         items={items}
