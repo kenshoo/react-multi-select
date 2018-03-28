@@ -81,13 +81,17 @@ describe("MultiSelect", () => {
 
   test("passes disabled if maxSelectedItem has passed", () => {
     const renderer = new ShallowRenderer();
-    const tree = renderer.render(<MultiSelect selectedItems={[1, 2]} maxSelectedItems={2}/>);
+    const tree = renderer.render(
+      <MultiSelect selectedItems={[1, 2]} maxSelectedItems={2} />
+    );
     expect(tree).toMatchSnapshot();
   });
 
   test("does not pass disabled if maxSelectedItem has passed", () => {
     const renderer = new ShallowRenderer();
-    const tree = renderer.render(<MultiSelect selectedItems={[1, 2]} maxSelectedItems={4}/>);
+    const tree = renderer.render(
+      <MultiSelect selectedItems={[1, 2]} maxSelectedItems={4} />
+    );
     expect(tree).toMatchSnapshot();
   });
 
@@ -146,6 +150,12 @@ describe("MultiSelect", () => {
     const tree = renderer.render(
       <MultiSelect loading={true} loaderRenderer={CustomComponent} />
     );
+    expect(tree).toMatchSnapshot();
+  });
+
+  test("can remove selected items", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(<MultiSelect showSelectedItems={false} />);
     expect(tree).toMatchSnapshot();
   });
 });
