@@ -77,6 +77,7 @@ class Example extends Component {
 | `messages`                      | `Object`              | {}                                               | custom messages. Please see below for the availabale messages                                                                                                                          
 | `showSearch   `                 | `boolean`             | true                                             | toggle to show search option.                                        
 | `showSelectAll`                 | `boolean`             | true                                             | toggle to show select All option in list.
+| `showSelectedItems`             | `boolean`             | true                                             | toggle to show selected items right pane.
 | `wrapperClassName`              | `String`              | ''                                               | wrapper class name. Used for customizing the style
 | `height`                        | `number`              | 400                                              | available items list height
 | `itemHeight`                    | `number`              | 40                                               | the height of an item in the list
