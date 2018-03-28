@@ -103,7 +103,7 @@ describe("List", () => {
     const wrapper = mount(<List width={100} items={items} onClick={onClick} />);
     const itemsWrapper = wrapper.find(Item);
     itemsWrapper.at(0).simulate("click");
-    expect(onClick).toHaveBeenCalledWith(5);
+    expect(onClick).toHaveBeenCalledWith(expect.anything(), 5);
   });
 
   test("click will not trigger onClick if disabled", () => {

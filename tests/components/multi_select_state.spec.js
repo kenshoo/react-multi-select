@@ -8,10 +8,19 @@ const CustomComponent = props => <div {...props} />;
 const ITEM_1 = { id: 0, label: "item 0" };
 const ITEM_2 = { id: 1, label: "item 1" };
 const ITEM_3 = { id: 2, label: "item 2" };
+const ITEM_4 = { id: 3, label: "item 3" };
+const ITEM_12 = { id: 12, label: "item 12" };
+const ITEM_22 = { id: 22, label: "item 22" };
+const EVENT = { shiftKey: false };
+const EVENT_WITH_SHIFT = { keyCode: 16, shiftKey: true };
+const EVENT_WITH_CTRL = { keyCode: 17, shiftKey: true };
 
 const items = [ITEM_1, ITEM_2, ITEM_3];
 
 describe("withMultiSelectState", () => {
+  window.addEventListener = jest.fn();
+  window.removeEventListener = jest.fn();
+
   test("default initial state", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const wrapper = shallow(<ConditionalComponent />);
@@ -73,9 +82,9 @@ describe("withMultiSelectState", () => {
   test("can clear all items", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const wrapper = shallow(<ConditionalComponent items={items} />);
-    wrapper.props().selectItem(ITEM_2.id);
+    wrapper.props().selectItem(EVENT, ITEM_2.id);
     wrapper.update();
-    wrapper.props().selectItem(ITEM_1.id);
+    wrapper.props().selectItem(EVENT, ITEM_1.id);
     wrapper.update();
     wrapper.props().clearAll();
     wrapper.update();
@@ -88,9 +97,9 @@ describe("withMultiSelectState", () => {
     const wrapper = shallow(
       <ConditionalComponent items={items} onChange={onChange} />
     );
-    wrapper.props().selectItem(ITEM_2.id);
+    wrapper.props().selectItem(EVENT, ITEM_2.id);
     wrapper.update();
-    wrapper.props().selectItem(ITEM_1.id);
+    wrapper.props().selectItem(EVENT, ITEM_1.id);
     wrapper.update();
     wrapper.props().clearAll();
     wrapper.update();
@@ -101,7 +110,7 @@ describe("withMultiSelectState", () => {
   test("can select one item", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const wrapper = shallow(<ConditionalComponent items={items} />);
-    wrapper.props().selectItem(ITEM_1.id);
+    wrapper.props().selectItem(EVENT, ITEM_1.id);
     wrapper.update();
     expect(wrapper.prop("selectedItems")).toEqual([ITEM_1]);
   });
@@ -112,7 +121,7 @@ describe("withMultiSelectState", () => {
     const wrapper = shallow(
       <ConditionalComponent items={items} onChange={onChange} />
     );
-    wrapper.props().selectItem(ITEM_1.id);
+    wrapper.props().selectItem(EVENT, ITEM_1.id);
     wrapper.update();
     expect(onChange).toHaveBeenCalledTimes(1);
     expect(onChange).toHaveBeenCalledWith([ITEM_1]);
@@ -121,9 +130,9 @@ describe("withMultiSelectState", () => {
   test("can remove one item on 2nd click", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const wrapper = shallow(<ConditionalComponent items={items} />);
-    wrapper.props().selectItem(ITEM_1.id);
+    wrapper.props().selectItem(EVENT, ITEM_1.id);
     wrapper.update();
-    wrapper.props().selectItem(ITEM_1.id);
+    wrapper.props().selectItem(EVENT, ITEM_1.id);
     wrapper.update();
     expect(wrapper.prop("selectedItems")).toEqual([]);
   });
@@ -145,9 +154,9 @@ describe("withMultiSelectState", () => {
   test("sorts selection", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const wrapper = shallow(<ConditionalComponent items={items} />);
-    wrapper.props().selectItem(ITEM_2.id);
+    wrapper.props().selectItem(EVENT, ITEM_2.id);
     wrapper.update();
-    wrapper.props().selectItem(ITEM_1.id);
+    wrapper.props().selectItem(EVENT, ITEM_1.id);
     wrapper.update();
     expect(wrapper.prop("selectedItems")).toEqual([ITEM_1, ITEM_2]);
   });
@@ -185,7 +194,7 @@ describe("withMultiSelectState", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const wrapper = shallow(<ConditionalComponent onChange={onChange} />);
     wrapper.props().getList({ update });
-    wrapper.props().selectItem(ITEM_2.id);
+    wrapper.props().selectItem(EVENT, ITEM_2.id);
     wrapper.update();
     expect(onChange).toHaveBeenCalledTimes(1);
     expect(update).toHaveBeenCalledTimes(1);
@@ -209,5 +218,99 @@ describe("withMultiSelectState", () => {
     wrapper.setProps({ selectedItems: state1 });
     wrapper.update();
     expect(wrapper.state().selectedItems).toBe(state1);
+  });
+
+  test("can select with shift next items", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const newItems = items.concat(ITEM_4);
+    const wrapper = shallow(<ConditionalComponent items={newItems} />);
+    wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_1.id);
+    wrapper.update();
+    expect(wrapper.prop("selectedItems")).toEqual([ITEM_1]);
+    expect(wrapper.state("firstItemShiftSelected")).toEqual(ITEM_1.id);
+    wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_4.id);
+    wrapper.update();
+    expect(wrapper.prop("selectedItems")).toEqual([
+      ITEM_1,
+      ITEM_2,
+      ITEM_3,
+      ITEM_4
+    ]);
+  });
+
+  test("can select with shift previous items", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const newItems = items.concat(ITEM_4);
+    const wrapper = shallow(<ConditionalComponent items={newItems} />);
+    wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_4.id);
+    wrapper.update();
+    expect(wrapper.prop("selectedItems")).toEqual([ITEM_4]);
+    expect(wrapper.state("firstItemShiftSelected")).toEqual(ITEM_4.id);
+    wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_2.id);
+    wrapper.update();
+    expect(wrapper.prop("selectedItems")).toEqual([ITEM_2, ITEM_3, ITEM_4]);
+  });
+
+  test("can select with shift and filter", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const newItems = items.concat([ITEM_4, ITEM_12, ITEM_22]);
+    const wrapper = shallow(<ConditionalComponent items={newItems} />);
+    wrapper.props().filterItems({ target: { value: "2" } });
+    wrapper.update();
+    wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_3.id);
+    wrapper.update();
+    wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_22.id);
+    wrapper.update();
+    expect(wrapper.prop("selectedItems")).toEqual([ITEM_3, ITEM_12, ITEM_22]);
+  });
+
+  test("remove shiftKey in the middle ", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const newItems = items.concat([ITEM_4, ITEM_12, ITEM_22]);
+    const wrapper = shallow(<ConditionalComponent items={newItems} />);
+    wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_3.id);
+    wrapper.update();
+    wrapper.props().selectItem(EVENT, ITEM_22.id);
+    wrapper.update();
+    expect(wrapper.prop("selectedItems")).toEqual([ITEM_3, ITEM_22]);
+  });
+
+  test("add event listener when component mounted ", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    shallow(<ConditionalComponent />);
+    expect(window.addEventListener).toHaveBeenCalled();
+  });
+
+  test("remove event listener when component unmount ", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const wrapper = shallow(<ConditionalComponent />);
+    wrapper.unmount();
+    expect(window.removeEventListener).toHaveBeenCalled();
+  });
+
+  test("simulate shift key up ", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const wrapper = shallow(<ConditionalComponent items={items} />);
+    wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_1.id);
+    wrapper.update();
+    wrapper.instance().onKeyUp(EVENT_WITH_SHIFT);
+    expect(wrapper.state("firstItemShiftSelected")).toEqual(undefined);
+  });
+
+  test("simulate ctrl key up ", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const wrapper = shallow(<ConditionalComponent items={items} />);
+    wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_1.id);
+    wrapper.update();
+    wrapper.instance().onKeyUp(EVENT_WITH_CTRL);
+    expect(wrapper.state("firstItemShiftSelected")).toEqual(ITEM_1.id);
+  });
+
+  test("set firstItemShiftSelected just with shift key", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const wrapper = shallow(<ConditionalComponent items={items} />);
+    wrapper.props().selectItem(EVENT, ITEM_4.id);
+    wrapper.update();
+    expect(wrapper.state("firstItemShiftSelected")).toEqual(undefined);
   });
 });
