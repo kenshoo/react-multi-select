@@ -305,4 +305,12 @@ describe("withMultiSelectState", () => {
     wrapper.instance().onKeyUp(EVENT_WITH_CTRL);
     expect(wrapper.state("firstItemShiftSelected")).toEqual(ITEM_1.id);
   });
+
+  test("set firstItemShiftSelected just with shift key", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const wrapper = shallow(<ConditionalComponent items={items} />);
+    wrapper.props().selectItem(EVENT, ITEM_4.id);
+    wrapper.update();
+    expect(wrapper.state("firstItemShiftSelected")).toEqual(undefined);
+  });
 });

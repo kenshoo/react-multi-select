@@ -90,7 +90,7 @@ const withMultiSelectState = WrappedComponent =>
         if (event.shiftKey && firstItemShiftSelected !== undefined) {
           this.handleMultiSelection(items.findIndex(item => item.id === id));
         } else {
-          if (firstItemShiftSelected === undefined) {
+          if (event.shiftKey && firstItemShiftSelected === undefined) {
             const index = items.findIndex(item => item.id === id);
             this.setState({ firstItemShiftSelected: index });
           }
