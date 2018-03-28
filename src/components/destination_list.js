@@ -15,7 +15,7 @@ const DestinationList = ({
   selectedItems,
   itemHeight,
   height,
-  unselectItem,
+  unselectItems,
   selectedItemRenderer,
   noItemsRenderer
 }) => {
@@ -33,7 +33,7 @@ const DestinationList = ({
         items={selectedItems}
         itemHeight={itemHeight}
         height={height - 45}
-        onClick={unselectItem}
+        onClick={id => unselectItems([id])}
         renderer={selectedItemRenderer}
         noItemsRenderer={noItemsRenderer}
         noItemsMessage={messages.noItemsMessage}
@@ -50,7 +50,7 @@ DestinationList.propTypes = {
   selectedItems: PropTypes.array,
   itemHeight: PropTypes.number,
   height: PropTypes.number,
-  unselectItem: PropTypes.func,
+  unselectItems: PropTypes.func,
   selectedItemRenderer: PropTypes.any,
   noItemsRenderer: PropTypes.any
 };

@@ -17,7 +17,7 @@ exports[`DestinationList custom messages 1`] = `
     noItemsMessage="No entries available..."
     noItemsRenderer={[Function]}
     offset={0}
-    onClick={undefined}
+    onClick={[Function]}
     renderer={[Function]}
     selectedIds={Array []}
   />
@@ -41,7 +41,7 @@ exports[`DestinationList custom noItemsRenderer 1`] = `
     noItemsMessage={undefined}
     noItemsRenderer={[MockFunction mockedComponent]}
     offset={0}
-    onClick={undefined}
+    onClick={[Function]}
     renderer={[Function]}
     selectedIds={Array []}
   />
@@ -65,7 +65,7 @@ exports[`DestinationList custom selectedItemRenderer 1`] = `
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={0}
-    onClick={undefined}
+    onClick={[Function]}
     renderer={[MockFunction mockedComponent]}
     selectedIds={Array []}
   />
@@ -89,7 +89,7 @@ exports[`DestinationList custom selectionStatusRenderer 1`] = `
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={0}
-    onClick={undefined}
+    onClick={[Function]}
     renderer={[Function]}
     selectedIds={Array []}
   />
@@ -113,7 +113,7 @@ exports[`DestinationList default snapshot 1`] = `
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={0}
-    onClick={undefined}
+    onClick={[Function]}
     renderer={[Function]}
     selectedIds={Array []}
   />
@@ -137,7 +137,7 @@ exports[`DestinationList passed clearAll 1`] = `
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={0}
-    onClick={undefined}
+    onClick={[Function]}
     renderer={[Function]}
     selectedIds={Array []}
   />
@@ -166,7 +166,7 @@ exports[`DestinationList passed selectedIds 1`] = `
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={0}
-    onClick={undefined}
+    onClick={[Function]}
     renderer={[Function]}
     selectedIds={Array []}
   />
@@ -195,14 +195,14 @@ exports[`DestinationList passed selectedItems 1`] = `
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={0}
-    onClick={undefined}
+    onClick={[Function]}
     renderer={[Function]}
     selectedIds={Array []}
   />
 </Column>
 `;
 
-exports[`DestinationList passed unselectItem 1`] = `
+exports[`DestinationList passed unselectItems 1`] = `
 <Column>
   <SelectionStatus
     clearAll={undefined}
@@ -219,7 +219,7 @@ exports[`DestinationList passed unselectItem 1`] = `
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={0}
-    onClick={[MockFunction unselectItem]}
+    onClick={[Function]}
     renderer={[Function]}
     selectedIds={Array []}
   />

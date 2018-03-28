@@ -19,7 +19,7 @@ const custom_messages = {
 const selectAllItems = jest.fn().mockName("selectAllItems");
 const filterItems = jest.fn().mockName("filterItems");
 const selectItem = jest.fn().mockName("selectItem");
-const unselectItem = jest.fn().mockName("unselectItem");
+const unselectItems = jest.fn().mockName("unselectItems");
 const clearAll = jest.fn().mockName("clearAll");
 
 describe("MultiSelect", () => {
@@ -115,9 +115,9 @@ describe("MultiSelect", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test("passed unselectItem", () => {
+  test("passed unselectItems", () => {
     const renderer = new ShallowRenderer();
-    const tree = renderer.render(<MultiSelect unselectItem={unselectItem} />);
+    const tree = renderer.render(<MultiSelect unselectItems={unselectItems} />);
     expect(tree).toMatchSnapshot();
   });
 

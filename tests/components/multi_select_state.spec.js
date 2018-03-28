@@ -188,7 +188,7 @@ describe("withMultiSelectState", () => {
     expect(wrapper.instance().list).toBe("testRef");
   });
 
-  test("hangelChange tirggers update list and onChange", () => {
+  test("handle Change tirggers update list and onChange", () => {
     const onChange = jest.fn();
     const update = jest.fn();
     const ConditionalComponent = withMultiSelectState(CustomComponent);
@@ -312,5 +312,29 @@ describe("withMultiSelectState", () => {
     wrapper.props().selectItem(EVENT, ITEM_4.id);
     wrapper.update();
     expect(wrapper.state("firstItemShiftSelected")).toEqual(undefined);
+  });
+
+  test("select all items with filter", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const wrapper = shallow(<ConditionalComponent items={items} />);
+    wrapper.props().selectItem(EVENT, ITEM_3.id);
+    wrapper.update();
+    wrapper.props().filterItems({ target: { value: "0" } });
+    wrapper.update();
+    wrapper.props().selectAllItems();
+    wrapper.update();
+    expect(wrapper.prop("selectedItems")).toEqual([ITEM_1, ITEM_3]);
+  });
+
+  test("unselect all items with filter", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const wrapper = shallow(
+      <ConditionalComponent items={items} selectedItems={items} />
+    );
+    wrapper.props().filterItems({ target: { value: "0" } });
+    wrapper.update();
+    wrapper.props().selectAllItems();
+    wrapper.update();
+    expect(wrapper.prop("selectedItems")).toEqual([ITEM_2, ITEM_3]);
   });
 });
