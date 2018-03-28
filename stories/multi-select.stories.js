@@ -115,6 +115,18 @@ storiesOf("React Multi Select", module)
       />
     );
   })
+  .add("Without Selected Items", () => {
+    return (
+      <ReactMultiSelect
+        items={manyItems}
+        loading={boolean("Loading", false)}
+        onChange={action("onChange")}
+        showSearch={boolean("Show search", true)}
+        showSelectAll={boolean("Show select all", true)}
+        showSelectedItems={boolean("Show selected items", false)}
+      />
+    );
+  })
   .add("With custom components", () => {
     return (
       <ReactMultiSelect

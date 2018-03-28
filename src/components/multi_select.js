@@ -18,6 +18,7 @@ export class MultiSelect extends PureComponent {
     onChange: PropTypes.func,
     showSearch: PropTypes.bool,
     showSelectAll: PropTypes.bool,
+    showSelectedItems: PropTypes.bool,
     searchIcon: PropTypes.string,
     deleteIcon: PropTypes.string,
     searchRenderer: PropTypes.func,
@@ -34,6 +35,7 @@ export class MultiSelect extends PureComponent {
     messages: {},
     showSearch: true,
     showSelectAll: true,
+    showSelectedItems: true,
     height: 400,
     itemHeight: 40,
     loaderRenderer: Loader
@@ -59,6 +61,7 @@ export class MultiSelect extends PureComponent {
       height,
       itemHeight,
       showSelectAll,
+      showSelectedItems,
       itemRenderer,
       selectedItemRenderer,
       filteredItems,
@@ -113,20 +116,21 @@ export class MultiSelect extends PureComponent {
             disabled={disabled}
           />
         )}
-        {!loading && (
-          <DestinationList
-            selectionStatusRenderer={selectionStatusRenderer}
-            selectedIds={selectedIds}
-            clearAll={clearAll}
-            messages={messages}
-            selectedItems={selectedItems}
-            itemHeight={itemHeight}
-            height={height}
-            unselectItem={unselectItem}
-            selectedItemRenderer={selectedItemRenderer}
-            noItemsRenderer={noItemsRenderer}
-          />
-        )}
+        {!loading &&
+          showSelectedItems && (
+            <DestinationList
+              selectionStatusRenderer={selectionStatusRenderer}
+              selectedIds={selectedIds}
+              clearAll={clearAll}
+              messages={messages}
+              selectedItems={selectedItems}
+              itemHeight={itemHeight}
+              height={height}
+              unselectItem={unselectItem}
+              selectedItemRenderer={selectedItemRenderer}
+              noItemsRenderer={noItemsRenderer}
+            />
+          )}
       </div>
     );
   }
