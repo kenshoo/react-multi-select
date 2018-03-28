@@ -14,7 +14,7 @@ const withMultiSelectState = WrappedComponent =>
     constructor(props) {
       super(props);
       this.selectItem = this.selectItem.bind(this);
-      this.unselectItem = this.unselectItem.bind(this);
+      this.unselectItems = this.unselectItems.bind(this);
       this.filterItems = this.filterItems.bind(this);
       this.selectAllItems = this.selectAllItems.bind(this);
       this.isAllSelected = this.isAllSelected.bind(this);
@@ -98,15 +98,18 @@ const withMultiSelectState = WrappedComponent =>
           this.setState({ selectedItems: newSelectedItems }, this.handleChange);
         }
       } else {
-        this.unselectItem(id);
+        this.unselectItems([id]);
       }
     }
 
-    unselectItem(id) {
+    unselectItems(ids) {
       const { selectedItems } = this.state;
+      const newSelectedItems = selectedItems.filter(
+        item => ids.find(id => id === item.id) === undefined
+      );
       this.setState(
         {
-          selectedItems: selectedItems.filter(item => item.id !== id)
+          selectedItems: newSelectedItems
         },
         this.handleChange
       );
@@ -125,9 +128,18 @@ const withMultiSelectState = WrappedComponent =>
     }
 
     selectAllItems() {
-      const { filteredItems } = this.state;
-      const itemsToSelect = this.isAllSelected() ? [] : filteredItems;
-      this.setState({ selectedItems: itemsToSelect }, this.handleChange);
+      const { filteredItems, selectedItems } = this.state;
+      const { items } = this.props;
+      if (this.isAllSelected()) {
+        this.unselectItems(filteredItems.map(filteredItem => filteredItem.id));
+      } else {
+        const newSelectedItems = items.filter(
+          item =>
+            filteredItems.find(filteredItem => item.id === filteredItem.id) ||
+            selectedItems.find(selectedItem => item.id === selectedItem.id)
+        );
+        this.setState({ selectedItems: newSelectedItems }, this.handleChange);
+      }
     }
 
     isAllSelected() {
@@ -136,7 +148,6 @@ const withMultiSelectState = WrappedComponent =>
         filteredItems.find(item => item.id === selectedItem.id)
       );
       return (
-        selectedItemsInFilteredItems.length === selectedItems.length &&
         selectedItemsInFilteredItems.length === filteredItems.length &&
         filteredItems.length > 0
       );
@@ -158,7 +169,7 @@ const withMultiSelectState = WrappedComponent =>
         <WrappedComponent
           {...this.props}
           {...this.state}
-          unselectItem={this.unselectItem}
+          unselectItems={this.unselectItems}
           selectItem={this.selectItem}
           filterItems={this.filterItems}
           selectAllItems={this.selectAllItems}

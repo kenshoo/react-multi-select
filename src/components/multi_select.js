@@ -72,7 +72,7 @@ export class MultiSelect extends PureComponent {
       isAllSelected,
       clearAll,
       selectItem,
-      unselectItem,
+      unselectItems,
       searchIcon,
       searchRenderer,
       selectAllRenderer,
@@ -126,7 +126,7 @@ export class MultiSelect extends PureComponent {
               selectedItems={selectedItems}
               itemHeight={itemHeight}
               height={height}
-              unselectItem={unselectItem}
+              unselectItems={unselectItems}
               selectedItemRenderer={selectedItemRenderer}
               noItemsRenderer={noItemsRenderer}
             />

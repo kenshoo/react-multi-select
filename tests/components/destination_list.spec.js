@@ -1,7 +1,9 @@
 import React from "react";
+import { shallow } from "enzyme";
 import ShallowRenderer from "react-test-renderer/shallow";
 
 import DestinationList from "../../src/components/destination_list";
+import List from "../../src/components/list/items_list";
 
 const CustomComponent = jest
   .fn(() => <div>Custom Component</div>)
@@ -16,7 +18,7 @@ const custom_messages = {
   clearAllMessage: "Uncheck all"
 };
 
-const unselectItem = jest.fn().mockName("unselectItem");
+const unselectItems = jest.fn().mockName("unselectItems");
 const clearAll = jest.fn().mockName("clearAll");
 
 describe("DestinationList", () => {
@@ -58,10 +60,10 @@ describe("DestinationList", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test("passed unselectItem", () => {
+  test("passed unselectItems", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
-      <DestinationList unselectItem={unselectItem} />
+      <DestinationList unselectItems={unselectItems} />
     );
     expect(tree).toMatchSnapshot();
   });
@@ -82,5 +84,13 @@ describe("DestinationList", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(<DestinationList selectedItems={[1, 2]} />);
     expect(tree).toMatchSnapshot();
+  });
+
+  test("passed selectedItems", () => {
+    const onClick = jest.fn();
+    const component = shallow(<DestinationList unselectItems={onClick} />);
+    const list = component.find(List).at(0);
+    list.simulate("click", {});
+    expect(onClick).toHaveBeenCalledWith([{}]);
   });
 });

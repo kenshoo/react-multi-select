@@ -39,7 +39,7 @@ exports[`MultiSelect can remove search 1`] = `
     selectedItemRenderer={[Function]}
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
-    unselectItem={undefined}
+    unselectItems={undefined}
   />
 </div>
 `;
@@ -83,7 +83,7 @@ exports[`MultiSelect can remove select all 1`] = `
     selectedItemRenderer={[Function]}
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
-    unselectItem={undefined}
+    unselectItems={undefined}
   />
 </div>
 `;
@@ -159,7 +159,7 @@ exports[`MultiSelect custom itemRenderer 1`] = `
     selectedItemRenderer={[Function]}
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
-    unselectItem={undefined}
+    unselectItems={undefined}
   />
 </div>
 `;
@@ -221,7 +221,7 @@ exports[`MultiSelect custom messages 1`] = `
     selectedItemRenderer={[Function]}
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
-    unselectItem={undefined}
+    unselectItems={undefined}
   />
 </div>
 `;
@@ -265,7 +265,7 @@ exports[`MultiSelect custom noItemsRenderer 1`] = `
     selectedItemRenderer={[Function]}
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
-    unselectItem={undefined}
+    unselectItems={undefined}
   />
 </div>
 `;
@@ -309,7 +309,7 @@ exports[`MultiSelect custom searchRenderer 1`] = `
     selectedItemRenderer={[Function]}
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
-    unselectItem={undefined}
+    unselectItems={undefined}
   />
 </div>
 `;
@@ -353,7 +353,7 @@ exports[`MultiSelect custom selectAllRenderer 1`] = `
     selectedItemRenderer={[Function]}
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
-    unselectItem={undefined}
+    unselectItems={undefined}
   />
 </div>
 `;
@@ -397,7 +397,7 @@ exports[`MultiSelect default snapshot 1`] = `
     selectedItemRenderer={[Function]}
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
-    unselectItem={undefined}
+    unselectItems={undefined}
   />
 </div>
 `;
@@ -482,7 +482,7 @@ exports[`MultiSelect does not pass disabled if maxSelectedItem has passed 1`] = 
       ]
     }
     selectionStatusRenderer={[Function]}
-    unselectItem={undefined}
+    unselectItems={undefined}
   />
 </div>
 `;
@@ -526,7 +526,7 @@ exports[`MultiSelect passed clearAll 1`] = `
     selectedItemRenderer={[Function]}
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
-    unselectItem={undefined}
+    unselectItems={undefined}
   />
 </div>
 `;
@@ -570,7 +570,7 @@ exports[`MultiSelect passed filterItems 1`] = `
     selectedItemRenderer={[Function]}
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
-    unselectItem={undefined}
+    unselectItems={undefined}
   />
 </div>
 `;
@@ -614,7 +614,7 @@ exports[`MultiSelect passed selectAllItems 1`] = `
     selectedItemRenderer={[Function]}
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
-    unselectItem={undefined}
+    unselectItems={undefined}
   />
 </div>
 `;
@@ -658,7 +658,7 @@ exports[`MultiSelect passed selectItem 1`] = `
     selectedItemRenderer={[Function]}
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
-    unselectItem={undefined}
+    unselectItems={undefined}
   />
 </div>
 `;
@@ -702,7 +702,7 @@ exports[`MultiSelect passed selectedIds 1`] = `
     selectedItemRenderer={[Function]}
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
-    unselectItem={undefined}
+    unselectItems={undefined}
   />
 </div>
 `;
@@ -761,12 +761,12 @@ exports[`MultiSelect passed selectedItems 1`] = `
       ]
     }
     selectionStatusRenderer={[Function]}
-    unselectItem={undefined}
+    unselectItems={undefined}
   />
 </div>
 `;
 
-exports[`MultiSelect passed unselectItem 1`] = `
+exports[`MultiSelect passed unselectItems 1`] = `
 <div
   className="wrapper"
   style={
@@ -805,7 +805,7 @@ exports[`MultiSelect passed unselectItem 1`] = `
     selectedItemRenderer={[Function]}
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
-    unselectItem={[MockFunction unselectItem]}
+    unselectItems={[MockFunction unselectItems]}
   />
 </div>
 `;
@@ -864,7 +864,7 @@ exports[`MultiSelect passes disabled if maxSelectedItem has passed 1`] = `
       ]
     }
     selectionStatusRenderer={[Function]}
-    unselectItem={undefined}
+    unselectItems={undefined}
   />
 </div>
 `;
