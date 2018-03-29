@@ -20,6 +20,7 @@ const custom_messages = {
 
 const unselectItems = jest.fn().mockName("unselectItems");
 const clearAll = jest.fn().mockName("clearAll");
+const ID = 1;
 
 describe("DestinationList", () => {
   test("default snapshot", () => {
@@ -90,7 +91,7 @@ describe("DestinationList", () => {
     const onClick = jest.fn();
     const component = shallow(<DestinationList unselectItems={onClick} />);
     const list = component.find(List).at(0);
-    list.simulate("click", {});
-    expect(onClick).toHaveBeenCalledWith([{}]);
+    list.simulate("click", {}, ID);
+    expect(onClick).toHaveBeenCalledWith([ID]);
   });
 });
