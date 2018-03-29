@@ -33,7 +33,7 @@ const DestinationList = ({
         items={selectedItems}
         itemHeight={itemHeight}
         height={height - 45}
-        onClick={id => unselectItems([id])}
+        onClick={(event, id) => unselectItems([id])}
         renderer={selectedItemRenderer}
         noItemsRenderer={noItemsRenderer}
         noItemsMessage={messages.noItemsMessage}
