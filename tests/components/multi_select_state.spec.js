@@ -211,13 +211,33 @@ describe("withMultiSelectState", () => {
     expect(wrapper.state().selectedItems).not.toBe(state1);
   });
 
-  test("componentWillReceiveProps will not call setState when selectedItems is the same", () => {
+  test("componentWillReceiveProps will call setState when items change", () => {
+    const state1 = [ITEM_3];
+    const state2 = [ITEM_4];
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const wrapper = shallow(<ConditionalComponent items={state1} />);
+    wrapper.setProps({ items: state2 });
+    wrapper.update();
+    expect(wrapper.state().items).toBe(state2);
+    expect(wrapper.state().items).not.toBe(state1);
+  });
+
+  test("componentWillReceiveProps will not call setState when items is the same", () => {
     const state1 = [ITEM_3];
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const wrapper = shallow(<ConditionalComponent selectedItems={state1} />);
     wrapper.setProps({ selectedItems: state1 });
     wrapper.update();
     expect(wrapper.state().selectedItems).toBe(state1);
+  });
+
+  test("componentWillReceiveProps will not call setState when selectedItems is the same", () => {
+    const state1 = [ITEM_3];
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const wrapper = shallow(<ConditionalComponent items={state1} />);
+    wrapper.setProps({ items: state1 });
+    wrapper.update();
+    expect(wrapper.state().items).toBe(state1);
   });
 
   test("can select with shift next items", () => {

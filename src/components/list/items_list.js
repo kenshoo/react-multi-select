@@ -36,6 +36,10 @@ class ItemsList extends PureComponent {
     this.listRef.forceUpdateGrid();
   }
 
+  componentDidUpdate() {
+    this.update();
+  }
+
   getlistRef(ref) {
     this.listRef = ref;
   }

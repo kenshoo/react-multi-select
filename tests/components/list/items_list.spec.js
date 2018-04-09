@@ -21,6 +21,15 @@ describe("ItemsList", () => {
     expect(forceUpdateGrid).toHaveBeenCalledTimes(1);
   });
 
+  test("componentDidUpdate will trigger update", () => {
+    const forceUpdateGrid = jest.fn();
+    const wrapper = shallow(<ItemsList width={100} />);
+    const instance = wrapper.instance();
+    instance.listRef = { forceUpdateGrid };
+    instance.componentDidUpdate();
+    expect(forceUpdateGrid).toHaveBeenCalledTimes(1);
+  });
+
   test("getlistRef will populate listRef", () => {
     const wrapper = shallow(<ItemsList width={100} />);
     const instance = wrapper.instance();
