@@ -2,12 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import CloseIcon from "react-icons/lib/md/close";
 import IconButton from "material-ui/IconButton";
+import ItemLabel from "./item_label";
 
 import styles from "./selected_item.scss";
 
 const SelectedItem = ({ item, height }) => (
   <div className={styles.selected_item} style={{ height }}>
-    <div>{item.label}</div>
+    <ItemLabel label={item.label}/>
     <IconButton>
       <CloseIcon />
     </IconButton>

@@ -91,6 +91,7 @@
     "material-ui": "^1.0.0-beta.25",
     "prop-types": "^15.5.8",
     "react-icons": "^2.2.7",
+    "react-overflow-tooltip": "^2.0.1",
     "react-virtualized": "^9.18.5"
   },
   "release": {
