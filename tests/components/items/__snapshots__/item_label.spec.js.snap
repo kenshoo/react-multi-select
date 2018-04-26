@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemLabel default snapshot 1`] = `
+<OverflowTooltip
+  title=""
+>
+  <div
+    className="label"
+  >
+    
+  </div>
+</OverflowTooltip>
+`;
+
+exports[`ItemLabel snapshot with label text 1`] = `
+<OverflowTooltip
+  title="hi"
+>
+  <div
+    className="label"
+  >
+    hi
+  </div>
+</OverflowTooltip>
+`;

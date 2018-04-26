@@ -9,7 +9,9 @@ exports[`SelectedItem default snapshot 1`] = `
     }
   }
 >
-  <div />
+  <ItemLabel
+    label=""
+  />
   <WithStyles(IconButton)>
     <MdClose />
   </WithStyles(IconButton)>
@@ -25,7 +27,9 @@ exports[`SelectedItem snapshot with height 1`] = `
     }
   }
 >
-  <div />
+  <ItemLabel
+    label=""
+  />
   <WithStyles(IconButton)>
     <MdClose />
   </WithStyles(IconButton)>
@@ -41,9 +45,9 @@ exports[`SelectedItem snapshot with valid item 1`] = `
     }
   }
 >
-  <div>
-    Hi
-  </div>
+  <ItemLabel
+    label="Hi"
+  />
   <WithStyles(IconButton)>
     <MdClose />
   </WithStyles(IconButton)>

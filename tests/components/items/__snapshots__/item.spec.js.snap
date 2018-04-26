@@ -17,6 +17,9 @@ exports[`Item default snapshot 1`] = `
     indeterminate={false}
     type="checkbox"
   />
+  <ItemLabel
+    label=""
+  />
 </div>
 `;
 
@@ -36,6 +39,9 @@ exports[`Item snapshot with border 1`] = `
     disabled={false}
     indeterminate={false}
     type="checkbox"
+  />
+  <ItemLabel
+    label=""
   />
 </div>
 `;
@@ -57,6 +63,9 @@ exports[`Item snapshot with checked status 1`] = `
     indeterminate={false}
     type="checkbox"
   />
+  <ItemLabel
+    label=""
+  />
 </div>
 `;
 
@@ -76,6 +85,9 @@ exports[`Item snapshot with disabled 1`] = `
     disabled={true}
     indeterminate={false}
     type="checkbox"
+  />
+  <ItemLabel
+    label=""
   />
 </div>
 `;
@@ -97,6 +109,9 @@ exports[`Item snapshot with height 1`] = `
     indeterminate={false}
     type="checkbox"
   />
+  <ItemLabel
+    label=""
+  />
 </div>
 `;
 
@@ -116,6 +131,9 @@ exports[`Item snapshot with indeterminate and checked status 1`] = `
     disabled={false}
     indeterminate={true}
     type="checkbox"
+  />
+  <ItemLabel
+    label=""
   />
 </div>
 `;
@@ -137,6 +155,9 @@ exports[`Item snapshot with indeterminate status 1`] = `
     indeterminate={true}
     type="checkbox"
   />
+  <ItemLabel
+    label=""
+  />
 </div>
 `;
 
@@ -157,6 +178,8 @@ exports[`Item snapshot with valid item 1`] = `
     indeterminate={false}
     type="checkbox"
   />
-  Hi
+  <ItemLabel
+    label="Hi"
+  />
 </div>
 `;
