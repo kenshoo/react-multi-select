@@ -82,7 +82,8 @@ class Example extends Component {
 | `height`                        | `number`              | 400                                              | available items list height
 | `itemHeight`                    | `number`              | 40                                               | the height of an item in the list
 | `maxSelectedItems`              | `number`              |                                                  | defines the maximum items that can be selected. Overrides showSelectAll
-| `filterFunction`                | `function`            | based on label                                   | The function used to filter items based on the search query
+| `filterFunction`                | `function`            | based on label                                   | The function used to filter items based on the search query, eliminates `onSearchChange`.
+| `onSearchChange`                | `function`            |                                                  | Advanced filter function, eliminates `filterFunction`. for example: server side filter
 | `searchRenderer`                | `Component`           |                                                  | Component to replace the default Search component
 | `selectedItemRenderer`          | `Component`           |                                                  | Component to replace the default selected item component in the destination list
 | `loaderRenderer`                | `Component`           |                                                  | Component to replace the default loader component
@@ -131,9 +132,9 @@ The Select All component receives the following props:
 `onClick` - Triggers the select all/clear all event on click
 
 `isAllSelected` - Indicates that all items are selected
-  
+
 `selectAllMessage` - Defines the message for the Select All component
-  
+
 `selectedIds` - holds a list of ids of all the selected items
 
 <br/>
@@ -144,7 +145,7 @@ Use the `selectAllRenderer` to replace the default component.
 
 
 The Selected Item component receives the following props:
- 
+
 `item` - holds your item data
 
 `height` - receives the height defined by the list
@@ -178,7 +179,7 @@ The Search component receives the following props:
 `noneSelectedMessage` - text to display when no items are selected
 
 `selectedMessage` - text to display when there are items selected
-  
+
 <br/>
 
 **Loader**
@@ -207,6 +208,18 @@ value => item =>
   String(item.label)
     .toLowerCase()
     .includes(value.toLowerCase())
+```
+
+#### Advanced search function
+
+You can use `onSearchChange` prop to provide your own advanced filter, For example: Server side filter
+
+Example :
+```javascript
+const onSearchChange = event => {
+  const { value } = event.target;
+  this.setState({items: searchServer(value)});
+};
 ```
 
 #### Messages 

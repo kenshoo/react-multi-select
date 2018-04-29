@@ -26,7 +26,8 @@ export class MultiSelect extends PureComponent {
     height: PropTypes.number,
     itemHeight: PropTypes.number,
     loaderRenderer: PropTypes.any,
-    maxSelectedItems: PropTypes.number
+    maxSelectedItems: PropTypes.number,
+    onSearchChange: PropTypes.func
   };
 
   static defaultProps = {
@@ -81,7 +82,8 @@ export class MultiSelect extends PureComponent {
       loaderRenderer,
       messages,
       loading,
-      maxSelectedItems
+      maxSelectedItems,
+      onSearchChange
     } = this.props;
     const calculatedHeight = this.calculateHeight();
     const selectedIds = selectedItems.map(item => item.id);
@@ -114,6 +116,7 @@ export class MultiSelect extends PureComponent {
             selectItem={selectItem}
             noItemsRenderer={noItemsRenderer}
             disabled={disabled}
+            onSearchChange={onSearchChange}
           />
         )}
         {!loading &&

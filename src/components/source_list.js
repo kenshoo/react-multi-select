@@ -26,7 +26,8 @@ const SourceList = ({
   calculatedHeight,
   selectItem,
   noItemsRenderer,
-  disabled
+  disabled,
+  onSearchChange
 }) => {
   const SearchRenderer = searchRenderer;
   const SelectAllRenderer = selectAllRenderer;
@@ -34,7 +35,7 @@ const SourceList = ({
     <Column>
       {showSearch && (
         <SearchRenderer
-          onChange={filterItems}
+          onChange={onSearchChange || filterItems}
           searchIcon={searchIcon}
           searchPlaceholder={messages.searchPlaceholder}
         />
@@ -84,7 +85,8 @@ SourceList.propTypes = {
   selectAllItems: PropTypes.func,
   getList: PropTypes.func,
   selectItem: PropTypes.func,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  onSearchChange: PropTypes.func
 };
 
 SourceList.defaultProps = {
