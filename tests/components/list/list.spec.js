@@ -137,7 +137,7 @@ describe("List", () => {
       <List
         width={100}
         items={items.slice(0, 1)}
-        disabledItemsTitle={"You can select up to 4 items"}
+        disabledItemsTooltip={"You can select up to 4 items"}
         disabled={true}
       />
     );
@@ -150,7 +150,7 @@ describe("List", () => {
       <List
         width={100}
         items={items.slice(0, 1)}
-        disabledItemsTitle={"You can select up to 4 items"}
+        disabledItemsTooltip={"You can select up to 4 items"}
         disabled={false}
       />
     );

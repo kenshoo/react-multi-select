@@ -111,7 +111,7 @@ describe("SourceList", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
       <SourceList
-        messages={{ disabledItemsTitle: "You can select up to 4 items" }}
+        messages={{ disabledItemsTooltip: "You can select up to 4 items" }}
       />
     );
     expect(tree).toMatchSnapshot();
