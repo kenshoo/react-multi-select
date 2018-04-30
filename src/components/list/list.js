@@ -16,7 +16,8 @@ class InnerList extends PureComponent {
     onClick: PropTypes.func,
     selectedIds: PropTypes.arrayOf(PropTypes.number),
     items: PropTypes.array,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    disabledItemsTooltip: PropTypes.string
   };
 
   static defaultProps = {
@@ -52,7 +53,8 @@ class InnerList extends PureComponent {
       onClick,
       items,
       selectedIds,
-      disabled
+      disabled,
+      disabledItemsTooltip
     } = this.props;
     const Renderer = renderer;
     const item = items[index];
@@ -63,6 +65,7 @@ class InnerList extends PureComponent {
         style={style}
         className={styles.list_item}
         onClick={event => this.onClick(event, item.id)}
+        title={disabled ? disabledItemsTooltip : undefined}
       >
         <Renderer
           item={item}

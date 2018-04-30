@@ -106,4 +106,14 @@ describe("SourceList", () => {
     const tree = renderer.render(<SourceList showSearch={false} />);
     expect(tree).toMatchSnapshot();
   });
+
+  test("show max selection tooltip", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(
+      <SourceList
+        messages={{ disabledItemsTooltip: "You can select up to 4 items" }}
+      />
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });
