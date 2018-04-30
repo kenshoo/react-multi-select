@@ -42,4 +42,14 @@ describe("ItemsList", () => {
     const innerList = wrapper.find(InnerList);
     expect(innerList.length).toBe(1);
   });
+
+  test("disabledItemsTitle property injected", () => {
+    const wrapper = mount(
+      <ItemsList disabledItemsTitle={"You can select up to 4 items"} />
+    );
+    const innerList = wrapper.find(InnerList);
+    expect(innerList.prop("disabledItemsTitle")).toBe(
+      "You can select up to 4 items"
+    );
+  });
 });

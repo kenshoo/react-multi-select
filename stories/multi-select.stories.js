@@ -62,6 +62,7 @@ storiesOf("React Multi Select", module)
         onChange={action("onChange")}
         showSearch={boolean("Show search", true)}
         showSelectAll={boolean("Show select all", true)}
+        messages={{ disabledItemsTitle: "You can select up to 4 items" }}
       />
     );
   })

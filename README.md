@@ -219,7 +219,8 @@ You can use your own messages. Here is the default messages object :
     noneSelectedMessage: "None Selected",
     selectedMessage: "delected",
     selectAllMessage: "Select All",
-    clearAllMessage: "Clear All"
+    clearAllMessage: "Clear All",
+    disabledItemsTitle: "You can only select 1 file"
   }
 ```
 

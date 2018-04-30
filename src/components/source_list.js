@@ -61,6 +61,7 @@ const SourceList = ({
         noItemsRenderer={noItemsRenderer}
         noItemsMessage={messages.noItemsMessage}
         disabled={disabled}
+        disabledItemsTitle={messages.disabledItemsTitle}
       />
     </Column>
   );

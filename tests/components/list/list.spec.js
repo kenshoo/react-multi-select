@@ -131,4 +131,30 @@ describe("List", () => {
     itemsWrapper.at(0).simulate("click");
     expect(onClick).toHaveBeenCalledTimes(1);
   });
+
+  test("should display disable items tooltip", () => {
+    const wrapper = mount(
+      <List
+        width={100}
+        items={items.slice(0, 1)}
+        disabledItemsTitle={"You can select up to 4 items"}
+        disabled={true}
+      />
+    );
+    const row = wrapper.find(".list_item");
+    expect(row.prop("title")).toBe("You can select up to 4 items");
+  });
+
+  test("should not display disable items tooltip", () => {
+    const wrapper = mount(
+      <List
+        width={100}
+        items={items.slice(0, 1)}
+        disabledItemsTitle={"You can select up to 4 items"}
+        disabled={false}
+      />
+    );
+    const row = wrapper.find(".list_item");
+    expect(row.prop("title")).toBe(undefined);
+  });
 });

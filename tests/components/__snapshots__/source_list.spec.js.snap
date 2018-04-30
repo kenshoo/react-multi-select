@@ -12,6 +12,7 @@ exports[`SourceList can remove search 1`] = `
   />
   <ItemsList
     disabled={false}
+    disabledItemsTitle={undefined}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -34,6 +35,7 @@ exports[`SourceList can remove select all 1`] = `
   />
   <ItemsList
     disabled={false}
+    disabledItemsTitle={undefined}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -64,6 +66,7 @@ exports[`SourceList custom itemRenderer 1`] = `
   />
   <ItemsList
     disabled={false}
+    disabledItemsTitle={undefined}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -94,6 +97,7 @@ exports[`SourceList custom messages 1`] = `
   />
   <ItemsList
     disabled={false}
+    disabledItemsTitle={undefined}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -124,6 +128,7 @@ exports[`SourceList custom noItemsRenderer 1`] = `
   />
   <ItemsList
     disabled={false}
+    disabledItemsTitle={undefined}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -154,6 +159,7 @@ exports[`SourceList custom searchRenderer 1`] = `
   />
   <ItemsList
     disabled={false}
+    disabledItemsTitle={undefined}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -184,6 +190,7 @@ exports[`SourceList custom selectAllRenderer 1`] = `
   />
   <ItemsList
     disabled={false}
+    disabledItemsTitle={undefined}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -214,6 +221,7 @@ exports[`SourceList default snapshot 1`] = `
   />
   <ItemsList
     disabled={false}
+    disabledItemsTitle={undefined}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -244,6 +252,7 @@ exports[`SourceList passed filterItems 1`] = `
   />
   <ItemsList
     disabled={false}
+    disabledItemsTitle={undefined}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -274,6 +283,7 @@ exports[`SourceList passed selectAllItems 1`] = `
   />
   <ItemsList
     disabled={false}
+    disabledItemsTitle={undefined}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -304,6 +314,7 @@ exports[`SourceList passed selectItem 1`] = `
   />
   <ItemsList
     disabled={false}
+    disabledItemsTitle={undefined}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -339,6 +350,7 @@ exports[`SourceList passed selectedIds 1`] = `
   />
   <ItemsList
     disabled={false}
+    disabledItemsTitle={undefined}
     height={400}
     itemHeight={40}
     items={Array []}
@@ -374,6 +386,38 @@ exports[`SourceList passed selectedItems 1`] = `
   />
   <ItemsList
     disabled={false}
+    disabledItemsTitle={undefined}
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`SourceList show max selection tooltip 1`] = `
+<Column>
+  <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+  />
+  <SelectAll
+    height={40}
+    isAllSelected={false}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
+    selectedIds={Array []}
+  />
+  <ItemsList
+    disabled={false}
+    disabledItemsTitle="You can select up to 4 items"
     height={400}
     itemHeight={40}
     items={Array []}
