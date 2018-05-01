@@ -209,6 +209,15 @@ value => item =>
     .includes(value.toLowerCase())
 ```
 
+Performs search on server side
+```javascript
+value => {
+    callServer(value).then(items => this.setState({items}));
+    // At the end return the expected method
+    return item => true;
+}
+```
+
 #### Messages 
 
 You can use your own messages. Here is the default messages object :
