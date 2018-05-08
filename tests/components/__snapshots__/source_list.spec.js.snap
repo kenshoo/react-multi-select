@@ -430,3 +430,96 @@ exports[`SourceList show max selection tooltip 1`] = `
   />
 </Column>
 `;
+
+exports[`SourceList will pass itemHeight 1`] = `
+<Column>
+  <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+  />
+  <SelectAll
+    height={10}
+    isAllSelected={false}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
+    selectedIds={Array []}
+  />
+  <ItemsList
+    disabled={false}
+    disabledItemsTooltip={undefined}
+    height={400}
+    itemHeight={10}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`SourceList will pass selectAllHeight 1`] = `
+<Column>
+  <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+  />
+  <SelectAll
+    height={60}
+    isAllSelected={false}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
+    selectedIds={Array []}
+  />
+  <ItemsList
+    disabled={false}
+    disabledItemsTooltip={undefined}
+    height={400}
+    itemHeight={10}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`SourceList will pass selectAllHeight without itemHeight 1`] = `
+<Column>
+  <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+  />
+  <SelectAll
+    height={60}
+    isAllSelected={false}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
+    selectedIds={Array []}
+  />
+  <ItemsList
+    disabled={false}
+    disabledItemsTooltip={undefined}
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;

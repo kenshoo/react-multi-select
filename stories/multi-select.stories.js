@@ -89,6 +89,8 @@ storiesOf("React Multi Select", module)
         onChange={action("onChange")}
         showSearch={boolean("Show search", true)}
         showSelectAll={boolean("Show select all", true)}
+        itemHeight={60}
+        selectAllHeight={40}
       />
     );
   })

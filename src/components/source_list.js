@@ -17,6 +17,7 @@ const SourceList = ({
   messages,
   showSelectAll,
   itemHeight,
+  selectAllHeight,
   selectAllItems,
   isAllSelected,
   selectedIds,
@@ -41,7 +42,7 @@ const SourceList = ({
       )}
       {showSelectAll && (
         <SelectAllRenderer
-          height={itemHeight}
+          height={selectAllHeight ? selectAllHeight : itemHeight}
           onClick={selectAllItems}
           isAllSelected={isAllSelected}
           selectedIds={selectedIds}
@@ -79,6 +80,7 @@ SourceList.propTypes = {
   filterItems: PropTypes.func,
   messages: PropTypes.object,
   itemHeight: PropTypes.number,
+  selectAllHeight: PropTypes.number,
   calculatedHeight: PropTypes.number,
   filteredItems: PropTypes.array,
   selectedIds: PropTypes.arrayOf(PropTypes.number),

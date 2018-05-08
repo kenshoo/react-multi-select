@@ -158,4 +158,24 @@ describe("MultiSelect", () => {
     const tree = renderer.render(<MultiSelect showSelectedItems={false} />);
     expect(tree).toMatchSnapshot();
   });
+
+  test("will pass itemHeight", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(<MultiSelect itemHeight={60} />);
+    expect(tree).toMatchSnapshot();
+  });
+
+  test("will pass selectAllHeight", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(
+      <MultiSelect itemHeight={60} selectAllHeight={40} />
+    );
+    expect(tree).toMatchSnapshot();
+  });
+
+  test("will pass selectAllHeight without itemHeight", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(<MultiSelect selectAllHeight={20} />);
+    expect(tree).toMatchSnapshot();
+  });
 });
