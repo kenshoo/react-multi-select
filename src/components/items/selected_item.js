@@ -8,7 +8,7 @@ import styles from "./selected_item.scss";
 
 const SelectedItem = ({ item, height }) => (
   <div className={styles.selected_item} style={{ height }}>
-    <ItemLabel label={item.label}/>
+    <ItemLabel label={item.label} />
     <IconButton>
       <CloseIcon />
     </IconButton>

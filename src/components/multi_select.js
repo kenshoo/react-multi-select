@@ -25,6 +25,7 @@ export class MultiSelect extends PureComponent {
     selectedItemRenderer: PropTypes.any,
     height: PropTypes.number,
     itemHeight: PropTypes.number,
+    selectAllHeight: PropTypes.number,
     loaderRenderer: PropTypes.any,
     maxSelectedItems: PropTypes.number
   };
@@ -47,10 +48,13 @@ export class MultiSelect extends PureComponent {
       showSearch,
       showSelectAll,
       itemHeight,
+      selectAllHeight,
       maxSelectedItems
     } = this.props;
     height = showSearch && !maxSelectedItems ? height - 45 : height;
-    height = showSelectAll ? height - itemHeight : height;
+    height = showSelectAll
+      ? height - (selectAllHeight ? selectAllHeight : itemHeight)
+      : height;
     return height;
   }
 
@@ -60,6 +64,7 @@ export class MultiSelect extends PureComponent {
       showSearch,
       height,
       itemHeight,
+      selectAllHeight,
       showSelectAll,
       showSelectedItems,
       itemRenderer,
@@ -114,6 +119,7 @@ export class MultiSelect extends PureComponent {
             selectItem={selectItem}
             noItemsRenderer={noItemsRenderer}
             disabled={disabled}
+            selectAllHeight={selectAllHeight}
           />
         )}
         {!loading &&

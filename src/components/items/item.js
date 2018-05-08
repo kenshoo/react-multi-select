@@ -31,7 +31,7 @@ const Item = ({
       indeterminate={indeterminate}
       disabled={disabled}
     />
-    <ItemLabel label={item.label}/>
+    <ItemLabel label={item.label} />
   </div>
 );
 

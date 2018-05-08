@@ -22,6 +22,7 @@ exports[`MultiSelect can remove search 1`] = `
     noItemsRenderer={[Function]}
     searchIcon={undefined}
     searchRenderer={[Function]}
+    selectAllHeight={undefined}
     selectAllItems={undefined}
     selectAllRenderer={[Function]}
     selectItem={undefined}
@@ -66,6 +67,7 @@ exports[`MultiSelect can remove select all 1`] = `
     noItemsRenderer={[Function]}
     searchIcon={undefined}
     searchRenderer={[Function]}
+    selectAllHeight={undefined}
     selectAllItems={undefined}
     selectAllRenderer={[Function]}
     selectItem={undefined}
@@ -110,6 +112,7 @@ exports[`MultiSelect can remove selected items 1`] = `
     noItemsRenderer={[Function]}
     searchIcon={undefined}
     searchRenderer={[Function]}
+    selectAllHeight={undefined}
     selectAllItems={undefined}
     selectAllRenderer={[Function]}
     selectItem={undefined}
@@ -142,6 +145,7 @@ exports[`MultiSelect custom itemRenderer 1`] = `
     noItemsRenderer={[Function]}
     searchIcon={undefined}
     searchRenderer={[Function]}
+    selectAllHeight={undefined}
     selectAllItems={undefined}
     selectAllRenderer={[Function]}
     selectItem={undefined}
@@ -195,6 +199,7 @@ exports[`MultiSelect custom messages 1`] = `
     noItemsRenderer={[Function]}
     searchIcon={undefined}
     searchRenderer={[Function]}
+    selectAllHeight={undefined}
     selectAllItems={undefined}
     selectAllRenderer={[Function]}
     selectItem={undefined}
@@ -248,6 +253,7 @@ exports[`MultiSelect custom noItemsRenderer 1`] = `
     noItemsRenderer={[MockFunction mockedComponent]}
     searchIcon={undefined}
     searchRenderer={[Function]}
+    selectAllHeight={undefined}
     selectAllItems={undefined}
     selectAllRenderer={[Function]}
     selectItem={undefined}
@@ -292,6 +298,7 @@ exports[`MultiSelect custom searchRenderer 1`] = `
     noItemsRenderer={[Function]}
     searchIcon={undefined}
     searchRenderer={[MockFunction mockedComponent]}
+    selectAllHeight={undefined}
     selectAllItems={undefined}
     selectAllRenderer={[Function]}
     selectItem={undefined}
@@ -336,6 +343,7 @@ exports[`MultiSelect custom selectAllRenderer 1`] = `
     noItemsRenderer={[Function]}
     searchIcon={undefined}
     searchRenderer={[Function]}
+    selectAllHeight={undefined}
     selectAllItems={undefined}
     selectAllRenderer={[MockFunction mockedComponent]}
     selectItem={undefined}
@@ -380,6 +388,7 @@ exports[`MultiSelect default snapshot 1`] = `
     noItemsRenderer={[Function]}
     searchIcon={undefined}
     searchRenderer={[Function]}
+    selectAllHeight={undefined}
     selectAllItems={undefined}
     selectAllRenderer={[Function]}
     selectItem={undefined}
@@ -450,6 +459,7 @@ exports[`MultiSelect does not pass disabled if maxSelectedItem has passed 1`] = 
     noItemsRenderer={[Function]}
     searchIcon={undefined}
     searchRenderer={[Function]}
+    selectAllHeight={undefined}
     selectAllItems={undefined}
     selectAllRenderer={[Function]}
     selectItem={undefined}
@@ -509,6 +519,7 @@ exports[`MultiSelect passed clearAll 1`] = `
     noItemsRenderer={[Function]}
     searchIcon={undefined}
     searchRenderer={[Function]}
+    selectAllHeight={undefined}
     selectAllItems={undefined}
     selectAllRenderer={[Function]}
     selectItem={undefined}
@@ -553,6 +564,7 @@ exports[`MultiSelect passed filterItems 1`] = `
     noItemsRenderer={[Function]}
     searchIcon={undefined}
     searchRenderer={[Function]}
+    selectAllHeight={undefined}
     selectAllItems={[MockFunction filterItems]}
     selectAllRenderer={[Function]}
     selectItem={undefined}
@@ -597,6 +609,7 @@ exports[`MultiSelect passed selectAllItems 1`] = `
     noItemsRenderer={[Function]}
     searchIcon={undefined}
     searchRenderer={[Function]}
+    selectAllHeight={undefined}
     selectAllItems={[MockFunction selectAllItems]}
     selectAllRenderer={[Function]}
     selectItem={undefined}
@@ -641,6 +654,7 @@ exports[`MultiSelect passed selectItem 1`] = `
     noItemsRenderer={[Function]}
     searchIcon={undefined}
     searchRenderer={[Function]}
+    selectAllHeight={undefined}
     selectAllItems={[MockFunction selectItem]}
     selectAllRenderer={[Function]}
     selectItem={undefined}
@@ -685,6 +699,7 @@ exports[`MultiSelect passed selectedIds 1`] = `
     noItemsRenderer={[Function]}
     searchIcon={undefined}
     searchRenderer={[Function]}
+    selectAllHeight={undefined}
     selectAllItems={undefined}
     selectAllRenderer={[Function]}
     selectItem={undefined}
@@ -729,6 +744,7 @@ exports[`MultiSelect passed selectedItems 1`] = `
     noItemsRenderer={[Function]}
     searchIcon={undefined}
     searchRenderer={[Function]}
+    selectAllHeight={undefined}
     selectAllItems={undefined}
     selectAllRenderer={[Function]}
     selectItem={undefined}
@@ -788,6 +804,7 @@ exports[`MultiSelect passed unselectItems 1`] = `
     noItemsRenderer={[Function]}
     searchIcon={undefined}
     searchRenderer={[Function]}
+    selectAllHeight={undefined}
     selectAllItems={undefined}
     selectAllRenderer={[Function]}
     selectItem={undefined}
@@ -832,6 +849,7 @@ exports[`MultiSelect passes disabled if maxSelectedItem has passed 1`] = `
     noItemsRenderer={[Function]}
     searchIcon={undefined}
     searchRenderer={[Function]}
+    selectAllHeight={undefined}
     selectAllItems={undefined}
     selectAllRenderer={[Function]}
     selectItem={undefined}
@@ -863,6 +881,141 @@ exports[`MultiSelect passes disabled if maxSelectedItem has passed 1`] = `
         2,
       ]
     }
+    selectionStatusRenderer={[Function]}
+    unselectItems={undefined}
+  />
+</div>
+`;
+
+exports[`MultiSelect will pass itemHeight 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <SourceList
+    calculatedHeight={295}
+    disabled={false}
+    filterItems={undefined}
+    filteredItems={Array []}
+    getList={undefined}
+    isAllSelected={false}
+    itemHeight={60}
+    itemRenderer={[Function]}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    searchIcon={undefined}
+    searchRenderer={[Function]}
+    selectAllHeight={undefined}
+    selectAllItems={undefined}
+    selectAllRenderer={[Function]}
+    selectItem={undefined}
+    selectedIds={Array []}
+    showSearch={true}
+    showSelectAll={true}
+  />
+  <DestinationList
+    clearAll={undefined}
+    height={400}
+    itemHeight={60}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    selectedIds={Array []}
+    selectedItemRenderer={[Function]}
+    selectedItems={Array []}
+    selectionStatusRenderer={[Function]}
+    unselectItems={undefined}
+  />
+</div>
+`;
+
+exports[`MultiSelect will pass selectAllHeight 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <SourceList
+    calculatedHeight={315}
+    disabled={false}
+    filterItems={undefined}
+    filteredItems={Array []}
+    getList={undefined}
+    isAllSelected={false}
+    itemHeight={60}
+    itemRenderer={[Function]}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    searchIcon={undefined}
+    searchRenderer={[Function]}
+    selectAllHeight={40}
+    selectAllItems={undefined}
+    selectAllRenderer={[Function]}
+    selectItem={undefined}
+    selectedIds={Array []}
+    showSearch={true}
+    showSelectAll={true}
+  />
+  <DestinationList
+    clearAll={undefined}
+    height={400}
+    itemHeight={60}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    selectedIds={Array []}
+    selectedItemRenderer={[Function]}
+    selectedItems={Array []}
+    selectionStatusRenderer={[Function]}
+    unselectItems={undefined}
+  />
+</div>
+`;
+
+exports[`MultiSelect will pass selectAllHeight without itemHeight 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <SourceList
+    calculatedHeight={335}
+    disabled={false}
+    filterItems={undefined}
+    filteredItems={Array []}
+    getList={undefined}
+    isAllSelected={false}
+    itemHeight={40}
+    itemRenderer={[Function]}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    searchIcon={undefined}
+    searchRenderer={[Function]}
+    selectAllHeight={20}
+    selectAllItems={undefined}
+    selectAllRenderer={[Function]}
+    selectItem={undefined}
+    selectedIds={Array []}
+    showSearch={true}
+    showSelectAll={true}
+  />
+  <DestinationList
+    clearAll={undefined}
+    height={400}
+    itemHeight={40}
+    messages={Object {}}
+    noItemsRenderer={[Function]}
+    selectedIds={Array []}
+    selectedItemRenderer={[Function]}
+    selectedItems={Array []}
     selectionStatusRenderer={[Function]}
     unselectItems={undefined}
   />

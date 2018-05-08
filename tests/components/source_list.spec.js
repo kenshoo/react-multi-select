@@ -116,4 +116,24 @@ describe("SourceList", () => {
     );
     expect(tree).toMatchSnapshot();
   });
+
+  test("will pass itemHeight", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(<SourceList itemHeight={10} />);
+    expect(tree).toMatchSnapshot();
+  });
+
+  test("will pass selectAllHeight", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(
+      <SourceList itemHeight={10} selectAllHeight={60} />
+    );
+    expect(tree).toMatchSnapshot();
+  });
+
+  test("will pass selectAllHeight without itemHeight", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(<SourceList selectAllHeight={60} />);
+    expect(tree).toMatchSnapshot();
+  });
 });
