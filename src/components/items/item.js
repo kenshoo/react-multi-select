@@ -29,7 +29,7 @@ const Item = ({
       color="primary"
       checked={checked}
       indeterminate={indeterminate}
-      disabled={disabled}
+      disabled={disabled || item.disabled}
     />
     <ItemLabel label={item.label} />
   </div>
