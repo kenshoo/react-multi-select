@@ -87,8 +87,8 @@
     "react-dom": "^15.0.0-0 || ^16.0.0"
   },
   "dependencies": {
+    "@material-ui/core": "^1.0.0",
     "classnames": "2.2.5",
-    "material-ui": "^1.0.0-beta.25",
     "prop-types": "^15.5.8",
     "react-icons": "^2.2.7",
     "react-overflow-tooltip": "^2.0.1",

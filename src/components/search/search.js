@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "material-ui/Icon";
+import Icon from "@material-ui/core/Icon";
 import SearchIcon from "react-icons/lib/md/search";
 import PropTypes from "prop-types";
 

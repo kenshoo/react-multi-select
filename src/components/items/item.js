@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
-import Checkbox from "material-ui/Checkbox";
+import Checkbox from "@material-ui/core/Checkbox";
 import ItemLabel from "./item_label";
 
 import styles from "./item.scss";

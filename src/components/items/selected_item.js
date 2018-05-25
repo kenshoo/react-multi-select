@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import CloseIcon from "react-icons/lib/md/close";
-import IconButton from "material-ui/IconButton";
+import IconButton from "@material-ui/core/IconButton";
 import ItemLabel from "./item_label";
 
 import styles from "./selected_item.scss";
