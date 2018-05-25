@@ -7,6 +7,10 @@ import NoItems from "../../../src/components/items/no_items";
 import ShallowRenderer from "react-test-renderer/shallow";
 
 const items = [{ id: 5, label: "item 0" }, { id: 12, label: "item 1" }];
+const disabledItems = [
+  { id: 5, label: "item 0", disabled: true },
+  { id: 12, label: "item 1", disabled: true }
+];
 const CUSTOM_MESSAGE = "custom message";
 const CustomComponent = () => <div>Custom Component</div>;
 
@@ -125,6 +129,31 @@ describe("List", () => {
         selectedIds={[5]}
         onClick={onClick}
         disabled={true}
+      />
+    );
+    const itemsWrapper = wrapper.find(Item);
+    itemsWrapper.at(0).simulate("click");
+    expect(onClick).toHaveBeenCalledTimes(1);
+  });
+
+  test("click will not trigger onClick if disabled with item.disabled property", () => {
+    const onClick = jest.fn();
+    const wrapper = mount(
+      <List width={100} items={disabledItems} onClick={onClick} />
+    );
+    const itemsWrapper = wrapper.find(Item);
+    itemsWrapper.at(0).simulate("click");
+    expect(onClick).toHaveBeenCalledTimes(0);
+  });
+
+  test("click will trigger onClick if disabled with item.disabled property but also checked", () => {
+    const onClick = jest.fn();
+    const wrapper = mount(
+      <List
+        width={100}
+        items={disabledItems}
+        selectedIds={[5]}
+        onClick={onClick}
       />
     );
     const itemsWrapper = wrapper.find(Item);

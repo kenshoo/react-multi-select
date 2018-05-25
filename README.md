@@ -42,8 +42,8 @@ class Example extends Component {
       items: [
         { id: 0, label: "item 1" },
         { id: 2, label: "item 2" },
-        { id: 3, label: "item 3" },
-        { id: 4, label: "item 4" }
+        { id: 3, label: "item 3", disabled: true }, // optional 'disabled' property
+        { id: 4, label: "item 4" , disabled: false}
       ],
       selectedItems: []
     };
@@ -107,7 +107,7 @@ Use the `itemRenderer` to replace the default component.
 
 Each item receives the following props:
 
-`item` - holds your item data
+`item` - holds your item data { id, label, disabled }
 
 `height` - receives the height defined by the list
 
@@ -193,6 +193,22 @@ Does not receive any props.
 **No Items**
 
 Use the `noItemsRenderer` to replace the default component.
+
+Does not receive any props.
+
+<br/>
+
+**Disabling Checkboxes via 'items' list**
+
+Along with the 'disabled' prop in the Item renderer, checkboxes can also be disabled via an optional 'disabled' property in the 'items' list.
+```javascript
+items: [
+        { id: 0, label: "item 1" },
+        { id: 2, label: "item 2" },
+        { id: 3, label: "item 3", disabled: true },
+        { id: 4, label: "item 4" , disabled: false}
+      ]
+```
 
 Does not receive any props.
 
