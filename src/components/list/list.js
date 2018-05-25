@@ -38,11 +38,11 @@ class InnerList extends PureComponent {
     this.onClick = this.onClick.bind(this);
   }
 
-  onClick(event, id) {
+  onClick(event, item) {
     const { disabled, onClick, selectedIds } = this.props;
-    const checked = selectedIds.includes(id);
-    if ((disabled && checked) || !disabled) {
-      onClick(event, id);
+    const checked = selectedIds.includes(item.id);
+    if (((disabled || item.disabled) && checked) || (!disabled && item.disabled !== true)) {
+      onClick(event, item.id);
     }
   }
 
@@ -64,14 +64,14 @@ class InnerList extends PureComponent {
         key={key}
         style={style}
         className={styles.list_item}
-        onClick={event => this.onClick(event, item.id)}
+        onClick={event => this.onClick(event, item)}
         title={disabled ? disabledItemsTooltip : undefined}
       >
         <Renderer
           item={item}
           height={itemHeight}
           checked={checked}
-          disabled={disabled && !checked}
+          disabled={(disabled || item.disabled === true) && !checked}
         />
       </div>
     );
