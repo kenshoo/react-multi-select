@@ -70,34 +70,34 @@ class Example extends Component {
 
 | Name                            | Type                  | Default                                          | Description                                                                                                                                       
 |:-----                           |:-----                 |:-----                                            |:-----                                                                                                                                             
-| `items`                         | `List`                | []                                               | list of items .                                                                                                                                   
-| `selectedItems`                 | `Array`               | []                                               | selected list to start with (subgroup of items).                                                                                                  
-| `onChange`                      | `function`            | ()=>{}                                           | callback for changed event                                                                                                                        
-| `loading`                       | `boolean`             | false                                            | toggle to show loading indication.                                                                                                                
-| `messages`                      | `Object`              | {}                                               | custom messages. Please see below for the availabale messages                                                                                                                          
-| `showSearch   `                 | `boolean`             | true                                             | toggle to show search option.                                        
-| `showSelectAll`                 | `boolean`             | true                                             | toggle to show select All option in list.
+| `items`                         | `List`                | []                                               | list of items.
+| `selectedItems`                 | `Array`               | []                                               | selected list to start with (subgroup of items).
+| `onChange`                      | `function`            | ()=>{}                                           | callback for changed event.
+| `loading`                       | `boolean`             | false                                            | toggle to show loading indication.
+| `messages`                      | `Object`              | {}                                               | custom messages. Please see below for the availabale messages.
+| `showSearch   `                 | `boolean`             | true                                             | toggle to show search option.
+| `showSelectAll`                 | `boolean`             | true                                             | toggle to show select all option in list.
 | `showSelectedItems`             | `boolean`             | true                                             | toggle to show selected items right pane.
-| `wrapperClassName`              | `String`              | ''                                               | wrapper class name. Used for customizing the style
-| `height`                        | `number`              | 400                                              | available items list height
-| `itemHeight`                    | `number`              | 40                                               | the height of an item in the list
-| `selectAllHeight`               | `number`              | `itemHeight`                                     | the height of the selectAll component, by default will use the valie of the itemHeight
-| `maxSelectedItems`              | `number`              |                                                  | defines the maximum items that can be selected. Overrides showSelectAll
-| `filterFunction`                | `function`            | based on label                                   | The function used to filter items based on the search query
-| `searchRenderer`                | `Component`           |                                                  | Component to replace the default Search component
-| `selectedItemRenderer`          | `Component`           |                                                  | Component to replace the default selected item component in the destination list
-| `loaderRenderer`                | `Component`           |                                                  | Component to replace the default loader component
-| `selectAllRenderer`             | `Component`           |                                                  | Component to replace the default select all component
-| `itemRenderer`                  | `Component`           |                                                  | Component to replace the default item component in the source list
-| `selectionStatusRenderer`       | `Component`           |                                                  | Component to replace the default selection status component
-| `noItemsRenderer`               | `Component`           |                                                  | Component to replace the default no items component
+| `wrapperClassName`              | `String`              | ''                                               | wrapper class name - Used for customizing the style.
+| `height`                        | `number`              | 400                                              | available items list height.
+| `itemHeight`                    | `number`              | 40                                               | the height of an item in the list.
+| `selectAllHeight`               | `number`              | `itemHeight`                                     | the height of the selectAll component, by default will use the value of the itemHeight.
+| `maxSelectedItems`              | `number`              |                                                  | defines the maximum items that can be selected, overrides showSelectAll.
+| `filterFunction`                | `function`            | based on label                                   | The function used to filter items based on the search query.
+| `searchRenderer`                | `Component`           |                                                  | Component to replace the default Search component.
+| `selectedItemRenderer`          | `Component`           |                                                  | Component to replace the default selected item component in the destination list.
+| `loaderRenderer`                | `Component`           |                                                  | Component to replace the default loader component.
+| `selectAllRenderer`             | `Component`           |                                                  | Component to replace the default select all component.
+| `itemRenderer`                  | `Component`           |                                                  | Component to replace the default item component in the source list.
+| `selectionStatusRenderer`       | `Component`           |                                                  | Component to replace the default selection status component.
+| `noItemsRenderer`               | `Component`           |                                                  | Component to replace the default no items component.
 
 
 ## Customization
 
 #### Renderers
 
-You can replace the renderes of the following components:
+You can replace the renderers of the following components:
 
 <br/>
 
@@ -125,16 +125,16 @@ Each item receives the following props:
 
 Use the `selectAllRenderer` to replace the default component.
 
-The Select All component receives the following props:
+The `SelectAll` component receives the following props:
 
 `height` - receives the height defined by the parent
 
 `onClick` - Triggers the select all/clear all event on click
 
 `isAllSelected` - Indicates that all items are selected
-  
-`selectAllMessage` - Defines the message for the Select All component
-  
+
+`selectAllMessage` - Defines the message for the `SelectAll` component
+
 `selectedIds` - holds a list of ids of all the selected items
 
 <br/>
@@ -143,9 +143,8 @@ The Select All component receives the following props:
 
 Use the `selectAllRenderer` to replace the default component.
 
+The `SelectedItem` component receives the following props:
 
-The Selected Item component receives the following props:
- 
 `item` - holds your item data
 
 `height` - receives the height defined by the list
@@ -156,7 +155,7 @@ The Selected Item component receives the following props:
 
 Use the `searchRenderer` to replace the default component.
 
-The Search component receives the following props:
+The `Search` component receives the following props:
 
 `searchPlaceholder` - defines the message to display in the search placeholder
 
@@ -168,7 +167,7 @@ The Search component receives the following props:
 
 Use the `selectionStatusRenderer` to replace the default component.
 
-The Search component receives the following props:
+The `SelectionStatus` component receives the following props:
 
 `selected` - an array of all the selected ids
 
@@ -179,7 +178,7 @@ The Search component receives the following props:
 `noneSelectedMessage` - text to display when no items are selected
 
 `selectedMessage` - text to display when there are items selected
-  
+
 <br/>
 
 **Loader**
@@ -200,7 +199,7 @@ Does not receive any props.
 
 #### Search Function
 
-In order to accomidate complex item filters, you can provide your own filter method in the `filterFunction` prop.
+In order to accommodate complex item filters, you can provide your own filter method in the `filterFunction` prop.
 
 Example (default):
 ```javascript
@@ -219,9 +218,9 @@ value => {
 }
 ```
 
-#### Messages 
+#### Messages
 
-You can use your own messages. Here is the default messages object :
+You can use your own messages. Here is the default messages object:
 ```jsx
  messages: {
     searchPlaceholder: "Search...",
@@ -236,13 +235,13 @@ You can use your own messages. Here is the default messages object :
 
 ## How to Contribute
 
-#### Setting up development environment 
+#### Setting up development environment
 
-1. Fork the repository and create your branch from master.
-2. To install the project: `yarn install`
-3. Running tests: `yarn test` or `yarn test:watch`
-4. Running dev environment to work on `yarn storybook` and head to [https://localhost:6006](https://localhost:6006)
-  
+1. Fork the repository and create your branch from `master`.
+2. Install the project: `yarn install`
+3. Run tests: `yarn test` or `yarn test:watch`
+4. Run dev environment: `yarn storybook` and head to [https://localhost:6006](https://localhost:6006)
+
 
 #### Issuing a change
 
@@ -251,7 +250,7 @@ You can use your own messages. Here is the default messages object :
 3. Open a Pull Request with the following guidelines:
    - Set title prefix to feature/bug and supply a descriptive PR title.
    - Add description to your Pull Request describing your change.
-4. Once your Pull Request is issued  the test suite and build processes will run and we will review your change.
+4. Once your Pull Request is issued, the test suite and build processes will run and your change will be reviewed.
   
   
 ## Compatibility
