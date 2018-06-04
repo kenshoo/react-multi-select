@@ -74,8 +74,7 @@ const withMultiSelectState = WrappedComponent =>
           selectedItems.find(selectedItem => item.id === selectedItem.id)
       );
       const itemsFromDestination = selectedItems.filter(
-        selectedItem =>
-          items.find(item => item.id === selectedItem.id) === undefined
+        selectedItem => !items.find(item => item.id === selectedItem.id)
       );
       return [...itemsFromDestination, ...itemsInSource];
     }
