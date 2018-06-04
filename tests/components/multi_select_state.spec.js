@@ -284,6 +284,19 @@ describe("withMultiSelectState", () => {
     expect(wrapper.prop("selectedItems")).toEqual([ITEM_3, ITEM_12, ITEM_22]);
   });
 
+  test("selected item should not be removed if it doesn't exist in the filtered available items", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const wrapper = shallow(<ConditionalComponent items={items} />);
+    wrapper.props().selectItem(EVENT, ITEM_3.id);
+    wrapper.update();
+    wrapper.setProps({ items: [ITEM_1, ITEM_2] });
+    wrapper.update();
+    expect(wrapper.prop("items")).toEqual([ITEM_1, ITEM_2]);
+    wrapper.props().selectItem(EVENT, ITEM_1.id);
+    wrapper.update();
+    expect(wrapper.prop("selectedItems")).toEqual([ITEM_3, ITEM_1]);
+  });
+
   test("remove shiftKey in the middle ", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const newItems = items.concat([ITEM_4, ITEM_12, ITEM_22]);
