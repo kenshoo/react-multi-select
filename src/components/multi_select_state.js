@@ -68,11 +68,15 @@ const withMultiSelectState = WrappedComponent =>
     getNewSelectedItems(itemId) {
       const { items } = this.props;
       const { selectedItems } = this.state;
-      return items.filter(
+      const sourceItems = items.filter(
         item =>
           item.id === itemId ||
           selectedItems.find(selectedItem => item.id === selectedItem.id)
       );
+      const destinationItems = selectedItems.filter(
+        selectedItem => !items.find(item => item.id === selectedItem.id)
+      );
+      return [...destinationItems, ...sourceItems];
     }
 
     componentDidMount() {
