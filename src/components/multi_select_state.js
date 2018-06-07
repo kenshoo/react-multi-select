@@ -143,12 +143,21 @@ const withMultiSelectState = WrappedComponent =>
       if (this.isAllSelected()) {
         this.unselectItems(filteredItems.map(filteredItem => filteredItem.id));
       } else {
-        const newSelectedItems = items.filter(
+        const sourceItems = items.filter(
           item =>
             filteredItems.find(filteredItem => item.id === filteredItem.id) ||
             selectedItems.find(selectedItem => item.id === selectedItem.id)
         );
-        this.setState({ selectedItems: newSelectedItems }, this.handleChange);
+        const destinationItems = selectedItems.filter(
+          selectedItem =>
+            !filteredItems.find(
+              filteredItem => selectedItem.id === filteredItem.id
+            ) && !items.find(item => selectedItem.id === item.id)
+        );
+        this.setState(
+          { selectedItems: [...destinationItems, ...sourceItems] },
+          this.handleChange
+        );
       }
     }
 

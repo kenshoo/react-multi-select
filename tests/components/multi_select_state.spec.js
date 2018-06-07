@@ -297,6 +297,35 @@ describe("withMultiSelectState", () => {
     expect(wrapper.prop("selectedItems")).toEqual([ITEM_3, ITEM_1]);
   });
 
+  test("selected item is removed when it 's being filtered from the available items and later click the select all", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const wrapper = shallow(<ConditionalComponent items={items} />);
+    wrapper.props().selectItem(EVENT, ITEM_3.id);
+    wrapper.update();
+    wrapper.setProps({ items: [ITEM_1, ITEM_2] });
+    wrapper.update();
+    expect(wrapper.prop("items")).toEqual([ITEM_1, ITEM_2]);
+    wrapper.props().selectAllItems();
+    wrapper.update();
+    expect(wrapper.prop("selectedItems")).toEqual([ITEM_3, ITEM_1, ITEM_2]);
+  });
+
+  test("selected item is removed when it 's being filtered from the available items and later click the un select all", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const wrapper = shallow(<ConditionalComponent items={items} />);
+    wrapper.props().selectItem(EVENT, ITEM_3.id);
+    wrapper.update();
+    wrapper.setProps({ items: [ITEM_1, ITEM_2] });
+    wrapper.update();
+    expect(wrapper.prop("items")).toEqual([ITEM_1, ITEM_2]);
+    wrapper.props().selectAllItems();
+    wrapper.update();
+    expect(wrapper.prop("selectedItems")).toEqual([ITEM_3, ITEM_1, ITEM_2]);
+    wrapper.props().selectAllItems();
+    wrapper.update();
+    expect(wrapper.prop("selectedItems")).toEqual([ITEM_3]);
+  });
+
   test("remove shiftKey in the middle ", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const newItems = items.concat([ITEM_4, ITEM_12, ITEM_22]);
