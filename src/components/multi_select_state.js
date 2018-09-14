@@ -167,9 +167,12 @@ const withMultiSelectState = WrappedComponent =>
       const selectedItemsInFilteredItems = selectedItems.filter(selectedItem =>
         filteredItems.find(item => item.id === selectedItem.id)
       );
+      const selectableFilteredItems = filteredItems.filter(
+        item => !item.disabled
+      );
       return (
-        selectedItemsInFilteredItems.length === filteredItems.length &&
-        filteredItems.length > 0
+        selectedItemsInFilteredItems.length ===
+          selectableFilteredItems.length && selectableFilteredItems.length > 0
       );
     }
 
