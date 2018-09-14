@@ -11,11 +11,13 @@ const ITEM_3 = { id: 2, label: "item 2" };
 const ITEM_4 = { id: 3, label: "item 3" };
 const ITEM_12 = { id: 12, label: "item 12" };
 const ITEM_22 = { id: 22, label: "item 22" };
+const DISABLED_ITEM_23 = { id: 23, label: "item 23", disabled: true };
 const EVENT = { shiftKey: false };
 const EVENT_WITH_SHIFT = { keyCode: 16, shiftKey: true };
 const EVENT_WITH_CTRL = { keyCode: 17, shiftKey: true };
 
 const items = [ITEM_1, ITEM_2, ITEM_3];
+const itemsWithDisabled = [ITEM_1, ITEM_2, DISABLED_ITEM_23, ITEM_3];
 
 describe("withMultiSelectState", () => {
   window.addEventListener = jest.fn();
@@ -43,6 +45,15 @@ describe("withMultiSelectState", () => {
     expect(wrapper.prop("selectedItems")).toEqual(items);
   });
 
+  test("can select all items except disabled", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const wrapper = shallow(<ConditionalComponent items={itemsWithDisabled} />);
+    const expected = itemsWithDisabled.filter(({ disabled }) => !disabled);
+    wrapper.props().selectAllItems();
+    wrapper.update();
+    expect(wrapper.prop("selectedItems")).toEqual(expected);
+  });
+
   test("select all triggers onChange", () => {
     const onChange = jest.fn();
     const ConditionalComponent = withMultiSelectState(CustomComponent);
@@ -58,6 +69,16 @@ describe("withMultiSelectState", () => {
   test("can unselect select all items", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const wrapper = shallow(<ConditionalComponent items={items} />);
+    wrapper.props().selectAllItems();
+    wrapper.update();
+    wrapper.props().selectAllItems();
+    wrapper.update();
+    expect(wrapper.prop("selectedItems")).toEqual([]);
+  });
+
+  test("can unselect select all items when there are disabled", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const wrapper = shallow(<ConditionalComponent items={itemsWithDisabled} />);
     wrapper.props().selectAllItems();
     wrapper.update();
     wrapper.props().selectAllItems();
