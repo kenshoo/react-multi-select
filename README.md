@@ -41,8 +41,8 @@ class Example extends Component {
     this.state = {
       items: [
         { id: 0, label: "item 1" },
-        { id: 2, label: "item 2" },
-        { id: 3, label: "item 3" },
+        { id: 2, label: "item 2", disabled: true },
+        { id: 3, label: "item 3", disabled: false },
         { id: 4, label: "item 4" }
       ],
       selectedItems: []
@@ -117,7 +117,7 @@ Each item receives the following props:
 
 `indeterminate` - used by the select all component to display indeterminate mode
 
-`disabled` - defines if item should be disabled
+`disabled` - defines if item should be disabled. Item won't be clickable for selection and will be ignored when clicking "Select All".
 
 <br/>
 

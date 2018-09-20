@@ -28,6 +28,11 @@ const items = generateItems(50);
 
 const manyItems = generateItems(7000);
 
+const withDisabledItems = generateItems(10).map((i, index) => ({
+  ...i,
+  disabled: index % 5 === 0
+}));
+
 storiesOf("React Multi Select", module)
   .addDecorator(withKnobs)
   .add("Default view", () => {
@@ -58,6 +63,18 @@ storiesOf("React Multi Select", module)
       <ReactMultiSelect
         items={items}
         maxSelectedItems={4}
+        loading={boolean("Loading", false)}
+        onChange={action("onChange")}
+        showSearch={boolean("Show search", true)}
+        showSelectAll={boolean("Show select all", true)}
+        messages={{ disabledItemsTooltip: "You can select up to 4 items" }}
+      />
+    );
+  })
+  .add("With some of the items disabled", () => {
+    return (
+      <ReactMultiSelect
+        items={withDisabledItems}
         loading={boolean("Loading", false)}
         onChange={action("onChange")}
         showSearch={boolean("Show search", true)}

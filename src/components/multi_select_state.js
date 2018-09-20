@@ -145,8 +145,9 @@ const withMultiSelectState = WrappedComponent =>
       } else {
         const sourceItems = items.filter(
           item =>
-            filteredItems.find(filteredItem => item.id === filteredItem.id) ||
-            selectedItems.find(selectedItem => item.id === selectedItem.id)
+            filteredItems.find(
+              filteredItem => item.id === filteredItem.id && !item.disabled
+            ) || selectedItems.find(selectedItem => item.id === selectedItem.id)
         );
         const destinationItems = selectedItems.filter(
           selectedItem =>
@@ -166,9 +167,12 @@ const withMultiSelectState = WrappedComponent =>
       const selectedItemsInFilteredItems = selectedItems.filter(selectedItem =>
         filteredItems.find(item => item.id === selectedItem.id)
       );
+      const selectableFilteredItems = filteredItems.filter(
+        item => !item.disabled
+      );
       return (
-        selectedItemsInFilteredItems.length === filteredItems.length &&
-        filteredItems.length > 0
+        selectedItemsInFilteredItems.length ===
+          selectableFilteredItems.length && selectableFilteredItems.length > 0
       );
     }
 
