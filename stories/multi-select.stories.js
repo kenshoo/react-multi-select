@@ -170,7 +170,6 @@ storiesOf("React Multi Select", module)
       };
 
       onChange = value => {
-        console.log(value);
         this.setState({ value });
       };
 
