@@ -136,9 +136,7 @@ const withMultiSelectState = WrappedComponent =>
         filteredItems: items.filter(filterFunction(value))
       });
 
-      if (typeof searchValueChanged === "function") {
-        searchValueChanged(value);
-      }
+      searchValueChanged && searchValueChanged(value);
     }
 
     selectAllItems() {
