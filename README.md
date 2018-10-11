@@ -91,8 +91,8 @@ class Example extends Component {
 | `itemRenderer`                  | `Component`           |                                                  | Component to replace the default item component in the source list.
 | `selectionStatusRenderer`       | `Component`           |                                                  | Component to replace the default selection status component.
 | `noItemsRenderer`               | `Component`           |                                                  | Component to replace the default no items component.
-| `searchValue`               | `string`           |                                                  | the value of the search field.
-| `searchValueChanged`               | `function`           |                                                  | function to handle the change of search field. accepts value as a single argument.
+| `searchValue`               | `string`           |                                                  | The value of the search field.
+| `searchValueChanged`               | `function`           |                                                  | Function to handle the change of search field. Accepts value as a single argument.
 
 
 ## Customization
