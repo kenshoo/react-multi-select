@@ -22,6 +22,30 @@ const Search = ({ searchPlaceholder, searchIcon, onChange }) => {
   );
 };
 
+export const SearchWithValue = ({
+  searchPlaceholder,
+  onChange,
+  value,
+  searchIcon
+}) => {
+  const IconRenderer = searchIcon;
+
+  return (
+    <div className={styles.search}>
+      <input
+        value={value}
+        type="text"
+        className={styles.input}
+        placeholder={searchPlaceholder}
+        onChange={onChange}
+      />
+      <div className={styles.icon}>
+        <IconRenderer />
+      </div>
+    </div>
+  );
+};
+
 Search.propTypes = {
   searchPlaceholder: PropTypes.string,
   searchIcon: PropTypes.any,
