@@ -86,7 +86,8 @@ export class MultiSelect extends PureComponent {
       loaderRenderer,
       messages,
       loading,
-      maxSelectedItems
+      maxSelectedItems,
+      searchValue
     } = this.props;
     const calculatedHeight = this.calculateHeight();
     const selectedIds = selectedItems.map(item => item.id);
@@ -101,6 +102,7 @@ export class MultiSelect extends PureComponent {
         {loading && <LoaderRenderer />}
         {!loading && (
           <SourceList
+            searchValue={searchValue}
             searchRenderer={searchRenderer}
             selectAllRenderer={selectAllRenderer}
             showSearch={showSearch}

@@ -130,11 +130,13 @@ const withMultiSelectState = WrappedComponent =>
     }
 
     filterItems(event) {
-      const { items, filterFunction } = this.props;
+      const { items, filterFunction, searchValueChanged } = this.props;
       const { value } = event.target;
       this.setState({
         filteredItems: items.filter(filterFunction(value))
       });
+
+      searchValueChanged && searchValueChanged(value);
     }
 
     selectAllItems() {

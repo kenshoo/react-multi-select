@@ -27,7 +27,8 @@ const SourceList = ({
   calculatedHeight,
   selectItem,
   noItemsRenderer,
-  disabled
+  disabled,
+  searchValue
 }) => {
   const SearchRenderer = searchRenderer;
   const SelectAllRenderer = selectAllRenderer;
@@ -37,6 +38,7 @@ const SourceList = ({
         <SearchRenderer
           onChange={filterItems}
           searchIcon={searchIcon}
+          value={searchValue}
           searchPlaceholder={messages.searchPlaceholder}
         />
       )}

@@ -5,7 +5,7 @@ import { boolean, withKnobs } from "@storybook/addon-knobs";
 import customStyle from "./custom_style.scss";
 import SelectAll from "./custom_components/select_all";
 import SelectionStatus from "./custom_components/selection_status";
-import Search from "./custom_components/search";
+import Search, { SearchWithValue } from "./custom_components/search";
 import Item from "./custom_components/item";
 import SelectedItem from "./custom_components/selected_item";
 
@@ -162,4 +162,36 @@ storiesOf("React Multi Select", module)
         showSelectAll={boolean("Show select all", true)}
       />
     );
+  })
+  .add("With custom components and custom value", () => {
+    class ValueController extends React.Component {
+      state = {
+        value: ""
+      };
+
+      onChange = value => {
+        this.setState({ value });
+      };
+
+      render() {
+        return (
+          <ReactMultiSelect
+            searchValue={this.state.value}
+            searchValueChanged={this.onChange}
+            items={items}
+            itemRenderer={Item}
+            selectAllRenderer={SelectAll}
+            searchRenderer={SearchWithValue}
+            selectedItemRenderer={SelectedItem}
+            selectionStatusRenderer={SelectionStatus}
+            loading={boolean("Loading", false)}
+            onChange={action("onChange")}
+            showSearch={boolean("Show search", true)}
+            showSelectAll={boolean("Show select all", true)}
+          />
+        );
+      }
+    }
+
+    return <ValueController />;
   });

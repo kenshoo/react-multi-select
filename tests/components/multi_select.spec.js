@@ -1,7 +1,11 @@
 import React from "react";
 import ShallowRenderer from "react-test-renderer/shallow";
+import { mount } from "enzyme";
 
-import { MultiSelect } from "../../src/components/multi_select";
+import MultiSelectWithState, {
+  MultiSelect
+} from "../../src/components/multi_select";
+import { SearchWithValue } from "../../src/components/search/search";
 
 const CustomComponent = jest
   .fn(() => <div>Custom Component</div>)
@@ -177,5 +181,23 @@ describe("MultiSelect", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(<MultiSelect selectAllHeight={20} />);
     expect(tree).toMatchSnapshot();
+  });
+
+  test("searchValueChanged will be called on controlled search value", () => {
+    const newValueString = "new value";
+    const searchValueChanged = jest.fn();
+    const tree = mount(
+      <MultiSelectWithState
+        searchRenderer={SearchWithValue}
+        searchValue=""
+        searchValueChanged={searchValueChanged}
+        searchIcon="div"
+      />
+    );
+
+    tree
+      .find('input[type="text"]')
+      .simulate("change", { target: { value: newValueString } });
+    expect(searchValueChanged).toHaveBeenCalledWith(newValueString);
   });
 });
