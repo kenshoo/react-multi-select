@@ -32,6 +32,7 @@ exports[`SourceList can remove select all 1`] = `
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />
   <ItemsList
     disabled={false}
@@ -55,6 +56,7 @@ exports[`SourceList custom itemRenderer 1`] = `
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />
   <SelectAll
     height={40}
@@ -86,6 +88,7 @@ exports[`SourceList custom messages 1`] = `
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Find..."
+    value={undefined}
   />
   <SelectAll
     height={40}
@@ -117,6 +120,7 @@ exports[`SourceList custom noItemsRenderer 1`] = `
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />
   <SelectAll
     height={40}
@@ -148,6 +152,7 @@ exports[`SourceList custom searchRenderer 1`] = `
     onChange={undefined}
     searchIcon={undefined}
     searchPlaceholder={undefined}
+    value={undefined}
   />
   <SelectAll
     height={40}
@@ -179,6 +184,7 @@ exports[`SourceList custom selectAllRenderer 1`] = `
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />
   <mockConstructor
     height={40}
@@ -210,6 +216,7 @@ exports[`SourceList default snapshot 1`] = `
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />
   <SelectAll
     height={40}
@@ -241,6 +248,7 @@ exports[`SourceList passed filterItems 1`] = `
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />
   <SelectAll
     height={40}
@@ -272,6 +280,7 @@ exports[`SourceList passed selectAllItems 1`] = `
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />
   <SelectAll
     height={40}
@@ -303,6 +312,7 @@ exports[`SourceList passed selectItem 1`] = `
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />
   <SelectAll
     height={40}
@@ -334,6 +344,7 @@ exports[`SourceList passed selectedIds 1`] = `
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />
   <SelectAll
     height={40}
@@ -375,6 +386,7 @@ exports[`SourceList passed selectedItems 1`] = `
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />
   <SelectAll
     height={40}
@@ -406,6 +418,7 @@ exports[`SourceList show max selection tooltip 1`] = `
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />
   <SelectAll
     height={40}
@@ -437,6 +450,7 @@ exports[`SourceList will pass itemHeight 1`] = `
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />
   <SelectAll
     height={10}
@@ -468,6 +482,7 @@ exports[`SourceList will pass selectAllHeight 1`] = `
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />
   <SelectAll
     height={60}
@@ -499,6 +514,7 @@ exports[`SourceList will pass selectAllHeight without itemHeight 1`] = `
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />
   <SelectAll
     height={60}
