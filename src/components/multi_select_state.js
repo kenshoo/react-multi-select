@@ -87,6 +87,12 @@ const withMultiSelectState = WrappedComponent =>
       window.removeEventListener("keyup", this.onKeyUp, false);
     }
 
+    componentWillReceiveProps(nextProps) {
+      if (this.props.searchValue !== nextProps.searchValue) {
+        this.filterItems({ target: { value: nextProps.searchValue } });
+      }
+    }
+
     onKeyUp(event) {
       if (event.keyCode === 16) {
         this.setState({ firstItemShiftSelected: undefined });
