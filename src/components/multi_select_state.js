@@ -35,11 +35,16 @@ const withMultiSelectState = WrappedComponent =>
       if (this.props.selectedItems !== nextProps.selectedItems) {
         this.setState({ selectedItems: nextProps.selectedItems });
       }
+
       if (this.props.items !== nextProps.items) {
         this.setState({
           items: nextProps.items,
           filteredItems: nextProps.items
         });
+      }
+
+      if (this.props.searchValue !== nextProps.searchValue) {
+        this.filterItems({ target: { value: nextProps.searchValue } });
       }
     }
 
@@ -85,12 +90,6 @@ const withMultiSelectState = WrappedComponent =>
 
     componentWillUnmount() {
       window.removeEventListener("keyup", this.onKeyUp, false);
-    }
-
-    componentWillReceiveProps(nextProps) {
-      if (this.props.searchValue !== nextProps.searchValue) {
-        this.filterItems({ target: { value: nextProps.searchValue } });
-      }
     }
 
     onKeyUp(event) {
