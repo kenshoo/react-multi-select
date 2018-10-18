@@ -420,4 +420,19 @@ describe("withMultiSelectState", () => {
     wrapper.update();
     expect(wrapper.prop("selectedItems")).toEqual([ITEM_2, ITEM_3]);
   });
+
+  test("items are filtered on searchValue change", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const wrapper = shallow(
+      <ConditionalComponent
+        items={items}
+        selectedItems={items}
+        searchValue=""
+      />
+    );
+    expect(wrapper.state("filteredItems")).toEqual(items);
+    wrapper.setProps({ searchValue: ITEM_1.label });
+    wrapper.update();
+    expect(wrapper.state("filteredItems")).toEqual([ITEM_1]);
+  });
 });
