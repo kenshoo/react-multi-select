@@ -1,5 +1,12 @@
 const path = require("path");
-const { babelLoader, cssLoader, mdLoader, pngLoader, jsonLoader, svgLoader } = require("./loaders");
+const {
+  babelLoader,
+  cssLoader,
+  mdLoader,
+  pngLoader,
+  jsonLoader,
+  svgLoader
+} = require("./loaders");
 
 module.exports = {
   entry: {
@@ -7,7 +14,8 @@ module.exports = {
   },
   externals: {
     react: "react",
-    "react-dom": "react-dom"
+    "react-dom": "react-dom",
+    "@material-ui/core": "@material-ui/core"
   },
   output: {
     filename: "[name].js",
