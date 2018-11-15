@@ -1,6 +1,6 @@
 import React from "react";
 import { action, storiesOf } from "@storybook/react";
-import ReactMultiSelect from "../src/components/multi_select";
+import ReactMultiSelect from "../src/components/multi_select_height_responsive";
 import { boolean, number, withKnobs } from "@storybook/addon-knobs";
 import Readme from "../README.md";
 import withReadme from "storybook-readme/with-readme";
@@ -57,7 +57,9 @@ storiesOf("React Multi Select", module)
       return (
         <div style={{ height: "1000px" }}>
           <ReactMultiSelect
-            height={number("Height", 50, { min: 0, max: 100 }) + "%"}
+            responsiveHeight={
+              number("Height %", 50, { min: 0, max: 100 }) + "%"
+            }
             items={items}
             loading={boolean("Loading", false)}
             onChange={action("onChange")}
