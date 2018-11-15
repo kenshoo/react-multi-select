@@ -1,6 +1,9 @@
 import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
 import ReactHeight from "react-height";
 import MultiSelect from "./multi_select";
+
+const DEFAULT_HEIGHT = 400;
 
 class MultiSelectHeightResponsive extends PureComponent {
   constructor(props) {
@@ -11,9 +14,14 @@ class MultiSelectHeightResponsive extends PureComponent {
     };
   }
 
+  static propTypes = {
+    responsiveHeight: PropTypes.string,
+    height: PropTypes.number
+  };
+
   static defaultProps = {
-    responsiveHeight: "400px",
-    height: 400
+    responsiveHeight: `${DEFAULT_HEIGHT}px`,
+    height: DEFAULT_HEIGHT
   };
 
   changeHeight = height => {
