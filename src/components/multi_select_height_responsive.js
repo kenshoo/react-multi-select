@@ -12,6 +12,7 @@ class MultiSelectHeightResponsive extends PureComponent {
   }
 
   static defaultProps = {
+    responsiveHeight: "400px",
     height: 400
   };
 
