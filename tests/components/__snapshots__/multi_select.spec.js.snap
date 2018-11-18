@@ -1042,3 +1042,45 @@ exports[`MultiSelect will pass selectAllHeight without itemHeight 1`] = `
   />
 </div>
 `;
+
+exports[`MultiSelect with responsiveHeight 1`] = `
+<ReactHeight
+  dirty={true}
+  getElementHeight={[Function]}
+  hidden={false}
+  onHeightReady={[Function]}
+  style={
+    Object {
+      "height": "70%",
+    }
+  }
+>
+  <_class
+    filterFunction={[Function]}
+    height={400}
+    items={Array []}
+    selectedItems={Array []}
+  />
+</ReactHeight>
+`;
+
+exports[`MultiSelect without responsiveHeight 1`] = `
+<ReactHeight
+  dirty={true}
+  getElementHeight={[Function]}
+  hidden={false}
+  onHeightReady={[Function]}
+  style={
+    Object {
+      "height": "400px",
+    }
+  }
+>
+  <_class
+    filterFunction={[Function]}
+    height={400}
+    items={Array []}
+    selectedItems={Array []}
+  />
+</ReactHeight>
+`;

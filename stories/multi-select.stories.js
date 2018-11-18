@@ -1,6 +1,6 @@
 import React from "react";
 import { action, storiesOf } from "@storybook/react";
-import ReactMultiSelect from "../src/components/multi_select_height_responsive";
+import ReactMultiSelect from "../src/components/multi_select";
 import { boolean, number, withKnobs } from "@storybook/addon-knobs";
 import Readme from "../README.md";
 import withReadme from "storybook-readme/with-readme";
