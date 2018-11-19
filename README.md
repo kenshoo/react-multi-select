@@ -91,8 +91,9 @@ class Example extends Component {
 | `itemRenderer`                  | `Component`           |                                                  | Component to replace the default item component in the source list.
 | `selectionStatusRenderer`       | `Component`           |                                                  | Component to replace the default selection status component.
 | `noItemsRenderer`               | `Component`           |                                                  | Component to replace the default no items component.
-| `searchValue`               | `string`           |                                                  | The value of the search field.
-| `searchValueChanged`               | `function`           |                                                  | Function to handle the change of search field. Accepts value as a single argument.
+| `searchValue`                   | `string`              |                                                  | The value of the search field.
+| `searchValueChanged`            | `function`            |                                                  | Function to handle the change of search field. Accepts value as a single argument.
+|`responsiveHeight`               | `string`              | 400px                                            | Responsive height of the wrapping component, can send percent for example: `70%` 
 
 
 ## Customization

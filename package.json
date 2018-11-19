@@ -90,6 +90,7 @@
     "@material-ui/core": "^1.0.0",
     "classnames": "2.2.5",
     "prop-types": "^15.5.8",
+    "react-height": "^3.0.0",
     "react-icons": "^2.2.7",
     "react-overflow-tooltip": "^2.0.1",
     "react-virtualized": "^9.18.5"

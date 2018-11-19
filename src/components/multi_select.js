@@ -3,6 +3,7 @@ import classnames from "classnames";
 import PropTypes from "prop-types";
 
 import withMultiSelectState from "./multi_select_state";
+import withResponsiveHeight from "./with_responsive_height";
 import SourceList from "./source_list";
 import DestinationList from "./destination_list";
 
@@ -144,4 +145,4 @@ export class MultiSelect extends PureComponent {
   }
 }
 
-export default withMultiSelectState(MultiSelect);
+export default withResponsiveHeight(withMultiSelectState(MultiSelect));
