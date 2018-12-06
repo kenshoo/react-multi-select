@@ -146,6 +146,7 @@ describe("SourceList", () => {
           { id: 2, label: "item2", group: "group2" },
           { id: 3, label: "item3", group: "group1" }
         ]}
+        withGrouping
       />
     );
     expect(tree).toMatchSnapshot();
