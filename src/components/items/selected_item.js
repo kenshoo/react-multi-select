@@ -6,12 +6,17 @@ import ItemLabel from "./item_label";
 
 import styles from "./selected_item.scss";
 
-const SelectedItem = ({ item, height }) => (
-  <div className={styles.selected_item} style={{ height }}>
+const SelectedItem = ({ item, height, group }) => (
+  <div
+    className={group ? styles.with_grouping : styles.selected_item}
+    style={{ height }}
+  >
     <ItemLabel label={item.label} />
-    <IconButton>
-      <CloseIcon />
-    </IconButton>
+    {!group && (
+      <IconButton>
+        <CloseIcon />
+      </IconButton>
+    )}
   </div>
 );
 

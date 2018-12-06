@@ -26,6 +26,13 @@ const generateItems = size =>
     label: `Item ${index}`
   }));
 
+const generateItemsWithGroups = (size, groupSize) =>
+  Array.apply(null, { length: size }).map((i, index) => ({
+    id: index,
+    label: `Item ${index}`,
+    group: `Group ${Math.floor(index / groupSize)}`
+  }));
+
 const items = generateItems(50);
 
 const manyItems = generateItems(7000);
@@ -247,5 +254,33 @@ storiesOf("React Multi Select", module)
       }
 
       return <ValueController />;
+    })
+  )
+  .add(
+    "Item grouping",
+    withReadme(Readme, () => {
+      return (
+        <ReactMultiSelect
+          items={generateItemsWithGroups(30, 4)}
+          onChange={action("onChange")}
+          showSearch={boolean("Show search", true)}
+          showSelectAll={boolean("Show select all", true)}
+          withGrouping
+        />
+      );
+    })
+  )
+  .add(
+    "Item grouping with Large Data (7000 items)",
+    withReadme(Readme, () => {
+      return (
+        <ReactMultiSelect
+          items={generateItemsWithGroups(7000, 4)}
+          onChange={action("onChange")}
+          showSearch={boolean("Show search", true)}
+          showSelectAll={boolean("Show select all", true)}
+          withGrouping
+        />
+      );
     })
   );

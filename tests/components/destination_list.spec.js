@@ -87,7 +87,21 @@ describe("DestinationList", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test("passed selectedItems", () => {
+  test("passed selectedItems with grouping", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(
+      <DestinationList
+        selectedItems={[
+          { id: 1, label: "item1", group: "group1" },
+          { id: 2, label: "item2", group: "group2" },
+          { id: 3, label: "item3", group: "group1" }
+        ]}
+      />
+    );
+    expect(tree).toMatchSnapshot();
+  });
+
+  test("passed unselectItems", () => {
     const onClick = jest.fn();
     const component = shallow(<DestinationList unselectItems={onClick} />);
     const list = component.find(List).at(0);

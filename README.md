@@ -94,6 +94,7 @@ class Example extends Component {
 | `searchValue`                   | `string`              |                                                  | The value of the search field.
 | `searchValueChanged`            | `function`            |                                                  | Function to handle the change of search field. Accepts value as a single argument.
 |`responsiveHeight`               | `string`              | 400px                                            | Responsive height of the wrapping component, can send percent for example: `70%` 
+|`withGrouping`                   | `boolean`             | false                                            | Your items will be grouped by the group prop values - see "item grouping" section below  
 
 
 ## Customization
@@ -234,6 +235,20 @@ You can use your own messages. Here is the default messages object:
     clearAllMessage: "Clear All",
     disabledItemsTooltip: "You can only select 1 file"
   }
+```
+
+#### Item grouping
+
+You can add also grouping to your items - add a group prop with the group name as a value to each of your items and add withGrouping prop as well.
+```jsx
+ <MultiSelect
+         items={[{id: 1, label: "item1", group: "group1"},
+                 {id: 2, label: "item2", group: "group1"}
+                 {id: 3, label: "item3", group: "group2"}]}
+         withGrouping
+         selectedItems={selectedItems}
+         onChange={this.handleChange}
+       />
 ```
 
 ## How to Contribute

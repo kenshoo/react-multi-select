@@ -42,6 +42,7 @@
     "babel-preset-env": "~1.6.0",
     "babel-preset-react": "~6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "chai": "^4.2.0",
     "chai-enzyme": "^0.8.0",
     "cheerio": "^1.0.0-rc.2",
     "cross-env": "^5.0.5",

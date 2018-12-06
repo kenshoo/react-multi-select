@@ -18,6 +18,21 @@ exports[`SelectedItem default snapshot 1`] = `
 </div>
 `;
 
+exports[`SelectedItem snapshot with group item 1`] = `
+<div
+  className="with_grouping"
+  style={
+    Object {
+      "height": 40,
+    }
+  }
+>
+  <ItemLabel
+    label="Hi"
+  />
+</div>
+`;
+
 exports[`SelectedItem snapshot with height 1`] = `
 <div
   className="selected_item"

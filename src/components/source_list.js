@@ -7,6 +7,7 @@ import NoItems from "./items/no_items";
 import Search from "./search/search";
 import SelectAll from "./items/select_all";
 import Item from "./items/item";
+import { buildItemGrouping } from "./item_grouping_util";
 
 const SourceList = ({
   searchRenderer,
@@ -28,10 +29,12 @@ const SourceList = ({
   selectItem,
   noItemsRenderer,
   disabled,
-  searchValue
+  searchValue,
+  withGrouping
 }) => {
   const SearchRenderer = searchRenderer;
   const SelectAllRenderer = selectAllRenderer;
+  const updatedFilteredItems = buildItemGrouping(filteredItems, withGrouping);
   return (
     <Column>
       {showSearch && (
@@ -55,7 +58,7 @@ const SourceList = ({
       <List
         ref={getList}
         offset={1}
-        items={filteredItems}
+        items={updatedFilteredItems}
         itemHeight={itemHeight}
         height={calculatedHeight}
         onClick={selectItem}
@@ -89,7 +92,8 @@ SourceList.propTypes = {
   selectAllItems: PropTypes.func,
   getList: PropTypes.func,
   selectItem: PropTypes.func,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  withGrouping: PropTypes.bool
 };
 
 SourceList.defaultProps = {
@@ -105,7 +109,8 @@ SourceList.defaultProps = {
   selectedIds: [],
   filteredItems: [],
   messages: {},
-  disabled: false
+  disabled: false,
+  withGrouping: false
 };
 
 export default SourceList;
