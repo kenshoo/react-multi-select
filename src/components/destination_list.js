@@ -22,7 +22,9 @@ const DestinationList = ({
   withGrouping
 }) => {
   const SelectionStatusRenderer = selectionStatusRenderer;
-  const updatedSelectedItems = buildItemGrouping(selectedItems, withGrouping);
+  const updatedSelectedItems = withGrouping
+    ? buildItemGrouping(selectedItems)
+    : selectedItems;
   return (
     <Column>
       <SelectionStatusRenderer

@@ -102,6 +102,14 @@ describe("DestinationList", () => {
     expect(tree).toMatchSnapshot();
   });
 
+  test("passed selectedItems with grouping and empty items", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(
+      <DestinationList selectedItems={[]} withGrouping />
+    );
+    expect(tree).toMatchSnapshot();
+  });
+
   test("passed unselectItems", () => {
     const onClick = jest.fn();
     const component = shallow(<DestinationList unselectItems={onClick} />);

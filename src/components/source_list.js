@@ -34,7 +34,9 @@ const SourceList = ({
 }) => {
   const SearchRenderer = searchRenderer;
   const SelectAllRenderer = selectAllRenderer;
-  const updatedFilteredItems = buildItemGrouping(filteredItems, withGrouping);
+  const updatedFilteredItems = withGrouping
+    ? buildItemGrouping(filteredItems)
+    : filteredItems;
   return (
     <Column>
       {showSearch && (
