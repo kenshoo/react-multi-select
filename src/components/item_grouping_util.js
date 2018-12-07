@@ -13,9 +13,7 @@ export const groupItems = items => {
   if (!items || items.length === 0) {
     return items;
   }
-  const uniqueGroups = Array.from(
-    new Set(items.map(item => item.group))
-  ).sort();
+  const uniqueGroups = Array.from(new Set(items.map(item => item.group)));
   return uniqueGroups.reduce((result, groupName) => {
     const groupItems = getGroupItems(groupName, items);
     result.push(generateGroup(groupName));
