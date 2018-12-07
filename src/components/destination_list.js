@@ -6,7 +6,7 @@ import List from "./list/items_list";
 import NoItems from "./items/no_items";
 import SelectedItem from "./items/selected_item";
 import SelectionStatus from "./selection_status/selection_status";
-import { buildItemGrouping } from "./item_grouping_util";
+import { groupItems } from "./item_grouping_util";
 
 const DestinationList = ({
   selectionStatusRenderer,
@@ -23,7 +23,7 @@ const DestinationList = ({
 }) => {
   const SelectionStatusRenderer = selectionStatusRenderer;
   const updatedSelectedItems = withGrouping
-    ? buildItemGrouping(selectedItems)
+    ? groupItems(selectedItems)
     : selectedItems;
   return (
     <Column>

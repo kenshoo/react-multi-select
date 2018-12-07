@@ -7,7 +7,7 @@ import NoItems from "./items/no_items";
 import Search from "./search/search";
 import SelectAll from "./items/select_all";
 import Item from "./items/item";
-import { buildItemGrouping } from "./item_grouping_util";
+import { groupItems } from "./item_grouping_util";
 
 const SourceList = ({
   searchRenderer,
@@ -35,7 +35,7 @@ const SourceList = ({
   const SearchRenderer = searchRenderer;
   const SelectAllRenderer = selectAllRenderer;
   const updatedFilteredItems = withGrouping
-    ? buildItemGrouping(filteredItems)
+    ? groupItems(filteredItems)
     : filteredItems;
   return (
     <Column>

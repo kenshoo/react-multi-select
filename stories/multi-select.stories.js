@@ -10,37 +10,7 @@ import SelectionStatus from "./custom_components/selection_status";
 import Search, { SearchWithValue } from "./custom_components/search";
 import Item from "./custom_components/item";
 import SelectedItem from "./custom_components/selected_item";
-
-const custom_messages = {
-  searchPlaceholder: "Find...",
-  noItemsMessage: "No entries available...",
-  noneSelectedMessage: "Nothing",
-  selectedMessage: "Checked",
-  selectAllMessage: "Check all",
-  clearAllMessage: "Uncheck all"
-};
-
-const generateItems = size =>
-  Array.apply(null, { length: size }).map((i, index) => ({
-    id: index,
-    label: `Item ${index}`
-  }));
-
-const generateItemsWithGroups = (size, groupSize) =>
-  Array.apply(null, { length: size }).map((i, index) => ({
-    id: index,
-    label: `Item ${index}`,
-    group: `Group ${Math.floor(index / groupSize)}`
-  }));
-
-const items = generateItems(50);
-
-const manyItems = generateItems(7000);
-
-const withDisabledItems = generateItems(10).map((i, index) => ({
-  ...i,
-  disabled: index % 5 === 0
-}));
+import * as utils from "./multi_select_stories_util";
 
 storiesOf("React Multi Select", module)
   .addDecorator(withKnobs)
@@ -49,7 +19,7 @@ storiesOf("React Multi Select", module)
     withReadme(Readme, () => {
       return (
         <ReactMultiSelect
-          items={items}
+          items={utils.items}
           loading={boolean("Loading", false)}
           onChange={action("onChange")}
           showSearch={boolean("Show search", true)}
@@ -67,7 +37,7 @@ storiesOf("React Multi Select", module)
             responsiveHeight={
               number("Height %", 50, { min: 0, max: 100 }) + "%"
             }
-            items={items}
+            items={utils.items}
             loading={boolean("Loading", false)}
             onChange={action("onChange")}
             showSearch={boolean("Show search", true)}
@@ -82,7 +52,7 @@ storiesOf("React Multi Select", module)
     withReadme(Readme, () => {
       return (
         <ReactMultiSelect
-          items={items}
+          items={utils.items}
           selectedItems={[{ id: 3, label: "Item 3" }]}
           loading={boolean("Loading", false)}
           onChange={action("onChange")}
@@ -97,7 +67,7 @@ storiesOf("React Multi Select", module)
     withReadme(Readme, () => {
       return (
         <ReactMultiSelect
-          items={items}
+          items={utils.items}
           maxSelectedItems={4}
           loading={boolean("Loading", false)}
           onChange={action("onChange")}
@@ -113,7 +83,7 @@ storiesOf("React Multi Select", module)
     withReadme(Readme, () => {
       return (
         <ReactMultiSelect
-          items={withDisabledItems}
+          items={utils.withDisabledItems}
           loading={boolean("Loading", false)}
           onChange={action("onChange")}
           showSearch={boolean("Show search", true)}
@@ -128,8 +98,8 @@ storiesOf("React Multi Select", module)
     withReadme(Readme, () => {
       return (
         <ReactMultiSelect
-          items={items}
-          messages={custom_messages}
+          items={utils.items}
+          messages={utils.custom_messages}
           loading={boolean("Loading", false)}
           onChange={action("onChange")}
           showSearch={boolean("Show search", true)}
@@ -143,7 +113,7 @@ storiesOf("React Multi Select", module)
     withReadme(Readme, () => {
       return (
         <ReactMultiSelect
-          items={items}
+          items={utils.items}
           wrapperClassName={customStyle.wrapper}
           listHeight={500}
           selectedListHeight={540}
@@ -162,7 +132,7 @@ storiesOf("React Multi Select", module)
     withReadme(Readme, () => {
       return (
         <ReactMultiSelect
-          items={items}
+          items={utils.items}
           listHeight={500}
           selectedListHeight={448}
           loading={boolean("Loading", false)}
@@ -178,7 +148,7 @@ storiesOf("React Multi Select", module)
     withReadme(Readme, () => {
       return (
         <ReactMultiSelect
-          items={manyItems}
+          items={utils.manyItems}
           loading={boolean("Loading", false)}
           onChange={action("onChange")}
           showSearch={boolean("Show search", true)}
@@ -192,7 +162,7 @@ storiesOf("React Multi Select", module)
     withReadme(Readme, () => {
       return (
         <ReactMultiSelect
-          items={manyItems}
+          items={utils.manyItems}
           loading={boolean("Loading", false)}
           onChange={action("onChange")}
           showSearch={boolean("Show search", true)}
@@ -207,7 +177,7 @@ storiesOf("React Multi Select", module)
     withReadme(Readme, () => {
       return (
         <ReactMultiSelect
-          items={items}
+          items={utils.items}
           itemRenderer={Item}
           selectAllRenderer={SelectAll}
           searchRenderer={Search}
@@ -238,7 +208,7 @@ storiesOf("React Multi Select", module)
             <ReactMultiSelect
               searchValue={this.state.value}
               searchValueChanged={this.onChange}
-              items={items}
+              items={utils.items}
               itemRenderer={Item}
               selectAllRenderer={SelectAll}
               searchRenderer={SearchWithValue}
@@ -261,7 +231,7 @@ storiesOf("React Multi Select", module)
     withReadme(Readme, () => {
       return (
         <ReactMultiSelect
-          items={generateItemsWithGroups(30, 4)}
+          items={utils.itemsWithGroups}
           onChange={action("onChange")}
           showSearch={boolean("Show search", true)}
           showSelectAll={boolean("Show select all", true)}
@@ -275,7 +245,7 @@ storiesOf("React Multi Select", module)
     withReadme(Readme, () => {
       return (
         <ReactMultiSelect
-          items={generateItemsWithGroups(7000, 4)}
+          items={utils.manyItemsWithGroups}
           onChange={action("onChange")}
           showSearch={boolean("Show search", true)}
           showSelectAll={boolean("Show select all", true)}

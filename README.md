@@ -123,6 +123,8 @@ Each item receives the following props:
 
 `disabled` - defines if item should be disabled. Item won't be clickable for selection and will be ignored when clicking "Select All".
 
+`group` - group item - no checkbox, not clickable, black colored
+
 <br/>
 
 **Select All**
