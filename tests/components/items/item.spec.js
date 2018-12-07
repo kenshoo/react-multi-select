@@ -61,4 +61,10 @@ describe("Item", () => {
     item.simulate("click");
     expect(onClick).toHaveBeenCalledTimes(1);
   });
+
+  test("snapshot with group item", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(<Item item={item} group />);
+    expect(tree).toMatchSnapshot();
+  });
 });

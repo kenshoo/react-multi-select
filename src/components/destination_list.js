@@ -6,6 +6,7 @@ import List from "./list/items_list";
 import NoItems from "./items/no_items";
 import SelectedItem from "./items/selected_item";
 import SelectionStatus from "./selection_status/selection_status";
+import { groupItems } from "./item_grouping_util";
 
 const DestinationList = ({
   selectionStatusRenderer,
@@ -17,9 +18,13 @@ const DestinationList = ({
   height,
   unselectItems,
   selectedItemRenderer,
-  noItemsRenderer
+  noItemsRenderer,
+  withGrouping
 }) => {
   const SelectionStatusRenderer = selectionStatusRenderer;
+  const updatedSelectedItems = withGrouping
+    ? groupItems(selectedItems)
+    : selectedItems;
   return (
     <Column>
       <SelectionStatusRenderer
@@ -30,7 +35,7 @@ const DestinationList = ({
         noneSelectedMessage={messages.noneSelectedMessage}
       />
       <List
-        items={selectedItems}
+        items={updatedSelectedItems}
         itemHeight={itemHeight}
         height={height - 45}
         onClick={(event, id) => unselectItems([id])}
@@ -52,7 +57,8 @@ DestinationList.propTypes = {
   height: PropTypes.number,
   unselectItems: PropTypes.func,
   selectedItemRenderer: PropTypes.any,
-  noItemsRenderer: PropTypes.any
+  noItemsRenderer: PropTypes.any,
+  withGrouping: PropTypes.bool
 };
 
 DestinationList.defaultProps = {
@@ -63,7 +69,8 @@ DestinationList.defaultProps = {
   itemHeight: 40,
   height: 400,
   selectedItemRenderer: SelectedItem,
-  noItemsRenderer: NoItems
+  noItemsRenderer: NoItems,
+  withGrouping: false
 };
 
 export default DestinationList;

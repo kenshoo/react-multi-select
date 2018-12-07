@@ -136,4 +136,19 @@ describe("SourceList", () => {
     const tree = renderer.render(<SourceList selectAllHeight={60} />);
     expect(tree).toMatchSnapshot();
   });
+
+  test("passed filteredItems with group", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(
+      <SourceList
+        filteredItems={[
+          { id: 1, label: "item1", group: "group1" },
+          { id: 2, label: "item2", group: "group2" },
+          { id: 3, label: "item3", group: "group1" }
+        ]}
+        withGrouping
+      />
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });

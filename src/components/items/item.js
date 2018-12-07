@@ -11,6 +11,7 @@ const Item = ({
   height,
   onClick,
   withBorder,
+  group,
   checked,
   indeterminate,
   disabled
@@ -19,18 +20,21 @@ const Item = ({
     className={classnames(styles.item, {
       [styles.with_border]: withBorder,
       [styles.selected]: checked,
-      [styles.disabled]: disabled
+      [styles.disabled]: disabled,
+      [styles.with_grouping]: group
     })}
     style={{ height }}
     onClick={onClick}
   >
-    <Checkbox
-      type="checkbox"
-      color="primary"
-      checked={checked}
-      indeterminate={indeterminate}
-      disabled={disabled}
-    />
+    {!group && (
+      <Checkbox
+        type="checkbox"
+        color="primary"
+        checked={checked}
+        indeterminate={indeterminate}
+        disabled={disabled}
+      />
+    )}
     <ItemLabel label={item.label} />
   </div>
 );
