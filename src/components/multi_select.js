@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import withMultiSelectState from "./multi_select_state";
 import withResponsiveHeight from "./with_responsive_height";
 import SourceList from "./source_list";
-import DestinationList from "./destination_list";
+import DestinationList, { SelectedItem } from "./destination_list";
 
 import styles from "./multi_select.scss";
 import Loader from "./loader/loader";
@@ -150,4 +150,5 @@ export class MultiSelect extends PureComponent {
   }
 }
 
+export { SelectedItem, DestinationList, SourceList };
 export default withResponsiveHeight(withMultiSelectState(MultiSelect));

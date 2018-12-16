@@ -1,1 +1,8 @@
-export { default } from "./components/multi_select";
+import MultiSelect, {
+  SelectedItem,
+  DestinationList,
+  SourceList
+} from "./components/multi_select";
+
+export { SelectedItem, DestinationList, SourceList };
+export default MultiSelect;

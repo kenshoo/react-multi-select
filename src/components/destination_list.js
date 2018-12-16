@@ -73,4 +73,5 @@ DestinationList.defaultProps = {
   withGrouping: false
 };
 
+export { SelectedItem };
 export default DestinationList;
