@@ -3,6 +3,7 @@ import classnames from "classnames";
 import PropTypes from "prop-types";
 
 import withMultiSelectState from "./multi_select_state";
+import withResponsiveHeight from "./with_responsive_height";
 import SourceList from "./source_list";
 import DestinationList from "./destination_list";
 
@@ -27,7 +28,8 @@ export class MultiSelect extends PureComponent {
     itemHeight: PropTypes.number,
     selectAllHeight: PropTypes.number,
     loaderRenderer: PropTypes.any,
-    maxSelectedItems: PropTypes.number
+    maxSelectedItems: PropTypes.number,
+    withGrouping: PropTypes.bool
   };
 
   static defaultProps = {
@@ -39,7 +41,8 @@ export class MultiSelect extends PureComponent {
     showSelectedItems: true,
     height: 400,
     itemHeight: 40,
-    loaderRenderer: Loader
+    loaderRenderer: Loader,
+    withGrouping: false
   };
 
   calculateHeight() {
@@ -87,7 +90,8 @@ export class MultiSelect extends PureComponent {
       messages,
       loading,
       maxSelectedItems,
-      searchValue
+      searchValue,
+      withGrouping
     } = this.props;
     const calculatedHeight = this.calculateHeight();
     const selectedIds = selectedItems.map(item => item.id);
@@ -122,6 +126,7 @@ export class MultiSelect extends PureComponent {
             noItemsRenderer={noItemsRenderer}
             disabled={disabled}
             selectAllHeight={selectAllHeight}
+            withGrouping={withGrouping}
           />
         )}
         {!loading &&
@@ -137,6 +142,7 @@ export class MultiSelect extends PureComponent {
               unselectItems={unselectItems}
               selectedItemRenderer={selectedItemRenderer}
               noItemsRenderer={noItemsRenderer}
+              withGrouping={withGrouping}
             />
           )}
       </div>
@@ -144,4 +150,4 @@ export class MultiSelect extends PureComponent {
   }
 }
 
-export default withMultiSelectState(MultiSelect);
+export default withResponsiveHeight(withMultiSelectState(MultiSelect));

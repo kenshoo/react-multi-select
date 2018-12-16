@@ -92,6 +92,22 @@ exports[`Item snapshot with disabled 1`] = `
 </div>
 `;
 
+exports[`Item snapshot with group item 1`] = `
+<div
+  className="item with_grouping"
+  onClick={undefined}
+  style={
+    Object {
+      "height": 40,
+    }
+  }
+>
+  <ItemLabel
+    label="Hi"
+  />
+</div>
+`;
+
 exports[`Item snapshot with height 1`] = `
 <div
   className="item"

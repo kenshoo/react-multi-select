@@ -200,4 +200,17 @@ describe("MultiSelect", () => {
       .simulate("change", { target: { value: newValueString } });
     expect(searchValueChanged).toHaveBeenCalledWith(newValueString);
   });
+
+  test("without responsiveHeight", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(<MultiSelectWithState />);
+    expect(tree).toMatchSnapshot();
+  });
+  test("with responsiveHeight", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(
+      <MultiSelectWithState responsiveHeight={"70%"} />
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });

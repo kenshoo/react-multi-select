@@ -30,6 +30,7 @@ exports[`MultiSelect can remove search 1`] = `
     selectedIds={Array []}
     showSearch={false}
     showSelectAll={true}
+    withGrouping={false}
   />
   <DestinationList
     clearAll={undefined}
@@ -42,6 +43,7 @@ exports[`MultiSelect can remove search 1`] = `
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
     unselectItems={undefined}
+    withGrouping={false}
   />
 </div>
 `;
@@ -76,6 +78,7 @@ exports[`MultiSelect can remove select all 1`] = `
     selectedIds={Array []}
     showSearch={true}
     showSelectAll={false}
+    withGrouping={false}
   />
   <DestinationList
     clearAll={undefined}
@@ -88,6 +91,7 @@ exports[`MultiSelect can remove select all 1`] = `
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
     unselectItems={undefined}
+    withGrouping={false}
   />
 </div>
 `;
@@ -122,6 +126,7 @@ exports[`MultiSelect can remove selected items 1`] = `
     selectedIds={Array []}
     showSearch={true}
     showSelectAll={true}
+    withGrouping={false}
   />
 </div>
 `;
@@ -156,6 +161,7 @@ exports[`MultiSelect custom itemRenderer 1`] = `
     selectedIds={Array []}
     showSearch={true}
     showSelectAll={true}
+    withGrouping={false}
   />
   <DestinationList
     clearAll={undefined}
@@ -168,6 +174,7 @@ exports[`MultiSelect custom itemRenderer 1`] = `
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
     unselectItems={undefined}
+    withGrouping={false}
   />
 </div>
 `;
@@ -211,6 +218,7 @@ exports[`MultiSelect custom messages 1`] = `
     selectedIds={Array []}
     showSearch={true}
     showSelectAll={true}
+    withGrouping={false}
   />
   <DestinationList
     clearAll={undefined}
@@ -232,6 +240,7 @@ exports[`MultiSelect custom messages 1`] = `
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
     unselectItems={undefined}
+    withGrouping={false}
   />
 </div>
 `;
@@ -266,6 +275,7 @@ exports[`MultiSelect custom noItemsRenderer 1`] = `
     selectedIds={Array []}
     showSearch={true}
     showSelectAll={true}
+    withGrouping={false}
   />
   <DestinationList
     clearAll={undefined}
@@ -278,6 +288,7 @@ exports[`MultiSelect custom noItemsRenderer 1`] = `
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
     unselectItems={undefined}
+    withGrouping={false}
   />
 </div>
 `;
@@ -312,6 +323,7 @@ exports[`MultiSelect custom searchRenderer 1`] = `
     selectedIds={Array []}
     showSearch={true}
     showSelectAll={true}
+    withGrouping={false}
   />
   <DestinationList
     clearAll={undefined}
@@ -324,6 +336,7 @@ exports[`MultiSelect custom searchRenderer 1`] = `
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
     unselectItems={undefined}
+    withGrouping={false}
   />
 </div>
 `;
@@ -358,6 +371,7 @@ exports[`MultiSelect custom selectAllRenderer 1`] = `
     selectedIds={Array []}
     showSearch={true}
     showSelectAll={true}
+    withGrouping={false}
   />
   <DestinationList
     clearAll={undefined}
@@ -370,6 +384,7 @@ exports[`MultiSelect custom selectAllRenderer 1`] = `
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
     unselectItems={undefined}
+    withGrouping={false}
   />
 </div>
 `;
@@ -404,6 +419,7 @@ exports[`MultiSelect default snapshot 1`] = `
     selectedIds={Array []}
     showSearch={true}
     showSelectAll={true}
+    withGrouping={false}
   />
   <DestinationList
     clearAll={undefined}
@@ -416,6 +432,7 @@ exports[`MultiSelect default snapshot 1`] = `
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
     unselectItems={undefined}
+    withGrouping={false}
   />
 </div>
 `;
@@ -481,6 +498,7 @@ exports[`MultiSelect does not pass disabled if maxSelectedItem has passed 1`] = 
     }
     showSearch={true}
     showSelectAll={false}
+    withGrouping={false}
   />
   <DestinationList
     clearAll={undefined}
@@ -503,6 +521,7 @@ exports[`MultiSelect does not pass disabled if maxSelectedItem has passed 1`] = 
     }
     selectionStatusRenderer={[Function]}
     unselectItems={undefined}
+    withGrouping={false}
   />
 </div>
 `;
@@ -537,6 +556,7 @@ exports[`MultiSelect passed clearAll 1`] = `
     selectedIds={Array []}
     showSearch={true}
     showSelectAll={true}
+    withGrouping={false}
   />
   <DestinationList
     clearAll={[MockFunction clearAll]}
@@ -549,6 +569,7 @@ exports[`MultiSelect passed clearAll 1`] = `
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
     unselectItems={undefined}
+    withGrouping={false}
   />
 </div>
 `;
@@ -583,6 +604,7 @@ exports[`MultiSelect passed filterItems 1`] = `
     selectedIds={Array []}
     showSearch={true}
     showSelectAll={true}
+    withGrouping={false}
   />
   <DestinationList
     clearAll={undefined}
@@ -595,6 +617,7 @@ exports[`MultiSelect passed filterItems 1`] = `
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
     unselectItems={undefined}
+    withGrouping={false}
   />
 </div>
 `;
@@ -629,6 +652,7 @@ exports[`MultiSelect passed selectAllItems 1`] = `
     selectedIds={Array []}
     showSearch={true}
     showSelectAll={true}
+    withGrouping={false}
   />
   <DestinationList
     clearAll={undefined}
@@ -641,6 +665,7 @@ exports[`MultiSelect passed selectAllItems 1`] = `
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
     unselectItems={undefined}
+    withGrouping={false}
   />
 </div>
 `;
@@ -675,6 +700,7 @@ exports[`MultiSelect passed selectItem 1`] = `
     selectedIds={Array []}
     showSearch={true}
     showSelectAll={true}
+    withGrouping={false}
   />
   <DestinationList
     clearAll={undefined}
@@ -687,6 +713,7 @@ exports[`MultiSelect passed selectItem 1`] = `
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
     unselectItems={undefined}
+    withGrouping={false}
   />
 </div>
 `;
@@ -721,6 +748,7 @@ exports[`MultiSelect passed selectedIds 1`] = `
     selectedIds={Array []}
     showSearch={true}
     showSelectAll={true}
+    withGrouping={false}
   />
   <DestinationList
     clearAll={undefined}
@@ -733,6 +761,7 @@ exports[`MultiSelect passed selectedIds 1`] = `
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
     unselectItems={undefined}
+    withGrouping={false}
   />
 </div>
 `;
@@ -772,6 +801,7 @@ exports[`MultiSelect passed selectedItems 1`] = `
     }
     showSearch={true}
     showSelectAll={true}
+    withGrouping={false}
   />
   <DestinationList
     clearAll={undefined}
@@ -794,6 +824,7 @@ exports[`MultiSelect passed selectedItems 1`] = `
     }
     selectionStatusRenderer={[Function]}
     unselectItems={undefined}
+    withGrouping={false}
   />
 </div>
 `;
@@ -828,6 +859,7 @@ exports[`MultiSelect passed unselectItems 1`] = `
     selectedIds={Array []}
     showSearch={true}
     showSelectAll={true}
+    withGrouping={false}
   />
   <DestinationList
     clearAll={undefined}
@@ -840,6 +872,7 @@ exports[`MultiSelect passed unselectItems 1`] = `
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
     unselectItems={[MockFunction unselectItems]}
+    withGrouping={false}
   />
 </div>
 `;
@@ -879,6 +912,7 @@ exports[`MultiSelect passes disabled if maxSelectedItem has passed 1`] = `
     }
     showSearch={true}
     showSelectAll={false}
+    withGrouping={false}
   />
   <DestinationList
     clearAll={undefined}
@@ -901,6 +935,7 @@ exports[`MultiSelect passes disabled if maxSelectedItem has passed 1`] = `
     }
     selectionStatusRenderer={[Function]}
     unselectItems={undefined}
+    withGrouping={false}
   />
 </div>
 `;
@@ -935,6 +970,7 @@ exports[`MultiSelect will pass itemHeight 1`] = `
     selectedIds={Array []}
     showSearch={true}
     showSelectAll={true}
+    withGrouping={false}
   />
   <DestinationList
     clearAll={undefined}
@@ -947,6 +983,7 @@ exports[`MultiSelect will pass itemHeight 1`] = `
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
     unselectItems={undefined}
+    withGrouping={false}
   />
 </div>
 `;
@@ -981,6 +1018,7 @@ exports[`MultiSelect will pass selectAllHeight 1`] = `
     selectedIds={Array []}
     showSearch={true}
     showSelectAll={true}
+    withGrouping={false}
   />
   <DestinationList
     clearAll={undefined}
@@ -993,6 +1031,7 @@ exports[`MultiSelect will pass selectAllHeight 1`] = `
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
     unselectItems={undefined}
+    withGrouping={false}
   />
 </div>
 `;
@@ -1027,6 +1066,7 @@ exports[`MultiSelect will pass selectAllHeight without itemHeight 1`] = `
     selectedIds={Array []}
     showSearch={true}
     showSelectAll={true}
+    withGrouping={false}
   />
   <DestinationList
     clearAll={undefined}
@@ -1039,6 +1079,49 @@ exports[`MultiSelect will pass selectAllHeight without itemHeight 1`] = `
     selectedItems={Array []}
     selectionStatusRenderer={[Function]}
     unselectItems={undefined}
+    withGrouping={false}
   />
 </div>
+`;
+
+exports[`MultiSelect with responsiveHeight 1`] = `
+<ReactHeight
+  dirty={true}
+  getElementHeight={[Function]}
+  hidden={false}
+  onHeightReady={[Function]}
+  style={
+    Object {
+      "height": "70%",
+    }
+  }
+>
+  <_class
+    filterFunction={[Function]}
+    height={400}
+    items={Array []}
+    selectedItems={Array []}
+  />
+</ReactHeight>
+`;
+
+exports[`MultiSelect without responsiveHeight 1`] = `
+<ReactHeight
+  dirty={true}
+  getElementHeight={[Function]}
+  hidden={false}
+  onHeightReady={[Function]}
+  style={
+    Object {
+      "height": "400px",
+    }
+  }
+>
+  <_class
+    filterFunction={[Function]}
+    height={400}
+    items={Array []}
+    selectedItems={Array []}
+  />
+</ReactHeight>
 `;

@@ -12,3 +12,9 @@
     background-color: $hover-background-color;
   }
 }
+
+.with_grouping {
+  @extend .selected_item;
+  pointer-events: none;
+  color: $color-black;
+}

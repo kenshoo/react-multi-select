@@ -18,6 +18,12 @@ describe("SelectedItem", () => {
     expect(tree).toMatchSnapshot();
   });
 
+  test("snapshot with group item", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(<SelectedItem item={item} group />);
+    expect(tree).toMatchSnapshot();
+  });
+
   test("snapshot with height", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(<SelectedItem height={20} />);

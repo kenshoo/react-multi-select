@@ -69,6 +69,7 @@ class InnerList extends PureComponent {
       >
         <Renderer
           item={item}
+          group={item.isGroup}
           height={itemHeight}
           checked={checked}
           disabled={disabled && !checked}

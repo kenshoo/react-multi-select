@@ -274,6 +274,68 @@ exports[`SourceList passed filterItems 1`] = `
 </Column>
 `;
 
+exports[`SourceList passed filteredItems with group 1`] = `
+<Column>
+  <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />
+  <SelectAll
+    height={40}
+    isAllSelected={false}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
+    selectedIds={Array []}
+  />
+  <ItemsList
+    disabled={false}
+    disabledItemsTooltip={undefined}
+    height={400}
+    itemHeight={40}
+    items={
+      Array [
+        Object {
+          "disabled": true,
+          "id": "group1",
+          "isGroup": true,
+          "label": "group1",
+        },
+        Object {
+          "group": "group1",
+          "id": 1,
+          "label": "item1",
+        },
+        Object {
+          "group": "group1",
+          "id": 3,
+          "label": "item3",
+        },
+        Object {
+          "disabled": true,
+          "id": "group2",
+          "isGroup": true,
+          "label": "group2",
+        },
+        Object {
+          "group": "group2",
+          "id": 2,
+          "label": "item2",
+        },
+      ]
+    }
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
 exports[`SourceList passed selectAllItems 1`] = `
 <Column>
   <Search
