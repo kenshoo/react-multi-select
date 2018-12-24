@@ -12,11 +12,13 @@ module.exports = {
   entry: {
     index: "./src/index.js"
   },
-  externals: {
-    react: "react",
-    "react-dom": "react-dom",
-    "@material-ui/core": "@material-ui/core"
-  },
+  externals: [
+    {
+      react: "react",
+      "react-dom": "react-dom"
+    },
+    /@material-ui\/core\/*./
+  ],
   output: {
     filename: "[name].js",
     path: path.resolve(process.cwd(), "dist"),
