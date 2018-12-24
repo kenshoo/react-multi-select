@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "^3.4.0",
+    "@material-ui/core": "^1.0.0",
     "@storybook/addon-knobs": "^3.3.15",
     "@storybook/addon-options": "^3.3.15",
     "@storybook/addons": "^3.3.15",
@@ -67,7 +68,7 @@
     "postcss-loader": "^2.0.6",
     "prettier": "^1.8.2",
     "raw-loader": "^0.5.1",
-    "react": "^16.0.0",
+    "react": "^16.7.0",
     "react-addons-test-utils": "^15.0.0",
     "react-addons-update": "^15.4.1",
     "react-dom": "^16.0.0",
@@ -83,11 +84,11 @@
     "webpack-strip": "^0.1.0"
   },
   "peerDependencies": {
+    "@material-ui/core": "^1.0.0",
     "react": "^15.0.0-0 || ^16.0.0",
     "react-dom": "^15.0.0-0 || ^16.0.0"
   },
   "dependencies": {
-    "@material-ui/core": "^1.0.0",
     "classnames": "2.2.5",
     "prop-types": "^15.6.2",
     "react-height": "^3.0.0",
