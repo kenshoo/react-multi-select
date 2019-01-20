@@ -6,6 +6,12 @@ import MultiSelectWithState, {
   MultiSelect
 } from "../../src/components/multi_select";
 import { SearchWithValue } from "../../src/components/search/search";
+import { createGenerateClassName } from "@material-ui/core/styles";
+
+const generateClassName = createGenerateClassName({
+  dangerouslyUseGlobalCSS: true,
+  productionPrefix: "c"
+});
 
 const CustomComponent = jest
   .fn(() => <div>Custom Component</div>)
@@ -210,6 +216,14 @@ describe("MultiSelect", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
       <MultiSelectWithState responsiveHeight={"70%"} />
+    );
+    expect(tree).toMatchSnapshot();
+  });
+
+  test("with generateClassName", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(
+      <MultiSelect generateClassName={generateClassName} />
     );
     expect(tree).toMatchSnapshot();
   });
