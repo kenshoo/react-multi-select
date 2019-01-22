@@ -1,1087 +1,3919 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MultiSelect can remove search 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <SourceList
-    calculatedHeight={360}
-    disabled={false}
-    filterItems={undefined}
-    filteredItems={Array []}
-    getList={undefined}
-    isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    searchIcon={undefined}
-    searchRenderer={[Function]}
-    searchValue={undefined}
-    selectAllHeight={undefined}
-    selectAllItems={undefined}
-    selectAllRenderer={[Function]}
-    selectItem={undefined}
-    selectedIds={Array []}
-    showSearch={false}
-    showSelectAll={true}
-    withGrouping={false}
-  />
-  <DestinationList
-    clearAll={undefined}
-    height={400}
-    itemHeight={40}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectedIds={Array []}
-    selectedItemRenderer={[Function]}
-    selectedItems={Array []}
-    selectionStatusRenderer={[Function]}
-    unselectItems={undefined}
-    withGrouping={false}
-  />
-</div>
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
+    }
+  >
+    <SourceList
+      calculatedHeight={360}
+      disabled={false}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={40}
+      itemRenderer={[Function]}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      searchIcon={undefined}
+      searchRenderer={[Function]}
+      searchValue={undefined}
+      selectAllHeight={undefined}
+      selectAllItems={undefined}
+      selectAllRenderer={[Function]}
+      selectItem={undefined}
+      selectedIds={Array []}
+      showSearch={false}
+      showSelectAll={true}
+      withGrouping={false}
+    />
+    <DestinationList
+      clearAll={undefined}
+      height={400}
+      itemHeight={40}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      selectedIds={Array []}
+      selectedItemRenderer={[Function]}
+      selectedItems={Array []}
+      selectionStatusRenderer={[Function]}
+      unselectItems={undefined}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect can remove select all 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <SourceList
-    calculatedHeight={355}
-    disabled={false}
-    filterItems={undefined}
-    filteredItems={Array []}
-    getList={undefined}
-    isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    searchIcon={undefined}
-    searchRenderer={[Function]}
-    searchValue={undefined}
-    selectAllHeight={undefined}
-    selectAllItems={undefined}
-    selectAllRenderer={[Function]}
-    selectItem={undefined}
-    selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={false}
-    withGrouping={false}
-  />
-  <DestinationList
-    clearAll={undefined}
-    height={400}
-    itemHeight={40}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectedIds={Array []}
-    selectedItemRenderer={[Function]}
-    selectedItems={Array []}
-    selectionStatusRenderer={[Function]}
-    unselectItems={undefined}
-    withGrouping={false}
-  />
-</div>
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
+    }
+  >
+    <SourceList
+      calculatedHeight={355}
+      disabled={false}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={40}
+      itemRenderer={[Function]}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      searchIcon={undefined}
+      searchRenderer={[Function]}
+      searchValue={undefined}
+      selectAllHeight={undefined}
+      selectAllItems={undefined}
+      selectAllRenderer={[Function]}
+      selectItem={undefined}
+      selectedIds={Array []}
+      showSearch={true}
+      showSelectAll={false}
+      withGrouping={false}
+    />
+    <DestinationList
+      clearAll={undefined}
+      height={400}
+      itemHeight={40}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      selectedIds={Array []}
+      selectedItemRenderer={[Function]}
+      selectedItems={Array []}
+      selectionStatusRenderer={[Function]}
+      unselectItems={undefined}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect can remove selected items 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <SourceList
-    calculatedHeight={315}
-    disabled={false}
-    filterItems={undefined}
-    filteredItems={Array []}
-    getList={undefined}
-    isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    searchIcon={undefined}
-    searchRenderer={[Function]}
-    searchValue={undefined}
-    selectAllHeight={undefined}
-    selectAllItems={undefined}
-    selectAllRenderer={[Function]}
-    selectItem={undefined}
-    selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
-  />
-</div>
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
+    }
+  >
+    <SourceList
+      calculatedHeight={315}
+      disabled={false}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={40}
+      itemRenderer={[Function]}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      searchIcon={undefined}
+      searchRenderer={[Function]}
+      searchValue={undefined}
+      selectAllHeight={undefined}
+      selectAllItems={undefined}
+      selectAllRenderer={[Function]}
+      selectItem={undefined}
+      selectedIds={Array []}
+      showSearch={true}
+      showSelectAll={true}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect custom itemRenderer 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <SourceList
-    calculatedHeight={315}
-    disabled={false}
-    filterItems={undefined}
-    filteredItems={Array []}
-    getList={undefined}
-    isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[MockFunction mockedComponent]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    searchIcon={undefined}
-    searchRenderer={[Function]}
-    searchValue={undefined}
-    selectAllHeight={undefined}
-    selectAllItems={undefined}
-    selectAllRenderer={[Function]}
-    selectItem={undefined}
-    selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
-  />
-  <DestinationList
-    clearAll={undefined}
-    height={400}
-    itemHeight={40}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectedIds={Array []}
-    selectedItemRenderer={[Function]}
-    selectedItems={Array []}
-    selectionStatusRenderer={[Function]}
-    unselectItems={undefined}
-    withGrouping={false}
-  />
-</div>
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
+    }
+  >
+    <SourceList
+      calculatedHeight={315}
+      disabled={false}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={40}
+      itemRenderer={[MockFunction mockedComponent]}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      searchIcon={undefined}
+      searchRenderer={[Function]}
+      searchValue={undefined}
+      selectAllHeight={undefined}
+      selectAllItems={undefined}
+      selectAllRenderer={[Function]}
+      selectItem={undefined}
+      selectedIds={Array []}
+      showSearch={true}
+      showSelectAll={true}
+      withGrouping={false}
+    />
+    <DestinationList
+      clearAll={undefined}
+      height={400}
+      itemHeight={40}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      selectedIds={Array []}
+      selectedItemRenderer={[Function]}
+      selectedItems={Array []}
+      selectionStatusRenderer={[Function]}
+      unselectItems={undefined}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect custom messages 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <SourceList
-    calculatedHeight={315}
-    disabled={false}
-    filterItems={undefined}
-    filteredItems={Array []}
-    getList={undefined}
-    isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    messages={
+  <div
+    className="wrapper"
+    style={
       Object {
-        "clearAllMessage": "Uncheck all",
-        "noItemsMessage": "No entries available...",
-        "noneSelectedMessage": "Nothing",
-        "searchPlaceholder": "Find...",
-        "selectAllMessage": "Check all",
-        "selectedMessage": "Checked",
+        "height": 400,
       }
     }
-    noItemsRenderer={[Function]}
-    searchIcon={undefined}
-    searchRenderer={[Function]}
-    searchValue={undefined}
-    selectAllHeight={undefined}
-    selectAllItems={undefined}
-    selectAllRenderer={[Function]}
-    selectItem={undefined}
-    selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
-  />
-  <DestinationList
-    clearAll={undefined}
-    height={400}
-    itemHeight={40}
-    messages={
-      Object {
-        "clearAllMessage": "Uncheck all",
-        "noItemsMessage": "No entries available...",
-        "noneSelectedMessage": "Nothing",
-        "searchPlaceholder": "Find...",
-        "selectAllMessage": "Check all",
-        "selectedMessage": "Checked",
+  >
+    <SourceList
+      calculatedHeight={315}
+      disabled={false}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={40}
+      itemRenderer={[Function]}
+      messages={
+        Object {
+          "clearAllMessage": "Uncheck all",
+          "noItemsMessage": "No entries available...",
+          "noneSelectedMessage": "Nothing",
+          "searchPlaceholder": "Find...",
+          "selectAllMessage": "Check all",
+          "selectedMessage": "Checked",
+        }
       }
-    }
-    noItemsRenderer={[Function]}
-    selectedIds={Array []}
-    selectedItemRenderer={[Function]}
-    selectedItems={Array []}
-    selectionStatusRenderer={[Function]}
-    unselectItems={undefined}
-    withGrouping={false}
-  />
-</div>
+      noItemsRenderer={[Function]}
+      searchIcon={undefined}
+      searchRenderer={[Function]}
+      searchValue={undefined}
+      selectAllHeight={undefined}
+      selectAllItems={undefined}
+      selectAllRenderer={[Function]}
+      selectItem={undefined}
+      selectedIds={Array []}
+      showSearch={true}
+      showSelectAll={true}
+      withGrouping={false}
+    />
+    <DestinationList
+      clearAll={undefined}
+      height={400}
+      itemHeight={40}
+      messages={
+        Object {
+          "clearAllMessage": "Uncheck all",
+          "noItemsMessage": "No entries available...",
+          "noneSelectedMessage": "Nothing",
+          "searchPlaceholder": "Find...",
+          "selectAllMessage": "Check all",
+          "selectedMessage": "Checked",
+        }
+      }
+      noItemsRenderer={[Function]}
+      selectedIds={Array []}
+      selectedItemRenderer={[Function]}
+      selectedItems={Array []}
+      selectionStatusRenderer={[Function]}
+      unselectItems={undefined}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect custom noItemsRenderer 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <SourceList
-    calculatedHeight={315}
-    disabled={false}
-    filterItems={undefined}
-    filteredItems={Array []}
-    getList={undefined}
-    isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[MockFunction mockedComponent]}
-    searchIcon={undefined}
-    searchRenderer={[Function]}
-    searchValue={undefined}
-    selectAllHeight={undefined}
-    selectAllItems={undefined}
-    selectAllRenderer={[Function]}
-    selectItem={undefined}
-    selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
-  />
-  <DestinationList
-    clearAll={undefined}
-    height={400}
-    itemHeight={40}
-    messages={Object {}}
-    noItemsRenderer={[MockFunction mockedComponent]}
-    selectedIds={Array []}
-    selectedItemRenderer={[Function]}
-    selectedItems={Array []}
-    selectionStatusRenderer={[Function]}
-    unselectItems={undefined}
-    withGrouping={false}
-  />
-</div>
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
+    }
+  >
+    <SourceList
+      calculatedHeight={315}
+      disabled={false}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={40}
+      itemRenderer={[Function]}
+      messages={Object {}}
+      noItemsRenderer={[MockFunction mockedComponent]}
+      searchIcon={undefined}
+      searchRenderer={[Function]}
+      searchValue={undefined}
+      selectAllHeight={undefined}
+      selectAllItems={undefined}
+      selectAllRenderer={[Function]}
+      selectItem={undefined}
+      selectedIds={Array []}
+      showSearch={true}
+      showSelectAll={true}
+      withGrouping={false}
+    />
+    <DestinationList
+      clearAll={undefined}
+      height={400}
+      itemHeight={40}
+      messages={Object {}}
+      noItemsRenderer={[MockFunction mockedComponent]}
+      selectedIds={Array []}
+      selectedItemRenderer={[Function]}
+      selectedItems={Array []}
+      selectionStatusRenderer={[Function]}
+      unselectItems={undefined}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect custom searchRenderer 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <SourceList
-    calculatedHeight={315}
-    disabled={false}
-    filterItems={undefined}
-    filteredItems={Array []}
-    getList={undefined}
-    isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    searchIcon={undefined}
-    searchRenderer={[MockFunction mockedComponent]}
-    searchValue={undefined}
-    selectAllHeight={undefined}
-    selectAllItems={undefined}
-    selectAllRenderer={[Function]}
-    selectItem={undefined}
-    selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
-  />
-  <DestinationList
-    clearAll={undefined}
-    height={400}
-    itemHeight={40}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectedIds={Array []}
-    selectedItemRenderer={[Function]}
-    selectedItems={Array []}
-    selectionStatusRenderer={[Function]}
-    unselectItems={undefined}
-    withGrouping={false}
-  />
-</div>
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
+    }
+  >
+    <SourceList
+      calculatedHeight={315}
+      disabled={false}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={40}
+      itemRenderer={[Function]}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      searchIcon={undefined}
+      searchRenderer={[MockFunction mockedComponent]}
+      searchValue={undefined}
+      selectAllHeight={undefined}
+      selectAllItems={undefined}
+      selectAllRenderer={[Function]}
+      selectItem={undefined}
+      selectedIds={Array []}
+      showSearch={true}
+      showSelectAll={true}
+      withGrouping={false}
+    />
+    <DestinationList
+      clearAll={undefined}
+      height={400}
+      itemHeight={40}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      selectedIds={Array []}
+      selectedItemRenderer={[Function]}
+      selectedItems={Array []}
+      selectionStatusRenderer={[Function]}
+      unselectItems={undefined}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect custom selectAllRenderer 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <SourceList
-    calculatedHeight={315}
-    disabled={false}
-    filterItems={undefined}
-    filteredItems={Array []}
-    getList={undefined}
-    isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    searchIcon={undefined}
-    searchRenderer={[Function]}
-    searchValue={undefined}
-    selectAllHeight={undefined}
-    selectAllItems={undefined}
-    selectAllRenderer={[MockFunction mockedComponent]}
-    selectItem={undefined}
-    selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
-  />
-  <DestinationList
-    clearAll={undefined}
-    height={400}
-    itemHeight={40}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectedIds={Array []}
-    selectedItemRenderer={[Function]}
-    selectedItems={Array []}
-    selectionStatusRenderer={[Function]}
-    unselectItems={undefined}
-    withGrouping={false}
-  />
-</div>
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
+    }
+  >
+    <SourceList
+      calculatedHeight={315}
+      disabled={false}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={40}
+      itemRenderer={[Function]}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      searchIcon={undefined}
+      searchRenderer={[Function]}
+      searchValue={undefined}
+      selectAllHeight={undefined}
+      selectAllItems={undefined}
+      selectAllRenderer={[MockFunction mockedComponent]}
+      selectItem={undefined}
+      selectedIds={Array []}
+      showSearch={true}
+      showSelectAll={true}
+      withGrouping={false}
+    />
+    <DestinationList
+      clearAll={undefined}
+      height={400}
+      itemHeight={40}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      selectedIds={Array []}
+      selectedItemRenderer={[Function]}
+      selectedItems={Array []}
+      selectionStatusRenderer={[Function]}
+      unselectItems={undefined}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect default snapshot 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <SourceList
-    calculatedHeight={315}
-    disabled={false}
-    filterItems={undefined}
-    filteredItems={Array []}
-    getList={undefined}
-    isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    searchIcon={undefined}
-    searchRenderer={[Function]}
-    searchValue={undefined}
-    selectAllHeight={undefined}
-    selectAllItems={undefined}
-    selectAllRenderer={[Function]}
-    selectItem={undefined}
-    selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
-  />
-  <DestinationList
-    clearAll={undefined}
-    height={400}
-    itemHeight={40}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectedIds={Array []}
-    selectedItemRenderer={[Function]}
-    selectedItems={Array []}
-    selectionStatusRenderer={[Function]}
-    unselectItems={undefined}
-    withGrouping={false}
-  />
-</div>
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
+    }
+  >
+    <SourceList
+      calculatedHeight={315}
+      disabled={false}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={40}
+      itemRenderer={[Function]}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      searchIcon={undefined}
+      searchRenderer={[Function]}
+      searchValue={undefined}
+      selectAllHeight={undefined}
+      selectAllItems={undefined}
+      selectAllRenderer={[Function]}
+      selectItem={undefined}
+      selectedIds={Array []}
+      showSearch={true}
+      showSelectAll={true}
+      withGrouping={false}
+    />
+    <DestinationList
+      clearAll={undefined}
+      height={400}
+      itemHeight={40}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      selectedIds={Array []}
+      selectedItemRenderer={[Function]}
+      selectedItems={Array []}
+      selectionStatusRenderer={[Function]}
+      unselectItems={undefined}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect displays Loader when loading 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <Loader />
-</div>
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
+    }
+  >
+    <Loader />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect displays custom Loader when loading 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <mockConstructor />
-</div>
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
+    }
+  >
+    <mockConstructor />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect does not pass disabled if maxSelectedItem has passed 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <SourceList
-    calculatedHeight={360}
-    disabled={false}
-    filterItems={undefined}
-    filteredItems={Array []}
-    getList={undefined}
-    isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    searchIcon={undefined}
-    searchRenderer={[Function]}
-    searchValue={undefined}
-    selectAllHeight={undefined}
-    selectAllItems={undefined}
-    selectAllRenderer={[Function]}
-    selectItem={undefined}
-    selectedIds={
-      Array [
-        undefined,
-        undefined,
-      ]
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
     }
-    showSearch={true}
-    showSelectAll={false}
-    withGrouping={false}
-  />
-  <DestinationList
-    clearAll={undefined}
-    height={400}
-    itemHeight={40}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectedIds={
-      Array [
-        undefined,
-        undefined,
-      ]
-    }
-    selectedItemRenderer={[Function]}
-    selectedItems={
-      Array [
-        1,
-        2,
-      ]
-    }
-    selectionStatusRenderer={[Function]}
-    unselectItems={undefined}
-    withGrouping={false}
-  />
-</div>
+  >
+    <SourceList
+      calculatedHeight={360}
+      disabled={false}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={40}
+      itemRenderer={[Function]}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      searchIcon={undefined}
+      searchRenderer={[Function]}
+      searchValue={undefined}
+      selectAllHeight={undefined}
+      selectAllItems={undefined}
+      selectAllRenderer={[Function]}
+      selectItem={undefined}
+      selectedIds={
+        Array [
+          undefined,
+          undefined,
+        ]
+      }
+      showSearch={true}
+      showSelectAll={false}
+      withGrouping={false}
+    />
+    <DestinationList
+      clearAll={undefined}
+      height={400}
+      itemHeight={40}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      selectedIds={
+        Array [
+          undefined,
+          undefined,
+        ]
+      }
+      selectedItemRenderer={[Function]}
+      selectedItems={
+        Array [
+          1,
+          2,
+        ]
+      }
+      selectionStatusRenderer={[Function]}
+      unselectItems={undefined}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect passed clearAll 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <SourceList
-    calculatedHeight={315}
-    disabled={false}
-    filterItems={undefined}
-    filteredItems={Array []}
-    getList={undefined}
-    isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    searchIcon={undefined}
-    searchRenderer={[Function]}
-    searchValue={undefined}
-    selectAllHeight={undefined}
-    selectAllItems={undefined}
-    selectAllRenderer={[Function]}
-    selectItem={undefined}
-    selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
-  />
-  <DestinationList
-    clearAll={[MockFunction clearAll]}
-    height={400}
-    itemHeight={40}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectedIds={Array []}
-    selectedItemRenderer={[Function]}
-    selectedItems={Array []}
-    selectionStatusRenderer={[Function]}
-    unselectItems={undefined}
-    withGrouping={false}
-  />
-</div>
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
+    }
+  >
+    <SourceList
+      calculatedHeight={315}
+      disabled={false}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={40}
+      itemRenderer={[Function]}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      searchIcon={undefined}
+      searchRenderer={[Function]}
+      searchValue={undefined}
+      selectAllHeight={undefined}
+      selectAllItems={undefined}
+      selectAllRenderer={[Function]}
+      selectItem={undefined}
+      selectedIds={Array []}
+      showSearch={true}
+      showSelectAll={true}
+      withGrouping={false}
+    />
+    <DestinationList
+      clearAll={[MockFunction clearAll]}
+      height={400}
+      itemHeight={40}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      selectedIds={Array []}
+      selectedItemRenderer={[Function]}
+      selectedItems={Array []}
+      selectionStatusRenderer={[Function]}
+      unselectItems={undefined}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect passed filterItems 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <SourceList
-    calculatedHeight={315}
-    disabled={false}
-    filterItems={undefined}
-    filteredItems={Array []}
-    getList={undefined}
-    isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    searchIcon={undefined}
-    searchRenderer={[Function]}
-    searchValue={undefined}
-    selectAllHeight={undefined}
-    selectAllItems={[MockFunction filterItems]}
-    selectAllRenderer={[Function]}
-    selectItem={undefined}
-    selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
-  />
-  <DestinationList
-    clearAll={undefined}
-    height={400}
-    itemHeight={40}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectedIds={Array []}
-    selectedItemRenderer={[Function]}
-    selectedItems={Array []}
-    selectionStatusRenderer={[Function]}
-    unselectItems={undefined}
-    withGrouping={false}
-  />
-</div>
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
+    }
+  >
+    <SourceList
+      calculatedHeight={315}
+      disabled={false}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={40}
+      itemRenderer={[Function]}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      searchIcon={undefined}
+      searchRenderer={[Function]}
+      searchValue={undefined}
+      selectAllHeight={undefined}
+      selectAllItems={[MockFunction filterItems]}
+      selectAllRenderer={[Function]}
+      selectItem={undefined}
+      selectedIds={Array []}
+      showSearch={true}
+      showSelectAll={true}
+      withGrouping={false}
+    />
+    <DestinationList
+      clearAll={undefined}
+      height={400}
+      itemHeight={40}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      selectedIds={Array []}
+      selectedItemRenderer={[Function]}
+      selectedItems={Array []}
+      selectionStatusRenderer={[Function]}
+      unselectItems={undefined}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect passed selectAllItems 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <SourceList
-    calculatedHeight={315}
-    disabled={false}
-    filterItems={undefined}
-    filteredItems={Array []}
-    getList={undefined}
-    isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    searchIcon={undefined}
-    searchRenderer={[Function]}
-    searchValue={undefined}
-    selectAllHeight={undefined}
-    selectAllItems={[MockFunction selectAllItems]}
-    selectAllRenderer={[Function]}
-    selectItem={undefined}
-    selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
-  />
-  <DestinationList
-    clearAll={undefined}
-    height={400}
-    itemHeight={40}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectedIds={Array []}
-    selectedItemRenderer={[Function]}
-    selectedItems={Array []}
-    selectionStatusRenderer={[Function]}
-    unselectItems={undefined}
-    withGrouping={false}
-  />
-</div>
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
+    }
+  >
+    <SourceList
+      calculatedHeight={315}
+      disabled={false}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={40}
+      itemRenderer={[Function]}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      searchIcon={undefined}
+      searchRenderer={[Function]}
+      searchValue={undefined}
+      selectAllHeight={undefined}
+      selectAllItems={[MockFunction selectAllItems]}
+      selectAllRenderer={[Function]}
+      selectItem={undefined}
+      selectedIds={Array []}
+      showSearch={true}
+      showSelectAll={true}
+      withGrouping={false}
+    />
+    <DestinationList
+      clearAll={undefined}
+      height={400}
+      itemHeight={40}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      selectedIds={Array []}
+      selectedItemRenderer={[Function]}
+      selectedItems={Array []}
+      selectionStatusRenderer={[Function]}
+      unselectItems={undefined}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect passed selectItem 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <SourceList
-    calculatedHeight={315}
-    disabled={false}
-    filterItems={undefined}
-    filteredItems={Array []}
-    getList={undefined}
-    isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    searchIcon={undefined}
-    searchRenderer={[Function]}
-    searchValue={undefined}
-    selectAllHeight={undefined}
-    selectAllItems={[MockFunction selectItem]}
-    selectAllRenderer={[Function]}
-    selectItem={undefined}
-    selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
-  />
-  <DestinationList
-    clearAll={undefined}
-    height={400}
-    itemHeight={40}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectedIds={Array []}
-    selectedItemRenderer={[Function]}
-    selectedItems={Array []}
-    selectionStatusRenderer={[Function]}
-    unselectItems={undefined}
-    withGrouping={false}
-  />
-</div>
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
+    }
+  >
+    <SourceList
+      calculatedHeight={315}
+      disabled={false}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={40}
+      itemRenderer={[Function]}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      searchIcon={undefined}
+      searchRenderer={[Function]}
+      searchValue={undefined}
+      selectAllHeight={undefined}
+      selectAllItems={[MockFunction selectItem]}
+      selectAllRenderer={[Function]}
+      selectItem={undefined}
+      selectedIds={Array []}
+      showSearch={true}
+      showSelectAll={true}
+      withGrouping={false}
+    />
+    <DestinationList
+      clearAll={undefined}
+      height={400}
+      itemHeight={40}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      selectedIds={Array []}
+      selectedItemRenderer={[Function]}
+      selectedItems={Array []}
+      selectionStatusRenderer={[Function]}
+      unselectItems={undefined}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect passed selectedIds 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <SourceList
-    calculatedHeight={315}
-    disabled={false}
-    filterItems={undefined}
-    filteredItems={Array []}
-    getList={undefined}
-    isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    searchIcon={undefined}
-    searchRenderer={[Function]}
-    searchValue={undefined}
-    selectAllHeight={undefined}
-    selectAllItems={undefined}
-    selectAllRenderer={[Function]}
-    selectItem={undefined}
-    selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
-  />
-  <DestinationList
-    clearAll={undefined}
-    height={400}
-    itemHeight={40}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectedIds={Array []}
-    selectedItemRenderer={[Function]}
-    selectedItems={Array []}
-    selectionStatusRenderer={[Function]}
-    unselectItems={undefined}
-    withGrouping={false}
-  />
-</div>
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
+    }
+  >
+    <SourceList
+      calculatedHeight={315}
+      disabled={false}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={40}
+      itemRenderer={[Function]}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      searchIcon={undefined}
+      searchRenderer={[Function]}
+      searchValue={undefined}
+      selectAllHeight={undefined}
+      selectAllItems={undefined}
+      selectAllRenderer={[Function]}
+      selectItem={undefined}
+      selectedIds={Array []}
+      showSearch={true}
+      showSelectAll={true}
+      withGrouping={false}
+    />
+    <DestinationList
+      clearAll={undefined}
+      height={400}
+      itemHeight={40}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      selectedIds={Array []}
+      selectedItemRenderer={[Function]}
+      selectedItems={Array []}
+      selectionStatusRenderer={[Function]}
+      unselectItems={undefined}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect passed selectedItems 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <SourceList
-    calculatedHeight={315}
-    disabled={false}
-    filterItems={undefined}
-    filteredItems={Array []}
-    getList={undefined}
-    isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    searchIcon={undefined}
-    searchRenderer={[Function]}
-    searchValue={undefined}
-    selectAllHeight={undefined}
-    selectAllItems={undefined}
-    selectAllRenderer={[Function]}
-    selectItem={undefined}
-    selectedIds={
-      Array [
-        undefined,
-        undefined,
-      ]
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
     }
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
-  />
-  <DestinationList
-    clearAll={undefined}
-    height={400}
-    itemHeight={40}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectedIds={
-      Array [
-        undefined,
-        undefined,
-      ]
-    }
-    selectedItemRenderer={[Function]}
-    selectedItems={
-      Array [
-        1,
-        2,
-      ]
-    }
-    selectionStatusRenderer={[Function]}
-    unselectItems={undefined}
-    withGrouping={false}
-  />
-</div>
+  >
+    <SourceList
+      calculatedHeight={315}
+      disabled={false}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={40}
+      itemRenderer={[Function]}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      searchIcon={undefined}
+      searchRenderer={[Function]}
+      searchValue={undefined}
+      selectAllHeight={undefined}
+      selectAllItems={undefined}
+      selectAllRenderer={[Function]}
+      selectItem={undefined}
+      selectedIds={
+        Array [
+          undefined,
+          undefined,
+        ]
+      }
+      showSearch={true}
+      showSelectAll={true}
+      withGrouping={false}
+    />
+    <DestinationList
+      clearAll={undefined}
+      height={400}
+      itemHeight={40}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      selectedIds={
+        Array [
+          undefined,
+          undefined,
+        ]
+      }
+      selectedItemRenderer={[Function]}
+      selectedItems={
+        Array [
+          1,
+          2,
+        ]
+      }
+      selectionStatusRenderer={[Function]}
+      unselectItems={undefined}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect passed unselectItems 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <SourceList
-    calculatedHeight={315}
-    disabled={false}
-    filterItems={undefined}
-    filteredItems={Array []}
-    getList={undefined}
-    isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    searchIcon={undefined}
-    searchRenderer={[Function]}
-    searchValue={undefined}
-    selectAllHeight={undefined}
-    selectAllItems={undefined}
-    selectAllRenderer={[Function]}
-    selectItem={undefined}
-    selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
-  />
-  <DestinationList
-    clearAll={undefined}
-    height={400}
-    itemHeight={40}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectedIds={Array []}
-    selectedItemRenderer={[Function]}
-    selectedItems={Array []}
-    selectionStatusRenderer={[Function]}
-    unselectItems={[MockFunction unselectItems]}
-    withGrouping={false}
-  />
-</div>
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
+    }
+  >
+    <SourceList
+      calculatedHeight={315}
+      disabled={false}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={40}
+      itemRenderer={[Function]}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      searchIcon={undefined}
+      searchRenderer={[Function]}
+      searchValue={undefined}
+      selectAllHeight={undefined}
+      selectAllItems={undefined}
+      selectAllRenderer={[Function]}
+      selectItem={undefined}
+      selectedIds={Array []}
+      showSearch={true}
+      showSelectAll={true}
+      withGrouping={false}
+    />
+    <DestinationList
+      clearAll={undefined}
+      height={400}
+      itemHeight={40}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      selectedIds={Array []}
+      selectedItemRenderer={[Function]}
+      selectedItems={Array []}
+      selectionStatusRenderer={[Function]}
+      unselectItems={[MockFunction unselectItems]}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect passes disabled if maxSelectedItem has passed 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <SourceList
-    calculatedHeight={360}
-    disabled={true}
-    filterItems={undefined}
-    filteredItems={Array []}
-    getList={undefined}
-    isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    searchIcon={undefined}
-    searchRenderer={[Function]}
-    searchValue={undefined}
-    selectAllHeight={undefined}
-    selectAllItems={undefined}
-    selectAllRenderer={[Function]}
-    selectItem={undefined}
-    selectedIds={
-      Array [
-        undefined,
-        undefined,
-      ]
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
     }
-    showSearch={true}
-    showSelectAll={false}
-    withGrouping={false}
-  />
-  <DestinationList
-    clearAll={undefined}
-    height={400}
-    itemHeight={40}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectedIds={
-      Array [
-        undefined,
-        undefined,
-      ]
-    }
-    selectedItemRenderer={[Function]}
-    selectedItems={
-      Array [
-        1,
-        2,
-      ]
-    }
-    selectionStatusRenderer={[Function]}
-    unselectItems={undefined}
-    withGrouping={false}
-  />
-</div>
+  >
+    <SourceList
+      calculatedHeight={360}
+      disabled={true}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={40}
+      itemRenderer={[Function]}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      searchIcon={undefined}
+      searchRenderer={[Function]}
+      searchValue={undefined}
+      selectAllHeight={undefined}
+      selectAllItems={undefined}
+      selectAllRenderer={[Function]}
+      selectItem={undefined}
+      selectedIds={
+        Array [
+          undefined,
+          undefined,
+        ]
+      }
+      showSearch={true}
+      showSelectAll={false}
+      withGrouping={false}
+    />
+    <DestinationList
+      clearAll={undefined}
+      height={400}
+      itemHeight={40}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      selectedIds={
+        Array [
+          undefined,
+          undefined,
+        ]
+      }
+      selectedItemRenderer={[Function]}
+      selectedItems={
+        Array [
+          1,
+          2,
+        ]
+      }
+      selectionStatusRenderer={[Function]}
+      unselectItems={undefined}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect will pass itemHeight 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <SourceList
-    calculatedHeight={295}
-    disabled={false}
-    filterItems={undefined}
-    filteredItems={Array []}
-    getList={undefined}
-    isAllSelected={false}
-    itemHeight={60}
-    itemRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    searchIcon={undefined}
-    searchRenderer={[Function]}
-    searchValue={undefined}
-    selectAllHeight={undefined}
-    selectAllItems={undefined}
-    selectAllRenderer={[Function]}
-    selectItem={undefined}
-    selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
-  />
-  <DestinationList
-    clearAll={undefined}
-    height={400}
-    itemHeight={60}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectedIds={Array []}
-    selectedItemRenderer={[Function]}
-    selectedItems={Array []}
-    selectionStatusRenderer={[Function]}
-    unselectItems={undefined}
-    withGrouping={false}
-  />
-</div>
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
+    }
+  >
+    <SourceList
+      calculatedHeight={295}
+      disabled={false}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={60}
+      itemRenderer={[Function]}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      searchIcon={undefined}
+      searchRenderer={[Function]}
+      searchValue={undefined}
+      selectAllHeight={undefined}
+      selectAllItems={undefined}
+      selectAllRenderer={[Function]}
+      selectItem={undefined}
+      selectedIds={Array []}
+      showSearch={true}
+      showSelectAll={true}
+      withGrouping={false}
+    />
+    <DestinationList
+      clearAll={undefined}
+      height={400}
+      itemHeight={60}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      selectedIds={Array []}
+      selectedItemRenderer={[Function]}
+      selectedItems={Array []}
+      selectionStatusRenderer={[Function]}
+      unselectItems={undefined}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect will pass selectAllHeight 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <SourceList
-    calculatedHeight={315}
-    disabled={false}
-    filterItems={undefined}
-    filteredItems={Array []}
-    getList={undefined}
-    isAllSelected={false}
-    itemHeight={60}
-    itemRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    searchIcon={undefined}
-    searchRenderer={[Function]}
-    searchValue={undefined}
-    selectAllHeight={40}
-    selectAllItems={undefined}
-    selectAllRenderer={[Function]}
-    selectItem={undefined}
-    selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
-  />
-  <DestinationList
-    clearAll={undefined}
-    height={400}
-    itemHeight={60}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectedIds={Array []}
-    selectedItemRenderer={[Function]}
-    selectedItems={Array []}
-    selectionStatusRenderer={[Function]}
-    unselectItems={undefined}
-    withGrouping={false}
-  />
-</div>
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
+    }
+  >
+    <SourceList
+      calculatedHeight={315}
+      disabled={false}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={60}
+      itemRenderer={[Function]}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      searchIcon={undefined}
+      searchRenderer={[Function]}
+      searchValue={undefined}
+      selectAllHeight={40}
+      selectAllItems={undefined}
+      selectAllRenderer={[Function]}
+      selectItem={undefined}
+      selectedIds={Array []}
+      showSearch={true}
+      showSelectAll={true}
+      withGrouping={false}
+    />
+    <DestinationList
+      clearAll={undefined}
+      height={400}
+      itemHeight={60}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      selectedIds={Array []}
+      selectedItemRenderer={[Function]}
+      selectedItems={Array []}
+      selectionStatusRenderer={[Function]}
+      unselectItems={undefined}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect will pass selectAllHeight without itemHeight 1`] = `
-<div
-  className="wrapper"
-  style={
-    Object {
-      "height": 400,
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
     }
   }
 >
-  <SourceList
-    calculatedHeight={335}
-    disabled={false}
-    filterItems={undefined}
-    filteredItems={Array []}
-    getList={undefined}
-    isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    searchIcon={undefined}
-    searchRenderer={[Function]}
-    searchValue={undefined}
-    selectAllHeight={20}
-    selectAllItems={undefined}
-    selectAllRenderer={[Function]}
-    selectItem={undefined}
-    selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
-  />
-  <DestinationList
-    clearAll={undefined}
-    height={400}
-    itemHeight={40}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectedIds={Array []}
-    selectedItemRenderer={[Function]}
-    selectedItems={Array []}
-    selectionStatusRenderer={[Function]}
-    unselectItems={undefined}
-    withGrouping={false}
-  />
-</div>
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
+    }
+  >
+    <SourceList
+      calculatedHeight={335}
+      disabled={false}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={40}
+      itemRenderer={[Function]}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      searchIcon={undefined}
+      searchRenderer={[Function]}
+      searchValue={undefined}
+      selectAllHeight={20}
+      selectAllItems={undefined}
+      selectAllRenderer={[Function]}
+      selectItem={undefined}
+      selectedIds={Array []}
+      showSearch={true}
+      showSelectAll={true}
+      withGrouping={false}
+    />
+    <DestinationList
+      clearAll={undefined}
+      height={400}
+      itemHeight={40}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      selectedIds={Array []}
+      selectedItemRenderer={[Function]}
+      selectedItems={Array []}
+      selectionStatusRenderer={[Function]}
+      unselectItems={undefined}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
+`;
+
+exports[`MultiSelect with generateClassName 1`] = `
+<JssProvider
+  generateClassName={[Function]}
+  jss={
+    Jss {
+      "generateClassName": [Function],
+      "id": 1,
+      "options": Object {
+        "Renderer": [Function],
+        "createGenerateClassName": [Function],
+        "plugins": Array [
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessStyle": [Function],
+            "onUpdate": [Function],
+          },
+          Object {
+            "onCreateRule": [Function],
+            "onProcessRule": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onChangeValue": [Function],
+            "onProcessRule": [Function],
+            "onProcessStyle": [Function],
+          },
+          Object {
+            "onProcessStyle": [Function],
+          },
+        ],
+      },
+      "plugins": PluginsRegistry {
+        "hooks": Object {
+          "onChangeValue": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onCreateRule": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessRule": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onProcessSheet": Array [],
+          "onProcessStyle": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "onUpdate": Array [
+            [Function],
+          ],
+        },
+      },
+      "version": "9.8.7",
+    }
+  }
+>
+  <div
+    className="wrapper"
+    style={
+      Object {
+        "height": 400,
+      }
+    }
+  >
+    <SourceList
+      calculatedHeight={315}
+      disabled={false}
+      filterItems={undefined}
+      filteredItems={Array []}
+      getList={undefined}
+      isAllSelected={false}
+      itemHeight={40}
+      itemRenderer={[Function]}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      searchIcon={undefined}
+      searchRenderer={[Function]}
+      searchValue={undefined}
+      selectAllHeight={undefined}
+      selectAllItems={undefined}
+      selectAllRenderer={[Function]}
+      selectItem={undefined}
+      selectedIds={Array []}
+      showSearch={true}
+      showSelectAll={true}
+      withGrouping={false}
+    />
+    <DestinationList
+      clearAll={undefined}
+      height={400}
+      itemHeight={40}
+      messages={Object {}}
+      noItemsRenderer={[Function]}
+      selectedIds={Array []}
+      selectedItemRenderer={[Function]}
+      selectedItems={Array []}
+      selectionStatusRenderer={[Function]}
+      unselectItems={undefined}
+      withGrouping={false}
+    />
+  </div>
+</JssProvider>
 `;
 
 exports[`MultiSelect with responsiveHeight 1`] = `
