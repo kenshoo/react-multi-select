@@ -7,6 +7,7 @@ import InnerList from "./list";
 class ItemsList extends PureComponent {
   static propTypes = {
     renderer: PropTypes.any,
+    listRenderer: PropTypes.any,
     noItemsRenderer: PropTypes.any,
     itemHeight: PropTypes.number,
     height: PropTypes.number,
@@ -34,7 +35,9 @@ class ItemsList extends PureComponent {
   }
 
   update() {
-    this.listRef.forceUpdateGrid();
+    if (this.listRef) {
+      this.listRef.forceUpdateGrid();
+    }
   }
 
   componentDidUpdate() {
@@ -54,6 +57,7 @@ class ItemsList extends PureComponent {
       noItemsMessage,
       noItemsRenderer,
       renderer,
+      listRenderer,
       selectedIds,
       onClick,
       disabled,
@@ -73,6 +77,7 @@ class ItemsList extends PureComponent {
             noItemsMessage={noItemsMessage}
             noItemsRenderer={noItemsRenderer}
             renderer={renderer}
+            listRenderer={listRenderer}
             itemHeight={itemHeight}
             onClick={onClick}
             items={items}

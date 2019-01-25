@@ -30,7 +30,8 @@ const SourceList = ({
   noItemsRenderer,
   disabled,
   searchValue,
-  withGrouping
+  withGrouping,
+  listRenderer
 }) => {
   const SearchRenderer = searchRenderer;
   const SelectAllRenderer = selectAllRenderer;
@@ -66,6 +67,7 @@ const SourceList = ({
         onClick={selectItem}
         selectedIds={selectedIds}
         renderer={itemRenderer}
+        listRenderer={listRenderer}
         noItemsRenderer={noItemsRenderer}
         noItemsMessage={messages.noItemsMessage}
         disabled={disabled}
@@ -95,7 +97,8 @@ SourceList.propTypes = {
   getList: PropTypes.func,
   selectItem: PropTypes.func,
   disabled: PropTypes.bool,
-  withGrouping: PropTypes.bool
+  withGrouping: PropTypes.bool,
+  listRenderer: PropTypes.func
 };
 
 SourceList.defaultProps = {

@@ -9,6 +9,7 @@ import NoItems from "../items/no_items";
 class InnerList extends PureComponent {
   static propTypes = {
     renderer: PropTypes.any,
+    listRenderer: PropTypes.any,
     noItemsRenderer: PropTypes.any,
     itemHeight: PropTypes.number,
     height: PropTypes.number,
@@ -22,6 +23,7 @@ class InnerList extends PureComponent {
 
   static defaultProps = {
     renderer: Item,
+    listRenderer: List,
     noItemsRenderer: NoItems,
     itemHeight: 40,
     height: 400,
@@ -85,9 +87,18 @@ class InnerList extends PureComponent {
   }
 
   render() {
-    const { height, itemHeight, items, offset, width, getlistRef } = this.props;
+    const {
+      height,
+      itemHeight,
+      items,
+      offset,
+      width,
+      getlistRef,
+      listRenderer
+    } = this.props;
+    const ListRenderer = listRenderer;
     return (
-      <List
+      <ListRenderer
         ref={getlistRef}
         className={styles.list}
         rowRenderer={this.rowRenderer}
@@ -95,6 +106,7 @@ class InnerList extends PureComponent {
         width={width - offset}
         rowHeight={itemHeight}
         height={height}
+        items={items}
         rowCount={items.length}
       />
     );

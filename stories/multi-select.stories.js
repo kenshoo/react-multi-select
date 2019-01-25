@@ -9,6 +9,8 @@ import SelectAll from "./custom_components/select_all";
 import SelectionStatus from "./custom_components/selection_status";
 import Search, { SearchWithValue } from "./custom_components/search";
 import Item from "./custom_components/item";
+import ListRenderer from "./custom_components/list_renderer";
+import ListRendererItem from "./custom_components/list_renderer/item";
 import SelectedItem from "./custom_components/selected_item";
 import * as utils from "./multi_select_stories_util";
 
@@ -196,7 +198,7 @@ storiesOf("React Multi Select", module)
     withReadme(Readme, () => {
       class ValueController extends React.Component {
         state = {
-          value: ""
+          value: "",
         };
 
         onChange = value => {
@@ -250,6 +252,26 @@ storiesOf("React Multi Select", module)
           showSearch={boolean("Show search", true)}
           showSelectAll={boolean("Show select all", true)}
           withGrouping
+        />
+      );
+    })
+  )
+  .add(
+    "Carousel Multi Select",
+    withReadme(Readme, () => {
+      return (
+        <ReactMultiSelect
+          listRenderer={ListRenderer}
+          itemRenderer={ListRendererItem}
+          selectAllHeight={40}
+          itemHeight={300}
+          selectedItemHeight={40}
+          items={utils.images}
+          loading={boolean("Loading", false)}
+          onChange={action("onChange")}
+          showSearch={boolean("Show search", true)}
+          showSelectAll={boolean("Show select all", true)}
+          messages={{ disabledItemsTooltip: "You can select up to 4 items" }}
         />
       );
     })

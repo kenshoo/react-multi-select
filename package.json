@@ -94,6 +94,7 @@
     "react-icons": "^2.2.7",
     "react-jss": "^8.6.1",
     "react-overflow-tooltip": "^2.0.1",
+    "react-slick": "^0.23.2",
     "react-virtualized": "^9.18.5"
   },
   "release": {
