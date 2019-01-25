@@ -2,8 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "!style-loader!css-loader!./style.scss";
 
-const ListRenderer = props => {
-  const { width, height, className, rowRenderer, ref } = props;
+const ListRenderer = ({ items, width, height, className, rowRenderer }) => {
   const Item = rowRenderer;
   const settings = {
     infinite: true,
@@ -15,14 +14,14 @@ const ListRenderer = props => {
   return (
     <div
       style={{
-        width: width,
-        height: height,
+        width,
+        height,
         position: "absolute"
       }}
       className={className}
     >
       <Slider {...settings}>
-        {props.items.map((item, key) => (
+        {items.map((item, key) => (
           <Item style={{ width }} key={key} index={key} />
         ))}
       </Slider>

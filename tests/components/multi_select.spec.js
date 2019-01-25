@@ -71,6 +71,14 @@ describe("MultiSelect", () => {
     expect(tree).toMatchSnapshot();
   });
 
+  test("custom listRenderer", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(
+      <MultiSelect listRenderer={CustomComponent} />
+    );
+    expect(tree).toMatchSnapshot();
+  });
+
   test("custom messages", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(<MultiSelect messages={custom_messages} />);

@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { List } from "react-virtualized/dist/commonjs/List";
 
 import Column from "./column/column";
-import List from "./list/items_list";
+import ItemsList from "./list/items_list";
 import NoItems from "./items/no_items";
 import Search from "./search/search";
 import SelectAll from "./items/select_all";
@@ -58,7 +59,7 @@ const SourceList = ({
           selectAllMessage={messages.selectAllMessage}
         />
       )}
-      <List
+      <ItemsList
         ref={getList}
         offset={1}
         items={updatedFilteredItems}
@@ -106,6 +107,7 @@ SourceList.defaultProps = {
   selectAllRenderer: SelectAll,
   noItemsRenderer: NoItems,
   itemRenderer: Item,
+  listRenderer: List,
   showSearch: true,
   showSelectAll: true,
   isAllSelected: false,
