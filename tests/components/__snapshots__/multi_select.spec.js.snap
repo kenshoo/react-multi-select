@@ -6,7 +6,7 @@ exports[`MultiSelect can remove search 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -170,7 +170,7 @@ exports[`MultiSelect can remove select all 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -334,7 +334,7 @@ exports[`MultiSelect can remove selected items 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -485,7 +485,7 @@ exports[`MultiSelect custom itemRenderer 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -649,7 +649,7 @@ exports[`MultiSelect custom messages 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -831,7 +831,7 @@ exports[`MultiSelect custom noItemsRenderer 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -995,7 +995,7 @@ exports[`MultiSelect custom searchRenderer 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -1159,7 +1159,7 @@ exports[`MultiSelect custom selectAllRenderer 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -1323,7 +1323,7 @@ exports[`MultiSelect default snapshot 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -1487,7 +1487,7 @@ exports[`MultiSelect displays Loader when loading 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -1616,7 +1616,7 @@ exports[`MultiSelect displays custom Loader when loading 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -1745,7 +1745,7 @@ exports[`MultiSelect does not pass disabled if maxSelectedItem has passed 1`] = 
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -1924,7 +1924,7 @@ exports[`MultiSelect passed clearAll 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -2088,7 +2088,7 @@ exports[`MultiSelect passed filterItems 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -2252,7 +2252,7 @@ exports[`MultiSelect passed selectAllItems 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -2416,7 +2416,7 @@ exports[`MultiSelect passed selectItem 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -2580,7 +2580,7 @@ exports[`MultiSelect passed selectedIds 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -2744,7 +2744,7 @@ exports[`MultiSelect passed selectedItems 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -2923,7 +2923,7 @@ exports[`MultiSelect passed unselectItems 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -3087,7 +3087,7 @@ exports[`MultiSelect passes disabled if maxSelectedItem has passed 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -3266,7 +3266,7 @@ exports[`MultiSelect will pass itemHeight 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -3430,7 +3430,7 @@ exports[`MultiSelect will pass selectAllHeight 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -3594,7 +3594,7 @@ exports[`MultiSelect will pass selectAllHeight without itemHeight 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],
@@ -3758,7 +3758,7 @@ exports[`MultiSelect with generateClassName 1`] = `
   jss={
     Jss {
       "generateClassName": [Function],
-      "id": 1,
+      "id": 3,
       "options": Object {
         "Renderer": [Function],
         "createGenerateClassName": [Function],

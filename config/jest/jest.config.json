@@ -27,5 +27,6 @@
 		"!**/resources/**",
 		"!**/stories/**",
 		"!**/coverage/**"
-	]
+	],
+	"testURL": "http://localhost/"
 }
