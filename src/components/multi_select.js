@@ -139,22 +139,21 @@ export class MultiSelect extends PureComponent {
               withGrouping={withGrouping}
             />
           )}
-          {!loading &&
-            showSelectedItems && (
-              <DestinationList
-                selectionStatusRenderer={selectionStatusRenderer}
-                selectedIds={selectedIds}
-                clearAll={clearAll}
-                messages={messages}
-                selectedItems={selectedItems}
-                itemHeight={itemHeight}
-                height={height}
-                unselectItems={unselectItems}
-                selectedItemRenderer={selectedItemRenderer}
-                noItemsRenderer={noItemsRenderer}
-                withGrouping={withGrouping}
-              />
-            )}
+          {!loading && showSelectedItems && (
+            <DestinationList
+              selectionStatusRenderer={selectionStatusRenderer}
+              selectedIds={selectedIds}
+              clearAll={clearAll}
+              messages={messages}
+              selectedItems={selectedItems}
+              itemHeight={itemHeight}
+              height={height}
+              unselectItems={unselectItems}
+              selectedItemRenderer={selectedItemRenderer}
+              noItemsRenderer={noItemsRenderer}
+              withGrouping={withGrouping}
+            />
+          )}
         </div>
       </JssProvider>
     );
