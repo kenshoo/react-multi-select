@@ -30,7 +30,6 @@ export class MultiSelect extends PureComponent {
     deleteIcon: PropTypes.string,
     searchRenderer: PropTypes.func,
     selectedItemRenderer: PropTypes.func,
-    selectedItemHeight: PropTypes.number,
     height: PropTypes.number,
     itemHeight: PropTypes.number,
     selectAllHeight: PropTypes.number,
@@ -103,8 +102,7 @@ export class MultiSelect extends PureComponent {
       searchValue,
       withGrouping,
       generateClassName,
-      listRenderer,
-      selectedItemHeight
+      listRenderer
     } = this.props;
     const calculatedHeight = this.calculateHeight();
     const selectedIds = selectedItems.map(item => item.id);
@@ -152,7 +150,7 @@ export class MultiSelect extends PureComponent {
                 clearAll={clearAll}
                 messages={messages}
                 selectedItems={selectedItems}
-                itemHeight={selectedItemHeight || itemHeight}
+                itemHeight={itemHeight}
                 height={height}
                 unselectItems={unselectItems}
                 selectedItemRenderer={selectedItemRenderer}
