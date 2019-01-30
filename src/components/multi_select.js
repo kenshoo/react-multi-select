@@ -29,13 +29,14 @@ export class MultiSelect extends PureComponent {
     searchIcon: PropTypes.string,
     deleteIcon: PropTypes.string,
     searchRenderer: PropTypes.func,
-    selectedItemRenderer: PropTypes.any,
+    selectedItemRenderer: PropTypes.func,
     height: PropTypes.number,
     itemHeight: PropTypes.number,
     selectAllHeight: PropTypes.number,
     loaderRenderer: PropTypes.any,
     maxSelectedItems: PropTypes.number,
     withGrouping: PropTypes.bool,
+    listRenderer: PropTypes.func,
     generateClassName: PropTypes.func
   };
 
@@ -100,7 +101,8 @@ export class MultiSelect extends PureComponent {
       maxSelectedItems,
       searchValue,
       withGrouping,
-      generateClassName
+      generateClassName,
+      listRenderer
     } = this.props;
     const calculatedHeight = this.calculateHeight();
     const selectedIds = selectedItems.map(item => item.id);
@@ -137,6 +139,7 @@ export class MultiSelect extends PureComponent {
               disabled={disabled}
               selectAllHeight={selectAllHeight}
               withGrouping={withGrouping}
+              listRenderer={listRenderer}
             />
           )}
           {!loading &&

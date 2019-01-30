@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { List } from "react-virtualized/dist/commonjs/List";
 
 import Column from "./column/column";
-import List from "./list/items_list";
+import ItemsList from "./list/items_list";
 import NoItems from "./items/no_items";
 import Search from "./search/search";
 import SelectAll from "./items/select_all";
@@ -30,7 +31,8 @@ const SourceList = ({
   noItemsRenderer,
   disabled,
   searchValue,
-  withGrouping
+  withGrouping,
+  listRenderer
 }) => {
   const SearchRenderer = searchRenderer;
   const SelectAllRenderer = selectAllRenderer;
@@ -57,7 +59,7 @@ const SourceList = ({
           selectAllMessage={messages.selectAllMessage}
         />
       )}
-      <List
+      <ItemsList
         ref={getList}
         offset={1}
         items={updatedFilteredItems}
@@ -66,6 +68,7 @@ const SourceList = ({
         onClick={selectItem}
         selectedIds={selectedIds}
         renderer={itemRenderer}
+        listRenderer={listRenderer}
         noItemsRenderer={noItemsRenderer}
         noItemsMessage={messages.noItemsMessage}
         disabled={disabled}
@@ -95,7 +98,8 @@ SourceList.propTypes = {
   getList: PropTypes.func,
   selectItem: PropTypes.func,
   disabled: PropTypes.bool,
-  withGrouping: PropTypes.bool
+  withGrouping: PropTypes.bool,
+  listRenderer: PropTypes.func
 };
 
 SourceList.defaultProps = {
@@ -103,6 +107,7 @@ SourceList.defaultProps = {
   selectAllRenderer: SelectAll,
   noItemsRenderer: NoItems,
   itemRenderer: Item,
+  listRenderer: List,
   showSearch: true,
   showSelectAll: true,
   isAllSelected: false,

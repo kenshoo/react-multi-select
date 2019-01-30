@@ -20,7 +20,16 @@ const generateItemsWithGroups = (size, groupSize) =>
     group: `Group ${Math.floor(index / groupSize)}`
   }));
 
+const generateImages = size =>
+  Array.apply(null, { length: size }).map((i, index) => ({
+    id: index,
+    label: `Item ${index}`,
+    img: `https://picsum.photos/600/400?image=${index * 10}`
+  }));
+
 export const items = generateItems(50);
+
+export const images = generateImages(10);
 
 export const manyItems = generateItems(7000);
 
