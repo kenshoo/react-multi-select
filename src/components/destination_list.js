@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { List } from "react-virtualized/dist/commonjs/List";
 
 import Column from "./column/column";
-import List from "./list/items_list";
+import ItemsList from "./list/items_list";
 import NoItems from "./items/no_items";
 import SelectedItem from "./items/selected_item";
 import SelectionStatus from "./selection_status/selection_status";
@@ -34,7 +35,7 @@ const DestinationList = ({
         selectedMessage={messages.selectedMessage}
         noneSelectedMessage={messages.noneSelectedMessage}
       />
-      <List
+      <ItemsList
         items={updatedSelectedItems}
         itemHeight={itemHeight}
         height={height - 45}
@@ -62,6 +63,7 @@ DestinationList.propTypes = {
 };
 
 DestinationList.defaultProps = {
+  listRenderer: List,
   selectionStatusRenderer: SelectionStatus,
   selectedIds: [],
   messages: {},
