@@ -13,23 +13,31 @@ Multi select is a straight forward component that helps a user select multiple i
 </p>
 
 ## Installation
- 
+
  **Installation using npm:**
- 
+
 ```
  npm install @kenshooui/react-multi-select --save
 ```
 
  **Installation using Yarn:**
- 
+
 ```
  yarn add @kenshooui/react-multi-select
 ```
-  
-  
- 
- ## How to use 
- 
+
+ ## Import styles
+
+Include the component's css on your app
+
+ ```jsx
+import "@kenshooui/react-multi-select/dist/style.css"
+ ```
+
+ ## How to use
+
+
+
 ```jsx
 import React, { Component } from "react";
 import MultiSelect from "@kenshooui/react-multi-select";
@@ -68,8 +76,8 @@ class Example extends Component {
 
 ## Properties
 
-| Name                            | Type                  | Default                                          | Description                                                                                                                                       
-|:-----                           |:-----                 |:-----                                            |:-----                                                                                                                                             
+| Name                            | Type                  | Default                                          | Description
+|:-----                           |:-----                 |:-----                                            |:-----
 | `items`                         | `List`                | []                                               | list of items.
 | `selectedItems`                 | `Array`               | []                                               | selected list to start with (subgroup of items).
 | `onChange`                      | `function`            | ()=>{}                                           | callback for changed event.
@@ -81,6 +89,7 @@ class Example extends Component {
 | `wrapperClassName`              | `String`              | ''                                               | wrapper class name - Used for customizing the style.
 | `height`                        | `number`              | 400                                              | available items list height.
 | `itemHeight`                    | `number`              | 40                                               | the height of an item in the list.
+| `selectedItemHeight`            | `number`              | `itemHeight`                                     | the height of the selected item in the list.
 | `selectAllHeight`               | `number`              | `itemHeight`                                     | the height of the selectAll component, by default will use the value of the itemHeight.
 | `maxSelectedItems`              | `number`              |                                                  | defines the maximum items that can be selected, overrides showSelectAll.
 | `filterFunction`                | `function`            | based on label                                   | The function used to filter items based on the search query.
@@ -93,8 +102,8 @@ class Example extends Component {
 | `noItemsRenderer`               | `Component`           |                                                  | Component to replace the default no items component.
 | `searchValue`                   | `string`              |                                                  | The value of the search field.
 | `searchValueChanged`            | `function`            |                                                  | Function to handle the change of search field. Accepts value as a single argument.
-|`responsiveHeight`               | `string`              | 400px                                            | Responsive height of the wrapping component, can send percent for example: `70%` 
-|`withGrouping`                   | `boolean`             | false                                            | Your items will be grouped by the group prop values - see "item grouping" section below  
+|`responsiveHeight`               | `string`              | 400px                                            | Responsive height of the wrapping component, can send percent for example: `70%`
+|`withGrouping`                   | `boolean`             | false                                            | Your items will be grouped by the group prop values - see "item grouping" section below
 
 
 ## Customization
@@ -244,13 +253,13 @@ You can use your own messages. Here is the default messages object:
 You can add also grouping to your items - add a group prop with the group name as a value to each of your items and add withGrouping prop as well.
 ```jsx
  <MultiSelect
-         items={[{id: 1, label: "item1", group: "group1"},
-                 {id: 2, label: "item2", group: "group1"}
-                 {id: 3, label: "item3", group: "group2"}]}
-         withGrouping
-         selectedItems={selectedItems}
-         onChange={this.handleChange}
-       />
+    items={[{id: 1, label: "item1", group: "group1"},
+            {id: 2, label: "item2", group: "group1"}
+            {id: 3, label: "item3", group: "group2"}]}
+    withGrouping
+    selectedItems={selectedItems}
+    onChange={this.handleChange}
+  />
 ```
 
 ## How to Contribute
@@ -271,10 +280,9 @@ You can add also grouping to your items - add a group prop with the group name a
    - Set title prefix to feature/bug and supply a descriptive PR title.
    - Add description to your Pull Request describing your change.
 4. Once your Pull Request is issued, the test suite and build processes will run and your change will be reviewed.
-  
-  
+
+
 ## Compatibility
-  
+
   - React 16 or newer
-  
-  
+

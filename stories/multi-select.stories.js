@@ -198,7 +198,7 @@ storiesOf("React Multi Select", module)
     withReadme(Readme, () => {
       class ValueController extends React.Component {
         state = {
-          value: "",
+          value: ""
         };
 
         onChange = value => {
