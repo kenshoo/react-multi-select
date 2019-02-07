@@ -183,6 +183,20 @@ describe("MultiSelect", () => {
     expect(tree).toMatchSnapshot();
   });
 
+  test("will pass selectedItemHeight", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(<MultiSelect selectedItemHeight={60} />);
+    expect(tree).toMatchSnapshot();
+  });
+
+  test("will pass selectedItemHeight", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(
+      <MultiSelect itemHeight={40} selectedItemHeight={60} />
+    );
+    expect(tree).toMatchSnapshot();
+  });
+
   test("will pass selectAllHeight", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(

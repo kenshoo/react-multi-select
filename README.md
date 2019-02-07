@@ -89,6 +89,7 @@ class Example extends Component {
 | `wrapperClassName`              | `String`              | ''                                               | wrapper class name - Used for customizing the style.
 | `height`                        | `number`              | 400                                              | available items list height.
 | `itemHeight`                    | `number`              | 40                                               | the height of an item in the list.
+| `selectedItemHeight`            | `number`              | `itemHeight`                                     | the height of the selected item in the list.
 | `selectAllHeight`               | `number`              | `itemHeight`                                     | the height of the selectAll component, by default will use the value of the itemHeight.
 | `maxSelectedItems`              | `number`              |                                                  | defines the maximum items that can be selected, overrides showSelectAll.
 | `filterFunction`                | `function`            | based on label                                   | The function used to filter items based on the search query.

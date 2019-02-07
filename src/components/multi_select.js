@@ -32,6 +32,7 @@ export class MultiSelect extends PureComponent {
     selectedItemRenderer: PropTypes.func,
     height: PropTypes.number,
     itemHeight: PropTypes.number,
+    selectedItemHeight: PropTypes.number,
     selectAllHeight: PropTypes.number,
     loaderRenderer: PropTypes.any,
     maxSelectedItems: PropTypes.number,
@@ -76,6 +77,7 @@ export class MultiSelect extends PureComponent {
       showSearch,
       height,
       itemHeight,
+      selectedItemHeight,
       selectAllHeight,
       showSelectAll,
       showSelectedItems,
@@ -149,7 +151,7 @@ export class MultiSelect extends PureComponent {
               clearAll={clearAll}
               messages={messages}
               selectedItems={selectedItems}
-              itemHeight={itemHeight}
+              itemHeight={selectedItemHeight || itemHeight}
               height={height}
               unselectItems={unselectItems}
               selectedItemRenderer={selectedItemRenderer}

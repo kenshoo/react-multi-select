@@ -265,6 +265,7 @@ storiesOf("React Multi Select", module)
           itemRenderer={ListRendererItem}
           selectAllHeight={40}
           itemHeight={300}
+          selectedItemHeight={40}
           items={utils.images}
           loading={boolean("Loading", false)}
           onChange={action("onChange")}
