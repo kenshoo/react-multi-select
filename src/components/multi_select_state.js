@@ -30,6 +30,8 @@ const withMultiSelectState = WrappedComponent =>
         items,
         filteredItems: items
       };
+
+      this.refCmponent = React.createRef();
     }
 
     componentWillReceiveProps(nextProps) {
@@ -87,12 +89,12 @@ const withMultiSelectState = WrappedComponent =>
 
     componentDidMount() {
       window.addEventListener("keyup", this.onKeyUp);
-      window.addEventListener("copy", this.handlyCopy);
+      window.addEventListener("copy", this.handleCopy);
     }
 
     componentWillUnmount() {
       window.removeEventListener("keyup", this.onKeyUp, false);
-      window.removeEventListener("copy", this.handlyCopy);
+      window.removeEventListener("copy", this.handleCopy);
     }
 
     onKeyUp(event) {
