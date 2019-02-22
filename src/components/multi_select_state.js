@@ -30,8 +30,6 @@ const withMultiSelectState = WrappedComponent =>
         items,
         filteredItems: items
       };
-
-      this.refCmponent = React.createRef();
     }
 
     componentWillReceiveProps(nextProps) {
