@@ -435,4 +435,19 @@ describe("withMultiSelectState", () => {
     wrapper.update();
     expect(wrapper.state("filteredItems")).toEqual([ITEM_1]);
   });
+
+  test("simulate copy", () => {
+    const setData = jest.fn();
+    const event = {
+      preventDefault: jest.fn(),
+      clipboardData: { setData }
+    };
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const wrapper = shallow(<ConditionalComponent items={items} />);
+    wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_1.id);
+    wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_2.id);
+    wrapper.update();
+    wrapper.instance().handleCopy(event);
+    expect(setData).toBeCalledWith("text/plain", "item 0\nitem 1");
+  });
 });
