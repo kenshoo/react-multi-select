@@ -6,7 +6,8 @@
 
 **[react-multi-select demo](https://kenshoo.github.io/react-multi-select)**
 
-Multi select is a straight forward component that helps a user select multiple items in a clear and filterable way.
+Multi select is a straight forward component that helps a user select multiple items in a clear and filterable way.<br />
+It also supports copy of selection titles to the buffer out of the box.
 
 <p align="center">
     <img src="preview.gif?raw=true" width="600" />
