@@ -104,6 +104,10 @@ class Example extends Component {
 | `searchValueChanged`            | `function`            |                                                  | Function to handle the change of search field. Accepts value as a single argument.
 |`responsiveHeight`               | `string`              | 400px                                            | Responsive height of the wrapping component, can send percent for example: `70%`
 |`withGrouping`                   | `boolean`             | false                                            | Your items will be grouped by the group prop values - see "item grouping" section below
+|`enabelCopyLabel`                   | `boolean`             | false                                         | This option includes the ability to copy selected items. Uses `getCopyLabel` to get text for copy buffer.
+|`getCopyLabel`                   | `function`             |    (item) => item.label                         | It is used to get text for copy buffer.
+
+
 
 
 ## Customization
@@ -209,6 +213,15 @@ Does not receive any props.
 Use the `noItemsRenderer` to replace the default component.
 
 Does not receive any props.
+
+<br/>
+
+**Copy Labels**
+
+Use the `enableCopyText` to enable copy option. 
+
+Use the `getCopyLabel` function property. Return specify string for copy to  buffer.
+
 
 <br/>
 

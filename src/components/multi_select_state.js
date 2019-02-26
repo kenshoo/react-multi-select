@@ -8,7 +8,8 @@ const withMultiSelectState = WrappedComponent =>
           .toLowerCase()
           .includes(value.toLowerCase()),
       items: [],
-      selectedItems: []
+      selectedItems: [],
+      getCopyLabel: item => item.label
     };
 
     constructor(props) {
@@ -101,9 +102,14 @@ const withMultiSelectState = WrappedComponent =>
       }
     }
     handleCopy(event) {
-      const { selectedItems } = this.state;
-      const result = selectedItems.map(item => item.label).join("\n");
+      const { enableCopyText } = this.props;
+      if (!enableCopyText) {
+        return;
+      }
 
+      const { getCopyLabel } = this.props;
+      const { selectedItems } = this.state;
+      const result = selectedItems.map(getCopyLabel).join("\n");
       event.preventDefault();
       event.clipboardData.setData("text/plain", result);
     }

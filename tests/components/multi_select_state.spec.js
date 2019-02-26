@@ -436,18 +436,62 @@ describe("withMultiSelectState", () => {
     expect(wrapper.state("filteredItems")).toEqual([ITEM_1]);
   });
 
-  test("simulate copy", () => {
+  test("case enableCopyText  is true", () => {
     const setData = jest.fn();
     const event = {
       preventDefault: jest.fn(),
       clipboardData: { setData }
     };
+
     const ConditionalComponent = withMultiSelectState(CustomComponent);
-    const wrapper = shallow(<ConditionalComponent items={items} />);
+    const wrapper = shallow(
+      <ConditionalComponent items={items} enableCopyText={true} />
+    );
     wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_1.id);
     wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_2.id);
     wrapper.update();
     wrapper.instance().handleCopy(event);
     expect(setData).toBeCalledWith("text/plain", "item 0\nitem 1");
+  });
+
+  test("case enableCopyText  is false", () => {
+    const setData = jest.fn();
+    const event = {
+      preventDefault: jest.fn(),
+      clipboardData: { setData }
+    };
+
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const wrapper = shallow(
+      <ConditionalComponent items={items} enableCopyText={false} />
+    );
+    wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_1.id);
+    wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_2.id);
+    wrapper.update();
+    wrapper.instance().handleCopy(event);
+    expect(setData).not.toBeCalledWith("text/plain", "item 0\nitem 1");
+  });
+
+  test("case getCopyLabel", () => {
+    const getCopyLabel = item => item.id;
+    const setData = jest.fn();
+    const event = {
+      preventDefault: jest.fn(),
+      clipboardData: { setData }
+    };
+
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const wrapper = shallow(
+      <ConditionalComponent
+        items={items}
+        enableCopyText={true}
+        getCopyLabel={getCopyLabel}
+      />
+    );
+    wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_1.id);
+    wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_2.id);
+    wrapper.update();
+    wrapper.instance().handleCopy(event);
+    expect(setData).toBeCalledWith("text/plain", "0\n1");
   });
 });
