@@ -19,6 +19,14 @@ describe("Item", () => {
     expect(tree).toMatchSnapshot();
   });
 
+  test("snapshot with item without id", () => {
+    const itemWithoutId = { label: "Hi" };
+
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(<Item item={itemWithoutId} />);
+    expect(tree).toMatchSnapshot();
+  });
+
   test("snapshot with checked status", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(<Item checked={true} />);
