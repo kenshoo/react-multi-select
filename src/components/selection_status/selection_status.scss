@@ -1,14 +1,22 @@
 @import "../../resources/globals";
 
-.selection_status {
-  height: $space-45;
+@mixin selection_status {
   padding: 0 $space-12;
   display: flex;
   align-items: center;
   border-bottom: 1px solid $border-color;
   justify-content: space-between;
 }
+.selection_status_enable_right_search {
+  box-sizing: border-box;
+  height: $space-40;
+  @include selection_status;
+}
 
+.selection_status_disable_right_search {
+  height: $space-45;
+  @include selection_status;
+}
 .status {
   color: $main-color;
 }

@@ -8,6 +8,7 @@ exports[`DestinationList custom messages 1`] = `
     noneSelectedMessage="Nothing"
     selected={Array []}
     selectedMessage="Checked"
+    showRightSearch={undefined}
   />
   <ItemsList
     disabled={false}
@@ -32,6 +33,7 @@ exports[`DestinationList custom noItemsRenderer 1`] = `
     noneSelectedMessage="None Selected"
     selected={Array []}
     selectedMessage="selected"
+    showRightSearch={undefined}
   />
   <ItemsList
     disabled={false}
@@ -56,6 +58,7 @@ exports[`DestinationList custom selectedItemRenderer 1`] = `
     noneSelectedMessage="None Selected"
     selected={Array []}
     selectedMessage="selected"
+    showRightSearch={undefined}
   />
   <ItemsList
     disabled={false}
@@ -80,6 +83,7 @@ exports[`DestinationList custom selectionStatusRenderer 1`] = `
     noneSelectedMessage={undefined}
     selected={Array []}
     selectedMessage={undefined}
+    showRightSearch={undefined}
   />
   <ItemsList
     disabled={false}
@@ -104,12 +108,59 @@ exports[`DestinationList default snapshot 1`] = `
     noneSelectedMessage="None Selected"
     selected={Array []}
     selectedMessage="selected"
+    showRightSearch={undefined}
   />
   <ItemsList
     disabled={false}
     height={355}
     itemHeight={40}
     items={Array []}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={0}
+    onClick={[Function]}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
+exports[`DestinationList enable right search 1`] = `
+<Column>
+  <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />
+  <SelectionStatus
+    clearAll={undefined}
+    clearAllMessage="Clear All"
+    noneSelectedMessage="None Selected"
+    selected={Array []}
+    selectedMessage="selected"
+    showRightSearch={true}
+  />
+  <ItemsList
+    disabled={false}
+    height={355}
+    itemHeight={40}
+    items={
+      Array [
+        Object {
+          "id": 1,
+          "label": "item1",
+        },
+        Object {
+          "id": 2,
+          "label": "item2",
+        },
+        Object {
+          "id": 3,
+          "label": "item3",
+        },
+      ]
+    }
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={0}
@@ -128,6 +179,7 @@ exports[`DestinationList passed clearAll 1`] = `
     noneSelectedMessage="None Selected"
     selected={Array []}
     selectedMessage="selected"
+    showRightSearch={undefined}
   />
   <ItemsList
     disabled={false}
@@ -157,6 +209,7 @@ exports[`DestinationList passed selectedIds 1`] = `
       ]
     }
     selectedMessage="selected"
+    showRightSearch={undefined}
   />
   <ItemsList
     disabled={false}
@@ -181,6 +234,7 @@ exports[`DestinationList passed selectedItems 1`] = `
     noneSelectedMessage="None Selected"
     selected={Array []}
     selectedMessage="selected"
+    showRightSearch={undefined}
   />
   <ItemsList
     disabled={false}
@@ -210,6 +264,7 @@ exports[`DestinationList passed selectedItems with grouping 1`] = `
     noneSelectedMessage="None Selected"
     selected={Array []}
     selectedMessage="selected"
+    showRightSearch={undefined}
   />
   <ItemsList
     disabled={false}
@@ -264,6 +319,7 @@ exports[`DestinationList passed selectedItems with grouping and empty items 1`] 
     noneSelectedMessage="None Selected"
     selected={Array []}
     selectedMessage="selected"
+    showRightSearch={undefined}
   />
   <ItemsList
     disabled={false}
@@ -288,6 +344,7 @@ exports[`DestinationList passed unselectItems 1`] = `
     noneSelectedMessage="None Selected"
     selected={Array []}
     selectedMessage="selected"
+    showRightSearch={undefined}
   />
   <ItemsList
     disabled={false}

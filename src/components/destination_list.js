@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { List } from "react-virtualized/dist/commonjs/List";
 
@@ -8,27 +8,50 @@ import NoItems from "./items/no_items";
 import SelectedItem from "./items/selected_item";
 import SelectionStatus from "./selection_status/selection_status";
 import { groupItems } from "./item_grouping_util";
+import Search from "./search/search";
 
 const DestinationList = ({
   selectionStatusRenderer,
   selectedIds,
   clearAll,
   messages,
-  selectedItems,
   itemHeight,
   height,
   unselectItems,
   selectedItemRenderer,
   noItemsRenderer,
-  withGrouping
+  withGrouping,
+
+  showRightSearch,
+  searchIcon,
+  selectedItems,
+  serchRightValue,
+  serchRightValueChange,
+  filterRightSearch
 }) => {
   const SelectionStatusRenderer = selectionStatusRenderer;
+
+  let filterSelectitems = selectedItems;
+  if (serchRightValue && serchRightValue.length > -1) {
+    filterSelectitems = filterRightSearch(selectedItems, serchRightValue);
+  }
+
   const updatedSelectedItems = withGrouping
-    ? groupItems(selectedItems)
-    : selectedItems;
+    ? groupItems(filterSelectitems)
+    : filterSelectitems;
+
   return (
     <Column>
+      {showRightSearch && (
+        <Search
+          onChange={serchRightValueChange}
+          searchIcon={searchIcon}
+          value={serchRightValue}
+          searchPlaceholder={messages.searchPlaceholder}
+        />
+      )}
       <SelectionStatusRenderer
+        showRightSearch={showRightSearch}
         selected={selectedIds}
         clearAll={clearAll}
         clearAllMessage={messages.clearAllMessage}
@@ -59,10 +82,19 @@ DestinationList.propTypes = {
   unselectItems: PropTypes.func,
   selectedItemRenderer: PropTypes.any,
   noItemsRenderer: PropTypes.any,
-  withGrouping: PropTypes.bool
+  withGrouping: PropTypes.bool,
+  showRightSearch: PropTypes.bool,
+  searchIcon: PropTypes.object,
+  selectedItems: PropTypes.array,
+  serchRightValue: PropTypes.string,
+  serchRightValueChang: PropTypes.func
 };
 
 DestinationList.defaultProps = {
+  filterRightSearch: (selectedItems, serchRightValue) =>
+    selectedItems.filter(item =>
+      item.label.toLowerCase().match(serchRightValue)
+    ),
   listRenderer: List,
   selectionStatusRenderer: SelectionStatus,
   selectedIds: [],

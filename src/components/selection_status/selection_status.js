@@ -8,9 +8,16 @@ const SelectionStatus = ({
   clearAll,
   clearAllMessage,
   noneSelectedMessage,
-  selectedMessage
+  selectedMessage,
+  showRightSearch
 }) => (
-  <div className={styles.selection_status}>
+  <div
+    className={
+      showRightSearch
+        ? styles.selection_status_enable_right_search
+        : styles.selection_status_disable_right_search
+    }
+  >
     <div className={styles.status}>
       {selected.length > 0
         ? `${selected.length} ${selectedMessage}`

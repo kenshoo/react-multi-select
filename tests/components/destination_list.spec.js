@@ -117,4 +117,19 @@ describe("DestinationList", () => {
     list.simulate("click", {}, ID);
     expect(onClick).toHaveBeenCalledWith([ID]);
   });
+
+  test("enable right search", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(
+      <DestinationList
+        showRightSearch
+        selectedItems={[
+          { id: 1, label: "item1" },
+          { id: 2, label: "item2" },
+          { id: 3, label: "item3" }
+        ]}
+      />
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });
