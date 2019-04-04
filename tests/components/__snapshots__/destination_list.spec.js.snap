@@ -1,5 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`DestinationList Added default items in right column 1`] = `
+<Column>
+  <SelectionStatus
+    clearAll={undefined}
+    clearAllMessage="Clear All"
+    noneSelectedMessage="None Selected"
+    selected={Array []}
+    selectedMessage="selected"
+  />
+  <ItemsList
+    disabled={false}
+    height={355}
+    itemHeight={40}
+    items={
+      Array [
+        Object {
+          "disable": true,
+          "id": "1",
+          "label": "default item",
+        },
+      ]
+    }
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={0}
+    onClick={[Function]}
+    renderer={[Function]}
+    selectedIds={Array []}
+  />
+</Column>
+`;
+
 exports[`DestinationList custom messages 1`] = `
 <Column>
   <SelectionStatus
