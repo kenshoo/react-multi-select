@@ -275,4 +275,25 @@ storiesOf("React Multi Select", module)
         />
       );
     })
+  )
+  .add(
+    "Default right column items",
+    withReadme(Readme, () => {
+      const defaultitems = [
+        { id: "11vf", label: "item_default_1", disabled: true },
+        { id: "14vf", label: "item_default_2", disabled: true },
+        { id: "15vf", label: "item_default_3", disabled: true },
+        { id: "16vf", label: "item_default_4", disabled: true }
+      ];
+      return (
+        <ReactMultiSelect
+          items={[...defaultitems, ...utils.items]}
+          loading={boolean("Loading", false)}
+          onChange={action("onChange")}
+          showSearch={boolean("Show search", true)}
+          showSelectAll={boolean("Show select all", true)}
+          enableRightDefault
+        />
+      );
+    })
   );
