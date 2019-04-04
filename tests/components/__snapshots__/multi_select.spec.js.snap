@@ -127,7 +127,6 @@ exports[`MultiSelect can remove search 1`] = `
     <SourceList
       calculatedHeight={360}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -151,10 +150,9 @@ exports[`MultiSelect can remove search 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={40}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -296,7 +294,6 @@ exports[`MultiSelect can remove select all 1`] = `
     <SourceList
       calculatedHeight={355}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -320,10 +317,9 @@ exports[`MultiSelect can remove select all 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={40}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -465,7 +461,6 @@ exports[`MultiSelect can remove selected items 1`] = `
     <SourceList
       calculatedHeight={315}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -618,7 +613,6 @@ exports[`MultiSelect custom itemRenderer 1`] = `
     <SourceList
       calculatedHeight={315}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -642,10 +636,9 @@ exports[`MultiSelect custom itemRenderer 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={40}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -787,7 +780,6 @@ exports[`MultiSelect custom listRenderer 1`] = `
     <SourceList
       calculatedHeight={315}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -811,10 +803,9 @@ exports[`MultiSelect custom listRenderer 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={40}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -956,7 +947,6 @@ exports[`MultiSelect custom messages 1`] = `
     <SourceList
       calculatedHeight={315}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -989,10 +979,9 @@ exports[`MultiSelect custom messages 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={40}
-      items={undefined}
       listRenderer={[Function]}
       messages={
         Object {
@@ -1143,7 +1132,6 @@ exports[`MultiSelect custom noItemsRenderer 1`] = `
     <SourceList
       calculatedHeight={315}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -1167,10 +1155,9 @@ exports[`MultiSelect custom noItemsRenderer 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={40}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[MockFunction mockedComponent]}
@@ -1312,7 +1299,6 @@ exports[`MultiSelect custom searchRenderer 1`] = `
     <SourceList
       calculatedHeight={315}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -1336,10 +1322,9 @@ exports[`MultiSelect custom searchRenderer 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={40}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -1481,7 +1466,6 @@ exports[`MultiSelect custom selectAllRenderer 1`] = `
     <SourceList
       calculatedHeight={315}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -1505,10 +1489,9 @@ exports[`MultiSelect custom selectAllRenderer 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={40}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -1650,7 +1633,6 @@ exports[`MultiSelect default snapshot 1`] = `
     <SourceList
       calculatedHeight={315}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -1674,10 +1656,9 @@ exports[`MultiSelect default snapshot 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={40}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -2077,7 +2058,6 @@ exports[`MultiSelect does not pass disabled if maxSelectedItem has passed 1`] = 
     <SourceList
       calculatedHeight={360}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -2106,10 +2086,9 @@ exports[`MultiSelect does not pass disabled if maxSelectedItem has passed 1`] = 
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={40}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -2261,7 +2240,6 @@ exports[`MultiSelect passed clearAll 1`] = `
     <SourceList
       calculatedHeight={315}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -2285,10 +2263,9 @@ exports[`MultiSelect passed clearAll 1`] = `
     />
     <DestinationList
       clearAll={[MockFunction clearAll]}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={40}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -2430,7 +2407,6 @@ exports[`MultiSelect passed filterItems 1`] = `
     <SourceList
       calculatedHeight={315}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -2454,10 +2430,9 @@ exports[`MultiSelect passed filterItems 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={40}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -2599,7 +2574,6 @@ exports[`MultiSelect passed selectAllItems 1`] = `
     <SourceList
       calculatedHeight={315}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -2623,10 +2597,9 @@ exports[`MultiSelect passed selectAllItems 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={40}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -2768,7 +2741,6 @@ exports[`MultiSelect passed selectItem 1`] = `
     <SourceList
       calculatedHeight={315}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -2792,10 +2764,9 @@ exports[`MultiSelect passed selectItem 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={40}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -2937,7 +2908,6 @@ exports[`MultiSelect passed selectedIds 1`] = `
     <SourceList
       calculatedHeight={315}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -2961,10 +2931,9 @@ exports[`MultiSelect passed selectedIds 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={40}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -3106,7 +3075,6 @@ exports[`MultiSelect passed selectedItems 1`] = `
     <SourceList
       calculatedHeight={315}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -3135,10 +3103,9 @@ exports[`MultiSelect passed selectedItems 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={40}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -3290,7 +3257,6 @@ exports[`MultiSelect passed unselectItems 1`] = `
     <SourceList
       calculatedHeight={315}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -3314,10 +3280,9 @@ exports[`MultiSelect passed unselectItems 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={40}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -3459,7 +3424,6 @@ exports[`MultiSelect passes disabled if maxSelectedItem has passed 1`] = `
     <SourceList
       calculatedHeight={360}
       disabled={true}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -3488,10 +3452,9 @@ exports[`MultiSelect passes disabled if maxSelectedItem has passed 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={40}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -3643,7 +3606,6 @@ exports[`MultiSelect will pass itemHeight 1`] = `
     <SourceList
       calculatedHeight={295}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -3667,10 +3629,9 @@ exports[`MultiSelect will pass itemHeight 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={60}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -3812,7 +3773,6 @@ exports[`MultiSelect will pass selectAllHeight 1`] = `
     <SourceList
       calculatedHeight={315}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -3836,10 +3796,9 @@ exports[`MultiSelect will pass selectAllHeight 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={60}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -3981,7 +3940,6 @@ exports[`MultiSelect will pass selectAllHeight without itemHeight 1`] = `
     <SourceList
       calculatedHeight={335}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -4005,10 +3963,9 @@ exports[`MultiSelect will pass selectAllHeight without itemHeight 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={40}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -4150,7 +4107,6 @@ exports[`MultiSelect will pass selectedItemHeight 1`] = `
     <SourceList
       calculatedHeight={315}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -4174,10 +4130,9 @@ exports[`MultiSelect will pass selectedItemHeight 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={60}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -4319,7 +4274,6 @@ exports[`MultiSelect will pass selectedItemHeight 2`] = `
     <SourceList
       calculatedHeight={315}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -4343,10 +4297,9 @@ exports[`MultiSelect will pass selectedItemHeight 2`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={60}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -4488,7 +4441,6 @@ exports[`MultiSelect with generateClassName 1`] = `
     <SourceList
       calculatedHeight={315}
       disabled={false}
-      enableRightDefault={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
@@ -4512,10 +4464,9 @@ exports[`MultiSelect with generateClassName 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      enableRightDefault={undefined}
+      defaultItems={undefined}
       height={400}
       itemHeight={40}
-      items={undefined}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
@@ -4543,6 +4494,7 @@ exports[`MultiSelect with responsiveHeight 1`] = `
   }
 >
   <_class
+    defaultItems={Array []}
     filterFunction={[Function]}
     height={400}
     items={Array []}
@@ -4564,6 +4516,7 @@ exports[`MultiSelect without responsiveHeight 1`] = `
   }
 >
   <_class
+    defaultItems={Array []}
     filterFunction={[Function]}
     height={400}
     items={Array []}

@@ -122,7 +122,7 @@ describe("DestinationList", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(
       <DestinationList
-        enableRightDefault={true}
+        rightDefaultItems={true}
         items={[{ id: 1, label: "item_1" }]}
         selectedItems={[{ id: "1", label: "default item", disable: true }]}
       />

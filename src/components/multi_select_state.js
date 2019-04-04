@@ -8,7 +8,8 @@ const withMultiSelectState = WrappedComponent =>
           .toLowerCase()
           .includes(value.toLowerCase()),
       items: [],
-      selectedItems: []
+      selectedItems: [],
+      defaultItems: []
     };
 
     constructor(props) {
@@ -87,7 +88,14 @@ const withMultiSelectState = WrappedComponent =>
     componentDidMount() {
       window.addEventListener("keyup", this.onKeyUp);
     }
+    componentDidUpdate(nextState) {
+      const { items } = this.state;
+      const { rightDefaultItems } = this.props;
 
+      if (items.length !== nextState.items.length && rightDefaultItems) {
+        this.setState({ defaultItems: items.filter(item => item.disabled) });
+      }
+    }
     componentWillUnmount() {
       window.removeEventListener("keyup", this.onKeyUp, false);
     }
@@ -131,13 +139,13 @@ const withMultiSelectState = WrappedComponent =>
     }
 
     clearAll() {
-      const { enableRightDefault } = this.props;
+      const { rightDefaultItems } = this.props;
 
       const disabledItems = this.state.selectedItems.filter(
         item => item.disabled
       );
       this.setState(
-        { selectedItems: enableRightDefault ? [...disabledItems] : [] },
+        { selectedItems: rightDefaultItems ? [...disabledItems] : [] },
         this.handleChange
       );
     }

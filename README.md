@@ -104,7 +104,7 @@ class Example extends Component {
 | `searchValueChanged`      | `function`  |                | Function to handle the change of search field. Accepts value as a single argument.      |
 | `responsiveHeight`        | `string`    | 400px          | Responsive height of the wrapping component, can send percent for example: `70%`        |
 | `withGrouping`            | `boolean`   | false          | Your items will be grouped by the group prop values - see "item grouping" section below |
-| `enableRightDefault`      | `boolean`   | false          | Your default items render in right columns                                              |
+| `rightDefaultItems`       | `boolean`   | false          | You can enable render of default items in right column                                  |
 
 ## Customization
 
@@ -232,19 +232,7 @@ value => {
     return item => true;
 }
 ```
-#### Right column Search
-You can enable support search for right column.
-Use `showRightSearch` enable right search.
-Use `serchRightValue` for transference you state string search value.
-Use `serchRightValueChange` for transference you function onChange for processing value right search.
 
-Use you filter function `filterRightSearch`
-Example (default):
-```js
-(selectedItems, serchRightValue) =>
-    selectedItems.filter(item =>
-      item.label.toLowerCase().match(serchRightValue))
-```
 #### Messages
 
 You can use your own messages. Here is the default messages object:
