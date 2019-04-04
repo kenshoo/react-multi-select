@@ -20,12 +20,18 @@ const DestinationList = ({
   unselectItems,
   selectedItemRenderer,
   noItemsRenderer,
-  withGrouping
+  withGrouping,
+  enableRightDefault,
+  items
 }) => {
   const SelectionStatusRenderer = selectionStatusRenderer;
   const updatedSelectedItems = withGrouping
     ? groupItems(selectedItems)
     : selectedItems;
+
+  const defaultColumns = enableRightDefault
+    ? items.filter(item => item.disabled && item)
+    : [];
   return (
     <Column>
       <SelectionStatusRenderer
@@ -36,7 +42,7 @@ const DestinationList = ({
         noneSelectedMessage={messages.noneSelectedMessage}
       />
       <ItemsList
-        items={updatedSelectedItems}
+        items={[...defaultColumns, ...updatedSelectedItems]}
         itemHeight={itemHeight}
         height={height - 45}
         onClick={(event, id) => unselectItems([id])}

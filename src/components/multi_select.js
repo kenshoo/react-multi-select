@@ -104,7 +104,9 @@ export class MultiSelect extends PureComponent {
       searchValue,
       withGrouping,
       generateClassName,
-      listRenderer
+      listRenderer,
+      items,
+      enableRightDefault
     } = this.props;
     const calculatedHeight = this.calculateHeight();
     const selectedIds = selectedItems.map(item => item.id);
@@ -120,6 +122,7 @@ export class MultiSelect extends PureComponent {
           {loading && <LoaderRenderer />}
           {!loading && (
             <SourceList
+              enableRightDefault={enableRightDefault}
               searchValue={searchValue}
               searchRenderer={searchRenderer}
               selectAllRenderer={selectAllRenderer}
@@ -146,6 +149,8 @@ export class MultiSelect extends PureComponent {
           )}
           {!loading && showSelectedItems && (
             <DestinationList
+              enableRightDefault={enableRightDefault}
+              items={items}
               selectionStatusRenderer={selectionStatusRenderer}
               selectedIds={selectedIds}
               clearAll={clearAll}

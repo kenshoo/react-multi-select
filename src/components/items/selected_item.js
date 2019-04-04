@@ -12,7 +12,7 @@ const SelectedItem = ({ item, height, group }) => (
     style={{ height }}
   >
     <ItemLabel label={item.label} />
-    {!group && (
+    {!group && !item.disabled && (
       <IconButton>
         <CloseIcon />
       </IconButton>

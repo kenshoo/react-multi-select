@@ -131,7 +131,15 @@ const withMultiSelectState = WrappedComponent =>
     }
 
     clearAll() {
-      this.setState({ selectedItems: [] }, this.handleChange);
+      const { enableRightDefault } = this.props;
+
+      const disabledItems = this.state.selectedItems.filter(
+        item => item.disabled
+      );
+      this.setState(
+        { selectedItems: enableRightDefault ? [...disabledItems] : [] },
+        this.handleChange
+      );
     }
 
     filterItems(event) {
