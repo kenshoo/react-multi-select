@@ -21,3 +21,8 @@ export const groupItems = items => {
     return result;
   }, []);
 };
+
+export const defaultItems = (defaultedItems, selectedItems) =>
+  defaultedItems && defaultedItems.length > 0
+    ? [...defaultedItems, ...selectedItems]
+    : selectedItems;
