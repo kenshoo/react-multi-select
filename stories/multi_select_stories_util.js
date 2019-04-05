@@ -7,10 +7,11 @@ export const custom_messages = {
   clearAllMessage: "Uncheck all"
 };
 
-const generateItems = size =>
+const generateItems = (size, numberDisabled) =>
   Array.apply(null, { length: size }).map((i, index) => ({
     id: index,
-    label: `Item ${index}`
+    label: `Item ${index}`,
+    disabled: index < numberDisabled && true
   }));
 
 const generateItemsWithGroups = (size, groupSize) =>
@@ -41,3 +42,5 @@ export const withDisabledItems = generateItems(10).map((i, index) => ({
 export const itemsWithGroups = generateItemsWithGroups(30, 4);
 
 export const manyItemsWithGroups = generateItemsWithGroups(7000, 4);
+
+export const disbaledItems = generateItems(50, 4);

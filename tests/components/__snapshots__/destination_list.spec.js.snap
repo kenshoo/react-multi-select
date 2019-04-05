@@ -18,7 +18,35 @@ exports[`DestinationList Added default items in right column 1`] = `
         Object {
           "disable": true,
           "id": "1",
-          "label": "default item",
+          "label": "default item1",
+        },
+        Object {
+          "disable": true,
+          "id": "2",
+          "label": "default item2",
+        },
+        Object {
+          "disable": true,
+          "id": "4",
+          "label": "default item2",
+        },
+        Object {
+          "disable": true,
+          "id": "5",
+          "label": "default item2",
+        },
+        Object {
+          "disable": true,
+          "id": "7",
+          "label": "default item2",
+        },
+        Object {
+          "id": "3",
+          "label": "default item3",
+        },
+        Object {
+          "id": "8",
+          "label": "default item4",
         },
       ]
     }

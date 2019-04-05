@@ -105,7 +105,7 @@ export class MultiSelect extends PureComponent {
       withGrouping,
       generateClassName,
       listRenderer,
-      defaultItems
+      defaultedItems
     } = this.props;
 
     const calculatedHeight = this.calculateHeight();
@@ -148,7 +148,7 @@ export class MultiSelect extends PureComponent {
           )}
           {!loading && showSelectedItems && (
             <DestinationList
-              defaultItems={defaultItems}
+              defaultedItems={defaultedItems}
               selectionStatusRenderer={selectionStatusRenderer}
               selectedIds={selectedIds}
               clearAll={clearAll}

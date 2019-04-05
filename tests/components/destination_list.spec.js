@@ -120,11 +120,23 @@ describe("DestinationList", () => {
 
   test("Added default items in right column", () => {
     const renderer = new ShallowRenderer();
+    const defaultedItems = [
+      { id: "1", label: "default item1", disable: true },
+      { id: "2", label: "default item2", disable: true },
+      { id: "4", label: "default item2", disable: true },
+      { id: "5", label: "default item2", disable: true },
+      { id: "7", label: "default item2", disable: true }
+    ];
+
+    const selectedItems = [
+      { id: "3", label: "default item3" },
+      { id: "8", label: "default item4" }
+    ];
+
     const tree = renderer.render(
       <DestinationList
-        rightDefaultItems={true}
-        items={[{ id: 1, label: "item_1" }]}
-        selectedItems={[{ id: "1", label: "default item", disable: true }]}
+        selectedItems={selectedItems}
+        defaultedItems={defaultedItems}
       />
     );
     expect(tree).toMatchSnapshot();
