@@ -8,27 +8,24 @@ import NoItems from "./items/no_items";
 import SelectedItem from "./items/selected_item";
 import SelectionStatus from "./selection_status/selection_status";
 import { groupItems, defaultItems } from "./item_grouping_util";
-
-const DestinationList = props => {
-  const {
-    selectionStatusRenderer,
-    selectedIds,
-    clearAll,
-    messages,
-    selectedItems,
-    itemHeight,
-    height,
-    unselectItems,
-    selectedItemRenderer,
-    noItemsRenderer,
-    withGrouping,
-    defaultedItems
-  } = props;
-
+const DestinationList = ({
+  selectionStatusRenderer,
+  selectedIds,
+  clearAll,
+  messages,
+  selectedItems,
+  itemHeight,
+  height,
+  unselectItems,
+  selectedItemRenderer,
+  noItemsRenderer,
+  withGrouping,
+  defaultedItems
+}) => {
   const SelectionStatusRenderer = selectionStatusRenderer;
-  const items = defaultItems(defaultedItems, selectedItems);
-
-  const updatedSelectedItems = withGrouping ? groupItems(items) : items;
+  const updatedSelectedItems = withGrouping
+    ? groupItems(defaultItems(defaultedItems, selectedItems))
+    : defaultItems(defaultedItems, selectedItems);
 
   return (
     <Column>
