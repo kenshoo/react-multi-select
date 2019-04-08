@@ -122,10 +122,7 @@ describe("DestinationList", () => {
     const renderer = new ShallowRenderer();
     const defaultedItems = [
       { id: "1", label: "default item1", disable: true },
-      { id: "2", label: "default item2", disable: true },
-      { id: "4", label: "default item2", disable: true },
-      { id: "5", label: "default item2", disable: true },
-      { id: "7", label: "default item2", disable: true }
+      { id: "2", label: "default item2", disable: true }
     ];
 
     const selectedItems = [
