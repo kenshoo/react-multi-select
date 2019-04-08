@@ -9,20 +9,22 @@ import SelectedItem from "./items/selected_item";
 import SelectionStatus from "./selection_status/selection_status";
 import { groupItems, defaultItems } from "./item_grouping_util";
 
-const DestinationList = ({
-  selectionStatusRenderer,
-  selectedIds,
-  clearAll,
-  messages,
-  selectedItems,
-  itemHeight,
-  height,
-  unselectItems,
-  selectedItemRenderer,
-  noItemsRenderer,
-  withGrouping,
-  defaultedItems
-}) => {
+const DestinationList = props => {
+  const {
+    selectionStatusRenderer,
+    selectedIds,
+    clearAll,
+    messages,
+    selectedItems,
+    itemHeight,
+    height,
+    unselectItems,
+    selectedItemRenderer,
+    noItemsRenderer,
+    withGrouping,
+    defaultedItems
+  } = props;
+
   const SelectionStatusRenderer = selectionStatusRenderer;
   const items = defaultItems(defaultedItems, selectedItems);
 
