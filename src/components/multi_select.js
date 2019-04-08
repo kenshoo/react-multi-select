@@ -38,7 +38,8 @@ export class MultiSelect extends PureComponent {
     maxSelectedItems: PropTypes.number,
     withGrouping: PropTypes.bool,
     listRenderer: PropTypes.func,
-    generateClassName: PropTypes.func
+    generateClassName: PropTypes.func,
+    defaultItems: PropTypes.bool
   };
 
   static defaultProps = {
@@ -52,7 +53,8 @@ export class MultiSelect extends PureComponent {
     itemHeight: 40,
     loaderRenderer: Loader,
     withGrouping: false,
-    generateClassName: defaultGenerateClassName
+    generateClassName: defaultGenerateClassName,
+    defaultItems: false
   };
 
   calculateHeight() {
