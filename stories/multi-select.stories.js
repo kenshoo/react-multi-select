@@ -325,7 +325,7 @@ storiesOf("React Multi Select", module)
           const { serchRightValue } = this.state;
           return (
             <ReactMultiSelect
-              showRightSearch
+              showRightSearch={true}
               serchRightValue={serchRightValue}
               serchRightValueChange={this.serchRightValueChange}
               filterRightSearch={filterRightSearch}

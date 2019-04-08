@@ -150,15 +150,20 @@ exports[`MultiSelect can remove search 1`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={Array []}
       selectedItemRenderer={[Function]}
       selectedItems={Array []}
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -316,15 +321,20 @@ exports[`MultiSelect can remove select all 1`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={Array []}
       selectedItemRenderer={[Function]}
       selectedItems={Array []}
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -634,15 +644,20 @@ exports[`MultiSelect custom itemRenderer 1`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={Array []}
       selectedItemRenderer={[Function]}
       selectedItems={Array []}
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -800,15 +815,20 @@ exports[`MultiSelect custom listRenderer 1`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={Array []}
       selectedItemRenderer={[Function]}
       selectedItems={Array []}
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -975,6 +995,7 @@ exports[`MultiSelect custom messages 1`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
@@ -989,10 +1010,14 @@ exports[`MultiSelect custom messages 1`] = `
         }
       }
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={Array []}
       selectedItemRenderer={[Function]}
       selectedItems={Array []}
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -1150,15 +1175,20 @@ exports[`MultiSelect custom noItemsRenderer 1`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[MockFunction mockedComponent]}
+      searchIcon={undefined}
       selectedIds={Array []}
       selectedItemRenderer={[Function]}
       selectedItems={Array []}
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -1316,15 +1346,20 @@ exports[`MultiSelect custom searchRenderer 1`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={Array []}
       selectedItemRenderer={[Function]}
       selectedItems={Array []}
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -1482,15 +1517,20 @@ exports[`MultiSelect custom selectAllRenderer 1`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={Array []}
       selectedItemRenderer={[Function]}
       selectedItems={Array []}
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -1648,15 +1688,20 @@ exports[`MultiSelect default snapshot 1`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={Array []}
       selectedItemRenderer={[Function]}
       selectedItems={Array []}
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -2077,11 +2122,13 @@ exports[`MultiSelect does not pass disabled if maxSelectedItem has passed 1`] = 
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={
         Array [
           undefined,
@@ -2096,6 +2143,9 @@ exports[`MultiSelect does not pass disabled if maxSelectedItem has passed 1`] = 
         ]
       }
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -2253,15 +2303,20 @@ exports[`MultiSelect passed clearAll 1`] = `
     />
     <DestinationList
       clearAll={[MockFunction clearAll]}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={Array []}
       selectedItemRenderer={[Function]}
       selectedItems={Array []}
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -2419,15 +2474,20 @@ exports[`MultiSelect passed filterItems 1`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={Array []}
       selectedItemRenderer={[Function]}
       selectedItems={Array []}
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -2585,15 +2645,20 @@ exports[`MultiSelect passed selectAllItems 1`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={Array []}
       selectedItemRenderer={[Function]}
       selectedItems={Array []}
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -2751,15 +2816,20 @@ exports[`MultiSelect passed selectItem 1`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={Array []}
       selectedItemRenderer={[Function]}
       selectedItems={Array []}
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -2917,15 +2987,20 @@ exports[`MultiSelect passed selectedIds 1`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={Array []}
       selectedItemRenderer={[Function]}
       selectedItems={Array []}
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -3088,11 +3163,13 @@ exports[`MultiSelect passed selectedItems 1`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={
         Array [
           undefined,
@@ -3107,6 +3184,9 @@ exports[`MultiSelect passed selectedItems 1`] = `
         ]
       }
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -3264,15 +3344,20 @@ exports[`MultiSelect passed unselectItems 1`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={Array []}
       selectedItemRenderer={[Function]}
       selectedItems={Array []}
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={[MockFunction unselectItems]}
       withGrouping={false}
     />
@@ -3435,11 +3520,13 @@ exports[`MultiSelect passes disabled if maxSelectedItem has passed 1`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={
         Array [
           undefined,
@@ -3454,6 +3541,9 @@ exports[`MultiSelect passes disabled if maxSelectedItem has passed 1`] = `
         ]
       }
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -3611,15 +3701,20 @@ exports[`MultiSelect will pass itemHeight 1`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={60}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={Array []}
       selectedItemRenderer={[Function]}
       selectedItems={Array []}
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -3777,15 +3872,20 @@ exports[`MultiSelect will pass selectAllHeight 1`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={60}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={Array []}
       selectedItemRenderer={[Function]}
       selectedItems={Array []}
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -3943,15 +4043,20 @@ exports[`MultiSelect will pass selectAllHeight without itemHeight 1`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={Array []}
       selectedItemRenderer={[Function]}
       selectedItems={Array []}
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -4109,15 +4214,20 @@ exports[`MultiSelect will pass selectedItemHeight 1`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={60}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={Array []}
       selectedItemRenderer={[Function]}
       selectedItems={Array []}
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -4275,15 +4385,20 @@ exports[`MultiSelect will pass selectedItemHeight 2`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={60}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={Array []}
       selectedItemRenderer={[Function]}
       selectedItems={Array []}
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -4441,15 +4556,20 @@ exports[`MultiSelect with generateClassName 1`] = `
     />
     <DestinationList
       clearAll={undefined}
+      filterRightSearch={[Function]}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[Function]}
+      searchIcon={undefined}
       selectedIds={Array []}
       selectedItemRenderer={[Function]}
       selectedItems={Array []}
       selectionStatusRenderer={[Function]}
+      serchRightValue={undefined}
+      serchRightValueChange={undefined}
+      showRightSearch={undefined}
       unselectItems={undefined}
       withGrouping={false}
     />

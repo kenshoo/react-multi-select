@@ -26,15 +26,14 @@ const DestinationList = ({
   searchIcon,
   selectedItems,
   serchRightValue,
-  serchRightValueChange
+  serchRightValueChange,
+  filterRightSearch
 }) => {
   const SelectionStatusRenderer = selectionStatusRenderer;
 
   let filterSelectitems = selectedItems;
-  if (serchRightValue.length) {
-    filterSelectitems = selectedItems.filter(item =>
-      item.label.toLowerCase().match(serchRightValue)
-    );
+  if (serchRightValue && serchRightValue.length) {
+    filterSelectitems = filterRightSearch(selectedItems, serchRightValue);
   }
 
   const updatedSelectedItems = withGrouping
@@ -85,13 +84,17 @@ DestinationList.propTypes = {
   noItemsRenderer: PropTypes.any,
   withGrouping: PropTypes.bool,
   showRightSearch: PropTypes.bool,
-  searchIcon: PropTypes.object,
+  searchIcon: PropTypes.string,
   selectedItems: PropTypes.array,
   serchRightValue: PropTypes.string,
   serchRightValueChang: PropTypes.func
 };
 
 DestinationList.defaultProps = {
+  filterRightSearch: (selectedItems, serchRightValue) =>
+    selectedItems.filter(item =>
+      item.label.toLowerCase().match(serchRightValue)
+    ),
   listRenderer: List,
   selectionStatusRenderer: SelectionStatus,
   selectedIds: [],
