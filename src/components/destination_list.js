@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { List } from "react-virtualized/dist/commonjs/List";
 
@@ -26,14 +26,15 @@ const DestinationList = ({
   searchIcon,
   selectedItems,
   serchRightValue,
-  serchRightValueChange,
-  filterRightSearch
+  serchRightValueChange
 }) => {
   const SelectionStatusRenderer = selectionStatusRenderer;
 
   let filterSelectitems = selectedItems;
-  if (serchRightValue && serchRightValue.length > -1) {
-    filterSelectitems = filterRightSearch(selectedItems, serchRightValue);
+  if (serchRightValue.length) {
+    filterSelectitems = selectedItems.filter(item =>
+      item.label.toLowerCase().match(serchRightValue)
+    );
   }
 
   const updatedSelectedItems = withGrouping
@@ -91,10 +92,6 @@ DestinationList.propTypes = {
 };
 
 DestinationList.defaultProps = {
-  filterRightSearch: (selectedItems, serchRightValue) =>
-    selectedItems.filter(item =>
-      item.label.toLowerCase().match(serchRightValue)
-    ),
   listRenderer: List,
   selectionStatusRenderer: SelectionStatus,
   selectedIds: [],
