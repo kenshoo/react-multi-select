@@ -150,10 +150,10 @@ exports[`MultiSelect can remove search 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={Array []}
@@ -317,10 +317,10 @@ exports[`MultiSelect can remove select all 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={Array []}
@@ -636,10 +636,10 @@ exports[`MultiSelect custom itemRenderer 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={Array []}
@@ -803,10 +803,10 @@ exports[`MultiSelect custom listRenderer 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={Array []}
@@ -979,10 +979,10 @@ exports[`MultiSelect custom messages 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={
         Object {
           "clearAllMessage": "Uncheck all",
@@ -1155,10 +1155,10 @@ exports[`MultiSelect custom noItemsRenderer 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[MockFunction mockedComponent]}
       selectedIds={Array []}
@@ -1322,10 +1322,10 @@ exports[`MultiSelect custom searchRenderer 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={Array []}
@@ -1489,10 +1489,10 @@ exports[`MultiSelect custom selectAllRenderer 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={Array []}
@@ -1656,10 +1656,10 @@ exports[`MultiSelect default snapshot 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={Array []}
@@ -2086,10 +2086,10 @@ exports[`MultiSelect does not pass disabled if maxSelectedItem has passed 1`] = 
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={
@@ -2263,10 +2263,10 @@ exports[`MultiSelect passed clearAll 1`] = `
     />
     <DestinationList
       clearAll={[MockFunction clearAll]}
-      defaultedItems={undefined}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={Array []}
@@ -2430,10 +2430,10 @@ exports[`MultiSelect passed filterItems 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={Array []}
@@ -2597,10 +2597,10 @@ exports[`MultiSelect passed selectAllItems 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={Array []}
@@ -2764,10 +2764,10 @@ exports[`MultiSelect passed selectItem 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={Array []}
@@ -2931,10 +2931,10 @@ exports[`MultiSelect passed selectedIds 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={Array []}
@@ -3103,10 +3103,10 @@ exports[`MultiSelect passed selectedItems 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={
@@ -3280,10 +3280,10 @@ exports[`MultiSelect passed unselectItems 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={Array []}
@@ -3452,10 +3452,10 @@ exports[`MultiSelect passes disabled if maxSelectedItem has passed 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={
@@ -3629,10 +3629,10 @@ exports[`MultiSelect will pass itemHeight 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={60}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={Array []}
@@ -3796,10 +3796,10 @@ exports[`MultiSelect will pass selectAllHeight 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={60}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={Array []}
@@ -3963,10 +3963,10 @@ exports[`MultiSelect will pass selectAllHeight without itemHeight 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={Array []}
@@ -4130,10 +4130,10 @@ exports[`MultiSelect will pass selectedItemHeight 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={60}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={Array []}
@@ -4297,10 +4297,10 @@ exports[`MultiSelect will pass selectedItemHeight 2`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={60}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={Array []}
@@ -4464,10 +4464,10 @@ exports[`MultiSelect with generateClassName 1`] = `
     />
     <DestinationList
       clearAll={undefined}
-      defaultedItems={undefined}
       height={400}
       itemHeight={40}
       listRenderer={[Function]}
+      lockedItems={undefined}
       messages={Object {}}
       noItemsRenderer={[Function]}
       selectedIds={Array []}

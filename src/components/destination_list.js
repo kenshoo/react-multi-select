@@ -7,7 +7,7 @@ import ItemsList from "./list/items_list";
 import NoItems from "./items/no_items";
 import SelectedItem from "./items/selected_item";
 import SelectionStatus from "./selection_status/selection_status";
-import { groupItems, defaultItems } from "./item_grouping_util";
+import { groupItems, withLockedItems } from "./item_grouping_util";
 
 const DestinationList = ({
   selectionStatusRenderer,
@@ -21,12 +21,14 @@ const DestinationList = ({
   selectedItemRenderer,
   noItemsRenderer,
   withGrouping,
-  defaultedItems
+  lockedItems
 }) => {
   const SelectionStatusRenderer = selectionStatusRenderer;
-  const items = defaultItems(defaultedItems, selectedItems);
+  const updateLockedItems = withLockedItems(lockedItems, selectedItems);
 
-  const updatedSelectedItems = withGrouping ? groupItems(items) : items;
+  const updatedSelectedItems = withGrouping
+    ? groupItems(updateLockedItems)
+    : updateLockedItems;
 
   return (
     <Column>

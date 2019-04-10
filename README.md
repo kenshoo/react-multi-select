@@ -104,7 +104,7 @@ class Example extends Component {
 | `searchValueChanged`      | `function`  |                | Function to handle the change of search field. Accepts value as a single argument.      |
 | `responsiveHeight`        | `string`    | 400px          | Responsive height of the wrapping component, can send percent for example: `70%`        |
 | `withGrouping`            | `boolean`   | false          | Your items will be grouped by the group prop values - see "item grouping" section below |
-| `defaultItems`            | `boolean`   | false          | You can enable render of default items in right column                                  |
+| `lockedItem`              | `boolean`   | false          | You can enable render of locked items in right column                                   |
 
 ## Customization
 

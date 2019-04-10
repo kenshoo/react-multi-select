@@ -277,7 +277,7 @@ storiesOf("React Multi Select", module)
     })
   )
   .add(
-    "Default right column items",
+    "Locked right column items",
     withReadme(Readme, () => {
       return (
         <ReactMultiSelect
@@ -286,7 +286,7 @@ storiesOf("React Multi Select", module)
           onChange={action("onChange")}
           showSearch={boolean("Show search", true)}
           showSelectAll={boolean("Show select all", true)}
-          defaultItems={true}
+          lockedItem
         />
       );
     })

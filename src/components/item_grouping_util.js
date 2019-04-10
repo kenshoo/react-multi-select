@@ -22,7 +22,7 @@ export const groupItems = items => {
   }, []);
 };
 
-export const defaultItems = (defaultedItems, selectedItems) =>
-  defaultedItems && defaultedItems.length > 0
-    ? [...defaultedItems, ...selectedItems]
+export const withLockedItems = (lockedItems, selectedItems) =>
+  lockedItems && lockedItems.length > 0
+    ? [...lockedItems, ...selectedItems]
     : selectedItems;

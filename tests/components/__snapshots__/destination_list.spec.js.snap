@@ -16,16 +16,6 @@ exports[`DestinationList Added default items in right column 1`] = `
     items={
       Array [
         Object {
-          "disable": true,
-          "id": "1",
-          "label": "default item1",
-        },
-        Object {
-          "disable": true,
-          "id": "2",
-          "label": "default item2",
-        },
-        Object {
           "id": "3",
           "label": "default item3",
         },

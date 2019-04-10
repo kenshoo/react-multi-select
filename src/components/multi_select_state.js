@@ -28,7 +28,7 @@ const withMultiSelectState = WrappedComponent =>
         selectedItems,
         items,
         filteredItems: items,
-        defaultedItems: []
+        lockedItems: []
       };
     }
 
@@ -88,10 +88,10 @@ const withMultiSelectState = WrappedComponent =>
     componentDidMount() {
       window.addEventListener("keyup", this.onKeyUp);
 
-      const { defaultItems, items } = this.props;
-      if (defaultItems) {
+      const { lockedItem, items } = this.props;
+      if (lockedItem) {
         this.setState({
-          defaultedItems: items.filter(item => item.disabled)
+          lockedItems: items.filter(item => item.disabled)
         });
       }
     }
@@ -139,12 +139,12 @@ const withMultiSelectState = WrappedComponent =>
     }
 
     clearAll() {
-      const { defaultItems } = this.props;
+      const { lockedItem } = this.props;
       const { selectedItems } = this.state;
 
       this.setState(
         {
-          selectedItems: defaultItems
+          selectedItems: lockedItem
             ? [...selectedItems.filter(item => item.disabled)]
             : []
         },
