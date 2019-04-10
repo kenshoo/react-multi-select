@@ -2,7 +2,7 @@
 
 exports[`SelectionStatus default snapshot 1`] = `
 <div
-  className="selection_status_disable_right_search"
+  className="selection_status"
 >
   <div
     className="status"
@@ -20,7 +20,7 @@ exports[`SelectionStatus default snapshot 1`] = `
 
 exports[`SelectionStatus snapshot with custom noneSelectedMessage 1`] = `
 <div
-  className="selection_status_disable_right_search"
+  className="selection_status"
 >
   <div
     className="status"
@@ -38,7 +38,7 @@ exports[`SelectionStatus snapshot with custom noneSelectedMessage 1`] = `
 
 exports[`SelectionStatus snapshot with selected item 1`] = `
 <div
-  className="selection_status_disable_right_search"
+  className="selection_status"
 >
   <div
     className="status"
@@ -56,7 +56,7 @@ exports[`SelectionStatus snapshot with selected item 1`] = `
 
 exports[`SelectionStatus snapshot with selected items and custom clearAllMessage 1`] = `
 <div
-  className="selection_status_disable_right_search"
+  className="selection_status"
 >
   <div
     className="status"
@@ -74,7 +74,7 @@ exports[`SelectionStatus snapshot with selected items and custom clearAllMessage
 
 exports[`SelectionStatus snapshot with selected items and custom selectedMessage 1`] = `
 <div
-  className="selection_status_disable_right_search"
+  className="selection_status"
 >
   <div
     className="status"

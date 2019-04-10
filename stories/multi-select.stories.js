@@ -279,65 +279,15 @@ storiesOf("React Multi Select", module)
   .add(
     "Supported search in right column",
     withReadme(Readme, () => {
-      class EnableSearchRight extends React.Component {
-        state = {
-          serchRightValue: ""
-        };
-
-        serchRightValueChange = e => {
-          this.setState({ serchRightValue: e.target.value });
-        };
-
-        render() {
-          const { serchRightValue } = this.state;
-          return (
-            <ReactMultiSelect
-              showRightSearch
-              serchRightValue={serchRightValue}
-              serchRightValueChange={this.serchRightValueChange}
-              items={utils.items}
-              loading={boolean("Loading", false)}
-              onChange={action("onChange")}
-              showSearch={boolean("Show search", true)}
-              showSelectAll={boolean("Show select all", true)}
-            />
-          );
-        }
-      }
-      return <EnableSearchRight />;
-    })
-  )
-  .add(
-    "Costum filter func for right search",
-    withReadme(Readme, () => {
-      const filterRightSearch = (selectedItems, id) =>
-        selectedItems.filter(item => item.id == id);
-
-      class CostumFilterSearchRight extends React.Component {
-        state = {
-          serchRightValue: ""
-        };
-
-        serchRightValueChange = e =>
-          this.setState({ serchRightValue: e.target.value });
-
-        render() {
-          const { serchRightValue } = this.state;
-          return (
-            <ReactMultiSelect
-              showRightSearch={true}
-              serchRightValue={serchRightValue}
-              serchRightValueChange={this.serchRightValueChange}
-              filterRightSearch={filterRightSearch}
-              items={utils.items}
-              loading={boolean("Loading", false)}
-              onChange={action("onChange")}
-              showSearch={boolean("Show search", true)}
-              showSelectAll={boolean("Show select all", true)}
-            />
-          );
-        }
-      }
-      return <CostumFilterSearchRight />;
+      return (
+        <ReactMultiSelect
+          showRightSearch
+          items={utils.items}
+          loading={boolean("Loading", false)}
+          onChange={action("onChange")}
+          showSearch={boolean("Show search", true)}
+          showSelectAll={boolean("Show select all", true)}
+        />
+      );
     })
   );

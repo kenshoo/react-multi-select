@@ -1,362 +1,207 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DestinationList custom messages 1`] = `
-<Column>
-  <SelectionStatus
-    clearAll={undefined}
-    clearAllMessage="Uncheck all"
-    noneSelectedMessage="Nothing"
-    selected={Array []}
-    selectedMessage="Checked"
-    showRightSearch={undefined}
-  />
-  <ItemsList
-    disabled={false}
-    height={355}
-    itemHeight={40}
-    items={Array []}
-    noItemsMessage="No entries available..."
-    noItemsRenderer={[Function]}
-    offset={0}
-    onClick={[Function]}
-    renderer={[Function]}
-    selectedIds={Array []}
-  />
-</Column>
+<DestinationList
+  height={400}
+  itemHeight={40}
+  listRenderer={[Function]}
+  messages={
+    Object {
+      "clearAllMessage": "Uncheck all",
+      "noItemsMessage": "No entries available...",
+      "noneSelectedMessage": "Nothing",
+      "searchPlaceholder": "Find...",
+      "selectAllMessage": "Check all",
+      "selectedMessage": "Checked",
+    }
+  }
+  noItemsRenderer={[Function]}
+  selectedIds={Array []}
+  selectedItemRenderer={[Function]}
+  selectedItems={Array []}
+  selectionStatusRenderer={[Function]}
+  withGrouping={false}
+/>
 `;
 
 exports[`DestinationList custom noItemsRenderer 1`] = `
-<Column>
-  <SelectionStatus
-    clearAll={undefined}
-    clearAllMessage="Clear All"
-    noneSelectedMessage="None Selected"
-    selected={Array []}
-    selectedMessage="selected"
-    showRightSearch={undefined}
-  />
-  <ItemsList
-    disabled={false}
-    height={355}
-    itemHeight={40}
-    items={Array []}
-    noItemsMessage={undefined}
-    noItemsRenderer={[MockFunction mockedComponent]}
-    offset={0}
-    onClick={[Function]}
-    renderer={[Function]}
-    selectedIds={Array []}
-  />
-</Column>
+<DestinationList
+  height={400}
+  itemHeight={40}
+  listRenderer={[Function]}
+  messages={Object {}}
+  noItemsRenderer={[MockFunction mockedComponent]}
+  selectedIds={Array []}
+  selectedItemRenderer={[Function]}
+  selectedItems={Array []}
+  selectionStatusRenderer={[Function]}
+  withGrouping={false}
+/>
 `;
 
 exports[`DestinationList custom selectedItemRenderer 1`] = `
-<Column>
-  <SelectionStatus
-    clearAll={undefined}
-    clearAllMessage="Clear All"
-    noneSelectedMessage="None Selected"
-    selected={Array []}
-    selectedMessage="selected"
-    showRightSearch={undefined}
-  />
-  <ItemsList
-    disabled={false}
-    height={355}
-    itemHeight={40}
-    items={Array []}
-    noItemsMessage={undefined}
-    noItemsRenderer={[Function]}
-    offset={0}
-    onClick={[Function]}
-    renderer={[MockFunction mockedComponent]}
-    selectedIds={Array []}
-  />
-</Column>
+<DestinationList
+  height={400}
+  itemHeight={40}
+  listRenderer={[Function]}
+  messages={Object {}}
+  noItemsRenderer={[Function]}
+  selectedIds={Array []}
+  selectedItemRenderer={[MockFunction mockedComponent]}
+  selectedItems={Array []}
+  selectionStatusRenderer={[Function]}
+  withGrouping={false}
+/>
 `;
 
 exports[`DestinationList custom selectionStatusRenderer 1`] = `
-<Column>
-  <mockConstructor
-    clearAll={undefined}
-    clearAllMessage={undefined}
-    noneSelectedMessage={undefined}
-    selected={Array []}
-    selectedMessage={undefined}
-    showRightSearch={undefined}
-  />
-  <ItemsList
-    disabled={false}
-    height={355}
-    itemHeight={40}
-    items={Array []}
-    noItemsMessage={undefined}
-    noItemsRenderer={[Function]}
-    offset={0}
-    onClick={[Function]}
-    renderer={[Function]}
-    selectedIds={Array []}
-  />
-</Column>
+<DestinationList
+  height={400}
+  itemHeight={40}
+  listRenderer={[Function]}
+  messages={Object {}}
+  noItemsRenderer={[Function]}
+  selectedIds={Array []}
+  selectedItemRenderer={[Function]}
+  selectedItems={Array []}
+  selectionStatusRenderer={[MockFunction mockedComponent]}
+  withGrouping={false}
+/>
 `;
 
 exports[`DestinationList default snapshot 1`] = `
-<Column>
-  <SelectionStatus
-    clearAll={undefined}
-    clearAllMessage="Clear All"
-    noneSelectedMessage="None Selected"
-    selected={Array []}
-    selectedMessage="selected"
-    showRightSearch={undefined}
-  />
-  <ItemsList
-    disabled={false}
-    height={355}
-    itemHeight={40}
-    items={Array []}
-    noItemsMessage={undefined}
-    noItemsRenderer={[Function]}
-    offset={0}
-    onClick={[Function]}
-    renderer={[Function]}
-    selectedIds={Array []}
-  />
-</Column>
+<DestinationList
+  height={400}
+  itemHeight={40}
+  listRenderer={[Function]}
+  messages={Object {}}
+  noItemsRenderer={[Function]}
+  selectedIds={Array []}
+  selectedItemRenderer={[Function]}
+  selectedItems={Array []}
+  selectionStatusRenderer={[Function]}
+  withGrouping={false}
+/>
 `;
 
-exports[`DestinationList enable right search 1`] = `
-<Column>
-  <Search
-    onChange={undefined}
-    searchIcon={[Function]}
-    searchPlaceholder="Search..."
-    value={undefined}
-  />
-  <SelectionStatus
-    clearAll={undefined}
-    clearAllMessage="Clear All"
-    noneSelectedMessage="None Selected"
-    selected={Array []}
-    selectedMessage="selected"
-    showRightSearch={true}
-  />
-  <ItemsList
-    disabled={false}
-    height={355}
-    itemHeight={40}
-    items={
-      Array [
-        Object {
-          "id": 1,
-          "label": "item1",
-        },
-        Object {
-          "id": 2,
-          "label": "item2",
-        },
-        Object {
-          "id": 3,
-          "label": "item3",
-        },
-      ]
-    }
-    noItemsMessage={undefined}
-    noItemsRenderer={[Function]}
-    offset={0}
-    onClick={[Function]}
-    renderer={[Function]}
-    selectedIds={Array []}
-  />
-</Column>
-`;
+exports[`DestinationList enable right search 1`] = `<App />`;
 
 exports[`DestinationList passed clearAll 1`] = `
-<Column>
-  <SelectionStatus
-    clearAll={[MockFunction clearAll]}
-    clearAllMessage="Clear All"
-    noneSelectedMessage="None Selected"
-    selected={Array []}
-    selectedMessage="selected"
-    showRightSearch={undefined}
-  />
-  <ItemsList
-    disabled={false}
-    height={355}
-    itemHeight={40}
-    items={Array []}
-    noItemsMessage={undefined}
-    noItemsRenderer={[Function]}
-    offset={0}
-    onClick={[Function]}
-    renderer={[Function]}
-    selectedIds={Array []}
-  />
-</Column>
+<DestinationList
+  clearAll={[MockFunction clearAll]}
+  height={400}
+  itemHeight={40}
+  listRenderer={[Function]}
+  messages={Object {}}
+  noItemsRenderer={[Function]}
+  selectedIds={Array []}
+  selectedItemRenderer={[Function]}
+  selectedItems={Array []}
+  selectionStatusRenderer={[Function]}
+  withGrouping={false}
+/>
 `;
 
 exports[`DestinationList passed selectedIds 1`] = `
-<Column>
-  <SelectionStatus
-    clearAll={undefined}
-    clearAllMessage="Clear All"
-    noneSelectedMessage="None Selected"
-    selected={
-      Array [
-        1,
-        2,
-      ]
-    }
-    selectedMessage="selected"
-    showRightSearch={undefined}
-  />
-  <ItemsList
-    disabled={false}
-    height={355}
-    itemHeight={40}
-    items={Array []}
-    noItemsMessage={undefined}
-    noItemsRenderer={[Function]}
-    offset={0}
-    onClick={[Function]}
-    renderer={[Function]}
-    selectedIds={Array []}
-  />
-</Column>
+<DestinationList
+  height={400}
+  itemHeight={40}
+  listRenderer={[Function]}
+  messages={Object {}}
+  noItemsRenderer={[Function]}
+  selectedIds={
+    Array [
+      1,
+      2,
+    ]
+  }
+  selectedItemRenderer={[Function]}
+  selectedItems={Array []}
+  selectionStatusRenderer={[Function]}
+  withGrouping={false}
+/>
 `;
 
 exports[`DestinationList passed selectedItems 1`] = `
-<Column>
-  <SelectionStatus
-    clearAll={undefined}
-    clearAllMessage="Clear All"
-    noneSelectedMessage="None Selected"
-    selected={Array []}
-    selectedMessage="selected"
-    showRightSearch={undefined}
-  />
-  <ItemsList
-    disabled={false}
-    height={355}
-    itemHeight={40}
-    items={
-      Array [
-        1,
-        2,
-      ]
-    }
-    noItemsMessage={undefined}
-    noItemsRenderer={[Function]}
-    offset={0}
-    onClick={[Function]}
-    renderer={[Function]}
-    selectedIds={Array []}
-  />
-</Column>
+<DestinationList
+  height={400}
+  itemHeight={40}
+  listRenderer={[Function]}
+  messages={Object {}}
+  noItemsRenderer={[Function]}
+  selectedIds={Array []}
+  selectedItemRenderer={[Function]}
+  selectedItems={
+    Array [
+      1,
+      2,
+    ]
+  }
+  selectionStatusRenderer={[Function]}
+  withGrouping={false}
+/>
 `;
 
 exports[`DestinationList passed selectedItems with grouping 1`] = `
-<Column>
-  <SelectionStatus
-    clearAll={undefined}
-    clearAllMessage="Clear All"
-    noneSelectedMessage="None Selected"
-    selected={Array []}
-    selectedMessage="selected"
-    showRightSearch={undefined}
-  />
-  <ItemsList
-    disabled={false}
-    height={355}
-    itemHeight={40}
-    items={
-      Array [
-        Object {
-          "disabled": true,
-          "id": "group1",
-          "isGroup": true,
-          "label": "group1",
-        },
-        Object {
-          "group": "group1",
-          "id": 1,
-          "label": "item1",
-        },
-        Object {
-          "group": "group1",
-          "id": 3,
-          "label": "item3",
-        },
-        Object {
-          "disabled": true,
-          "id": "group2",
-          "isGroup": true,
-          "label": "group2",
-        },
-        Object {
-          "group": "group2",
-          "id": 2,
-          "label": "item2",
-        },
-      ]
-    }
-    noItemsMessage={undefined}
-    noItemsRenderer={[Function]}
-    offset={0}
-    onClick={[Function]}
-    renderer={[Function]}
-    selectedIds={Array []}
-  />
-</Column>
+<DestinationList
+  height={400}
+  itemHeight={40}
+  listRenderer={[Function]}
+  messages={Object {}}
+  noItemsRenderer={[Function]}
+  selectedIds={Array []}
+  selectedItemRenderer={[Function]}
+  selectedItems={
+    Array [
+      Object {
+        "group": "group1",
+        "id": 1,
+        "label": "item1",
+      },
+      Object {
+        "group": "group2",
+        "id": 2,
+        "label": "item2",
+      },
+      Object {
+        "group": "group1",
+        "id": 3,
+        "label": "item3",
+      },
+    ]
+  }
+  selectionStatusRenderer={[Function]}
+  withGrouping={true}
+/>
 `;
 
 exports[`DestinationList passed selectedItems with grouping and empty items 1`] = `
-<Column>
-  <SelectionStatus
-    clearAll={undefined}
-    clearAllMessage="Clear All"
-    noneSelectedMessage="None Selected"
-    selected={Array []}
-    selectedMessage="selected"
-    showRightSearch={undefined}
-  />
-  <ItemsList
-    disabled={false}
-    height={355}
-    itemHeight={40}
-    items={Array []}
-    noItemsMessage={undefined}
-    noItemsRenderer={[Function]}
-    offset={0}
-    onClick={[Function]}
-    renderer={[Function]}
-    selectedIds={Array []}
-  />
-</Column>
+<DestinationList
+  height={400}
+  itemHeight={40}
+  listRenderer={[Function]}
+  messages={Object {}}
+  noItemsRenderer={[Function]}
+  selectedIds={Array []}
+  selectedItemRenderer={[Function]}
+  selectedItems={Array []}
+  selectionStatusRenderer={[Function]}
+  withGrouping={true}
+/>
 `;
 
 exports[`DestinationList passed unselectItems 1`] = `
-<Column>
-  <SelectionStatus
-    clearAll={undefined}
-    clearAllMessage="Clear All"
-    noneSelectedMessage="None Selected"
-    selected={Array []}
-    selectedMessage="selected"
-    showRightSearch={undefined}
-  />
-  <ItemsList
-    disabled={false}
-    height={355}
-    itemHeight={40}
-    items={Array []}
-    noItemsMessage={undefined}
-    noItemsRenderer={[Function]}
-    offset={0}
-    onClick={[Function]}
-    renderer={[Function]}
-    selectedIds={Array []}
-  />
-</Column>
+<DestinationList
+  height={400}
+  itemHeight={40}
+  listRenderer={[Function]}
+  messages={Object {}}
+  noItemsRenderer={[Function]}
+  selectedIds={Array []}
+  selectedItemRenderer={[Function]}
+  selectedItems={Array []}
+  selectionStatusRenderer={[Function]}
+  unselectItems={[MockFunction unselectItems]}
+  withGrouping={false}
+/>
 `;

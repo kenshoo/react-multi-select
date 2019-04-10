@@ -76,35 +76,35 @@ class Example extends Component {
 
 ## Properties
 
-| Name                            | Type                  | Default                                          | Description
-|:-----                           |:-----                 |:-----                                            |:-----
-| `items`                         | `List`                | []                                               | list of items.
-| `selectedItems`                 | `Array`               | []                                               | selected list to start with (subgroup of items).
-| `onChange`                      | `function`            | ()=>{}                                           | callback for changed event.
-| `loading`                       | `boolean`             | false                                            | toggle to show loading indication.
-| `messages`                      | `Object`              | {}                                               | custom messages. Please see below for the availabale messages.
-| `showSearch   `                 | `boolean`             | true                                             | toggle to show search option.
-| `showSelectAll`                 | `boolean`             | true                                             | toggle to show select all option in list.
-| `showSelectedItems`             | `boolean`             | true                                             | toggle to show selected items right pane.
-| `wrapperClassName`              | `String`              | ''                                               | wrapper class name - Used for customizing the style.
-| `height`                        | `number`              | 400                                              | available items list height.
-| `itemHeight`                    | `number`              | 40                                               | the height of an item in the list.
-| `selectedItemHeight`            | `number`              | `itemHeight`                                     | the height of the selected item in the list.
-| `selectAllHeight`               | `number`              | `itemHeight`                                     | the height of the selectAll component, by default will use the value of the itemHeight.
-| `maxSelectedItems`              | `number`              |                                                  | defines the maximum items that can be selected, overrides showSelectAll.
-| `filterFunction`                | `function`            | based on label                                   | The function used to filter items based on the search query.
-| `searchRenderer`                | `Component`           |                                                  | Component to replace the default Search component.
-| `selectedItemRenderer`          | `Component`           |                                                  | Component to replace the default selected item component in the destination list.
-| `loaderRenderer`                | `Component`           |                                                  | Component to replace the default loader component.
-| `selectAllRenderer`             | `Component`           |                                                  | Component to replace the default select all component.
-| `itemRenderer`                  | `Component`           |                                                  | Component to replace the default item component in the source list.
-| `selectionStatusRenderer`       | `Component`           |                                                  | Component to replace the default selection status component.
-| `noItemsRenderer`               | `Component`           |                                                  | Component to replace the default no items component.
-| `searchValue`                   | `string`              |                                                  | The value of the search field.
-| `searchValueChanged`            | `function`            |                                                  | Function to handle the change of search field. Accepts value as a single argument.
-|`responsiveHeight`               | `string`              | 400px                                            | Responsive height of the wrapping component, can send percent for example: `70%`
-|`withGrouping`                   | `boolean`             | false                                            | Your items will be grouped by the group prop values - see "item grouping" section below
-
+| Name                      | Type        | Default        | Description                                                                             |
+| :------------------------ | :---------- | :------------- | :-------------------------------------------------------------------------------------- |
+| `items`                   | `List`      | []             | list of items.                                                                          |
+| `selectedItems`           | `Array`     | []             | selected list to start with (subgroup of items).                                        |
+| `onChange`                | `function`  | ()=>{}         | callback for changed event.                                                             |
+| `loading`                 | `boolean`   | false          | toggle to show loading indication.                                                      |
+| `messages`                | `Object`    | {}             | custom messages. Please see below for the availabale messages.                          |
+| `showSearch   `           | `boolean`   | true           | toggle to show search option.                                                           |
+| `showSelectAll`           | `boolean`   | true           | toggle to show select all option in list.                                               |
+| `showSelectedItems`       | `boolean`   | true           | toggle to show selected items right pane.                                               |
+| `wrapperClassName`        | `String`    | ''             | wrapper class name - Used for customizing the style.                                    |
+| `height`                  | `number`    | 400            | available items list height.                                                            |
+| `itemHeight`              | `number`    | 40             | the height of an item in the list.                                                      |
+| `selectedItemHeight`      | `number`    | `itemHeight`   | the height of the selected item in the list.                                            |
+| `selectAllHeight`         | `number`    | `itemHeight`   | the height of the selectAll component, by default will use the value of the itemHeight. |
+| `maxSelectedItems`        | `number`    |                | defines the maximum items that can be selected, overrides showSelectAll.                |
+| `filterFunction`          | `function`  | based on label | The function used to filter items based on the search query.                            |
+| `searchRenderer`          | `Component` |                | Component to replace the default Search component.                                      |
+| `selectedItemRenderer`    | `Component` |                | Component to replace the default selected item component in the destination list.       |
+| `loaderRenderer`          | `Component` |                | Component to replace the default loader component.                                      |
+| `selectAllRenderer`       | `Component` |                | Component to replace the default select all component.                                  |
+| `itemRenderer`            | `Component` |                | Component to replace the default item component in the source list.                     |
+| `selectionStatusRenderer` | `Component` |                | Component to replace the default selection status component.                            |
+| `noItemsRenderer`         | `Component` |                | Component to replace the default no items component.                                    |
+| `searchValue`             | `string`    |                | The value of the search field.                                                          |
+| `searchValueChanged`      | `function`  |                | Function to handle the change of search field. Accepts value as a single argument.      |
+| `responsiveHeight`        | `string`    | 400px          | Responsive height of the wrapping component, can send percent for example: `70%`        |
+| `withGrouping`            | `boolean`   | false          | Your items will be grouped by the group prop values - see "item grouping" section below |
+| `showRightSearch`         | `boolean`   | false          | You may enable search for right column                                                  |
 
 ## Customization
 

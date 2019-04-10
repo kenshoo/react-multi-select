@@ -9,7 +9,7 @@ import SelectedItem from "./items/selected_item";
 import SelectionStatus from "./selection_status/selection_status";
 import { groupItems } from "./item_grouping_util";
 import Search from "./search/search";
-
+import withDestenation from "./with_search_destenation";
 const DestinationList = ({
   selectionStatusRenderer,
   selectedIds,
@@ -21,32 +21,25 @@ const DestinationList = ({
   selectedItemRenderer,
   noItemsRenderer,
   withGrouping,
-
   showRightSearch,
   searchIcon,
   selectedItems,
-  serchRightValue,
-  serchRightValueChange,
-  filterRightSearch
+  onChange,
+  searchValue
 }) => {
   const SelectionStatusRenderer = selectionStatusRenderer;
 
-  let filterSelectitems = selectedItems;
-  if (serchRightValue && serchRightValue.length) {
-    filterSelectitems = filterRightSearch(selectedItems, serchRightValue);
-  }
-
   const updatedSelectedItems = withGrouping
-    ? groupItems(filterSelectitems)
-    : filterSelectitems;
+    ? groupItems(selectedItems)
+    : selectedItems;
 
   return (
     <Column>
       {showRightSearch && (
         <Search
-          onChange={serchRightValueChange}
+          onChange={onChange}
           searchIcon={searchIcon}
-          value={serchRightValue}
+          value={searchValue}
           searchPlaceholder={messages.searchPlaceholder}
         />
       )}
@@ -62,7 +55,7 @@ const DestinationList = ({
         items={updatedSelectedItems}
         itemHeight={itemHeight}
         height={height - 45}
-        onClick={(event, id) => unselectItems([id])}
+        onClick={id => unselectItems([id])}
         renderer={selectedItemRenderer}
         noItemsRenderer={noItemsRenderer}
         noItemsMessage={messages.noItemsMessage}
@@ -85,16 +78,10 @@ DestinationList.propTypes = {
   withGrouping: PropTypes.bool,
   showRightSearch: PropTypes.bool,
   searchIcon: PropTypes.string,
-  selectedItems: PropTypes.array,
-  serchRightValue: PropTypes.string,
-  serchRightValueChang: PropTypes.func
+  selectedItems: PropTypes.array
 };
 
 DestinationList.defaultProps = {
-  filterRightSearch: (selectedItems, serchRightValue) =>
-    selectedItems.filter(item =>
-      item.label.toLowerCase().match(serchRightValue)
-    ),
   listRenderer: List,
   selectionStatusRenderer: SelectionStatus,
   selectedIds: [],
@@ -107,4 +94,4 @@ DestinationList.defaultProps = {
   withGrouping: false
 };
 
-export default DestinationList;
+export default withDestenation(DestinationList);

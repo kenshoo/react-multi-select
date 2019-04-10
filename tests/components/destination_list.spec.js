@@ -111,11 +111,15 @@ describe("DestinationList", () => {
   });
 
   test("passed unselectItems", () => {
-    const onClick = jest.fn();
-    const component = shallow(<DestinationList unselectItems={onClick} />);
+    const unselectItems = jest.fn();
+    const component = shallow(
+      <DestinationList>
+        <List onClick={unselectItems} />
+      </DestinationList>
+    );
     const list = component.find(List).at(0);
-    list.simulate("click", {}, ID);
-    expect(onClick).toHaveBeenCalledWith([ID]);
+    list.simulate("click", ID);
+    expect(unselectItems).toHaveBeenCalledWith(ID);
   });
 
   test("enable right search", () => {
