@@ -22,21 +22,23 @@ const withMultiSelectState = WrappedComponent =>
       this.handleChange = this.handleChange.bind(this);
       this.getList = this.getList.bind(this);
       this.onKeyUp = this.onKeyUp.bind(this);
+      this.filterDestinationItems = this.filterDestinationItems.bind(this);
 
       const { items, selectedItems } = props;
       this.state = {
         selectedItems,
         items,
-        filteredItems: items
+        filteredItems: items,
+        filteredDestinationItems: []
       };
     }
 
     componentWillReceiveProps(nextProps) {
-      if (this.props.selectedItems !== nextProps.selectedItems) {
+      if (this.props.selectedItems.length !== nextProps.selectedItems.length) {
         this.setState({ selectedItems: nextProps.selectedItems });
       }
 
-      if (this.props.items !== nextProps.items) {
+      if (this.props.items.length !== nextProps.items.length) {
         this.setState({
           items: nextProps.items,
           filteredItems: nextProps.items
@@ -45,6 +47,14 @@ const withMultiSelectState = WrappedComponent =>
 
       if (this.props.searchValue !== nextProps.searchValue) {
         this.filterItems({ target: { value: nextProps.searchValue } });
+      }
+
+      if (
+        this.props.searchDestinationValue !== nextProps.searchDestinationValue
+      ) {
+        this.filterDestinationItems({
+          target: { value: nextProps.searchDestinationValue }
+        });
       }
     }
 
@@ -135,8 +145,9 @@ const withMultiSelectState = WrappedComponent =>
     }
 
     filterItems(event) {
-      const { items, filterFunction, searchValueChanged } = this.props;
+      const { items, filterFunction } = this.props;
       const { value } = event.target;
+
       this.setState({
         filteredItems: items.filter(filterFunction(value))
       });
@@ -144,6 +155,17 @@ const withMultiSelectState = WrappedComponent =>
       searchValueChanged && searchValueChanged(value);
     }
 
+    filterDestinationItems(event) {
+      const { filterFunction, searchDestinationChanged } = this.props;
+      const { value } = event.target;
+      const { selectedItems } = this.state;
+
+      this.setState({
+        filteredDestinationItems: selectedItems.filter(filterFunction(value))
+      });
+
+      searchDestinationChanged && searchDestinationChanged(value);
+    }
     selectAllItems() {
       const { filteredItems, selectedItems } = this.state;
       const { items } = this.props;
@@ -202,6 +224,7 @@ const withMultiSelectState = WrappedComponent =>
           unselectItems={this.unselectItems}
           selectItem={this.selectItem}
           filterItems={this.filterItems}
+          filterDestinationItems={this.filterDestinationItems}
           selectAllItems={this.selectAllItems}
           isAllSelected={this.isAllSelected()}
           clearAll={this.clearAll}

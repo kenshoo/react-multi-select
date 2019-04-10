@@ -277,17 +277,39 @@ storiesOf("React Multi Select", module)
     })
   )
   .add(
-    "Supported search in right column",
+    "Supported search in destination column",
     withReadme(Readme, () => {
-      return (
-        <ReactMultiSelect
-          showRightSearch
-          items={utils.items}
-          loading={boolean("Loading", false)}
-          onChange={action("onChange")}
-          showSearch={boolean("Show search", true)}
-          showSelectAll={boolean("Show select all", true)}
-        />
-      );
+      class DestinationSearch extends React.Component {
+        constructor(props) {
+          super(props);
+
+          this.state = {
+            searchDestinationValue: ""
+          };
+
+          this.searchDestinationChanged = this.searchDestinationChanged.bind(
+            this
+          );
+        }
+        searchDestinationChanged(e) {
+          this.setState({ e });
+        }
+
+        render() {
+          return (
+            <ReactMultiSelect
+              showDestinationSearch
+              searchDestinationValue={this.state.searchDestinationValue}
+              searchDestinationChanged={this.searchDestinationChanged}
+              items={utils.items}
+              loading={boolean("Loading", false)}
+              onChange={action("onChange")}
+              showSearch={boolean("Show search", true)}
+              showSelectAll={boolean("Show select all", true)}
+            />
+          );
+        }
+      }
+      return <DestinationSearch />;
     })
   );

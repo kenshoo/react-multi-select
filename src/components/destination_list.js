@@ -9,7 +9,7 @@ import SelectedItem from "./items/selected_item";
 import SelectionStatus from "./selection_status/selection_status";
 import { groupItems } from "./item_grouping_util";
 import Search from "./search/search";
-import withDestenation from "./with_search_destenation";
+
 const DestinationList = ({
   selectionStatusRenderer,
   selectedIds,
@@ -21,30 +21,34 @@ const DestinationList = ({
   selectedItemRenderer,
   noItemsRenderer,
   withGrouping,
-  showRightSearch,
   searchIcon,
   selectedItems,
-  onChange,
-  searchValue
+  showDestinationSearch,
+  filterDestinationItems,
+  searchDestinationValue,
+  filteredDestinationItems
 }) => {
   const SelectionStatusRenderer = selectionStatusRenderer;
+  const filteredSelectedItems =
+    showDestinationSearch && filteredDestinationItems.length > 0
+      ? filteredDestinationItems
+      : selectedItems;
 
   const updatedSelectedItems = withGrouping
-    ? groupItems(selectedItems)
-    : selectedItems;
+    ? groupItems(filteredSelectedItems)
+    : filteredSelectedItems;
 
   return (
     <Column>
-      {showRightSearch && (
+      {showDestinationSearch && (
         <Search
-          onChange={onChange}
+          onChange={filterDestinationItems}
           searchIcon={searchIcon}
-          value={searchValue}
+          value={searchDestinationValue}
           searchPlaceholder={messages.searchPlaceholder}
         />
       )}
       <SelectionStatusRenderer
-        showRightSearch={showRightSearch}
         selected={selectedIds}
         clearAll={clearAll}
         clearAllMessage={messages.clearAllMessage}
@@ -76,7 +80,7 @@ DestinationList.propTypes = {
   selectedItemRenderer: PropTypes.any,
   noItemsRenderer: PropTypes.any,
   withGrouping: PropTypes.bool,
-  showRightSearch: PropTypes.bool,
+  showDestinationSearch: PropTypes.bool,
   searchIcon: PropTypes.string,
   selectedItems: PropTypes.array
 };
@@ -94,4 +98,4 @@ DestinationList.defaultProps = {
   withGrouping: false
 };
 
-export default withDestenation(DestinationList);
+export default DestinationList;
