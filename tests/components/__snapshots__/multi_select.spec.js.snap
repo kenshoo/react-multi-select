@@ -4471,6 +4471,7 @@ exports[`MultiSelect with responsiveHeight 1`] = `
 >
   <_class
     filterFunction={[Function]}
+    getCopyLabel={[Function]}
     height={400}
     items={Array []}
     selectedItems={Array []}
@@ -4492,6 +4493,7 @@ exports[`MultiSelect without responsiveHeight 1`] = `
 >
   <_class
     filterFunction={[Function]}
+    getCopyLabel={[Function]}
     height={400}
     items={Array []}
     selectedItems={Array []}

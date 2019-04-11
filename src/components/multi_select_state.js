@@ -8,7 +8,8 @@ const withMultiSelectState = WrappedComponent =>
           .toLowerCase()
           .includes(value.toLowerCase()),
       items: [],
-      selectedItems: []
+      selectedItems: [],
+      getCopyLabel: item => item.label
     };
 
     constructor(props) {
@@ -22,6 +23,7 @@ const withMultiSelectState = WrappedComponent =>
       this.handleChange = this.handleChange.bind(this);
       this.getList = this.getList.bind(this);
       this.onKeyUp = this.onKeyUp.bind(this);
+      this.handleCopy = this.handleCopy.bind(this);
 
       const { items, selectedItems } = props;
       this.state = {
@@ -86,10 +88,12 @@ const withMultiSelectState = WrappedComponent =>
 
     componentDidMount() {
       window.addEventListener("keyup", this.onKeyUp);
+      window.addEventListener("copy", this.handleCopy);
     }
 
     componentWillUnmount() {
       window.removeEventListener("keyup", this.onKeyUp, false);
+      window.removeEventListener("copy", this.handleCopy);
     }
 
     onKeyUp(event) {
@@ -97,7 +101,18 @@ const withMultiSelectState = WrappedComponent =>
         this.setState({ firstItemShiftSelected: undefined });
       }
     }
+    handleCopy(event) {
+      const { enableCopyText } = this.props;
+      if (!enableCopyText) {
+        return;
+      }
 
+      const { getCopyLabel } = this.props;
+      const { selectedItems } = this.state;
+      const result = selectedItems.map(getCopyLabel).join("\n");
+      event.preventDefault();
+      event.clipboardData.setData("text/plain", result);
+    }
     selectItem(event, id) {
       const { items } = this.props;
       const { selectedItems, firstItemShiftSelected } = this.state;
@@ -193,7 +208,6 @@ const withMultiSelectState = WrappedComponent =>
     getList(ref) {
       this.list = ref;
     }
-
     render() {
       return (
         <WrappedComponent
