@@ -28,6 +28,7 @@ const Item = ({
   >
     {!group && (
       <Checkbox
+        id={item.id ? `checkbox-${item.id}` : null}
         type="checkbox"
         color="primary"
         checked={checked}
