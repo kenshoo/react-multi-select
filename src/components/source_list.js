@@ -11,6 +11,7 @@ import Item from "./items/item";
 import { groupItems } from "./item_grouping_util";
 import withSearch from "./with_search";
 const SourceList = ({
+  searchRenderer,
   selectAllRenderer,
   messages,
   showSelectAll,
