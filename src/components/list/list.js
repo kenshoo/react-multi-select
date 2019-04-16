@@ -48,11 +48,10 @@ class InnerList extends PureComponent {
     }
   }
 
-  rowRenderer({ index, isScrolling, key, style }) {
+  rowRenderer({ index, key, style }) {
     const {
       renderer,
       itemHeight,
-      onClick,
       items,
       selectedIds,
       disabledItemsTooltip
