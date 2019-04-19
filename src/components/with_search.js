@@ -17,13 +17,13 @@ export default Component => ({
         onChange={filterItems}
         searchIcon={searchIcon}
         value={searchValue}
-        searchPlaceholder={messages.searchPlaceholder}
+        placeholder={messages.searchPlaceholder}
       />
       <Component {...others} />
     </Column>
   ) : (
-      <Column>
-        <Component {...others} />
-      </Column>
-    );
+    <Column>
+      <Component {...others} />
+    </Column>
+  );
 };

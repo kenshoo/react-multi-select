@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { List } from "react-virtualized/dist/commonjs/List";
 
@@ -33,33 +33,35 @@ const SourceList = ({
   const updatedFilteredItems = withGrouping
     ? groupItems(filteredItems)
     : filteredItems;
-  return [
-    showSelectAll && (
-      <SelectAllRenderer
-        height={selectAllHeight ? selectAllHeight : itemHeight}
-        onClick={selectAllItems}
-        isAllSelected={isAllSelected}
+  return (
+    <Fragment>
+      {showSelectAll && (
+        <SelectAllRenderer
+          height={selectAllHeight ? selectAllHeight : itemHeight}
+          onClick={selectAllItems}
+          isAllSelected={isAllSelected}
+          selectedIds={selectedIds}
+          renderer={itemRenderer}
+          selectAllMessage={messages.selectAllMessage}
+        />
+      )}
+      <ItemsList
+        ref={getList}
+        offset={1}
+        items={updatedFilteredItems}
+        itemHeight={itemHeight}
+        height={calculatedHeight}
+        onClick={selectItem}
         selectedIds={selectedIds}
         renderer={itemRenderer}
-        selectAllMessage={messages.selectAllMessage}
+        listRenderer={listRenderer}
+        noItemsRenderer={noItemsRenderer}
+        noItemsMessage={messages.noItemsMessage}
+        disabled={disabled}
+        disabledItemsTooltip={messages.disabledItemsTooltip}
       />
-    ),
-    <ItemsList
-      ref={getList}
-      offset={1}
-      items={updatedFilteredItems}
-      itemHeight={itemHeight}
-      height={calculatedHeight}
-      onClick={selectItem}
-      selectedIds={selectedIds}
-      renderer={itemRenderer}
-      listRenderer={listRenderer}
-      noItemsRenderer={noItemsRenderer}
-      noItemsMessage={messages.noItemsMessage}
-      disabled={disabled}
-      disabledItemsTooltip={messages.disabledItemsTooltip}
-    />
-  ];
+    </Fragment>
+  );
 };
 
 SourceList.propTypes = {
