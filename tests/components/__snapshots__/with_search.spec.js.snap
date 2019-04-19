@@ -1,255 +1,157 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`With search renderer search 1`] = `
-<div
-  className="column"
->
-  <div
-    className="search"
-  >
-    <input
-      className="input"
-      onChange={undefined}
-      placeholder="Search..."
-      type="text"
-    />
-    <div
-      className="icon"
-    >
-      <svg
-        fill="currentColor"
-        height="1em"
-        preserveAspectRatio="xMidYMid meet"
-        style={
-          Object {
-            "color": undefined,
-            "verticalAlign": "middle",
-          }
-        }
-        viewBox="0 0 40 40"
-        width="1em"
-      >
-        <g>
-          <path
-            d="m15.9 23.4c4.1 0 7.5-3.4 7.5-7.5s-3.4-7.5-7.5-7.5-7.5 3.3-7.5 7.5 3.3 7.5 7.5 7.5z m10 0l8.2 8.2-2.5 2.5-8.2-8.2v-1.4l-0.5-0.4c-1.9 1.6-4.4 2.5-7 2.5-6.1 0-10.9-4.7-10.9-10.7s4.8-10.9 10.9-10.9 10.7 4.8 10.7 10.9c0 2.6-0.9 5.1-2.5 7l0.4 0.5h1.4z"
-          />
-        </g>
-      </svg>
-    </div>
-  </div>
-  <div
-    className="column"
-  >
-    <div
-      className="item with_border"
-      onClick={undefined}
-      style={
+exports[`With search Case custom search component 1`] = `
+<Column>
+  <UserSearch
+    onChange={[Function]}
+    searchIcon={undefined}
+    searchPlaceholder="Search"
+    value="1"
+  />
+  <Unknown
+    calculatedHeight={50}
+    filteredItems={
+      Array [
         Object {
-          "height": 40,
-        }
-      }
-    >
-      <span
-        className="MuiButtonBase-root-16 MuiIconButton-root-10 MuiSwitchBase-root-6 MuiCheckbox-root-1 MuiCheckbox-colorPrimary-4"
-        onBlur={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role={undefined}
-        tabIndex={null}
-      >
-        <span
-          className="MuiIconButton-label-15"
-        >
-          <svg
-            aria-hidden="true"
-            className="MuiSvgIcon-root-19"
-            color={undefined}
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-            />
-          </svg>
-          <input
-            autoFocus={undefined}
-            checked={false}
-            className="MuiSwitchBase-input-9"
-            disabled={false}
-            id={null}
-            name={undefined}
-            onChange={[Function]}
-            readOnly={undefined}
-            required={undefined}
-            tabIndex={undefined}
-            type="checkbox"
-            value={undefined}
-          />
-        </span>
-        <span
-          className="MuiTouchRipple-root-26"
-        />
-      </span>
-      <div
-        className="label"
-      >
-        Select All
-      </div>
-    </div>
-    <div
-      className={undefined}
-      style={
+          "disabled": true,
+          "id": 1,
+          "label": "item-1",
+        },
         Object {
-          "height": 0,
-          "overflow": "visible",
-          "width": 0,
-        }
-      }
-    >
-      <div
-        aria-label="grid"
-        aria-readonly={true}
-        className="ReactVirtualized__Grid ReactVirtualized__List list"
-        id={undefined}
-        onScroll={[Function]}
-        role="grid"
-        style={
-          Object {
-            "WebkitOverflowScrolling": "touch",
-            "boxSizing": "border-box",
-            "direction": "ltr",
-            "height": 400,
-            "overflowX": "hidden",
-            "overflowY": "hidden",
-            "position": "relative",
-            "width": -1,
-            "willChange": "transform",
-          }
-        }
-        tabIndex={0}
-      />
-    </div>
-  </div>
-</div>
+          "disabled": false,
+          "id": 2,
+          "label": "item-2",
+        },
+        Object {
+          "id": 3,
+          "label": "item-3",
+          "withGrouping": true,
+        },
+        Object {
+          "id": 4,
+          "label": "item-4",
+        },
+      ]
+    }
+    getList={[Function]}
+    isAllSelected={false}
+    itemHeight={50}
+    itemRenderer={[Function]}
+    listRenderer={[Function]}
+    noItemsRenderer={false}
+    selectAllHeight={400}
+    selectAllItems={[Function]}
+    selectAllRenderer={true}
+    selectItem={[Function]}
+    selectedIds={
+      Array [
+        1,
+        2,
+      ]
+    }
+    showSelectAll={true}
+  />
+</Column>
 `;
 
-exports[`With search renderer user search 1`] = `
-<div
-  className="column"
->
-  <input
-    onChange={undefined}
-    placeholder="Search"
-    searchIcon={undefined}
-    type="text"
+exports[`With search Case default search component 1`] = `
+<Column>
+  <Search
+    onChange={[Function]}
+    searchIcon={[Function]}
+    searchPlaceholder="Search"
     value={undefined}
   />
-  <div
-    className="column"
-  >
-    <div
-      className="item with_border"
-      onClick={undefined}
-      style={
+  <Unknown
+    calculatedHeight={50}
+    filteredItems={
+      Array [
         Object {
-          "height": 40,
-        }
-      }
-    >
-      <span
-        className="MuiButtonBase-root-16 MuiIconButton-root-10 MuiSwitchBase-root-6 MuiCheckbox-root-1 MuiCheckbox-colorPrimary-4"
-        onBlur={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role={undefined}
-        tabIndex={null}
-      >
-        <span
-          className="MuiIconButton-label-15"
-        >
-          <svg
-            aria-hidden="true"
-            className="MuiSvgIcon-root-19"
-            color={undefined}
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-            />
-          </svg>
-          <input
-            autoFocus={undefined}
-            checked={false}
-            className="MuiSwitchBase-input-9"
-            disabled={false}
-            id={null}
-            name={undefined}
-            onChange={[Function]}
-            readOnly={undefined}
-            required={undefined}
-            tabIndex={undefined}
-            type="checkbox"
-            value={undefined}
-          />
-        </span>
-        <span
-          className="MuiTouchRipple-root-26"
-        />
-      </span>
-      <div
-        className="label"
-      >
-        Select All
-      </div>
-    </div>
-    <div
-      className={undefined}
-      style={
+          "disabled": true,
+          "id": 1,
+          "label": "item-1",
+        },
         Object {
-          "height": 0,
-          "overflow": "visible",
-          "width": 0,
-        }
-      }
-    >
-      <div
-        aria-label="grid"
-        aria-readonly={true}
-        className="ReactVirtualized__Grid ReactVirtualized__List list"
-        id={undefined}
-        onScroll={[Function]}
-        role="grid"
-        style={
-          Object {
-            "WebkitOverflowScrolling": "touch",
-            "boxSizing": "border-box",
-            "direction": "ltr",
-            "height": 400,
-            "overflowX": "hidden",
-            "overflowY": "hidden",
-            "position": "relative",
-            "width": -1,
-            "willChange": "transform",
-          }
-        }
-        tabIndex={0}
-      />
-    </div>
-  </div>
-</div>
+          "disabled": false,
+          "id": 2,
+          "label": "item-2",
+        },
+        Object {
+          "id": 3,
+          "label": "item-3",
+          "withGrouping": true,
+        },
+        Object {
+          "id": 4,
+          "label": "item-4",
+        },
+      ]
+    }
+    getList={[Function]}
+    isAllSelected={false}
+    itemHeight={50}
+    itemRenderer={[Function]}
+    listRenderer={[Function]}
+    noItemsRenderer={false}
+    selectAllHeight={400}
+    selectAllItems={[Function]}
+    selectAllRenderer={true}
+    selectItem={[Function]}
+    selectedIds={
+      Array [
+        1,
+        2,
+      ]
+    }
+    showSelectAll={true}
+  />
+</Column>
+`;
+
+exports[`With search Case show search false 1`] = `
+<Column>
+  <Unknown
+    calculatedHeight={50}
+    filteredItems={
+      Array [
+        Object {
+          "disabled": true,
+          "id": 1,
+          "label": "item-1",
+        },
+        Object {
+          "disabled": false,
+          "id": 2,
+          "label": "item-2",
+        },
+        Object {
+          "id": 3,
+          "label": "item-3",
+          "withGrouping": true,
+        },
+        Object {
+          "id": 4,
+          "label": "item-4",
+        },
+      ]
+    }
+    getList={[Function]}
+    isAllSelected={false}
+    itemHeight={50}
+    itemRenderer={[Function]}
+    listRenderer={[Function]}
+    noItemsRenderer={false}
+    selectAllHeight={400}
+    selectAllItems={[Function]}
+    selectAllRenderer={true}
+    selectItem={[Function]}
+    selectedIds={
+      Array [
+        1,
+        2,
+      ]
+    }
+    showSelectAll={true}
+  />
+</Column>
 `;

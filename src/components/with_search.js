@@ -1,7 +1,7 @@
 import React from "react";
 import Search from "./search/search";
 import Column from "./column/column";
-export default Component => ({
+const withSearch = Component => ({
   searchRenderer = Search,
   showSearch,
   filterItems,
@@ -17,7 +17,7 @@ export default Component => ({
         onChange={filterItems}
         searchIcon={searchIcon}
         value={searchValue}
-        placeholder={messages.searchPlaceholder}
+        searchPlaceholder={messages.searchPlaceholder}
       />
       <Component {...others} />
     </Column>
@@ -27,3 +27,4 @@ export default Component => ({
     </Column>
   );
 };
+export default withSearch;
