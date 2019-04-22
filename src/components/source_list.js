@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { List } from "react-virtualized/dist/commonjs/List";
-
+import Column from "./column/column";
 import ItemsList from "./list/items_list";
 import NoItems from "./items/no_items";
 import SelectAll from "./items/select_all";
@@ -27,14 +27,16 @@ const SourceList = ({
   noItemsRenderer,
   disabled,
   withGrouping,
-  listRenderer
+  listRenderer,
+  children
 }) => {
   const SelectAllRenderer = selectAllRenderer;
   const updatedFilteredItems = withGrouping
     ? groupItems(filteredItems)
     : filteredItems;
   return (
-    <Fragment>
+    <Column>
+      {children}
       {showSelectAll && (
         <SelectAllRenderer
           height={selectAllHeight ? selectAllHeight : itemHeight}
@@ -60,7 +62,7 @@ const SourceList = ({
         disabled={disabled}
         disabledItemsTooltip={messages.disabledItemsTooltip}
       />
-    </Fragment>
+    </Column>
   );
 };
 
@@ -103,5 +105,5 @@ SourceList.defaultProps = {
   disabled: false,
   withGrouping: false
 };
-
+export { SourceList };
 export default withSearch(SourceList);

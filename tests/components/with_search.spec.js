@@ -1,72 +1,61 @@
 import React from "react";
-
 import ShallowRenderer from "react-test-renderer/shallow";
 import withSearch from "../../src/components/with_search.js";
-import SourceList from "../../src/components/source_list";
 
-const ListComponent = withSearch(SourceList);
+const CustomComponent = props => <div {...props} />;
+const ListComponent = withSearch(CustomComponent);
 const messages = { searchPlaceholder: "Search" };
 const UserSearch = props => (
   <input type="text" placeholder={messages.searchPlaceholder} {...props} />
 );
 
-const testParameters = {
-  selectAllRenderer: true,
-  noItemsRenderer: false,
-  showSelectAll: true,
-  selectItem: () => {},
-  selectAllItems: () => {},
-  itemHeight: 50,
-  isAllSelected: false,
-  itemRenderer: () => <span>Test</span>,
-  filterItems: () => {},
-  selectAllHeight: 400,
-  calculatedHeight: 50,
-  filteredItems: [
-    { id: 1, label: "item-1", disabled: true },
-    { id: 2, label: "item-2", disabled: false },
-    { id: 3, label: "item-3", withGrouping: true },
-    { id: 4, label: "item-4" }
-  ],
-  selectedIds: [1, 2],
-  getList: () => {},
-  listRenderer: () => {}
-};
-
 describe("With search", () => {
   test("Case default search component", () => {
     const renderer = new ShallowRenderer();
+    const filterItems = jest.fn();
+    const filteredItems = [{ id: 1, label: "item-1" }];
+
     const component = renderer.render(
       <ListComponent
         showSearch={true}
+        searchValue="1"
+        searchIcon={<img src="custom_icon" alt="" />}
         messages={messages}
-        {...testParameters}
+        filterItems={filterItems}
+        filteredItems={filteredItems}
       />
     );
     expect(component).toMatchSnapshot();
   });
   test("Case custom search component", () => {
-    const searchValue = "1";
     const renderer = new ShallowRenderer();
-
+    const filterItems = jest.fn();
+    const filteredItems = [{ id: 11, label: "item-11" }];
     const component = renderer.render(
       <ListComponent
-        searchRenderer={UserSearch}
         showSearch={true}
+        searchRenderer={UserSearch}
+        searchIcon={<img src="custom_icon" alt="" />}
+        searchValue="11"
         messages={messages}
-        searchValue={searchValue}
-        {...testParameters}
+        filteredItems={filteredItems}
+        filterItems={filterItems}
       />
     );
     expect(component).toMatchSnapshot();
   });
-  test("Case show search false", () => {
+
+  test("Case not search component", () => {
     const renderer = new ShallowRenderer();
+    const filterItems = jest.fn();
     const component = renderer.render(
       <ListComponent
         showSearch={false}
+        searchRenderer={UserSearch}
+        searchIcon={<img src="custom_icon" alt="" />}
+        searchValue="11"
         messages={messages}
-        {...testParameters}
+        filterItems={filterItems}
       />
     );
     expect(component).toMatchSnapshot();

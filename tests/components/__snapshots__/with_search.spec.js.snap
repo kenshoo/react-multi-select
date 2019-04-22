@@ -1,157 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`With search Case custom search component 1`] = `
-<Column>
+<CustomComponent
+  filteredItems={
+    Array [
+      Object {
+        "id": 11,
+        "label": "item-11",
+      },
+    ]
+  }
+>
   <UserSearch
-    onChange={[Function]}
-    searchIcon={undefined}
+    onChange={[MockFunction]}
+    searchIcon={
+      <img
+        alt=""
+        src="custom_icon"
+      />
+    }
     searchPlaceholder="Search"
-    value="1"
+    value="11"
   />
-  <Unknown
-    calculatedHeight={50}
-    filteredItems={
-      Array [
-        Object {
-          "disabled": true,
-          "id": 1,
-          "label": "item-1",
-        },
-        Object {
-          "disabled": false,
-          "id": 2,
-          "label": "item-2",
-        },
-        Object {
-          "id": 3,
-          "label": "item-3",
-          "withGrouping": true,
-        },
-        Object {
-          "id": 4,
-          "label": "item-4",
-        },
-      ]
-    }
-    getList={[Function]}
-    isAllSelected={false}
-    itemHeight={50}
-    itemRenderer={[Function]}
-    listRenderer={[Function]}
-    noItemsRenderer={false}
-    selectAllHeight={400}
-    selectAllItems={[Function]}
-    selectAllRenderer={true}
-    selectItem={[Function]}
-    selectedIds={
-      Array [
-        1,
-        2,
-      ]
-    }
-    showSelectAll={true}
-  />
-</Column>
+</CustomComponent>
 `;
 
 exports[`With search Case default search component 1`] = `
-<Column>
+<CustomComponent
+  filteredItems={
+    Array [
+      Object {
+        "id": 1,
+        "label": "item-1",
+      },
+    ]
+  }
+>
   <Search
-    onChange={[Function]}
-    searchIcon={[Function]}
+    onChange={[MockFunction]}
+    searchIcon={
+      <img
+        alt=""
+        src="custom_icon"
+      />
+    }
     searchPlaceholder="Search"
-    value={undefined}
+    value="1"
   />
-  <Unknown
-    calculatedHeight={50}
-    filteredItems={
-      Array [
-        Object {
-          "disabled": true,
-          "id": 1,
-          "label": "item-1",
-        },
-        Object {
-          "disabled": false,
-          "id": 2,
-          "label": "item-2",
-        },
-        Object {
-          "id": 3,
-          "label": "item-3",
-          "withGrouping": true,
-        },
-        Object {
-          "id": 4,
-          "label": "item-4",
-        },
-      ]
-    }
-    getList={[Function]}
-    isAllSelected={false}
-    itemHeight={50}
-    itemRenderer={[Function]}
-    listRenderer={[Function]}
-    noItemsRenderer={false}
-    selectAllHeight={400}
-    selectAllItems={[Function]}
-    selectAllRenderer={true}
-    selectItem={[Function]}
-    selectedIds={
-      Array [
-        1,
-        2,
-      ]
-    }
-    showSelectAll={true}
-  />
-</Column>
+</CustomComponent>
 `;
 
-exports[`With search Case show search false 1`] = `
-<Column>
-  <Unknown
-    calculatedHeight={50}
-    filteredItems={
-      Array [
-        Object {
-          "disabled": true,
-          "id": 1,
-          "label": "item-1",
-        },
-        Object {
-          "disabled": false,
-          "id": 2,
-          "label": "item-2",
-        },
-        Object {
-          "id": 3,
-          "label": "item-3",
-          "withGrouping": true,
-        },
-        Object {
-          "id": 4,
-          "label": "item-4",
-        },
-      ]
-    }
-    getList={[Function]}
-    isAllSelected={false}
-    itemHeight={50}
-    itemRenderer={[Function]}
-    listRenderer={[Function]}
-    noItemsRenderer={false}
-    selectAllHeight={400}
-    selectAllItems={[Function]}
-    selectAllRenderer={true}
-    selectItem={[Function]}
-    selectedIds={
-      Array [
-        1,
-        2,
-      ]
-    }
-    showSelectAll={true}
-  />
-</Column>
-`;
+exports[`With search Case not search component 1`] = `<CustomComponent />`;

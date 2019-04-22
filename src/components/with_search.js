@@ -1,7 +1,7 @@
 import React from "react";
 import Search from "./search/search";
-import Column from "./column/column";
-const withSearch = Component => ({
+
+const withSearch = WrappedComponent => ({
   searchRenderer = Search,
   showSearch,
   filterItems,
@@ -11,20 +11,17 @@ const withSearch = Component => ({
   ...others
 }) => {
   const SearchRenderer = searchRenderer;
-  return showSearch ? (
-    <Column>
-      <SearchRenderer
-        onChange={filterItems}
-        searchIcon={searchIcon}
-        value={searchValue}
-        searchPlaceholder={messages.searchPlaceholder}
-      />
-      <Component {...others} />
-    </Column>
-  ) : (
-    <Column>
-      <Component {...others} />
-    </Column>
+  return (
+    <WrappedComponent {...others}>
+      {showSearch ? (
+        <SearchRenderer
+          onChange={filterItems}
+          searchIcon={searchIcon}
+          value={searchValue}
+          searchPlaceholder={messages.searchPlaceholder}
+        />
+      ) : null}
+    </WrappedComponent>
   );
 };
 export default withSearch;

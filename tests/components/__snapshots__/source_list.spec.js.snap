@@ -2,412 +2,563 @@
 
 exports[`SourceList can remove search 1`] = `
 <Column>
-  <SourceList
-    calculatedHeight={400}
-    disabled={false}
-    filteredItems={Array []}
+  <SelectAll
+    height={40}
     isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    listRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectAllRenderer={[Function]}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
     selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
+  />
+  <ItemsList
+    disabled={false}
+    disabledItemsTooltip={undefined}
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    listRenderer={[Function]}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
   />
 </Column>
 `;
 
 exports[`SourceList can remove select all 1`] = `
 <Column>
-  <SourceList
-    calculatedHeight={400}
+  <ItemsList
     disabled={false}
-    filteredItems={Array []}
-    isAllSelected={false}
+    disabledItemsTooltip={undefined}
+    height={400}
     itemHeight={40}
-    itemRenderer={[Function]}
+    items={Array []}
     listRenderer={[Function]}
-    messages={Object {}}
+    noItemsMessage={undefined}
     noItemsRenderer={[Function]}
-    selectAllRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
     selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={false}
-    withGrouping={false}
   />
 </Column>
 `;
 
 exports[`SourceList custom itemRenderer 1`] = `
 <Column>
-  <SourceList
-    calculatedHeight={400}
-    disabled={false}
-    filteredItems={Array []}
+  <SelectAll
+    height={40}
     isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[MockFunction mockedComponent]}
-    listRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectAllRenderer={[Function]}
+    onClick={undefined}
+    renderer={[MockFunction mockedComponent]}
+    selectAllMessage="Select All"
     selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
+  />
+  <ItemsList
+    disabled={false}
+    disabledItemsTooltip={undefined}
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    listRenderer={[Function]}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[MockFunction mockedComponent]}
+    selectedIds={Array []}
   />
 </Column>
 `;
 
 exports[`SourceList custom messages 1`] = `
 <Column>
-  <SourceList
-    calculatedHeight={400}
-    disabled={false}
-    filteredItems={Array []}
+  <SelectAll
+    height={40}
     isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    listRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectAllRenderer={[Function]}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Check all"
     selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
+  />
+  <ItemsList
+    disabled={false}
+    disabledItemsTooltip={undefined}
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    listRenderer={[Function]}
+    noItemsMessage="No entries available..."
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
   />
 </Column>
 `;
 
 exports[`SourceList custom noItemsRenderer 1`] = `
 <Column>
-  <SourceList
-    calculatedHeight={400}
-    disabled={false}
-    filteredItems={Array []}
+  <SelectAll
+    height={40}
     isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    listRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[MockFunction mockedComponent]}
-    selectAllRenderer={[Function]}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
     selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
+  />
+  <ItemsList
+    disabled={false}
+    disabledItemsTooltip={undefined}
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    listRenderer={[Function]}
+    noItemsMessage={undefined}
+    noItemsRenderer={[MockFunction mockedComponent]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
   />
 </Column>
 `;
 
 exports[`SourceList custom searchRenderer 1`] = `
 <Column>
-  <SourceList
-    calculatedHeight={400}
-    disabled={false}
-    filteredItems={Array []}
+  <SelectAll
+    height={40}
     isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    listRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectAllRenderer={[Function]}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
     selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
+  />
+  <ItemsList
+    disabled={false}
+    disabledItemsTooltip={undefined}
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    listRenderer={[Function]}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
   />
 </Column>
 `;
 
 exports[`SourceList custom selectAllRenderer 1`] = `
 <Column>
-  <SourceList
-    calculatedHeight={400}
-    disabled={false}
-    filteredItems={Array []}
+  <mockConstructor
+    height={40}
     isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    listRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectAllRenderer={[MockFunction mockedComponent]}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage={undefined}
     selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
+  />
+  <ItemsList
+    disabled={false}
+    disabledItemsTooltip={undefined}
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    listRenderer={[Function]}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
   />
 </Column>
 `;
 
 exports[`SourceList default snapshot 1`] = `
 <Column>
-  <SourceList
-    calculatedHeight={400}
-    disabled={false}
-    filteredItems={Array []}
+  <SelectAll
+    height={40}
     isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    listRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectAllRenderer={[Function]}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
     selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
+  />
+  <ItemsList
+    disabled={false}
+    disabledItemsTooltip={undefined}
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    listRenderer={[Function]}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
   />
 </Column>
 `;
 
 exports[`SourceList passed filterItems 1`] = `
 <Column>
-  <SourceList
-    calculatedHeight={400}
-    disabled={false}
-    filteredItems={Array []}
+  <SelectAll
+    height={40}
     isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    listRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectAllItems={[MockFunction filterItems]}
-    selectAllRenderer={[Function]}
+    onClick={[MockFunction filterItems]}
+    renderer={[Function]}
+    selectAllMessage="Select All"
     selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
+  />
+  <ItemsList
+    disabled={false}
+    disabledItemsTooltip={undefined}
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    listRenderer={[Function]}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
   />
 </Column>
 `;
 
 exports[`SourceList passed filteredItems with group 1`] = `
 <Column>
-  <SourceList
-    calculatedHeight={400}
+  <SelectAll
+    height={40}
+    isAllSelected={false}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
+    selectedIds={Array []}
+  />
+  <ItemsList
     disabled={false}
-    filteredItems={
+    disabledItemsTooltip={undefined}
+    height={400}
+    itemHeight={40}
+    items={
       Array [
+        Object {
+          "disabled": true,
+          "id": "group1",
+          "isGroup": true,
+          "label": "group1",
+        },
         Object {
           "group": "group1",
           "id": 1,
           "label": "item1",
         },
         Object {
-          "group": "group2",
-          "id": 2,
-          "label": "item2",
-        },
-        Object {
           "group": "group1",
           "id": 3,
           "label": "item3",
         },
+        Object {
+          "disabled": true,
+          "id": "group2",
+          "isGroup": true,
+          "label": "group2",
+        },
+        Object {
+          "group": "group2",
+          "id": 2,
+          "label": "item2",
+        },
       ]
     }
-    isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
     listRenderer={[Function]}
-    messages={Object {}}
+    noItemsMessage={undefined}
     noItemsRenderer={[Function]}
-    selectAllRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
     selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={true}
   />
 </Column>
 `;
 
 exports[`SourceList passed selectAllItems 1`] = `
 <Column>
-  <SourceList
-    calculatedHeight={400}
-    disabled={false}
-    filteredItems={Array []}
+  <SelectAll
+    height={40}
     isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    listRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectAllItems={[MockFunction selectAllItems]}
-    selectAllRenderer={[Function]}
+    onClick={[MockFunction selectAllItems]}
+    renderer={[Function]}
+    selectAllMessage="Select All"
     selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
+  />
+  <ItemsList
+    disabled={false}
+    disabledItemsTooltip={undefined}
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    listRenderer={[Function]}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
   />
 </Column>
 `;
 
 exports[`SourceList passed selectItem 1`] = `
 <Column>
-  <SourceList
-    calculatedHeight={400}
-    disabled={false}
-    filteredItems={Array []}
+  <SelectAll
+    height={40}
     isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    listRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectAllItems={[MockFunction selectItem]}
-    selectAllRenderer={[Function]}
+    onClick={[MockFunction selectItem]}
+    renderer={[Function]}
+    selectAllMessage="Select All"
     selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
+  />
+  <ItemsList
+    disabled={false}
+    disabledItemsTooltip={undefined}
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    listRenderer={[Function]}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
   />
 </Column>
 `;
 
 exports[`SourceList passed selectedIds 1`] = `
 <Column>
-  <SourceList
-    calculatedHeight={400}
-    disabled={false}
-    filteredItems={Array []}
+  <SelectAll
+    height={40}
     isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    listRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectAllRenderer={[Function]}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
     selectedIds={
       Array [
         1,
         2,
       ]
     }
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
+  />
+  <ItemsList
+    disabled={false}
+    disabledItemsTooltip={undefined}
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    listRenderer={[Function]}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={
+      Array [
+        1,
+        2,
+      ]
+    }
   />
 </Column>
 `;
 
 exports[`SourceList passed selectedItems 1`] = `
 <Column>
-  <SourceList
-    calculatedHeight={400}
-    disabled={false}
-    filteredItems={Array []}
+  <SelectAll
+    height={40}
     isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    listRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectAllRenderer={[Function]}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
     selectedIds={Array []}
-    selectedItems={
-      Array [
-        1,
-        2,
-      ]
-    }
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
+  />
+  <ItemsList
+    disabled={false}
+    disabledItemsTooltip={undefined}
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    listRenderer={[Function]}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
   />
 </Column>
 `;
 
+exports[`SourceList passed source_list wrapped up to HOC withSearch 1`] = `
+<SourceList
+  calculatedHeight={400}
+  disabled={false}
+  filteredItems={
+    Array [
+      Object {
+        "group": "group1",
+        "id": 1,
+        "label": "item1",
+      },
+    ]
+  }
+  isAllSelected={false}
+  itemHeight={10}
+  itemRenderer={[MockFunction mockedComponent]}
+  listRenderer={[Function]}
+  messages={Object {}}
+  noItemsRenderer={[Function]}
+  selectAllHeight={60}
+  selectAllItems={[MockFunction selectAllItems]}
+  selectAllRenderer={[Function]}
+  selectedIds={
+    Array [
+      1,
+    ]
+  }
+  selectedItems={
+    Array [
+      1,
+    ]
+  }
+  showSearch={true}
+  showSelectAll={true}
+  withGrouping={true}
+>
+  <Search
+    onChange={[MockFunction filterItems]}
+    searchIcon={[Function]}
+    searchPlaceholder="Find..."
+    value="1"
+  />
+</SourceList>
+`;
+
 exports[`SourceList show max selection tooltip 1`] = `
 <Column>
-  <SourceList
-    calculatedHeight={400}
-    disabled={false}
-    filteredItems={Array []}
+  <SelectAll
+    height={40}
     isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    listRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectAllRenderer={[Function]}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
     selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
+  />
+  <ItemsList
+    disabled={false}
+    disabledItemsTooltip="You can select up to 4 items"
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    listRenderer={[Function]}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
   />
 </Column>
 `;
 
 exports[`SourceList will pass itemHeight 1`] = `
 <Column>
-  <SourceList
-    calculatedHeight={400}
-    disabled={false}
-    filteredItems={Array []}
+  <SelectAll
+    height={10}
     isAllSelected={false}
-    itemHeight={10}
-    itemRenderer={[Function]}
-    listRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectAllRenderer={[Function]}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
     selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
+  />
+  <ItemsList
+    disabled={false}
+    disabledItemsTooltip={undefined}
+    height={400}
+    itemHeight={10}
+    items={Array []}
+    listRenderer={[Function]}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
   />
 </Column>
 `;
 
 exports[`SourceList will pass selectAllHeight 1`] = `
 <Column>
-  <SourceList
-    calculatedHeight={400}
-    disabled={false}
-    filteredItems={Array []}
+  <SelectAll
+    height={60}
     isAllSelected={false}
-    itemHeight={10}
-    itemRenderer={[Function]}
-    listRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectAllHeight={60}
-    selectAllRenderer={[Function]}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
     selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
+  />
+  <ItemsList
+    disabled={false}
+    disabledItemsTooltip={undefined}
+    height={400}
+    itemHeight={10}
+    items={Array []}
+    listRenderer={[Function]}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
   />
 </Column>
 `;
 
 exports[`SourceList will pass selectAllHeight without itemHeight 1`] = `
 <Column>
-  <SourceList
-    calculatedHeight={400}
-    disabled={false}
-    filteredItems={Array []}
+  <SelectAll
+    height={60}
     isAllSelected={false}
-    itemHeight={40}
-    itemRenderer={[Function]}
-    listRenderer={[Function]}
-    messages={Object {}}
-    noItemsRenderer={[Function]}
-    selectAllHeight={60}
-    selectAllRenderer={[Function]}
+    onClick={undefined}
+    renderer={[Function]}
+    selectAllMessage="Select All"
     selectedIds={Array []}
-    showSearch={true}
-    showSelectAll={true}
-    withGrouping={false}
+  />
+  <ItemsList
+    disabled={false}
+    disabledItemsTooltip={undefined}
+    height={400}
+    itemHeight={40}
+    items={Array []}
+    listRenderer={[Function]}
+    noItemsMessage={undefined}
+    noItemsRenderer={[Function]}
+    offset={1}
+    onClick={undefined}
+    renderer={[Function]}
+    selectedIds={Array []}
   />
 </Column>
 `;
