@@ -1,7 +1,7 @@
 import React from "react";
 import ShallowRenderer from "react-test-renderer/shallow";
 
-import { SourceList } from "../../src/components/source_list";
+import WithSourceList, { SourceList } from "../../src/components/source_list";
 
 const CustomComponent = jest
   .fn(() => <div>Custom Component</div>)
