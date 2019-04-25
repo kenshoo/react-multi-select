@@ -1,21 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { List } from "react-virtualized/dist/commonjs/List";
-
 import Column from "./column/column";
 import ItemsList from "./list/items_list";
 import NoItems from "./items/no_items";
-import Search from "./search/search";
 import SelectAll from "./items/select_all";
 import Item from "./items/item";
+
 import { groupItems } from "./item_grouping_util";
+import withSearch from "./with_search";
 
 const SourceList = ({
-  searchRenderer,
   selectAllRenderer,
-  showSearch,
-  filterItems,
-  searchIcon,
   messages,
   showSelectAll,
   itemHeight,
@@ -30,25 +26,17 @@ const SourceList = ({
   selectItem,
   noItemsRenderer,
   disabled,
-  searchValue,
   withGrouping,
-  listRenderer
+  listRenderer,
+  children
 }) => {
-  const SearchRenderer = searchRenderer;
   const SelectAllRenderer = selectAllRenderer;
   const updatedFilteredItems = withGrouping
     ? groupItems(filteredItems)
     : filteredItems;
   return (
     <Column>
-      {showSearch && (
-        <SearchRenderer
-          onChange={filterItems}
-          searchIcon={searchIcon}
-          value={searchValue}
-          searchPlaceholder={messages.searchPlaceholder}
-        />
-      )}
+      {children}
       {showSelectAll && (
         <SelectAllRenderer
           height={selectAllHeight ? selectAllHeight : itemHeight}
@@ -79,7 +67,6 @@ const SourceList = ({
 };
 
 SourceList.propTypes = {
-  searchRenderer: PropTypes.any,
   selectAllRenderer: PropTypes.any,
   noItemsRenderer: PropTypes.any,
   itemRenderer: PropTypes.any,
@@ -103,7 +90,6 @@ SourceList.propTypes = {
 };
 
 SourceList.defaultProps = {
-  searchRenderer: Search,
   selectAllRenderer: SelectAll,
   noItemsRenderer: NoItems,
   itemRenderer: Item,
@@ -119,5 +105,5 @@ SourceList.defaultProps = {
   disabled: false,
   withGrouping: false
 };
-
-export default SourceList;
+export { SourceList };
+export default withSearch(SourceList);

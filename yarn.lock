@@ -6448,6 +6448,11 @@ json-stable-stringify@^1.0.1:
   dependencies:
     jsonify "~0.0.0"
 
+json-stringify-pretty-compact@^1.0.1:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/json-stringify-pretty-compact/-/json-stringify-pretty-compact-1.2.0.tgz#0bc316b5e6831c07041fc35612487fb4e9ab98b8"
+  integrity sha512-/11Pj1OyX814QMKO7K8l85SHPTr/KsFxHp8GE2zVa0BtJgGimDjXHfM3FhC7keQdWDea7+nXf+f1de7ATZcZkQ==
+
 json-stringify-safe@^5.0.1, json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
@@ -8900,6 +8905,14 @@ react-element-to-jsx-string@^5.0.0:
     stringify-object "2.4.0"
     traverse "^0.6.6"
 
+react-element-to-string@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-element-to-string/-/react-element-to-string-1.0.2.tgz#0262f2ce0ffa8b518ea3597bc3a8dc26e0551a47"
+  integrity sha1-AmLyzg/6i1GOo1l7w6jcJuBVGkc=
+  dependencies:
+    indent-string "^2.1.0"
+    json-stringify-pretty-compact "^1.0.1"
+
 react-error-overlay@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.1.tgz#417addb0814a90f3a7082eacba7cee588d00da89"
@@ -9860,6 +9873,16 @@ shellwords@^0.1.1:
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
+
+skin-deep@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/skin-deep/-/skin-deep-1.2.0.tgz#fe2c432368bd97281f1b3e0958245424fa5a7a5d"
+  integrity sha512-2TFImKMDE4bS4hm8hdpjTf4+0RXAUxK0jjQRKPrf4qypAk9zDcEldIcxdQNMUdhsJhWwFrENz7jGu5Gu/IWbbQ==
+  dependencies:
+    escape-string-regexp "^1.0.5"
+    is-subset "^0.1.1"
+    react-element-to-string "^1.0.2"
+    semver "^5.3.0"
 
 slash@^1.0.0:
   version "1.0.0"

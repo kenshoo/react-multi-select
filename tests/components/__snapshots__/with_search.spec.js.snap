@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`With search Case custom search component 1`] = `
+<CustomComponent
+  filteredItems={
+    Array [
+      Object {
+        "id": 11,
+        "label": "item-11",
+      },
+    ]
+  }
+>
+  <UserSearch
+    onChange={[MockFunction]}
+    searchIcon={
+      <img
+        alt=""
+        src="custom_icon"
+      />
+    }
+    searchPlaceholder="Search"
+    value="11"
+  />
+</CustomComponent>
+`;
+
+exports[`With search Case default search component 1`] = `
+<CustomComponent
+  filteredItems={
+    Array [
+      Object {
+        "id": 1,
+        "label": "item-1",
+      },
+    ]
+  }
+>
+  <Search
+    onChange={[MockFunction]}
+    searchIcon={
+      <img
+        alt=""
+        src="custom_icon"
+      />
+    }
+    searchPlaceholder="Search"
+    value="1"
+  />
+</CustomComponent>
+`;
+
+exports[`With search Case not search component 1`] = `<CustomComponent />`;
