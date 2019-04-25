@@ -4346,7 +4346,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": undefined,
   "selectAllItems": undefined,
   "selectAllRenderer": [Function],
@@ -4365,6 +4364,7 @@ Object {
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />,
   "disabled": false,
   "filteredItems": Array [],
@@ -4375,7 +4375,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": undefined,
   "selectAllItems": undefined,
   "selectAllRenderer": [Function],
@@ -4394,6 +4393,7 @@ Object {
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />,
   "disabled": false,
   "filteredItems": Array [],
@@ -4404,7 +4404,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": undefined,
   "selectAllItems": undefined,
   "selectAllRenderer": [Function],
@@ -4423,6 +4422,7 @@ Object {
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />,
   "disabled": false,
   "filteredItems": Array [],
@@ -4433,7 +4433,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": undefined,
   "selectAllItems": undefined,
   "selectAllRenderer": [Function],
@@ -4452,6 +4451,7 @@ Object {
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />,
   "disabled": false,
   "filteredItems": Array [],
@@ -4462,7 +4462,6 @@ Object {
   "listRenderer": [MockFunction mockedComponent],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": undefined,
   "selectAllItems": undefined,
   "selectAllRenderer": [Function],
@@ -4481,6 +4480,7 @@ Object {
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Find..."
+    value={undefined}
   />,
   "disabled": false,
   "filteredItems": Array [],
@@ -4491,7 +4491,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": undefined,
   "selectAllItems": undefined,
   "selectAllRenderer": [Function],
@@ -4510,6 +4509,7 @@ Object {
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />,
   "disabled": false,
   "filteredItems": Array [],
@@ -4520,7 +4520,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [MockFunction mockedComponent],
-  "searchValue": undefined,
   "selectAllHeight": undefined,
   "selectAllItems": undefined,
   "selectAllRenderer": [Function],
@@ -4539,6 +4538,7 @@ Object {
     onChange={undefined}
     searchIcon={undefined}
     searchPlaceholder={undefined}
+    value={undefined}
   />,
   "disabled": false,
   "filteredItems": Array [],
@@ -4549,7 +4549,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": undefined,
   "selectAllItems": undefined,
   "selectAllRenderer": [Function],
@@ -4568,6 +4567,7 @@ Object {
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />,
   "disabled": false,
   "filteredItems": Array [],
@@ -4578,7 +4578,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": undefined,
   "selectAllItems": undefined,
   "selectAllRenderer": [MockFunction mockedComponent],
@@ -4597,6 +4596,7 @@ Object {
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />,
   "disabled": false,
   "filteredItems": Array [],
@@ -4607,7 +4607,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": undefined,
   "selectAllItems": undefined,
   "selectAllRenderer": [Function],
@@ -4626,6 +4625,7 @@ Object {
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />,
   "disabled": false,
   "filteredItems": Array [],
@@ -4636,7 +4636,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": undefined,
   "selectAllItems": undefined,
   "selectAllRenderer": [Function],
@@ -4658,6 +4657,7 @@ Object {
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />,
   "disabled": false,
   "filteredItems": Array [],
@@ -4668,7 +4668,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": undefined,
   "selectAllItems": undefined,
   "selectAllRenderer": [Function],
@@ -4687,6 +4686,7 @@ Object {
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />,
   "disabled": false,
   "filteredItems": Array [],
@@ -4697,7 +4697,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": undefined,
   "selectAllItems": [MockFunction filterItems],
   "selectAllRenderer": [Function],
@@ -4716,6 +4715,7 @@ Object {
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />,
   "disabled": false,
   "filteredItems": Array [],
@@ -4726,7 +4726,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": undefined,
   "selectAllItems": [MockFunction selectAllItems],
   "selectAllRenderer": [Function],
@@ -4745,6 +4744,7 @@ Object {
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />,
   "disabled": false,
   "filteredItems": Array [],
@@ -4755,7 +4755,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": undefined,
   "selectAllItems": [MockFunction selectItem],
   "selectAllRenderer": [Function],
@@ -4774,6 +4773,7 @@ Object {
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />,
   "disabled": false,
   "filteredItems": Array [],
@@ -4784,7 +4784,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": undefined,
   "selectAllItems": undefined,
   "selectAllRenderer": [Function],
@@ -4803,6 +4802,7 @@ Object {
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />,
   "disabled": false,
   "filteredItems": Array [],
@@ -4813,7 +4813,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": undefined,
   "selectAllItems": undefined,
   "selectAllRenderer": [Function],
@@ -4835,6 +4834,7 @@ Object {
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />,
   "disabled": false,
   "filteredItems": Array [],
@@ -4845,7 +4845,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": undefined,
   "selectAllItems": undefined,
   "selectAllRenderer": [Function],
@@ -4864,6 +4863,7 @@ Object {
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />,
   "disabled": true,
   "filteredItems": Array [],
@@ -4874,7 +4874,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": undefined,
   "selectAllItems": undefined,
   "selectAllRenderer": [Function],
@@ -4896,6 +4895,7 @@ Object {
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />,
   "disabled": false,
   "filteredItems": Array [],
@@ -4906,7 +4906,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": undefined,
   "selectAllItems": undefined,
   "selectAllRenderer": [Function],
@@ -4925,6 +4924,7 @@ Object {
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />,
   "disabled": false,
   "filteredItems": Array [],
@@ -4935,7 +4935,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": 40,
   "selectAllItems": undefined,
   "selectAllRenderer": [Function],
@@ -4954,6 +4953,7 @@ Object {
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />,
   "disabled": false,
   "filteredItems": Array [],
@@ -4964,7 +4964,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": 20,
   "selectAllItems": undefined,
   "selectAllRenderer": [Function],
@@ -4983,6 +4982,7 @@ Object {
     onChange={undefined}
     searchIcon={[Function]}
     searchPlaceholder="Search..."
+    value={undefined}
   />,
   "disabled": false,
   "filteredItems": Array [],
@@ -4993,7 +4993,6 @@ Object {
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
-  "searchValue": undefined,
   "selectAllHeight": undefined,
   "selectAllItems": undefined,
   "selectAllRenderer": [Function],
