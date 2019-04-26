@@ -442,7 +442,6 @@ exports[`SourceList passed source_list wrapped up to HOC withSearch 1`] = `
       1,
     ]
   }
-  showSearch={true}
   showSelectAll={true}
   withGrouping={true}
 >

@@ -10,7 +10,6 @@ exports[`With search Case custom search component 1`] = `
       },
     ]
   }
-  showSearch={true}
 >
   <UserSearch
     onChange={[MockFunction]}
@@ -36,7 +35,6 @@ exports[`With search Case default search component 1`] = `
       },
     ]
   }
-  showSearch={true}
 >
   <Search
     onChange={[MockFunction]}
@@ -52,8 +50,4 @@ exports[`With search Case default search component 1`] = `
 </CustomComponent>
 `;
 
-exports[`With search Case not search component 1`] = `
-<CustomComponent
-  showSearch={false}
-/>
-`;
+exports[`With search Case not search component 1`] = `<CustomComponent />`;

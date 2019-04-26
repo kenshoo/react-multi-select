@@ -15,23 +15,19 @@ const DestinationList = ({
   selectedIds,
   clearAll,
   messages,
-  selectedItems,
   itemHeight,
   height,
   unselectItems,
   selectedItemRenderer,
   noItemsRenderer,
   withGrouping,
-  showSearch,
   filteredItems,
   children
 }) => {
   const SelectionStatusRenderer = selectionStatusRenderer;
-  const filteredSelectedItemsList = showSearch ? filteredItems : selectedItems;
-
   const updatedSelectedItems = withGrouping
-    ? groupItems(filteredSelectedItemsList)
-    : filteredSelectedItemsList;
+    ? groupItems(filteredItems)
+    : filteredItems;
 
   return (
     <Column>
@@ -61,14 +57,12 @@ DestinationList.propTypes = {
   selectedIds: PropTypes.arrayOf(PropTypes.number),
   clearAll: PropTypes.func,
   messages: PropTypes.object,
-  selectedItems: PropTypes.array,
   itemHeight: PropTypes.number,
   height: PropTypes.number,
   unselectItems: PropTypes.func,
   selectedItemRenderer: PropTypes.any,
   noItemsRenderer: PropTypes.any,
   withGrouping: PropTypes.bool,
-  showSearch: PropTypes.bool,
   filteredItems: PropTypes.arrayOf(PropTypes.object),
   children: PropTypes.node
 };
@@ -78,13 +72,11 @@ DestinationList.defaultProps = {
   selectionStatusRenderer: SelectionStatus,
   selectedIds: [],
   messages: {},
-  selectedItems: [],
   itemHeight: 40,
   height: 400,
   selectedItemRenderer: SelectedItem,
   noItemsRenderer: NoItems,
   withGrouping: false,
-  showSearch: false,
   filteredItems: []
 };
 

@@ -12,7 +12,7 @@ const withSearch = WrappedComponent => ({
 }) => {
   const SearchRenderer = searchRenderer;
   return (
-    <WrappedComponent {...others} showSearch={showSearch}>
+    <WrappedComponent {...others}>
       {showSearch && (
         <SearchRenderer
           onChange={filterItems}

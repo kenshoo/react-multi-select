@@ -10,9 +10,7 @@ exports[`DestinationList Case disabled search with destination list 1`] = `
   noItemsRenderer={[Function]}
   selectedIds={Array []}
   selectedItemRenderer={[Function]}
-  selectedItems={Array []}
   selectionStatusRenderer={[Function]}
-  showSearch={false}
   withGrouping={false}
 />
 `;
@@ -27,9 +25,7 @@ exports[`DestinationList Case include search with destination list 1`] = `
   noItemsRenderer={[Function]}
   selectedIds={Array []}
   selectedItemRenderer={[Function]}
-  selectedItems={Array []}
   selectionStatusRenderer={[Function]}
-  showSearch={true}
   withGrouping={false}
 >
   <Search
@@ -227,12 +223,7 @@ exports[`DestinationList passed selectedItems 1`] = `
     disabled={false}
     height={355}
     itemHeight={40}
-    items={
-      Array [
-        1,
-        2,
-      ]
-    }
+    items={Array []}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={0}
@@ -256,37 +247,7 @@ exports[`DestinationList passed selectedItems with grouping 1`] = `
     disabled={false}
     height={355}
     itemHeight={40}
-    items={
-      Array [
-        Object {
-          "disabled": true,
-          "id": "group1",
-          "isGroup": true,
-          "label": "group1",
-        },
-        Object {
-          "group": "group1",
-          "id": 1,
-          "label": "item1",
-        },
-        Object {
-          "group": "group1",
-          "id": 3,
-          "label": "item3",
-        },
-        Object {
-          "disabled": true,
-          "id": "group2",
-          "isGroup": true,
-          "label": "group2",
-        },
-        Object {
-          "group": "group2",
-          "id": 2,
-          "label": "item2",
-        },
-      ]
-    }
+    items={Array []}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={0}
