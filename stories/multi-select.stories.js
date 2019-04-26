@@ -294,6 +294,7 @@ storiesOf("React Multi Select", module)
               showSelectedItemsSearch={true}
               searchSelectedItemsValue={this.state.value}
               searchSelectedItemsChanged={this.onChange}
+              selectedItemsFilterFunction={id => item => item.id === Number(id)}
               items={utils.items}
               loading={boolean("Loading", false)}
               onChange={action("onChange")}

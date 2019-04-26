@@ -26,8 +26,16 @@ const withMultiSelectState = WrappedComponent =>
       this.getNewFilteredSelectedItems = this.getNewFilteredSelectedItems.bind(
         this
       );
+      const {
+        items,
+        selectedItems,
+        filterFunction,
+        selectedItemsFilterFunction
+      } = props;
 
-      const { items, selectedItems } = props;
+      this.selectedItemsFilterFunction =
+        selectedItemsFilterFunction || filterFunction;
+
       this.state = {
         selectedItems,
         items,
@@ -108,9 +116,12 @@ const withMultiSelectState = WrappedComponent =>
     }
 
     getNewFilteredSelectedItems(items) {
-      const { searchSelectedItemsValue, filterFunction } = this.props;
+      const { searchSelectedItemsValue } = this.props;
+
       return searchSelectedItemsValue
-        ? items.filter(filterFunction(searchSelectedItemsValue))
+        ? items.filter(
+            this.selectedItemsFilterFunction(searchSelectedItemsValue)
+          )
         : items;
     }
     componentDidMount() {
@@ -192,12 +203,13 @@ const withMultiSelectState = WrappedComponent =>
     }
 
     filterSelectedItems(event) {
-      const { filterFunction, searchSelectedItemsChanged } = this.props;
+      const { searchSelectedItemsChanged } = this.props;
       const { value } = event.target;
       const { selectedItems } = this.state;
-
       this.setState({
-        filteredSelectedItems: selectedItems.filter(filterFunction(value))
+        filteredSelectedItems: selectedItems.filter(
+          this.selectedItemsFilterFunction(value)
+        )
       });
       searchSelectedItemsChanged && searchSelectedItemsChanged(value);
     }
