@@ -104,7 +104,11 @@ export class MultiSelect extends PureComponent {
       searchValue,
       withGrouping,
       generateClassName,
-      listRenderer
+      listRenderer,
+      showSelectedItemsSearch,
+      searchSelectedItemsValue,
+      filterSelectedItems,
+      filteredSelectedItems
     } = this.props;
     const calculatedHeight = this.calculateHeight();
     const selectedIds = selectedItems.map(item => item.id);
@@ -157,6 +161,11 @@ export class MultiSelect extends PureComponent {
               selectedItemRenderer={selectedItemRenderer}
               noItemsRenderer={noItemsRenderer}
               withGrouping={withGrouping}
+              showSearch={showSelectedItemsSearch}
+              searchValue={searchSelectedItemsValue}
+              filteredItems={filteredSelectedItems}
+              searchIcon={searchIcon}
+              filterItems={filterSelectedItems}
             />
           )}
         </div>

@@ -8,6 +8,7 @@ import NoItems from "./items/no_items";
 import SelectedItem from "./items/selected_item";
 import SelectionStatus from "./selection_status/selection_status";
 import { groupItems } from "./item_grouping_util";
+import withSearch from "./with_search";
 
 const DestinationList = ({
   selectionStatusRenderer,
@@ -20,14 +21,21 @@ const DestinationList = ({
   unselectItems,
   selectedItemRenderer,
   noItemsRenderer,
-  withGrouping
+  withGrouping,
+  showSearch,
+  filteredItems,
+  children
 }) => {
   const SelectionStatusRenderer = selectionStatusRenderer;
+  const filteredSelectedItemsList = showSearch ? filteredItems : selectedItems;
+
   const updatedSelectedItems = withGrouping
-    ? groupItems(selectedItems)
-    : selectedItems;
+    ? groupItems(filteredSelectedItemsList)
+    : filteredSelectedItemsList;
+
   return (
     <Column>
+      {children}
       <SelectionStatusRenderer
         selected={selectedIds}
         clearAll={clearAll}
@@ -59,7 +67,10 @@ DestinationList.propTypes = {
   unselectItems: PropTypes.func,
   selectedItemRenderer: PropTypes.any,
   noItemsRenderer: PropTypes.any,
-  withGrouping: PropTypes.bool
+  withGrouping: PropTypes.bool,
+  showSearch: PropTypes.bool,
+  filteredItems: PropTypes.arrayOf(PropTypes.object),
+  children: PropTypes.node
 };
 
 DestinationList.defaultProps = {
@@ -72,7 +83,10 @@ DestinationList.defaultProps = {
   height: 400,
   selectedItemRenderer: SelectedItem,
   noItemsRenderer: NoItems,
-  withGrouping: false
+  withGrouping: false,
+  showSearch: false,
+  filteredItems: []
 };
 
-export default DestinationList;
+export { DestinationList };
+export default withSearch(DestinationList);

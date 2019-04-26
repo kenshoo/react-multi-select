@@ -2,7 +2,9 @@ import React from "react";
 import { shallow } from "enzyme";
 import ShallowRenderer from "react-test-renderer/shallow";
 
-import DestinationList from "../../src/components/destination_list";
+import WithDestinationList, {
+  DestinationList
+} from "../../src/components/destination_list";
 import List from "../../src/components/list/items_list";
 
 const CustomComponent = jest
@@ -116,5 +118,32 @@ describe("DestinationList", () => {
     const list = component.find(List).at(0);
     list.simulate("click", {}, ID);
     expect(onClick).toHaveBeenCalledWith([ID]);
+  });
+  test("Case include search with destination list", () => {
+    const renderer = new ShallowRenderer();
+    const custom_messages = { messages: { searchPlaceholder: "Search" } };
+    const tree = renderer.render(
+      <WithDestinationList
+        showSearch={true}
+        messages={custom_messages}
+        searchIcon="custom_path_icon"
+        searchValue="1"
+      />
+    );
+    expect(tree).toMatchSnapshot();
+  });
+
+  test("Case disabled search with destination list", () => {
+    const renderer = new ShallowRenderer();
+    const custom_messages = { messages: { searchPlaceholder: "Search" } };
+    const tree = renderer.render(
+      <WithDestinationList
+        showSearch={false}
+        messages={custom_messages}
+        searchIcon="custom_path_icon"
+        searchValue="1"
+      />
+    );
+    expect(tree).toMatchSnapshot();
   });
 });

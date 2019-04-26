@@ -1,5 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`DestinationList Case disabled search with destination list 1`] = `
+<DestinationList
+  filteredItems={Array []}
+  height={400}
+  itemHeight={40}
+  listRenderer={[Function]}
+  messages={Object {}}
+  noItemsRenderer={[Function]}
+  selectedIds={Array []}
+  selectedItemRenderer={[Function]}
+  selectedItems={Array []}
+  selectionStatusRenderer={[Function]}
+  showSearch={false}
+  withGrouping={false}
+/>
+`;
+
+exports[`DestinationList Case include search with destination list 1`] = `
+<DestinationList
+  filteredItems={Array []}
+  height={400}
+  itemHeight={40}
+  listRenderer={[Function]}
+  messages={Object {}}
+  noItemsRenderer={[Function]}
+  selectedIds={Array []}
+  selectedItemRenderer={[Function]}
+  selectedItems={Array []}
+  selectionStatusRenderer={[Function]}
+  showSearch={true}
+  withGrouping={false}
+>
+  <Search
+    onChange={undefined}
+    searchIcon="custom_path_icon"
+    searchPlaceholder="Search..."
+    value="1"
+  />
+</DestinationList>
+`;
+
 exports[`DestinationList custom messages 1`] = `
 <Column>
   <SelectionStatus
