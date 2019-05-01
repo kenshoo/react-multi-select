@@ -29,8 +29,8 @@ const Item = ({
     {!group && (
       <Checkbox
         type="checkbox"
-        color="primary"
-        checked={checked}
+        color={disabled && checked ? "#b4b4b4" : "primary"}
+        checked={disabled ? true : checked}
         indeterminate={indeterminate}
         disabled={disabled}
       />

@@ -22,12 +22,13 @@ const withMultiSelectState = WrappedComponent =>
       this.handleChange = this.handleChange.bind(this);
       this.getList = this.getList.bind(this);
       this.onKeyUp = this.onKeyUp.bind(this);
-
+      this.getLockedItems = this.getLockedItems.bind(this);
       const { items, selectedItems } = props;
+      const lockedItems = selectedItems.filter(item => item.disabled);
       this.state = {
         selectedItems,
         items,
-        filteredItems: items
+        filteredItems: [...lockedItems, ...items]
       };
     }
 
@@ -60,7 +61,11 @@ const withMultiSelectState = WrappedComponent =>
             filteredItems.find(filteredItem => item.id === filteredItem.id)) ||
           selectedItems.find(selectedItem => item.id === selectedItem.id)
       );
-      this.setState({ selectedItems: newSelectedItems }, this.handleChange);
+      const lockedItems = this.getLockedItems();
+      this.setState(
+        { selectedItems: [...lockedItems, ...newSelectedItems] },
+        this.handleChange
+      );
     }
 
     getMinMaxIndexes(currentIndex) {
@@ -101,7 +106,7 @@ const withMultiSelectState = WrappedComponent =>
     selectItem(event, id) {
       const { items } = this.props;
       const { selectedItems, firstItemShiftSelected } = this.state;
-      if (!selectedItems.find(item => item.id === id)) {
+      if (!selectedItems.find(item => item.id === id && !item.disabled)) {
         if (event.shiftKey && firstItemShiftSelected !== undefined) {
           this.handleMultiSelection(items.findIndex(item => item.id === id));
         } else {
@@ -120,7 +125,7 @@ const withMultiSelectState = WrappedComponent =>
     unselectItems(ids) {
       const { selectedItems } = this.state;
       const newSelectedItems = selectedItems.filter(
-        item => ids.find(id => id === item.id) === undefined
+        item => ids.find(id => id === item.id && !item.disabled) === undefined
       );
       this.setState(
         {
@@ -129,41 +134,66 @@ const withMultiSelectState = WrappedComponent =>
         this.handleChange
       );
     }
-
+    getLockedItems() {
+      return this.state.selectedItems.filter(item => item.disabled);
+    }
     clearAll() {
-      this.setState({ selectedItems: [] }, this.handleChange);
+      const lockedItems = this.getLockedItems();
+      this.setState({ selectedItems: [...lockedItems] }, this.handleChange);
     }
 
     filterItems(event) {
       const { items, filterFunction, searchValueChanged } = this.props;
       const { value } = event.target;
+      const lockedItems = this.getLockedItems();
       this.setState({
-        filteredItems: items.filter(filterFunction(value))
+        filteredItems: [...lockedItems, ...items.filter(filterFunction(value))]
       });
 
       searchValueChanged && searchValueChanged(value);
     }
 
+    setAllSelectLists(filteredItems, selectedItems, items) {
+      const sourceItems = items.filter(
+        item =>
+          filteredItems.find(
+            filteredItem => item.id === filteredItem.id && !item.disabled
+          ) ||
+          selectedItems.find(
+            selectedItem => item.id === selectedItem.id && !item.disabled
+          )
+      );
+      const destinationItems =
+        selectedItems.filter(
+          selectedItem =>
+            !filteredItems.find(
+              filteredItem =>
+                selectedItem.disabled && selectedItem.id === filteredItem.id
+            ) && !items.find(item => selectedItem.id === item.id)
+        ) || !selectedItem;
+      return { destinationItems, sourceItems };
+    }
+
     selectAllItems() {
       const { filteredItems, selectedItems } = this.state;
       const { items } = this.props;
+      const lockedItems = this.getLockedItems();
       if (this.isAllSelected()) {
-        this.unselectItems(filteredItems.map(filteredItem => filteredItem.id));
+        lockedItems.length
+          ? this.setState({ selectedItems: lockedItems })
+          : this.unselectItems(
+              filteredItems.map(filteredItem => filteredItem.id)
+            );
       } else {
-        const sourceItems = items.filter(
-          item =>
-            filteredItems.find(
-              filteredItem => item.id === filteredItem.id && !item.disabled
-            ) || selectedItems.find(selectedItem => item.id === selectedItem.id)
-        );
-        const destinationItems = selectedItems.filter(
-          selectedItem =>
-            !filteredItems.find(
-              filteredItem => selectedItem.id === filteredItem.id
-            ) && !items.find(item => selectedItem.id === item.id)
+        const { destinationItems, sourceItems } = this.setAllSelectLists(
+          filteredItems,
+          selectedItems,
+          items
         );
         this.setState(
-          { selectedItems: [...destinationItems, ...sourceItems] },
+          {
+            selectedItems: [...destinationItems, ...lockedItems, ...sourceItems]
+          },
           this.handleChange
         );
       }
@@ -172,11 +202,14 @@ const withMultiSelectState = WrappedComponent =>
     isAllSelected() {
       const { filteredItems, selectedItems } = this.state;
       const selectedItemsInFilteredItems = selectedItems.filter(selectedItem =>
-        filteredItems.find(item => item.id === selectedItem.id)
+        filteredItems.find(
+          item => item.id === selectedItem.id && !item.disabled
+        )
       );
       const selectableFilteredItems = filteredItems.filter(
         item => !item.disabled
       );
+
       return (
         selectedItemsInFilteredItems.length ===
           selectableFilteredItems.length && selectableFilteredItems.length > 0

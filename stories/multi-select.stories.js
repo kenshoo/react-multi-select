@@ -275,4 +275,25 @@ storiesOf("React Multi Select", module)
         />
       );
     })
+  )
+  .add(
+    "With some of the locked items",
+    withReadme(Readme, () => {
+      const disabledItems = [
+        { id: "d-1", label: "disabled item 1", disabled: true },
+        { id: "d-2", label: "disabled item 2", disabled: true },
+        { id: "d-3", label: "disabled item 3", disabled: true }
+      ];
+      return (
+        <ReactMultiSelect
+          items={utils.items}
+          selectedItems={[...disabledItems]}
+          loading={boolean("Loading", false)}
+          onChange={action("onChange")}
+          showSearch={boolean("Show search", true)}
+          showSelectAll={boolean("Show select all", true)}
+          messages={{ disabledItemsTooltip: "You can select up to 4 items" }}
+        />
+      );
+    })
   );

@@ -59,7 +59,7 @@ class InnerList extends PureComponent {
     } = this.props;
     const Renderer = renderer;
     const item = items[index];
-    const checked = selectedIds.includes(item.id);
+    const checked = !item.disabled && selectedIds.includes(item.id);
     const disabled = this.props.disabled || item.disabled;
     return (
       <div

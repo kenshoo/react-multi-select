@@ -80,7 +80,7 @@ exports[`Item snapshot with disabled 1`] = `
   }
 >
   <WithStyles(Checkbox)
-    checked={false}
+    checked={true}
     color="primary"
     disabled={true}
     indeterminate={false}
