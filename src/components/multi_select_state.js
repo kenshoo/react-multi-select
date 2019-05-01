@@ -22,7 +22,7 @@ const withMultiSelectState = WrappedComponent =>
       this.handleChange = this.handleChange.bind(this);
       this.getList = this.getList.bind(this);
       this.onKeyUp = this.onKeyUp.bind(this);
-      this.getLockedItems = this.getLockedItems.bind(this);
+
       const { items, selectedItems } = props;
       const lockedItems = selectedItems.filter(item => item.disabled);
       this.state = {
@@ -134,9 +134,11 @@ const withMultiSelectState = WrappedComponent =>
         this.handleChange
       );
     }
+
     getLockedItems() {
       return this.state.selectedItems.filter(item => item.disabled);
     }
+
     clearAll() {
       const lockedItems = this.getLockedItems();
       this.setState({ selectedItems: [...lockedItems] }, this.handleChange);
@@ -153,7 +155,7 @@ const withMultiSelectState = WrappedComponent =>
       searchValueChanged && searchValueChanged(value);
     }
 
-    setAllSelectLists(filteredItems, selectedItems, items) {
+    getAllLists(filteredItems, selectedItems, items) {
       const sourceItems = items.filter(
         item =>
           filteredItems.find(
@@ -185,7 +187,7 @@ const withMultiSelectState = WrappedComponent =>
               filteredItems.map(filteredItem => filteredItem.id)
             );
       } else {
-        const { destinationItems, sourceItems } = this.setAllSelectLists(
+        const { destinationItems, sourceItems } = this.getAllLists(
           filteredItems,
           selectedItems,
           items
