@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-
+import { getSelectAllItems } from "./multi_select_state_utils";
 const withMultiSelectState = WrappedComponent =>
   class extends PureComponent {
     static defaultProps = {
@@ -155,27 +155,6 @@ const withMultiSelectState = WrappedComponent =>
       searchValueChanged && searchValueChanged(value);
     }
 
-    getAllLists(filteredItems, selectedItems, items) {
-      const sourceItems = items.filter(
-        item =>
-          filteredItems.find(
-            filteredItem => item.id === filteredItem.id && !item.disabled
-          ) ||
-          selectedItems.find(
-            selectedItem => item.id === selectedItem.id && !item.disabled
-          )
-      );
-      const destinationItems =
-        selectedItems.filter(
-          selectedItem =>
-            !filteredItems.find(
-              filteredItem =>
-                selectedItem.disabled && selectedItem.id === filteredItem.id
-            ) && !items.find(item => selectedItem.id === item.id)
-        ) || !selectedItem;
-      return { destinationItems, sourceItems };
-    }
-
     selectAllItems() {
       const { filteredItems, selectedItems } = this.state;
       const { items } = this.props;
@@ -187,14 +166,14 @@ const withMultiSelectState = WrappedComponent =>
               filteredItems.map(filteredItem => filteredItem.id)
             );
       } else {
-        const { destinationItems, sourceItems } = this.getAllLists(
+        const newSelectItems = getSelectAllItems(
           filteredItems,
           selectedItems,
           items
         );
         this.setState(
           {
-            selectedItems: [...destinationItems, ...lockedItems, ...sourceItems]
+            selectedItems: [...lockedItems, ...newSelectItems]
           },
           this.handleChange
         );
