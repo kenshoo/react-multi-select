@@ -1,6 +1,5 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
-import ReactHeight from "react-height";
 
 const DEFAULT_HEIGHT = 400;
 
@@ -23,20 +22,34 @@ const withResponsiveHeight = WrappedComponent =>
       height: DEFAULT_HEIGHT
     };
 
-    changeHeight = height => {
+    componentDidMount() {
+      const { clientHeight } = this.divRef;
+      this.changeHeight(clientHeight);
+    }
+
+    componentDidUpdate() {
+      const { height } = this.state;
+      const { clientHeight } = this.divRef;
+      console.log("clientHeight", clientHeight);
+      if (clientHeight && height !== clientHeight) {
+        this.changeHeight(clientHeight);
+      }
+    }
+
+    changeHeight(height) {
       this.setState({ height: height - 2 });
-    };
+    }
 
     render() {
       const { responsiveHeight, ...props } = this.props;
       const { height } = this.state;
       return (
-        <ReactHeight
+        <div
           style={{ height: responsiveHeight }}
-          onHeightReady={this.changeHeight}
+          ref={element => (this.divRef = element)}
         >
           <WrappedComponent {...props} height={height} />
-        </ReactHeight>
+        </div>
       );
     }
   };
