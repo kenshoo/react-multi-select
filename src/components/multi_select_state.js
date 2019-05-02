@@ -24,7 +24,9 @@ const withMultiSelectState = WrappedComponent =>
       this.getList = this.getList.bind(this);
       this.onKeyUp = this.onKeyUp.bind(this);
       this.filterSelectedItems = this.filterSelectedItems.bind(this);
-
+      this.getNewFilteredSelectedItems = this.getNewFilteredSelectedItems.bind(
+        this
+      );
       const { items, selectedItems } = props;
       this.selectedItemsFilterFunction =
         props.selectedItemsFilterFunction || props.filterFunction;
