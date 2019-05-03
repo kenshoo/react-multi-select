@@ -1,5 +1,9 @@
 import React, { PureComponent } from "react";
-import { getSelectedByAllItems, filterByIds } from "./multi_select_state_utils";
+import {
+  getSelectedByAllItems,
+  filterByIds,
+  findItem
+} from "./multi_select_state_utils";
 
 const withMultiSelectState = WrappedComponent =>
   class extends PureComponent {
@@ -68,8 +72,8 @@ const withMultiSelectState = WrappedComponent =>
         (item, index) =>
           (index >= minIndex &&
             index <= maxIndex &&
-            filteredItems.find(filteredItem => item.id === filteredItem.id)) ||
-          selectedItems.find(selectedItem => item.id === selectedItem.id)
+            findItem(item, filteredItems)) ||
+          findItem(item, selectedItems)
       );
       const newFilteredSelectedItems = this.getNewFilteredSelectedItems(
         newSelectedItems
@@ -94,12 +98,10 @@ const withMultiSelectState = WrappedComponent =>
       const { items } = this.props;
       const { selectedItems } = this.state;
       const sourceItems = items.filter(
-        item =>
-          item.id === itemId ||
-          selectedItems.find(selectedItem => item.id === selectedItem.id)
+        item => item.id === itemId || findItem(item, selectedItems)
       );
       const destinationItems = selectedItems.filter(
-        selectedItem => !items.find(item => item.id === selectedItem.id)
+        selectedItem => !findItem(selectedItem, items)
       );
       return [...destinationItems, ...sourceItems];
     }
@@ -224,7 +226,7 @@ const withMultiSelectState = WrappedComponent =>
     isAllSelected() {
       const { filteredItems, selectedItems } = this.state;
       const selectedItemsInFilteredItems = selectedItems.filter(selectedItem =>
-        filteredItems.find(item => item.id === selectedItem.id)
+        findItem(selectedItem, filteredItems)
       );
       const selectableFilteredItems = filteredItems.filter(
         item => !item.disabled

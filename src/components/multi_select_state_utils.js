@@ -1,13 +1,12 @@
-const matchItemById = id => item => id === item.id;
+export const findItem = ({ id }, items) => items.find(item => id === item.id);
 
-const findItem = ({ id }, items) => items.find(matchItemById(id));
-
-const shouldItem = (item, itemsToSelect) =>
+const shouldSelectItem = (item, itemsToSelect) =>
   !item.disabled && findItem(item, itemsToSelect);
 
 const getSourceItems = (itemsToSelect, selectedItems, items) =>
   items.filter(
-    item => shouldItem(item, itemsToSelect) || findItem(item, selectedItems)
+    item =>
+      shouldSelectItem(item, itemsToSelect) || findItem(item, selectedItems)
   );
 
 const getDestinationItems = (itemsToSelect, selectedItems, items) =>
