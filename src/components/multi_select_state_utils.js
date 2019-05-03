@@ -1,34 +1,30 @@
 const matchItemById = id => item => id === item.id;
 
-const getItemById = (id, selectedItems) =>
-  selectedItems.find(matchItemById(id));
+const findItem = ({ id }, items) => items.find(matchItemById(id));
 
-const isFilteredEnabled = (item, filteredItems) =>
-  filteredItems.find(
-    filteredItem => item.id === filteredItem.id && !item.disabled
-  );
+const shouldItem = (item, itemsToSelect) =>
+  !item.disabled && findItem(item, itemsToSelect);
 
-const getSourceItems = (filteredItems, selectedItems, items) =>
+const getSourceItems = (itemsToSelect, selectedItems, items) =>
   items.filter(
-    item =>
-      isFilteredEnabled(item, filteredItems) ||
-      getItemById(item.id, selectedItems)
+    item => shouldItem(item, itemsToSelect) || findItem(item, selectedItems)
   );
 
-const getDestinationItems = (filteredItems, selectedItems, items) =>
+const getDestinationItems = (itemsToSelect, selectedItems, items) =>
   selectedItems.filter(
     selectedItem =>
-      !getItemById(selectedItem.id, filteredItems) &&
-      !getItemById(selectedItem.id, items)
+      !findItem(selectedItem, itemsToSelect) && !findItem(selectedItem, items)
   );
 
-export const findItemByIds = ids => item =>
-  ids.find(id => id === item.id) === undefined;
+const containsId = (ids, item) => ids.find(id => id === item.id) === undefined;
 
-export const getSelectAllItems = (filteredItems, selectedItems, items) => {
-  const sourceItems = getSourceItems(filteredItems, selectedItems, items);
+export const filterByIds = (items, ids) =>
+  items.filter(item => containsId(ids, item));
+
+export const getSelectedByAllItems = (itemsToSelect, selectedItems, items) => {
+  const sourceItems = getSourceItems(itemsToSelect, selectedItems, items);
   const destinationItems = getDestinationItems(
-    filteredItems,
+    itemsToSelect,
     selectedItems,
     items
   );

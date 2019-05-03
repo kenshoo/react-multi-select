@@ -1,6 +1,6 @@
 import {
-  findItemByIds,
-  getSelectAllItems
+  filterByIds,
+  getSelectedByAllItems
 } from "../../src/components/multi_select_state_utils";
 
 const items = [
@@ -12,7 +12,7 @@ const items = [
 
 const ids = [0, 1];
 
-const filteredItems = [{ id: 0, label: "item-0" }, { id: 1, label: "item-1" }];
+const itemsToSelect = [{ id: 0, label: "item-0" }, { id: 1, label: "item-1" }];
 
 const selectedItems = [
   { id: 0, label: "item-0" },
@@ -26,13 +26,13 @@ const disabledItems = [
 
 describe("testing utils for multi select state", () => {
   test("filter items by id", () => {
-    const filterItems = items.filter(findItemByIds(ids));
+    const filterItems = filterByIds(items, ids);
     expect(filterItems).toEqual([items[2], items[3]]);
   });
 
   test("testing all items select", () => {
-    const allSelectedItems = getSelectAllItems(
-      filteredItems,
+    const allSelectedItems = getSelectedByAllItems(
+      itemsToSelect,
       selectedItems,
       items
     );
@@ -40,25 +40,26 @@ describe("testing utils for multi select state", () => {
   });
 
   test("testing all select case items have disabled", () => {
-    const allSelectedItems = getSelectAllItems(filteredItems, selectedItems, [
-      ...items,
-      ...disabledItems
-    ]);
+    const allSelectedItems = getSelectedByAllItems(
+      itemsToSelect,
+      selectedItems,
+      [...items, ...disabledItems]
+    );
     expect(allSelectedItems).toEqual(selectedItems);
   });
 
-  test("not filteredItems", () => {
-    const allSelectedItems = getSelectAllItems([], selectedItems, items);
+  test("not itemsToSelect", () => {
+    const allSelectedItems = getSelectedByAllItems([], selectedItems, items);
     expect(allSelectedItems).toEqual(selectedItems);
   });
 
   test("not selectedItems", () => {
-    const allSelectedItems = getSelectAllItems(filteredItems, [], items);
-    expect(allSelectedItems).toEqual(filteredItems);
+    const allSelectedItems = getSelectedByAllItems(itemsToSelect, [], items);
+    expect(allSelectedItems).toEqual(itemsToSelect);
   });
 
-  test("filteredItems is disabled", () => {
-    const allSelectedItems = getSelectAllItems(
+  test("itemsToSelect is disabled", () => {
+    const allSelectedItems = getSelectedByAllItems(
       disabledItems,
       selectedItems,
       items
@@ -66,8 +67,8 @@ describe("testing utils for multi select state", () => {
     expect(allSelectedItems).toEqual(selectedItems);
   });
 
-  test("not filteredItems and not selectedItems", () => {
-    const allSelectedItems = getSelectAllItems(
+  test("not itemsToSelect and not selectedItems", () => {
+    const allSelectedItems = getSelectedByAllItems(
       [],
       [],
       [...items, ...disabledItems]

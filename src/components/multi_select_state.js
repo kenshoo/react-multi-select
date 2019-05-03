@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { getSelectAllItems, findItemByIds } from "./multi_select_state_utils";
+import { getSelectedByAllItems, filterByIds } from "./multi_select_state_utils";
 
 const withMultiSelectState = WrappedComponent =>
   class extends PureComponent {
@@ -157,10 +157,8 @@ const withMultiSelectState = WrappedComponent =>
 
     unselectItems(ids) {
       const { selectedItems, filteredSelectedItems } = this.state;
-      const newSelectedItems = selectedItems.filter(findItemByIds(ids));
-      const newFilteredSelectedItems = filteredSelectedItems.filter(
-        findItemByIds(ids)
-      );
+      const newSelectedItems = filterByIds(selectedItems, ids);
+      const newFilteredSelectedItems = filterByIds(filteredSelectedItems, ids);
       this.setState(
         {
           selectedItems: newSelectedItems,
@@ -205,7 +203,7 @@ const withMultiSelectState = WrappedComponent =>
       if (this.isAllSelected()) {
         this.unselectItems(filteredItems.map(filteredItem => filteredItem.id));
       } else {
-        const newSelectItems = getSelectAllItems(
+        const newSelectItems = getSelectedByAllItems(
           filteredItems,
           selectedItems,
           items
