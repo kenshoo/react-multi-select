@@ -251,12 +251,13 @@ describe("MultiSelect", () => {
 
     test("changeHeight will not be called", () => {
       const changeHeight = jest.fn();
-      const tree = skinDeep.shallowRender(<MultiSelectWithState />);
+      const getClientHeight = jest.fn(() => 44);
+      const tree = mount(<MultiSelectWithState />);
       const instance = tree.instance();
+      instance.getClientHeight = getClientHeight;
       instance.changeHeight = changeHeight;
-      instance.divRef = { clientHeight: 10 };
       instance.componentDidUpdate();
-      expect(changeHeight).not.toHaveBeenCalled();
+      expect(changeHeight).toHaveBeenCalled();
     });
   });
 

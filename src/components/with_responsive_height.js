@@ -22,15 +22,18 @@ const withResponsiveHeight = WrappedComponent =>
       height: DEFAULT_HEIGHT
     };
 
+    getClientHeight() {
+      return this.divRef.clientHeight;
+    }
+
     componentDidMount() {
-      const { clientHeight } = this.divRef;
+      const clientHeight = this.getClientHeight();
       this.changeHeight(clientHeight);
     }
 
     componentDidUpdate() {
       const { height } = this.state;
-      const { clientHeight } = this.divRef;
-      console.log("clientHeight", clientHeight);
+      const clientHeight = this.getClientHeight();
       if (clientHeight && height !== clientHeight) {
         this.changeHeight(clientHeight);
       }
