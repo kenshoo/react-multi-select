@@ -1,5 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`DestinationList Case disabled search with destination list 1`] = `
+<DestinationList
+  filteredItems={Array []}
+  height={400}
+  itemHeight={40}
+  listRenderer={[Function]}
+  messages={Object {}}
+  noItemsRenderer={[Function]}
+  selectedIds={Array []}
+  selectedItemRenderer={[Function]}
+  selectionStatusRenderer={[Function]}
+  withGrouping={false}
+/>
+`;
+
+exports[`DestinationList Case include search with destination list 1`] = `
+<DestinationList
+  filteredItems={Array []}
+  height={400}
+  itemHeight={40}
+  listRenderer={[Function]}
+  messages={Object {}}
+  noItemsRenderer={[Function]}
+  selectedIds={Array []}
+  selectedItemRenderer={[Function]}
+  selectionStatusRenderer={[Function]}
+  withGrouping={false}
+>
+  <Search
+    onChange={undefined}
+    searchIcon="custom_path_icon"
+    searchPlaceholder="Search..."
+    value="1"
+  />
+</DestinationList>
+`;
+
 exports[`DestinationList custom messages 1`] = `
 <Column>
   <SelectionStatus
@@ -186,12 +223,7 @@ exports[`DestinationList passed selectedItems 1`] = `
     disabled={false}
     height={355}
     itemHeight={40}
-    items={
-      Array [
-        1,
-        2,
-      ]
-    }
+    items={Array []}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={0}
@@ -215,37 +247,7 @@ exports[`DestinationList passed selectedItems with grouping 1`] = `
     disabled={false}
     height={355}
     itemHeight={40}
-    items={
-      Array [
-        Object {
-          "disabled": true,
-          "id": "group1",
-          "isGroup": true,
-          "label": "group1",
-        },
-        Object {
-          "group": "group1",
-          "id": 1,
-          "label": "item1",
-        },
-        Object {
-          "group": "group1",
-          "id": 3,
-          "label": "item3",
-        },
-        Object {
-          "disabled": true,
-          "id": "group2",
-          "isGroup": true,
-          "label": "group2",
-        },
-        Object {
-          "group": "group2",
-          "id": 2,
-          "label": "item2",
-        },
-      ]
-    }
+    items={Array []}
     noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={0}

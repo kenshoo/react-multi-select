@@ -148,17 +148,20 @@ exports[`MultiSelect Snapshots can remove search 1`] = `
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -314,17 +317,20 @@ exports[`MultiSelect Snapshots can remove select all 1`] = `
       showSelectAll={false}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -632,17 +638,20 @@ exports[`MultiSelect Snapshots custom itemRenderer 1`] = `
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -798,17 +807,20 @@ exports[`MultiSelect Snapshots custom listRenderer 1`] = `
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -973,11 +985,12 @@ exports[`MultiSelect Snapshots custom messages 1`] = `
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={
         Object {
           "clearAllMessage": "Uncheck all",
@@ -988,11 +1001,13 @@ exports[`MultiSelect Snapshots custom messages 1`] = `
           "selectedMessage": "Checked",
         }
       }
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -1148,17 +1163,20 @@ exports[`MultiSelect Snapshots custom noItemsRenderer 1`] = `
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[MockFunction mockedComponent]}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -1314,17 +1332,20 @@ exports[`MultiSelect Snapshots custom searchRenderer 1`] = `
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -1480,17 +1501,20 @@ exports[`MultiSelect Snapshots custom selectAllRenderer 1`] = `
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -1646,17 +1670,20 @@ exports[`MultiSelect Snapshots default snapshot 1`] = `
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -2075,27 +2102,25 @@ exports[`MultiSelect Snapshots does not pass disabled if maxSelectedItem has pas
       showSelectAll={false}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={
         Array [
           undefined,
           undefined,
         ]
       }
-      selectedItemRenderer={[Function]}
-      selectedItems={
-        Array [
-          1,
-          2,
-        ]
-      }
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -2251,17 +2276,20 @@ exports[`MultiSelect Snapshots passed clearAll 1`] = `
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={[MockFunction clearAll]}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -2417,17 +2445,20 @@ exports[`MultiSelect Snapshots passed filterItems 1`] = `
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -2583,17 +2614,20 @@ exports[`MultiSelect Snapshots passed selectAllItems 1`] = `
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -2749,17 +2783,20 @@ exports[`MultiSelect Snapshots passed selectItem 1`] = `
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -2915,17 +2952,20 @@ exports[`MultiSelect Snapshots passed selectedIds 1`] = `
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -3086,27 +3126,25 @@ exports[`MultiSelect Snapshots passed selectedItems 1`] = `
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={
         Array [
           undefined,
           undefined,
         ]
       }
-      selectedItemRenderer={[Function]}
-      selectedItems={
-        Array [
-          1,
-          2,
-        ]
-      }
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -3262,17 +3300,20 @@ exports[`MultiSelect Snapshots passed unselectItems 1`] = `
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={[MockFunction unselectItems]}
       withGrouping={false}
     />
@@ -3433,27 +3474,25 @@ exports[`MultiSelect Snapshots passes disabled if maxSelectedItem has passed 1`]
       showSelectAll={false}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={
         Array [
           undefined,
           undefined,
         ]
       }
-      selectedItemRenderer={[Function]}
-      selectedItems={
-        Array [
-          1,
-          2,
-        ]
-      }
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -3609,17 +3648,20 @@ exports[`MultiSelect Snapshots will pass itemHeight 1`] = `
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={60}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -3775,17 +3817,20 @@ exports[`MultiSelect Snapshots will pass selectAllHeight 1`] = `
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={60}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -3941,17 +3986,20 @@ exports[`MultiSelect Snapshots will pass selectAllHeight without itemHeight 1`] 
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -4107,17 +4155,20 @@ exports[`MultiSelect Snapshots will pass selectedItemHeight 1`] = `
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={60}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -4273,17 +4324,20 @@ exports[`MultiSelect Snapshots with generateClassName 1`] = `
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -4351,7 +4405,6 @@ Object {
   "selectAllRenderer": [Function],
   "selectItem": undefined,
   "selectedIds": Array [],
-  "showSearch": true,
   "showSelectAll": true,
   "withGrouping": false,
 }
@@ -4380,7 +4433,6 @@ Object {
   "selectAllRenderer": [Function],
   "selectItem": undefined,
   "selectedIds": Array [],
-  "showSearch": true,
   "showSelectAll": false,
   "withGrouping": false,
 }
@@ -4409,7 +4461,6 @@ Object {
   "selectAllRenderer": [Function],
   "selectItem": undefined,
   "selectedIds": Array [],
-  "showSearch": true,
   "showSelectAll": true,
   "withGrouping": false,
 }
@@ -4438,7 +4489,6 @@ Object {
   "selectAllRenderer": [Function],
   "selectItem": undefined,
   "selectedIds": Array [],
-  "showSearch": true,
   "showSelectAll": true,
   "withGrouping": false,
 }
@@ -4467,7 +4517,6 @@ Object {
   "selectAllRenderer": [Function],
   "selectItem": undefined,
   "selectedIds": Array [],
-  "showSearch": true,
   "showSelectAll": true,
   "withGrouping": false,
 }
@@ -4496,7 +4545,6 @@ Object {
   "selectAllRenderer": [Function],
   "selectItem": undefined,
   "selectedIds": Array [],
-  "showSearch": true,
   "showSelectAll": true,
   "withGrouping": false,
 }
@@ -4525,7 +4573,6 @@ Object {
   "selectAllRenderer": [Function],
   "selectItem": undefined,
   "selectedIds": Array [],
-  "showSearch": true,
   "showSelectAll": true,
   "withGrouping": false,
 }
@@ -4554,7 +4601,6 @@ Object {
   "selectAllRenderer": [Function],
   "selectItem": undefined,
   "selectedIds": Array [],
-  "showSearch": true,
   "showSelectAll": true,
   "withGrouping": false,
 }
@@ -4583,7 +4629,6 @@ Object {
   "selectAllRenderer": [MockFunction mockedComponent],
   "selectItem": undefined,
   "selectedIds": Array [],
-  "showSearch": true,
   "showSelectAll": true,
   "withGrouping": false,
 }
@@ -4612,7 +4657,6 @@ Object {
   "selectAllRenderer": [Function],
   "selectItem": undefined,
   "selectedIds": Array [],
-  "showSearch": true,
   "showSelectAll": true,
   "withGrouping": false,
 }
@@ -4644,7 +4688,6 @@ Object {
     undefined,
     undefined,
   ],
-  "showSearch": true,
   "showSelectAll": false,
   "withGrouping": false,
 }
@@ -4673,7 +4716,6 @@ Object {
   "selectAllRenderer": [Function],
   "selectItem": undefined,
   "selectedIds": Array [],
-  "showSearch": true,
   "showSelectAll": true,
   "withGrouping": false,
 }
@@ -4702,7 +4744,6 @@ Object {
   "selectAllRenderer": [Function],
   "selectItem": undefined,
   "selectedIds": Array [],
-  "showSearch": true,
   "showSelectAll": true,
   "withGrouping": false,
 }
@@ -4731,7 +4772,6 @@ Object {
   "selectAllRenderer": [Function],
   "selectItem": undefined,
   "selectedIds": Array [],
-  "showSearch": true,
   "showSelectAll": true,
   "withGrouping": false,
 }
@@ -4760,7 +4800,6 @@ Object {
   "selectAllRenderer": [Function],
   "selectItem": undefined,
   "selectedIds": Array [],
-  "showSearch": true,
   "showSelectAll": true,
   "withGrouping": false,
 }
@@ -4789,7 +4828,6 @@ Object {
   "selectAllRenderer": [Function],
   "selectItem": undefined,
   "selectedIds": Array [],
-  "showSearch": true,
   "showSelectAll": true,
   "withGrouping": false,
 }
@@ -4821,7 +4859,6 @@ Object {
     undefined,
     undefined,
   ],
-  "showSearch": true,
   "showSelectAll": true,
   "withGrouping": false,
 }
@@ -4850,7 +4887,6 @@ Object {
   "selectAllRenderer": [Function],
   "selectItem": undefined,
   "selectedIds": Array [],
-  "showSearch": true,
   "showSelectAll": true,
   "withGrouping": false,
 }
@@ -4882,7 +4918,6 @@ Object {
     undefined,
     undefined,
   ],
-  "showSearch": true,
   "showSelectAll": false,
   "withGrouping": false,
 }
@@ -4911,7 +4946,6 @@ Object {
   "selectAllRenderer": [Function],
   "selectItem": undefined,
   "selectedIds": Array [],
-  "showSearch": true,
   "showSelectAll": true,
   "withGrouping": false,
 }
@@ -4940,7 +4974,6 @@ Object {
   "selectAllRenderer": [Function],
   "selectItem": undefined,
   "selectedIds": Array [],
-  "showSearch": true,
   "showSelectAll": true,
   "withGrouping": false,
 }
@@ -4969,7 +5002,6 @@ Object {
   "selectAllRenderer": [Function],
   "selectItem": undefined,
   "selectedIds": Array [],
-  "showSearch": true,
   "showSelectAll": true,
   "withGrouping": false,
 }
@@ -4998,7 +5030,6 @@ Object {
   "selectAllRenderer": [Function],
   "selectItem": undefined,
   "selectedIds": Array [],
-  "showSearch": true,
   "showSelectAll": true,
   "withGrouping": false,
 }

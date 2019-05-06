@@ -275,4 +275,36 @@ storiesOf("React Multi Select", module)
         />
       );
     })
+  )
+  .add(
+    "Selected items search",
+    withReadme(Readme, () => {
+      class SelectedSearchController extends React.Component {
+        state = {
+          value: ""
+        };
+
+        onChange = value => {
+          this.setState({ value });
+        };
+
+        render() {
+          return (
+            <ReactMultiSelect
+              showSelectedItemsSearch={true}
+              searchSelectedItemsValue={this.state.value}
+              searchSelectedItemsChanged={this.onChange}
+              selectedItemsFilterFunction={id => item => item.id === Number(id)}
+              items={utils.items}
+              loading={boolean("Loading", false)}
+              onChange={action("onChange")}
+              showSearch={boolean("Show search", true)}
+              showSelectAll={boolean("Show select all", true)}
+            />
+          );
+        }
+      }
+
+      return <SelectedSearchController />;
+    })
   );
