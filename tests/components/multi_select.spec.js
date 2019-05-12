@@ -248,6 +248,17 @@ describe("MultiSelect", () => {
       );
       expect(tree).toMatchSnapshot();
     });
+
+    test("changeHeight will not be called", () => {
+      const changeHeight = jest.fn();
+      const getClientHeight = jest.fn(() => 44);
+      const tree = mount(<MultiSelectWithState />);
+      const instance = tree.instance();
+      instance.getClientHeight = getClientHeight;
+      instance.changeHeight = changeHeight;
+      instance.componentDidUpdate();
+      expect(changeHeight).toHaveBeenCalled();
+    });
   });
 
   describe("passes properties", () => {
