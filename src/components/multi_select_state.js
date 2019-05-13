@@ -1,8 +1,10 @@
 import React, { PureComponent } from "react";
 import {
   getSelectedByAllItems,
-  filterByIds,
-  findItem
+  filterUnselectedByIds,
+  findItem,
+  getLockedItems,
+  findEnabledItem
 } from "./multi_select_state_utils";
 
 const withMultiSelectState = WrappedComponent =>
@@ -72,7 +74,7 @@ const withMultiSelectState = WrappedComponent =>
         (item, index) =>
           (index >= minIndex &&
             index <= maxIndex &&
-            findItem(item, filteredItems)) ||
+            findEnabledItem(item, filteredItems)) ||
           findItem(item, selectedItems)
       );
       const newFilteredSelectedItems = this.getNewFilteredSelectedItems(
@@ -159,8 +161,11 @@ const withMultiSelectState = WrappedComponent =>
 
     unselectItems(ids) {
       const { selectedItems, filteredSelectedItems } = this.state;
-      const newSelectedItems = filterByIds(selectedItems, ids);
-      const newFilteredSelectedItems = filterByIds(filteredSelectedItems, ids);
+      const newSelectedItems = filterUnselectedByIds(selectedItems, ids);
+      const newFilteredSelectedItems = filterUnselectedByIds(
+        filteredSelectedItems,
+        ids
+      );
       this.setState(
         {
           selectedItems: newSelectedItems,
@@ -171,8 +176,12 @@ const withMultiSelectState = WrappedComponent =>
     }
 
     clearAll() {
+      const lockedItems = getLockedItems(this.props.selectedItems);
       this.setState(
-        { selectedItems: [], filteredSelectedItems: [] },
+        {
+          selectedItems: lockedItems,
+          filteredSelectedItems: lockedItems
+        },
         this.handleChange
       );
     }
@@ -183,7 +192,6 @@ const withMultiSelectState = WrappedComponent =>
       this.setState({
         filteredItems: items.filter(filterFunction(value))
       });
-
       searchValueChanged && searchValueChanged(value);
     }
 
@@ -226,7 +234,7 @@ const withMultiSelectState = WrappedComponent =>
     isAllSelected() {
       const { filteredItems, selectedItems } = this.state;
       const selectedItemsInFilteredItems = selectedItems.filter(selectedItem =>
-        findItem(selectedItem, filteredItems)
+        findEnabledItem(selectedItem, filteredItems)
       );
       const selectableFilteredItems = filteredItems.filter(
         item => !item.disabled

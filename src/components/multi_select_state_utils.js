@@ -1,5 +1,8 @@
 export const findItem = ({ id }, items) => items.find(item => id === item.id);
 
+export const findEnabledItem = ({ id }, items) =>
+  items.find(item => !item.disabled && id === item.id);
+
 const shouldSelectItem = (item, itemsToSelect) =>
   !item.disabled && findItem(item, itemsToSelect);
 
@@ -15,10 +18,11 @@ const getDestinationItems = (itemsToSelect, selectedItems, items) =>
       !findItem(selectedItem, itemsToSelect) && !findItem(selectedItem, items)
   );
 
-const containsId = (ids, item) => ids.find(id => id === item.id) === undefined;
+const notContainsId = (ids, item) =>
+  ids.find(id => id === item.id) === undefined;
 
-export const filterByIds = (items, ids) =>
-  items.filter(item => containsId(ids, item));
+export const filterUnselectedByIds = (items, ids) =>
+  items.filter(item => notContainsId(ids, item) || item.disabled);
 
 export const getSelectedByAllItems = (itemsToSelect, selectedItems, items) => {
   const sourceItems = getSourceItems(itemsToSelect, selectedItems, items);
@@ -30,3 +34,5 @@ export const getSelectedByAllItems = (itemsToSelect, selectedItems, items) => {
 
   return [...destinationItems, ...sourceItems];
 };
+
+export const getLockedItems = items => items.filter(item => item.disabled);

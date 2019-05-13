@@ -60,7 +60,8 @@ class InnerList extends PureComponent {
     const Renderer = renderer;
     const item = items[index];
     const checked = selectedIds.includes(item.id);
-    const disabled = this.props.disabled || item.disabled;
+    const disabled = (this.props.disabled && !checked) || item.disabled;
+
     return (
       <div
         key={key}
@@ -74,7 +75,7 @@ class InnerList extends PureComponent {
           group={item.isGroup}
           height={itemHeight}
           checked={checked}
-          disabled={disabled && !checked}
+          disabled={disabled}
         />
       </div>
     );

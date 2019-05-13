@@ -3,16 +3,22 @@ import PropTypes from "prop-types";
 import CloseIcon from "react-icons/lib/md/close";
 import IconButton from "@material-ui/core/IconButton";
 import ItemLabel from "./item_label";
-
+import classnames from "classnames";
 import styles from "./selected_item.scss";
+import itemStyles from "./item.scss";
 
 const SelectedItem = ({ item, height, group }) => (
   <div
-    className={group ? styles.with_grouping : styles.selected_item}
+    className={classnames({
+      [styles.with_grouping]: group,
+      [styles.selected_item]: !group,
+      [itemStyles.disabled]: item.disabled,
+      [itemStyles.selected]: item.disabled
+    })}
     style={{ height }}
   >
     <ItemLabel label={item.label} />
-    {!group && (
+    {!group && !item.disabled && (
       <IconButton>
         <CloseIcon />
       </IconButton>

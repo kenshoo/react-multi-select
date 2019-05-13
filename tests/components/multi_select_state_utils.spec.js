@@ -1,5 +1,5 @@
 import {
-  filterByIds,
+  filterUnselectedByIds,
   getSelectedByAllItems
 } from "../../src/components/multi_select_state_utils";
 
@@ -26,7 +26,7 @@ const disabledItems = [
 
 describe("testing utils for multi select state", () => {
   test("filter items by id", () => {
-    const filterItems = filterByIds(items, ids);
+    const filterItems = filterUnselectedByIds(items, ids);
     expect(filterItems).toEqual([items[2], items[3]]);
   });
 
