@@ -4360,6 +4360,7 @@ exports[`MultiSelect Snapshots with responsiveHeight 1`] = `
   <_class
     filterFunction={[Function]}
     height={400}
+    isLocked={[Function]}
     items={Array []}
     selectedItems={Array []}
   />
@@ -4381,6 +4382,7 @@ exports[`MultiSelect Snapshots without responsiveHeight 1`] = `
   <_class
     filterFunction={[Function]}
     height={400}
+    isLocked={[Function]}
     items={Array []}
     selectedItems={Array []}
   />

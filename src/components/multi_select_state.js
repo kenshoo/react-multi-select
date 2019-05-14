@@ -2,9 +2,7 @@ import React, { PureComponent } from "react";
 import {
   getSelectedByAllItems,
   filterUnselectedByIds,
-  findItem,
-  getLockedItems,
-  findEnabledItem
+  findItem
 } from "./multi_select_state_utils";
 
 const withMultiSelectState = WrappedComponent =>
@@ -15,7 +13,8 @@ const withMultiSelectState = WrappedComponent =>
           .toLowerCase()
           .includes(value.toLowerCase()),
       items: [],
-      selectedItems: []
+      selectedItems: [],
+      isLocked: item => item.disabled
     };
 
     constructor(props) {
@@ -66,7 +65,7 @@ const withMultiSelectState = WrappedComponent =>
     }
 
     handleMultiSelection(index) {
-      const { items } = this.props;
+      const { items, isLocked } = this.props;
       const { selectedItems, filteredItems } = this.state;
 
       const { minIndex, maxIndex } = this.getMinMaxIndexes(index);
@@ -74,7 +73,8 @@ const withMultiSelectState = WrappedComponent =>
         (item, index) =>
           (index >= minIndex &&
             index <= maxIndex &&
-            findEnabledItem(item, filteredItems)) ||
+            !isLocked(item) &&
+            findItem(item, filteredItems)) ||
           findItem(item, selectedItems)
       );
       const newFilteredSelectedItems = this.getNewFilteredSelectedItems(
@@ -161,10 +161,16 @@ const withMultiSelectState = WrappedComponent =>
 
     unselectItems(ids) {
       const { selectedItems, filteredSelectedItems } = this.state;
-      const newSelectedItems = filterUnselectedByIds(selectedItems, ids);
+      const { isLocked } = this.props;
+      const newSelectedItems = filterUnselectedByIds(
+        selectedItems,
+        ids,
+        isLocked
+      );
       const newFilteredSelectedItems = filterUnselectedByIds(
         filteredSelectedItems,
-        ids
+        ids,
+        isLocked
       );
       this.setState(
         {
@@ -176,7 +182,8 @@ const withMultiSelectState = WrappedComponent =>
     }
 
     clearAll() {
-      const lockedItems = getLockedItems(this.props.selectedItems);
+      const { selectedItems, isLocked } = this.props;
+      const lockedItems = selectedItems.filter(isLocked);
       this.setState(
         {
           selectedItems: lockedItems,
@@ -233,8 +240,10 @@ const withMultiSelectState = WrappedComponent =>
 
     isAllSelected() {
       const { filteredItems, selectedItems } = this.state;
-      const selectedItemsInFilteredItems = selectedItems.filter(selectedItem =>
-        findEnabledItem(selectedItem, filteredItems)
+      const { isLocked } = this.props;
+      const selectedItemsInFilteredItems = selectedItems.filter(
+        selectedItem =>
+          !isLocked(selectedItem) && findItem(selectedItem, filteredItems)
       );
       const selectableFilteredItems = filteredItems.filter(
         item => !item.disabled

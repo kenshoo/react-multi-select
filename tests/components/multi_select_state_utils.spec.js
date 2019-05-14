@@ -26,7 +26,8 @@ const disabledItems = [
 
 describe("testing utils for multi select state", () => {
   test("filter items by id", () => {
-    const filterItems = filterUnselectedByIds(items, ids);
+    const isLocked = item => item.disabled;
+    const filterItems = filterUnselectedByIds(items, ids, isLocked);
     expect(filterItems).toEqual([items[2], items[3]]);
   });
 
