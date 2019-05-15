@@ -131,6 +131,7 @@ exports[`MultiSelect Snapshots can remove search 1`] = `
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -153,6 +154,7 @@ exports[`MultiSelect Snapshots can remove search 1`] = `
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -300,6 +302,7 @@ exports[`MultiSelect Snapshots can remove select all 1`] = `
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -322,6 +325,7 @@ exports[`MultiSelect Snapshots can remove select all 1`] = `
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -469,6 +473,7 @@ exports[`MultiSelect Snapshots can remove selected items 1`] = `
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -621,6 +626,7 @@ exports[`MultiSelect Snapshots custom itemRenderer 1`] = `
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={[MockFunction mockedComponent]}
       listRenderer={undefined}
@@ -643,6 +649,7 @@ exports[`MultiSelect Snapshots custom itemRenderer 1`] = `
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -790,6 +797,7 @@ exports[`MultiSelect Snapshots custom listRenderer 1`] = `
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
       listRenderer={[MockFunction mockedComponent]}
@@ -812,6 +820,7 @@ exports[`MultiSelect Snapshots custom listRenderer 1`] = `
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -959,6 +968,7 @@ exports[`MultiSelect Snapshots custom messages 1`] = `
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -990,6 +1000,7 @@ exports[`MultiSelect Snapshots custom messages 1`] = `
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
       messages={
         Object {
@@ -1146,6 +1157,7 @@ exports[`MultiSelect Snapshots custom noItemsRenderer 1`] = `
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -1168,6 +1180,7 @@ exports[`MultiSelect Snapshots custom noItemsRenderer 1`] = `
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
       messages={Object {}}
       noItemsRenderer={[MockFunction mockedComponent]}
@@ -1315,6 +1328,7 @@ exports[`MultiSelect Snapshots custom searchRenderer 1`] = `
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -1337,6 +1351,7 @@ exports[`MultiSelect Snapshots custom searchRenderer 1`] = `
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -1484,6 +1499,7 @@ exports[`MultiSelect Snapshots custom selectAllRenderer 1`] = `
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -1506,6 +1522,7 @@ exports[`MultiSelect Snapshots custom selectAllRenderer 1`] = `
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -1653,6 +1670,7 @@ exports[`MultiSelect Snapshots default snapshot 1`] = `
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -1675,6 +1693,7 @@ exports[`MultiSelect Snapshots default snapshot 1`] = `
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -2080,6 +2099,7 @@ exports[`MultiSelect Snapshots does not pass disabled if maxSelectedItem has pas
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -2107,6 +2127,7 @@ exports[`MultiSelect Snapshots does not pass disabled if maxSelectedItem has pas
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -2259,6 +2280,7 @@ exports[`MultiSelect Snapshots passed clearAll 1`] = `
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -2281,6 +2303,7 @@ exports[`MultiSelect Snapshots passed clearAll 1`] = `
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -2428,6 +2451,7 @@ exports[`MultiSelect Snapshots passed filterItems 1`] = `
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -2450,6 +2474,7 @@ exports[`MultiSelect Snapshots passed filterItems 1`] = `
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -2597,6 +2622,7 @@ exports[`MultiSelect Snapshots passed selectAllItems 1`] = `
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -2619,6 +2645,7 @@ exports[`MultiSelect Snapshots passed selectAllItems 1`] = `
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -2766,6 +2793,7 @@ exports[`MultiSelect Snapshots passed selectItem 1`] = `
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -2788,6 +2816,7 @@ exports[`MultiSelect Snapshots passed selectItem 1`] = `
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -2935,6 +2964,7 @@ exports[`MultiSelect Snapshots passed selectedIds 1`] = `
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -2957,6 +2987,7 @@ exports[`MultiSelect Snapshots passed selectedIds 1`] = `
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -3104,6 +3135,7 @@ exports[`MultiSelect Snapshots passed selectedItems 1`] = `
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -3131,6 +3163,7 @@ exports[`MultiSelect Snapshots passed selectedItems 1`] = `
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -3283,6 +3316,7 @@ exports[`MultiSelect Snapshots passed unselectItems 1`] = `
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -3305,6 +3339,7 @@ exports[`MultiSelect Snapshots passed unselectItems 1`] = `
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -3452,6 +3487,7 @@ exports[`MultiSelect Snapshots passes disabled if maxSelectedItem has passed 1`]
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -3479,6 +3515,7 @@ exports[`MultiSelect Snapshots passes disabled if maxSelectedItem has passed 1`]
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -3631,6 +3668,7 @@ exports[`MultiSelect Snapshots will pass itemHeight 1`] = `
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={60}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -3653,6 +3691,7 @@ exports[`MultiSelect Snapshots will pass itemHeight 1`] = `
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={60}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -3800,6 +3839,7 @@ exports[`MultiSelect Snapshots will pass selectAllHeight 1`] = `
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={60}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -3822,6 +3862,7 @@ exports[`MultiSelect Snapshots will pass selectAllHeight 1`] = `
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={60}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -3969,6 +4010,7 @@ exports[`MultiSelect Snapshots will pass selectAllHeight without itemHeight 1`] 
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -3991,6 +4033,7 @@ exports[`MultiSelect Snapshots will pass selectAllHeight without itemHeight 1`] 
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -4138,6 +4181,7 @@ exports[`MultiSelect Snapshots will pass selectedItemHeight 1`] = `
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -4160,6 +4204,7 @@ exports[`MultiSelect Snapshots will pass selectedItemHeight 1`] = `
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={60}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -4307,6 +4352,7 @@ exports[`MultiSelect Snapshots with generateClassName 1`] = `
       filteredItems={Array []}
       getList={undefined}
       isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
       listRenderer={undefined}
@@ -4329,6 +4375,7 @@ exports[`MultiSelect Snapshots with generateClassName 1`] = `
       filterItems={undefined}
       filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -4389,6 +4436,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
   "listRenderer": [Function],
@@ -4417,6 +4465,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
   "listRenderer": [Function],
@@ -4445,6 +4494,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
   "listRenderer": [Function],
@@ -4473,6 +4523,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [MockFunction mockedComponent],
   "listRenderer": [Function],
@@ -4501,6 +4552,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
   "listRenderer": [MockFunction mockedComponent],
@@ -4529,6 +4581,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
   "listRenderer": [Function],
@@ -4557,6 +4610,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
   "listRenderer": [Function],
@@ -4585,6 +4639,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
   "listRenderer": [Function],
@@ -4613,6 +4668,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
   "listRenderer": [Function],
@@ -4641,6 +4697,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
   "listRenderer": [Function],
@@ -4669,6 +4726,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
   "listRenderer": [Function],
@@ -4700,6 +4758,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
   "listRenderer": [Function],
@@ -4728,6 +4787,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
   "listRenderer": [Function],
@@ -4756,6 +4816,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
   "listRenderer": [Function],
@@ -4784,6 +4845,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
   "listRenderer": [Function],
@@ -4812,6 +4874,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
   "listRenderer": [Function],
@@ -4840,6 +4903,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
   "listRenderer": [Function],
@@ -4871,6 +4935,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
   "listRenderer": [Function],
@@ -4899,6 +4964,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
   "listRenderer": [Function],
@@ -4930,6 +4996,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 60,
   "itemRenderer": [Function],
   "listRenderer": [Function],
@@ -4958,6 +5025,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 60,
   "itemRenderer": [Function],
   "listRenderer": [Function],
@@ -4986,6 +5054,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
   "listRenderer": [Function],
@@ -5014,6 +5083,7 @@ Object {
   "filteredItems": Array [],
   "getList": undefined,
   "isAllSelected": false,
+  "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
   "listRenderer": [Function],

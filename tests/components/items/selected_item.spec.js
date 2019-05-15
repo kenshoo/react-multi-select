@@ -29,4 +29,12 @@ describe("SelectedItem", () => {
     const tree = renderer.render(<SelectedItem height={20} />);
     expect(tree).toMatchSnapshot();
   });
+
+  test("snapshot with disabled item", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(
+      <SelectedItem item={{ id: 1, label: "item 1", disabled: true }} />
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });

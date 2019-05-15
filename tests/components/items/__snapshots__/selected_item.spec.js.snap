@@ -18,6 +18,24 @@ exports[`SelectedItem default snapshot 1`] = `
 </div>
 `;
 
+exports[`SelectedItem snapshot with disabled item 1`] = `
+<div
+  className="selected_item"
+  style={
+    Object {
+      "height": 40,
+    }
+  }
+>
+  <ItemLabel
+    label="item 1"
+  />
+  <WithStyles(IconButton)>
+    <MdClose />
+  </WithStyles(IconButton)>
+</div>
+`;
+
 exports[`SelectedItem snapshot with group item 1`] = `
 <div
   className="with_grouping"
