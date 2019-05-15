@@ -108,7 +108,7 @@ class Example extends Component {
 | `searchSelectedItemsValue`    | `string`    |                | The value of the search field for destination list.                                                     |
 | `searchSelectedItemsChanged`  | `function`  |                | Function to handle the change of search field for destination list. Accepts value as a single argument. |
 | `selectedItemsFilterFunction` | `function`  | based on label | Is the same as filterFunction by default to filter items based on the search query in destination list. |
-
+| `isLocked`              | `function`  | `item => item.disabled`  |  Function to be used to define whether item is locked or not|
 
 ## Customization
 
@@ -168,6 +168,21 @@ The `SelectedItem` component receives the following props:
 
 `height` - receives the height defined by the list
 
+
+You can disable specific selected items by passing `item.disabled: true` or pass `isLocked` function which will be used to define whether the item is disabled.
+
+Example (selected & disabled):
+```javascript
+function Exemple(){
+  const items = [{id:0,label: 'item 0'}, {id:1,label: 'item 1'}];
+  return (
+        <MultiSelect
+          isLocked={item => item.label === 'item 0'}
+          items={items}
+          selectedItems={items}
+        />
+}
+```
 <br/>
 
 **Search**

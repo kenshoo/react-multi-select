@@ -311,17 +311,44 @@ storiesOf("React Multi Select", module)
   .add(
     "With some of the locked items",
     withReadme(Readme, () => {
-      const disabledItem = { id: 2, label: "item 2", disabled: true };
+      const disabledItem = [
+        { id: 0, label: "item 0", disabled: true },
+        { id: 5, label: "item 5", disabled: true }
+      ];
+
+      return (
+        <ReactMultiSelect
+          items={utils.withDisabledItems}
+          selectedItems={disabledItem}
+          showSelectedItemsSearch
+          isLocked={item => item.disabled}
+          loading={boolean("Loading", false)}
+          onChange={action("onChange")}
+          showSearch={boolean("Show search", true)}
+          showSelectAll={boolean("Show select all", true)}
+          messages={{ disabledItemsTooltip: "You can select up to 4 items" }}
+        />
+      );
+    })
+  )
+  .add(
+    "With some of the locked items selected & unselected",
+    withReadme(Readme, () => {
+      const disabledItem = [
+        { id: 2, label: "item 2", disabled: true },
+        { id: 5, label: "item 5", disabled: true }
+      ];
       const items = [
         { id: 1, label: "item  1" },
-        disabledItem,
+        ...disabledItem,
         { id: 3, label: "item  3" }
       ];
       return (
         <ReactMultiSelect
           items={items}
-          selectedItems={[disabledItem]}
+          selectedItems={[disabledItem[0]]}
           showSelectedItemsSearch
+          isLocked={item => item.disabled}
           loading={boolean("Loading", false)}
           onChange={action("onChange")}
           showSearch={boolean("Show search", true)}
