@@ -6,17 +6,17 @@ import ItemLabel from "./item_label";
 import classnames from "classnames";
 import styles from "./selected_item.scss";
 
-const SelectedItem = ({ item, height, group, isLocked }) => (
+const SelectedItem = ({ item, height, group, disabled }) => (
   <div
     className={classnames({
       [styles.with_grouping]: group,
       [styles.selected_item]: !group,
-      [styles.disabled]: isLocked(item)
+      [styles.disabled]: disabled
     })}
     style={{ height }}
   >
     <ItemLabel label={item.label} />
-    {!group && !isLocked(item) && (
+    {!group && !disabled && (
       <IconButton>
         <CloseIcon />
       </IconButton>

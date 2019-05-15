@@ -78,7 +78,6 @@ class InnerList extends PureComponent {
           height={itemHeight}
           checked={checked}
           disabled={disabled}
-          isLocked={isLocked}
         />
       </div>
     );
