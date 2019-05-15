@@ -246,7 +246,7 @@ const withMultiSelectState = WrappedComponent =>
           !isLocked(selectedItem) && findItem(selectedItem, filteredItems)
       );
       const selectableFilteredItems = filteredItems.filter(
-        item => !item.disabled
+        item => !isLocked(item)
       );
       return (
         selectedItemsInFilteredItems.length ===

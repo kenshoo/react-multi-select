@@ -28,7 +28,8 @@ const SourceList = ({
   disabled,
   withGrouping,
   listRenderer,
-  children
+  children,
+  isLocked
 }) => {
   const SelectAllRenderer = selectAllRenderer;
   const updatedFilteredItems = withGrouping
@@ -61,6 +62,7 @@ const SourceList = ({
         noItemsMessage={messages.noItemsMessage}
         disabled={disabled}
         disabledItemsTooltip={messages.disabledItemsTooltip}
+        isLocked={isLocked}
       />
     </Column>
   );
@@ -85,7 +87,8 @@ SourceList.propTypes = {
   selectItem: PropTypes.func,
   disabled: PropTypes.bool,
   withGrouping: PropTypes.bool,
-  listRenderer: PropTypes.func
+  listRenderer: PropTypes.func,
+  isLocked: PropTypes.func
 };
 
 SourceList.defaultProps = {

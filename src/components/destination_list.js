@@ -22,7 +22,8 @@ const DestinationList = ({
   noItemsRenderer,
   withGrouping,
   filteredItems,
-  children
+  children,
+  isLocked
 }) => {
   const SelectionStatusRenderer = selectionStatusRenderer;
   const updatedSelectedItems = withGrouping
@@ -47,6 +48,7 @@ const DestinationList = ({
         renderer={selectedItemRenderer}
         noItemsRenderer={noItemsRenderer}
         noItemsMessage={messages.noItemsMessage}
+        isLocked={isLocked}
       />
     </Column>
   );
@@ -64,7 +66,8 @@ DestinationList.propTypes = {
   noItemsRenderer: PropTypes.any,
   withGrouping: PropTypes.bool,
   filteredItems: PropTypes.arrayOf(PropTypes.object),
-  children: PropTypes.node
+  children: PropTypes.node,
+  isLocked: PropTypes.func
 };
 
 DestinationList.defaultProps = {

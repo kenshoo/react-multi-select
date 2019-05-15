@@ -7,18 +7,18 @@ import classnames from "classnames";
 import styles from "./selected_item.scss";
 import itemStyles from "./item.scss";
 
-const SelectedItem = ({ item, height, group }) => (
+const SelectedItem = ({ item, height, group, isLocked }) => (
   <div
     className={classnames({
       [styles.with_grouping]: group,
       [styles.selected_item]: !group,
-      [itemStyles.disabled]: item.disabled,
-      [itemStyles.selected]: item.disabled
+      [itemStyles.disabled]: isLocked(item),
+      [itemStyles.selected]: isLocked(item)
     })}
     style={{ height }}
   >
     <ItemLabel label={item.label} />
-    {!group && !item.disabled && (
+    {!group && !isLocked(item) && (
       <IconButton>
         <CloseIcon />
       </IconButton>
@@ -28,7 +28,8 @@ const SelectedItem = ({ item, height, group }) => (
 
 SelectedItem.propTypes = {
   item: PropTypes.object,
-  height: PropTypes.number
+  height: PropTypes.number,
+  isLocked: PropTypes.func
 };
 
 SelectedItem.defaultProps = {
