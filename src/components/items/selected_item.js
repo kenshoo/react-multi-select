@@ -5,15 +5,13 @@ import IconButton from "@material-ui/core/IconButton";
 import ItemLabel from "./item_label";
 import classnames from "classnames";
 import styles from "./selected_item.scss";
-import itemStyles from "./item.scss";
 
 const SelectedItem = ({ item, height, group, isLocked }) => (
   <div
     className={classnames({
       [styles.with_grouping]: group,
       [styles.selected_item]: !group,
-      [itemStyles.disabled]: isLocked(item),
-      [itemStyles.selected]: isLocked(item)
+      [styles.disabled]: isLocked(item)
     })}
     style={{ height }}
   >
