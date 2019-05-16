@@ -6,7 +6,13 @@ exports[`DestinationList Case disabled search with destination list 1`] = `
   height={400}
   itemHeight={40}
   listRenderer={[Function]}
-  messages={Object {}}
+  messages={
+    Object {
+      "messages": Object {
+        "searchPlaceholder": "Search",
+      },
+    }
+  }
   noItemsRenderer={[Function]}
   selectedIds={Array []}
   selectedItemRenderer={[Function]}
@@ -21,7 +27,13 @@ exports[`DestinationList Case include search with destination list 1`] = `
   height={400}
   itemHeight={40}
   listRenderer={[Function]}
-  messages={Object {}}
+  messages={
+    Object {
+      "messages": Object {
+        "searchPlaceholder": "Search",
+      },
+    }
+  }
   noItemsRenderer={[Function]}
   selectedIds={Array []}
   selectedItemRenderer={[Function]}
