@@ -4346,11 +4346,7 @@ exports[`MultiSelect Snapshots with generateClassName 1`] = `
 `;
 
 exports[`MultiSelect Snapshots with responsiveHeight 1`] = `
-<ReactHeight
-  dirty={true}
-  getElementHeight={[Function]}
-  hidden={false}
-  onHeightReady={[Function]}
+<div
   style={
     Object {
       "height": "70%",
@@ -4363,15 +4359,11 @@ exports[`MultiSelect Snapshots with responsiveHeight 1`] = `
     items={Array []}
     selectedItems={Array []}
   />
-</ReactHeight>
+</div>
 `;
 
 exports[`MultiSelect Snapshots without responsiveHeight 1`] = `
-<ReactHeight
-  dirty={true}
-  getElementHeight={[Function]}
-  hidden={false}
-  onHeightReady={[Function]}
+<div
   style={
     Object {
       "height": "400px",
@@ -4384,7 +4376,7 @@ exports[`MultiSelect Snapshots without responsiveHeight 1`] = `
     items={Array []}
     selectedItems={Array []}
   />
-</ReactHeight>
+</div>
 `;
 
 exports[`MultiSelect passes properties can remove search 1`] = `
