@@ -4,7 +4,7 @@ import {
   filterUnselectedByIds,
   findItem,
   getMinMaxIndexes,
-  isWhose,
+  isWithin,
   getNewSelectedItems
 } from "./multi_select_state_utils";
 
@@ -72,7 +72,7 @@ const withMultiSelectState = WrappedComponent =>
       const interval = getMinMaxIndexes(index, firstItemShiftSelected);
       const newSelectedItems = items.filter(
         (item, index) =>
-          (isWhose(index, interval) &&
+          (isWithin(index, interval) &&
             !isLocked(item) &&
             findItem(item, filteredItems)) ||
           findItem(item, this.state.selectedItems)
@@ -123,14 +123,14 @@ const withMultiSelectState = WrappedComponent =>
             const index = items.findIndex(item => item.id === id);
             this.setState({ firstItemShiftSelected: index });
           }
-          this.getNewItemsBySelectItem(id, items, selectedItems);
+          this.setNewItemsBySelectItem(id, items, selectedItems);
         }
       } else {
         this.unselectItems([id]);
       }
     }
 
-    getNewItemsBySelectItem(id, items, selectedItems) {
+    setNewItemsBySelectItem(id, items, selectedItems) {
       const newSelectedItems = getNewSelectedItems(id, items, selectedItems);
       const newFilteredSelectedItems = this.getNewFilteredSelectedItems(
         newSelectedItems

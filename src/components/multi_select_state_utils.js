@@ -37,7 +37,7 @@ export const getMinMaxIndexes = (currentIndex, firstItemShiftSelected) =>
     ? { minIndex: currentIndex, maxIndex: firstItemShiftSelected }
     : { minIndex: firstItemShiftSelected, maxIndex: currentIndex };
 
-export const isWhose = (index, { minIndex, maxIndex }) =>
+export const isWithin = (index, { minIndex, maxIndex }) =>
   index >= minIndex && index <= maxIndex;
 
 export const getNewSelectedItems = (itemId, items, selectedItems) => {
