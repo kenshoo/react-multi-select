@@ -123,27 +123,26 @@ const withMultiSelectState = WrappedComponent =>
             const index = items.findIndex(item => item.id === id);
             this.setState({ firstItemShiftSelected: index });
           }
-          const newSelectedItems = getNewSelectedItems(
-            id,
-            items,
-            selectedItems
-          );
-          const newFilteredSelectedItems = this.getNewFilteredSelectedItems(
-            newSelectedItems
-          );
-          this.setState(
-            {
-              selectedItems: newSelectedItems,
-              filteredSelectedItems: newFilteredSelectedItems
-            },
-            this.handleChange
-          );
+          this.getNewItemsBySelectItem(id, items, selectedItems);
         }
       } else {
         this.unselectItems([id]);
       }
     }
 
+    getNewItemsBySelectItem(id, items, selectedItems) {
+      const newSelectedItems = getNewSelectedItems(id, items, selectedItems);
+      const newFilteredSelectedItems = this.getNewFilteredSelectedItems(
+        newSelectedItems
+      );
+      this.setState(
+        {
+          selectedItems: newSelectedItems,
+          filteredSelectedItems: newFilteredSelectedItems
+        },
+        this.handleChange
+      );
+    }
     unselectItems(ids) {
       const { selectedItems, filteredSelectedItems } = this.state;
       const { isLocked } = this.props;
