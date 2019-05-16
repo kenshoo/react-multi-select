@@ -31,3 +31,21 @@ export const getSelectedByAllItems = (itemsToSelect, selectedItems, items) => {
 
   return [...destinationItems, ...sourceItems];
 };
+
+export const getMinMaxIndexes = (currentIndex, firstItemShiftSelected) =>
+  firstItemShiftSelected > currentIndex
+    ? { minIndex: currentIndex, maxIndex: firstItemShiftSelected }
+    : { minIndex: firstItemShiftSelected, maxIndex: currentIndex };
+
+export const isWhose = (index, { minIndex, maxIndex }) =>
+  index >= minIndex && index <= maxIndex;
+
+export const getNewSelectedItems = (itemId, items, selectedItems) => {
+  const sourceItems = items.filter(
+    item => item.id === itemId || findItem(item, selectedItems)
+  );
+  const destinationItems = selectedItems.filter(
+    selectedItem => !findItem(selectedItem, items)
+  );
+  return [...destinationItems, ...sourceItems];
+};

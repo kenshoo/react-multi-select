@@ -2,7 +2,10 @@ import React, { PureComponent } from "react";
 import {
   getSelectedByAllItems,
   filterUnselectedByIds,
-  findItem
+  findItem,
+  getMinMaxIndexes,
+  isWhose,
+  getNewSelectedItems
 } from "./multi_select_state_utils";
 
 const withMultiSelectState = WrappedComponent =>
@@ -49,10 +52,8 @@ const withMultiSelectState = WrappedComponent =>
         this.setState({ selectedItems: nextProps.selectedItems });
       }
       if (this.props.items !== nextProps.items) {
-        this.setState({
-          items: nextProps.items,
-          filteredItems: nextProps.items
-        });
+        const { items } = nextProps;
+        this.setState({ items, filteredItems: items });
       }
       if (searchValue !== nextProps.searchValue) {
         this.filterItems({ target: { value: nextProps.searchValue } });
@@ -66,16 +67,15 @@ const withMultiSelectState = WrappedComponent =>
 
     handleMultiSelection(index) {
       const { items, isLocked } = this.props;
-      const { selectedItems, filteredItems } = this.state;
+      const { filteredItems, firstItemShiftSelected } = this.state;
 
-      const { minIndex, maxIndex } = this.getMinMaxIndexes(index);
+      const interval = getMinMaxIndexes(index, firstItemShiftSelected);
       const newSelectedItems = items.filter(
         (item, index) =>
-          (index >= minIndex &&
-            index <= maxIndex &&
+          (isWhose(index, interval) &&
             !isLocked(item) &&
             findItem(item, filteredItems)) ||
-          findItem(item, selectedItems)
+          findItem(item, this.state.selectedItems)
       );
       const newFilteredSelectedItems = this.getNewFilteredSelectedItems(
         newSelectedItems
@@ -87,25 +87,6 @@ const withMultiSelectState = WrappedComponent =>
         },
         this.handleChange
       );
-    }
-
-    getMinMaxIndexes(currentIndex) {
-      const { firstItemShiftSelected } = this.state;
-      return firstItemShiftSelected > currentIndex
-        ? { minIndex: currentIndex, maxIndex: firstItemShiftSelected }
-        : { minIndex: firstItemShiftSelected, maxIndex: currentIndex };
-    }
-
-    getNewSelectedItems(itemId) {
-      const { items } = this.props;
-      const { selectedItems } = this.state;
-      const sourceItems = items.filter(
-        item => item.id === itemId || findItem(item, selectedItems)
-      );
-      const destinationItems = selectedItems.filter(
-        selectedItem => !findItem(selectedItem, items)
-      );
-      return [...destinationItems, ...sourceItems];
     }
 
     getNewFilteredSelectedItems(items) {
@@ -142,7 +123,11 @@ const withMultiSelectState = WrappedComponent =>
             const index = items.findIndex(item => item.id === id);
             this.setState({ firstItemShiftSelected: index });
           }
-          const newSelectedItems = this.getNewSelectedItems(id);
+          const newSelectedItems = getNewSelectedItems(
+            id,
+            items,
+            selectedItems
+          );
           const newFilteredSelectedItems = this.getNewFilteredSelectedItems(
             newSelectedItems
           );
@@ -196,9 +181,7 @@ const withMultiSelectState = WrappedComponent =>
     filterItems(event) {
       const { items, filterFunction, searchValueChanged } = this.props;
       const { value } = event.target;
-      this.setState({
-        filteredItems: items.filter(filterFunction(value))
-      });
+      this.setState({ filteredItems: items.filter(filterFunction(value)) });
       searchValueChanged && searchValueChanged(value);
     }
 
