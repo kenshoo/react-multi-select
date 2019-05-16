@@ -1,4 +1,5 @@
 import React from "react";
+import { mount } from "enzyme";
 import ShallowRenderer from "react-test-renderer/shallow";
 import withSearch from "../../src/components/with_search.js";
 
@@ -59,5 +60,21 @@ describe("With search", () => {
       />
     );
     expect(component).toMatchSnapshot();
+  });
+
+  test("Case messages are passed ok", () => {
+    const filterItems = jest.fn();
+    const component = mount(
+      <ListComponent
+        showSearch={false}
+        searchRenderer={UserSearch}
+        searchIcon={<img src="custom_icon" alt="" />}
+        searchValue="11"
+        messages={messages}
+        filterItems={filterItems}
+      />
+    );
+    const listComponent = component.find(ListComponent);
+    expect(listComponent.props().messages).toEqual(messages);
   });
 });
