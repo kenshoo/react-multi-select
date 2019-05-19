@@ -10,6 +10,11 @@ exports[`With search Case custom search component 1`] = `
       },
     ]
   }
+  messages={
+    Object {
+      "searchPlaceholder": "Search",
+    }
+  }
 >
   <UserSearch
     onChange={[MockFunction]}
@@ -35,6 +40,11 @@ exports[`With search Case default search component 1`] = `
       },
     ]
   }
+  messages={
+    Object {
+      "searchPlaceholder": "Search",
+    }
+  }
 >
   <Search
     onChange={[MockFunction]}
@@ -50,4 +60,12 @@ exports[`With search Case default search component 1`] = `
 </CustomComponent>
 `;
 
-exports[`With search Case not search component 1`] = `<CustomComponent />`;
+exports[`With search Case not search component 1`] = `
+<CustomComponent
+  messages={
+    Object {
+      "searchPlaceholder": "Search",
+    }
+  }
+/>
+`;

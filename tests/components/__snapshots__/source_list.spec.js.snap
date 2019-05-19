@@ -441,7 +441,16 @@ exports[`SourceList passed source_list wrapped up to HOC withSearch 1`] = `
   itemHeight={10}
   itemRenderer={[MockFunction mockedComponent]}
   listRenderer={[Function]}
-  messages={Object {}}
+  messages={
+    Object {
+      "clearAllMessage": "Uncheck all",
+      "noItemsMessage": "No entries available...",
+      "noneSelectedMessage": "Nothing",
+      "searchPlaceholder": "Find...",
+      "selectAllMessage": "Check all",
+      "selectedMessage": "Checked",
+    }
+  }
   noItemsRenderer={[Function]}
   selectAllHeight={60}
   selectAllItems={[MockFunction selectAllItems]}
