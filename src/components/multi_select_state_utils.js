@@ -15,10 +15,11 @@ const getDestinationItems = (itemsToSelect, selectedItems, items) =>
       !findItem(selectedItem, itemsToSelect) && !findItem(selectedItem, items)
   );
 
-const containsId = (ids, item) => ids.find(id => id === item.id) === undefined;
+const notContainsId = (ids, item) =>
+  ids.find(id => id === item.id) === undefined;
 
-export const filterByIds = (items, ids) =>
-  items.filter(item => containsId(ids, item));
+export const filterUnselectedByIds = (items, ids, isLocked) =>
+  items.filter(item => notContainsId(ids, item) || isLocked(item));
 
 export const getSelectedByAllItems = (itemsToSelect, selectedItems, items) => {
   const sourceItems = getSourceItems(itemsToSelect, selectedItems, items);
@@ -28,5 +29,23 @@ export const getSelectedByAllItems = (itemsToSelect, selectedItems, items) => {
     items
   );
 
+  return [...destinationItems, ...sourceItems];
+};
+
+export const getMinMaxIndexes = (currentIndex, firstItemShiftSelected) =>
+  firstItemShiftSelected > currentIndex
+    ? { minIndex: currentIndex, maxIndex: firstItemShiftSelected }
+    : { minIndex: firstItemShiftSelected, maxIndex: currentIndex };
+
+export const isWithin = (index, { minIndex, maxIndex }) =>
+  index >= minIndex && index <= maxIndex;
+
+export const getNewSelectedItems = (itemId, items, selectedItems) => {
+  const sourceItems = items.filter(
+    item => item.id === itemId || findItem(item, selectedItems)
+  );
+  const destinationItems = selectedItems.filter(
+    selectedItem => !findItem(selectedItem, items)
+  );
   return [...destinationItems, ...sourceItems];
 };

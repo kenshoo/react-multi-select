@@ -18,3 +18,9 @@
   pointer-events: none;
   color: $color-black;
 }
+
+.disabled {
+  color: $disabled-color;
+  background-color: $selected-background-color;
+  cursor: default;
+}

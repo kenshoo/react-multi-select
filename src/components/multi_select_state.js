@@ -1,8 +1,11 @@
 import React, { PureComponent } from "react";
 import {
   getSelectedByAllItems,
-  filterByIds,
-  findItem
+  filterUnselectedByIds,
+  findItem,
+  getMinMaxIndexes,
+  isWithin,
+  getNewSelectedItems
 } from "./multi_select_state_utils";
 
 const withMultiSelectState = WrappedComponent =>
@@ -13,7 +16,8 @@ const withMultiSelectState = WrappedComponent =>
           .toLowerCase()
           .includes(value.toLowerCase()),
       items: [],
-      selectedItems: []
+      selectedItems: [],
+      isLocked: item => item.disabled
     };
 
     constructor(props) {
@@ -48,10 +52,8 @@ const withMultiSelectState = WrappedComponent =>
         this.setState({ selectedItems: nextProps.selectedItems });
       }
       if (this.props.items !== nextProps.items) {
-        this.setState({
-          items: nextProps.items,
-          filteredItems: nextProps.items
-        });
+        const { items } = nextProps;
+        this.setState({ items, filteredItems: items });
       }
       if (searchValue !== nextProps.searchValue) {
         this.filterItems({ target: { value: nextProps.searchValue } });
@@ -64,16 +66,16 @@ const withMultiSelectState = WrappedComponent =>
     }
 
     handleMultiSelection(index) {
-      const { items } = this.props;
-      const { selectedItems, filteredItems } = this.state;
+      const { items, isLocked } = this.props;
+      const { filteredItems, firstItemShiftSelected } = this.state;
 
-      const { minIndex, maxIndex } = this.getMinMaxIndexes(index);
+      const interval = getMinMaxIndexes(index, firstItemShiftSelected);
       const newSelectedItems = items.filter(
         (item, index) =>
-          (index >= minIndex &&
-            index <= maxIndex &&
+          (isWithin(index, interval) &&
+            !isLocked(item) &&
             findItem(item, filteredItems)) ||
-          findItem(item, selectedItems)
+          findItem(item, this.state.selectedItems)
       );
       const newFilteredSelectedItems = this.getNewFilteredSelectedItems(
         newSelectedItems
@@ -85,25 +87,6 @@ const withMultiSelectState = WrappedComponent =>
         },
         this.handleChange
       );
-    }
-
-    getMinMaxIndexes(currentIndex) {
-      const { firstItemShiftSelected } = this.state;
-      return firstItemShiftSelected > currentIndex
-        ? { minIndex: currentIndex, maxIndex: firstItemShiftSelected }
-        : { minIndex: firstItemShiftSelected, maxIndex: currentIndex };
-    }
-
-    getNewSelectedItems(itemId) {
-      const { items } = this.props;
-      const { selectedItems } = this.state;
-      const sourceItems = items.filter(
-        item => item.id === itemId || findItem(item, selectedItems)
-      );
-      const destinationItems = selectedItems.filter(
-        selectedItem => !findItem(selectedItem, items)
-      );
-      return [...destinationItems, ...sourceItems];
     }
 
     getNewFilteredSelectedItems(items) {
@@ -140,27 +123,39 @@ const withMultiSelectState = WrappedComponent =>
             const index = items.findIndex(item => item.id === id);
             this.setState({ firstItemShiftSelected: index });
           }
-          const newSelectedItems = this.getNewSelectedItems(id);
-          const newFilteredSelectedItems = this.getNewFilteredSelectedItems(
-            newSelectedItems
-          );
-          this.setState(
-            {
-              selectedItems: newSelectedItems,
-              filteredSelectedItems: newFilteredSelectedItems
-            },
-            this.handleChange
-          );
+          this.setNewItemsBySelectItem(id, items, selectedItems);
         }
       } else {
         this.unselectItems([id]);
       }
     }
 
+    setNewItemsBySelectItem(id, items, selectedItems) {
+      const newSelectedItems = getNewSelectedItems(id, items, selectedItems);
+      const newFilteredSelectedItems = this.getNewFilteredSelectedItems(
+        newSelectedItems
+      );
+      this.setState(
+        {
+          selectedItems: newSelectedItems,
+          filteredSelectedItems: newFilteredSelectedItems
+        },
+        this.handleChange
+      );
+    }
     unselectItems(ids) {
       const { selectedItems, filteredSelectedItems } = this.state;
-      const newSelectedItems = filterByIds(selectedItems, ids);
-      const newFilteredSelectedItems = filterByIds(filteredSelectedItems, ids);
+      const { isLocked } = this.props;
+      const newSelectedItems = filterUnselectedByIds(
+        selectedItems,
+        ids,
+        isLocked
+      );
+      const newFilteredSelectedItems = filterUnselectedByIds(
+        filteredSelectedItems,
+        ids,
+        isLocked
+      );
       this.setState(
         {
           selectedItems: newSelectedItems,
@@ -171,8 +166,13 @@ const withMultiSelectState = WrappedComponent =>
     }
 
     clearAll() {
+      const { selectedItems, isLocked } = this.props;
+      const lockedItems = selectedItems.filter(isLocked);
       this.setState(
-        { selectedItems: [], filteredSelectedItems: [] },
+        {
+          selectedItems: lockedItems,
+          filteredSelectedItems: lockedItems
+        },
         this.handleChange
       );
     }
@@ -180,10 +180,7 @@ const withMultiSelectState = WrappedComponent =>
     filterItems(event) {
       const { items, filterFunction, searchValueChanged } = this.props;
       const { value } = event.target;
-      this.setState({
-        filteredItems: items.filter(filterFunction(value))
-      });
-
+      this.setState({ filteredItems: items.filter(filterFunction(value)) });
       searchValueChanged && searchValueChanged(value);
     }
 
@@ -225,11 +222,13 @@ const withMultiSelectState = WrappedComponent =>
 
     isAllSelected() {
       const { filteredItems, selectedItems } = this.state;
-      const selectedItemsInFilteredItems = selectedItems.filter(selectedItem =>
-        findItem(selectedItem, filteredItems)
+      const { isLocked } = this.props;
+      const selectedItemsInFilteredItems = selectedItems.filter(
+        selectedItem =>
+          !isLocked(selectedItem) && findItem(selectedItem, filteredItems)
       );
       const selectableFilteredItems = filteredItems.filter(
-        item => !item.disabled
+        item => !isLocked(item)
       );
       return (
         selectedItemsInFilteredItems.length ===

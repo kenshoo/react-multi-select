@@ -61,6 +61,7 @@ exports[`DestinationList custom messages 1`] = `
   <ItemsList
     disabled={false}
     height={355}
+    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     noItemsMessage="No entries available..."
@@ -85,6 +86,7 @@ exports[`DestinationList custom noItemsRenderer 1`] = `
   <ItemsList
     disabled={false}
     height={355}
+    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     noItemsMessage={undefined}
@@ -109,6 +111,7 @@ exports[`DestinationList custom selectedItemRenderer 1`] = `
   <ItemsList
     disabled={false}
     height={355}
+    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     noItemsMessage={undefined}
@@ -133,6 +136,7 @@ exports[`DestinationList custom selectionStatusRenderer 1`] = `
   <ItemsList
     disabled={false}
     height={355}
+    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     noItemsMessage={undefined}
@@ -157,6 +161,7 @@ exports[`DestinationList default snapshot 1`] = `
   <ItemsList
     disabled={false}
     height={355}
+    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     noItemsMessage={undefined}
@@ -181,6 +186,7 @@ exports[`DestinationList passed clearAll 1`] = `
   <ItemsList
     disabled={false}
     height={355}
+    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     noItemsMessage={undefined}
@@ -210,6 +216,7 @@ exports[`DestinationList passed selectedIds 1`] = `
   <ItemsList
     disabled={false}
     height={355}
+    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     noItemsMessage={undefined}
@@ -234,6 +241,7 @@ exports[`DestinationList passed selectedItems 1`] = `
   <ItemsList
     disabled={false}
     height={355}
+    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     noItemsMessage={undefined}
@@ -258,6 +266,7 @@ exports[`DestinationList passed selectedItems with grouping 1`] = `
   <ItemsList
     disabled={false}
     height={355}
+    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     noItemsMessage={undefined}
@@ -282,6 +291,7 @@ exports[`DestinationList passed selectedItems with grouping and empty items 1`] 
   <ItemsList
     disabled={false}
     height={355}
+    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     noItemsMessage={undefined}
@@ -306,6 +316,7 @@ exports[`DestinationList passed unselectItems 1`] = `
   <ItemsList
     disabled={false}
     height={355}
+    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     noItemsMessage={undefined}
