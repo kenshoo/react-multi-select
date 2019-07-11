@@ -357,4 +357,50 @@ storiesOf("React Multi Select", module)
         />
       );
     })
+  )
+  .add(
+    "As a controlled component",
+    withReadme(Readme, () => {
+      class SelectedItemsController extends React.Component {
+        SINGLE_ITEM = [{ id: 1, label: "Item 1" }];
+        MULTI_ITEMS = [
+          { id: 2, label: "Item 2" },
+          { id: 4, label: "Item 4" }
+        ]
+
+        constructor(props) {
+          super(props);
+          this.state = {
+            selectedItems: this.SINGLE_ITEM,
+          };
+        }
+
+        render() {
+          return (
+            <React.Fragment>
+              <input
+                style={{ marginBottom: "10px" }}
+                value="set Selected Items from outside"
+                type="button"
+                onClick={() => {
+                  this.setState({
+                    selectedItems: this.state.selectedItems.length > 1 ? this.SINGLE_ITEM : this.MULTI_ITEMS
+                  });
+                }}
+              />
+              <ReactMultiSelect
+                items={utils.items}
+                selectedItems={this.state.selectedItems}
+                loading={boolean("Loading", false)}
+                onChange={action("onChange")}
+                showSearch={boolean("Show search", true)}
+                showSelectAll={boolean("Show select all", true)}
+              />
+            </React.Fragment>
+          );
+        }
+      }
+
+      return <SelectedItemsController />;
+    })
   );
