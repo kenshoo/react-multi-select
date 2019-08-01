@@ -115,7 +115,7 @@ const withMultiSelectState = WrappedComponent =>
     }
 
     selectItem(event, id) {
-      const { items } = this.props;
+      const { items, keepSelectionOrder } = this.props;
       const { selectedItems, firstItemShiftSelected } = this.state;
       if (!selectedItems.find(item => item.id === id)) {
         if (event.shiftKey && firstItemShiftSelected !== undefined) {
@@ -125,15 +125,25 @@ const withMultiSelectState = WrappedComponent =>
             const index = items.findIndex(item => item.id === id);
             this.setState({ firstItemShiftSelected: index });
           }
-          this.setNewItemsBySelectItem(id, items, selectedItems);
+          this.setNewItemsBySelectItem(
+            id,
+            items,
+            selectedItems,
+            keepSelectionOrder
+          );
         }
       } else {
         this.unselectItems([id]);
       }
     }
 
-    setNewItemsBySelectItem(id, items, selectedItems) {
-      const newSelectedItems = getNewSelectedItems(id, items, selectedItems);
+    setNewItemsBySelectItem(id, items, selectedItems, keepSelectionOrder) {
+      const newSelectedItems = getNewSelectedItems(
+        id,
+        items,
+        selectedItems,
+        keepSelectionOrder
+      );
       const newFilteredSelectedItems = this.getNewFilteredSelectedItems(
         newSelectedItems
       );
