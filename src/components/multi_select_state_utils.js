@@ -32,54 +32,54 @@ export const getSelectedByAllItems = (itemsToSelect, selectedItems, items) => {
   return [...destinationItems, ...sourceItems];
 };
 
-export const getMinMaxIndexes = (currentIndex, firstItemShiftSelected) =>
+export const getMinMaxIndexes = (
+  currentIndex,
+  firstItemShiftSelected,
+  items,
+  selectedItems,
+  maxSelected
+) => {
+  const outsideSelected = getSelectedItemsOutsideInterval(
+    currentIndex,
+    firstItemShiftSelected,
+    items,
+    selectedItems
+  ).length;
+  const shouldBeSelect =
+    outsideSelected + Math.abs(firstItemShiftSelected - currentIndex) + 1;
+
+  if (maxSelected && maxSelected <= shouldBeSelect) {
+    const availableToSelect = maxSelected - outsideSelected - 1;
+    return firstItemShiftSelected > currentIndex
+      ? {
+          minIndex: firstItemShiftSelected - availableToSelect,
+          maxIndex: firstItemShiftSelected
+        }
+      : {
+          minIndex: firstItemShiftSelected,
+          maxIndex: firstItemShiftSelected + availableToSelect
+        };
+  }
+  return getInputInterval(currentIndex, firstItemShiftSelected);
+};
+
+const getInputInterval = (currentIndex, firstItemShiftSelected) =>
   firstItemShiftSelected > currentIndex
     ? { minIndex: currentIndex, maxIndex: firstItemShiftSelected }
     : { minIndex: firstItemShiftSelected, maxIndex: currentIndex };
 
-export const getAvailableIntervalForSelection = (
-  interval,
-  outsideSelectedItems,
-  maxSelectedItems,
-  firstItemShiftSelected
-) => {
-  const { minIndex, maxIndex } = interval;
-  const shouldBeSelect = outsideSelectedItems + (maxIndex - minIndex);
-  return maxSelectedItems > 0 && maxSelectedItems <= shouldBeSelect
-    ? getFixedInterval(
-        interval,
-        outsideSelectedItems,
-        maxSelectedItems,
-        firstItemShiftSelected
-      )
-    : interval;
-};
-
-const getFixedInterval = (
-  { minIndex, maxIndex },
-  outsideSelectedItems,
-  maxSelectedItems,
-  firstItemShiftSelected
-) => ({
-  minIndex:
-    maxIndex === firstItemShiftSelected
-      ? maxIndex - (maxSelectedItems - outsideSelectedItems - 1)
-      : minIndex,
-  maxIndex:
-    minIndex === firstItemShiftSelected
-      ? minIndex + (maxSelectedItems - outsideSelectedItems - 1)
-      : maxIndex
-});
-
 export const getSelectedItemsOutsideInterval = (
+  currentIndex,
+  firstItemShiftSelected,
   sourceItems,
-  selectedItems,
-  interval
-) =>
-  selectedItems.filter(selectedItem => {
+  selectedItems
+) => {
+  const interval = getInputInterval(currentIndex, firstItemShiftSelected);
+  return selectedItems.filter(selectedItem => {
     const index = sourceItems.findIndex(item => item.id === selectedItem.id);
     return !isWithin(index, interval) || selectedItem.disabled;
   });
+};
 
 export const isWithin = (index, { minIndex, maxIndex }) =>
   index >= minIndex && index <= maxIndex;

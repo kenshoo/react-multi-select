@@ -2,7 +2,6 @@ import React, { PureComponent } from "react";
 import {
   getSelectedByAllItems,
   getSelectedItemsOutsideInterval,
-  getAvailableIntervalForSelection,
   filterUnselectedByIds,
   findItem,
   getMinMaxIndexes,
@@ -75,17 +74,18 @@ const withMultiSelectState = WrappedComponent =>
         selectedItems
       } = this.state;
 
-      const initialInterval = getMinMaxIndexes(index, firstItemShiftSelected);
-      const outsideIntervalSelectedItems = getSelectedItemsOutsideInterval(
+      const interval = getMinMaxIndexes(
+        index,
+        firstItemShiftSelected,
         items,
         selectedItems,
-        initialInterval
+        maxSelectedItems
       );
-      const interval = getAvailableIntervalForSelection(
-        initialInterval,
-        outsideIntervalSelectedItems.length,
-        maxSelectedItems,
-        firstItemShiftSelected
+      const outsideSelectedItems = getSelectedItemsOutsideInterval(
+        index,
+        firstItemShiftSelected,
+        items,
+        selectedItems
       );
 
       const newSelectedItems = items.filter(
@@ -93,7 +93,7 @@ const withMultiSelectState = WrappedComponent =>
           (isWithin(index, interval) &&
             !isLocked(item) &&
             findItem(item, filteredItems)) ||
-          findItem(item, outsideIntervalSelectedItems)
+          findItem(item, outsideSelectedItems)
       );
       const newFilteredSelectedItems = this.getNewFilteredSelectedItems(
         newSelectedItems
