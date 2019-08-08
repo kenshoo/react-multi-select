@@ -39,28 +39,44 @@ export const getMinMaxIndexes = (
   selectedItems,
   maxSelected
 ) => {
-  const outsideSelected = getSelectedItemsOutsideInterval(
+  const numberOfItemsOutsideSelected = getSelectedItemsOutsideInterval(
     currentIndex,
     firstItemShiftSelected,
     items,
     selectedItems
   ).length;
-  const shouldBeSelect =
-    outsideSelected + Math.abs(firstItemShiftSelected - currentIndex) + 1;
+  const sumItemsShouldBeSelect =
+    numberOfItemsOutsideSelected +
+    Math.abs(firstItemShiftSelected - currentIndex) +
+    1;
 
-  if (maxSelected && maxSelected <= shouldBeSelect) {
-    const availableToSelect = maxSelected - outsideSelected - 1;
-    return firstItemShiftSelected > currentIndex
-      ? {
-          minIndex: firstItemShiftSelected - availableToSelect,
-          maxIndex: firstItemShiftSelected
-        }
-      : {
-          minIndex: firstItemShiftSelected,
-          maxIndex: firstItemShiftSelected + availableToSelect
-        };
+  if (maxSelected && maxSelected <= sumItemsShouldBeSelect) {
+    return getIndexesWhenShiftSelected(
+      currentIndex,
+      firstItemShiftSelected,
+      maxSelected,
+      numberOfItemsOutsideSelected
+    );
   }
   return getInputInterval(currentIndex, firstItemShiftSelected);
+};
+
+const getIndexesWhenShiftSelected = (
+  currentIndex,
+  firstItemShiftSelected,
+  maxSelected,
+  numberOfItemsOutsideSelected
+) => {
+  const sumItemsAllowToSelect = maxSelected - numberOfItemsOutsideSelected - 1;
+  return firstItemShiftSelected > currentIndex
+    ? {
+        minIndex: firstItemShiftSelected - sumItemsAllowToSelect,
+        maxIndex: firstItemShiftSelected
+      }
+    : {
+        minIndex: firstItemShiftSelected,
+        maxIndex: firstItemShiftSelected + sumItemsAllowToSelect
+      };
 };
 
 const getInputInterval = (currentIndex, firstItemShiftSelected) =>
