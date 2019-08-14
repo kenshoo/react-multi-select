@@ -50,7 +50,10 @@ const withMultiSelectState = WrappedComponent =>
     componentWillReceiveProps(nextProps) {
       const { searchValue, searchSelectedItemsValue } = this.props;
       if (this.props.selectedItems !== nextProps.selectedItems) {
-        this.setState({ selectedItems: nextProps.selectedItems });
+        this.setState({
+          selectedItems: nextProps.selectedItems,
+          filteredSelectedItems: nextProps.selectedItems
+        });
       }
       if (this.props.items !== nextProps.items) {
         const { items } = nextProps;
@@ -119,7 +122,6 @@ const withMultiSelectState = WrappedComponent =>
     componentDidMount() {
       window.addEventListener("keyup", this.onKeyUp);
     }
-
     componentWillUnmount() {
       window.removeEventListener("keyup", this.onKeyUp, false);
     }
