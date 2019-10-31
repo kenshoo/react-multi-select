@@ -16,7 +16,8 @@ class ItemsList extends PureComponent {
     selectedIds: PropTypes.arrayOf(PropTypes.number),
     items: PropTypes.array,
     disabled: PropTypes.bool,
-    disabledItemsTooltip: PropTypes.string
+    disabledItemsTooltip: PropTypes.string,
+    isLocked: PropTypes.func
   };
 
   static defaultProps = {
@@ -61,7 +62,8 @@ class ItemsList extends PureComponent {
       selectedIds,
       onClick,
       disabled,
-      disabledItemsTooltip
+      disabledItemsTooltip,
+      isLocked
     } = this.props;
     return (
       <AutoSizer>
@@ -84,6 +86,7 @@ class ItemsList extends PureComponent {
             selectedIds={selectedIds}
             disabled={disabled}
             disabledItemsTooltip={disabledItemsTooltip}
+            isLocked={isLocked}
           />
         )}
       </AutoSizer>

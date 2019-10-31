@@ -275,4 +275,132 @@ storiesOf("React Multi Select", module)
         />
       );
     })
+  )
+  .add(
+    "Selected items search",
+    withReadme(Readme, () => {
+      class SelectedSearchController extends React.Component {
+        state = {
+          value: ""
+        };
+
+        onChange = value => {
+          this.setState({ value });
+        };
+
+        render() {
+          return (
+            <ReactMultiSelect
+              showSelectedItemsSearch={true}
+              searchSelectedItemsValue={this.state.value}
+              searchSelectedItemsChanged={this.onChange}
+              selectedItemsFilterFunction={id => item => item.id === Number(id)}
+              items={utils.items}
+              loading={boolean("Loading", false)}
+              onChange={action("onChange")}
+              showSearch={boolean("Show search", true)}
+              showSelectAll={boolean("Show select all", true)}
+            />
+          );
+        }
+      }
+
+      return <SelectedSearchController />;
+    })
+  )
+  .add(
+    "With some of the locked items",
+    withReadme(Readme, () => {
+      const disabledItem = [
+        { id: 0, label: "item 0", disabled: true },
+        { id: 5, label: "item 5", disabled: true }
+      ];
+
+      return (
+        <ReactMultiSelect
+          items={utils.withDisabledItems}
+          selectedItems={disabledItem}
+          showSelectedItemsSearch
+          isLocked={item => item.disabled}
+          loading={boolean("Loading", false)}
+          onChange={action("onChange")}
+          showSearch={boolean("Show search", true)}
+          showSelectAll={boolean("Show select all", true)}
+          messages={{ disabledItemsTooltip: "You can select up to 4 items" }}
+        />
+      );
+    })
+  )
+  .add(
+    "With some of the locked items selected & unselected",
+    withReadme(Readme, () => {
+      const disabledItem = [
+        { id: 2, label: "item 2", disabled: true },
+        { id: 5, label: "item 5", disabled: true }
+      ];
+      const items = [
+        { id: 1, label: "item  1" },
+        ...disabledItem,
+        { id: 3, label: "item  3" }
+      ];
+      return (
+        <ReactMultiSelect
+          items={items}
+          selectedItems={[disabledItem[0]]}
+          showSelectedItemsSearch
+          isLocked={item => item.disabled}
+          loading={boolean("Loading", false)}
+          onChange={action("onChange")}
+          showSearch={boolean("Show search", true)}
+          showSelectAll={boolean("Show select all", true)}
+          messages={{ disabledItemsTooltip: "You can select up to 4 items" }}
+        />
+      );
+    })
+  )
+  .add(
+    "As a controlled component",
+    withReadme(Readme, () => {
+      class SelectedItemsController extends React.Component {
+        SINGLE_ITEM = [{ id: 1, label: "Item 1" }];
+        MULTI_ITEMS = [
+          { id: 2, label: "Item 2" },
+          { id: 4, label: "Item 4" }
+        ]
+
+        constructor(props) {
+          super(props);
+          this.state = {
+            selectedItems: this.SINGLE_ITEM,
+          };
+        }
+
+        render() {
+          return (
+            <React.Fragment>
+              <input
+                style={{ marginBottom: "10px" }}
+                value="set Selected Items from outside"
+                type="button"
+                onClick={() => {
+                  this.setState({
+                    selectedItems: this.state.selectedItems.length > 1 ? this.SINGLE_ITEM : this.MULTI_ITEMS
+                  });
+                }}
+              />
+              <ReactMultiSelect
+                items={utils.items}
+                selectedItems={this.state.selectedItems}
+                loading={boolean("Loading", false)}
+                onChange={action("onChange")}
+                showSearch={boolean("Show search", true)}
+                showSelectAll={boolean("Show select all", true)}
+              />
+            </React.Fragment>
+          );
+        }
+      }
+
+      return <SelectedItemsController />;
+    })
   );

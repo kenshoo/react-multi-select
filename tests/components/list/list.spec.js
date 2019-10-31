@@ -13,6 +13,7 @@ const itemsWithDisabled = [
 ];
 const CUSTOM_MESSAGE = "custom message";
 const CustomComponent = () => <div>Custom Component</div>;
+const isLocked = item => item.disabled;
 
 describe("List", () => {
   test("default snapshot", () => {
@@ -66,20 +67,24 @@ describe("List", () => {
   });
 
   test("does not shows NoItems if items are present", () => {
-    const wrapper = mount(<List width={100} items={items} />);
+    const wrapper = mount(
+      <List width={100} items={items} isLocked={isLocked} />
+    );
     const noItems = wrapper.find(NoItems);
     expect(noItems.length).toBe(0);
   });
 
   test("shows Items if items are present", () => {
-    const wrapper = mount(<List width={100} items={items} />);
+    const wrapper = mount(
+      <List width={100} items={items} isLocked={isLocked} />
+    );
     const itemsWrapper = wrapper.find(Item);
     expect(itemsWrapper.length).toBe(2);
   });
 
   test("shows checked Items if items are present", () => {
     const wrapper = mount(
-      <List width={100} items={items} selectedIds={[12]} />
+      <List width={100} items={items} selectedIds={[12]} isLocked={isLocked} />
     );
     const itemsWrapper = wrapper.find(Item);
     expect(itemsWrapper.at(0).prop("checked")).toBe(false);
@@ -88,7 +93,12 @@ describe("List", () => {
 
   test("shows Custom Item Component", () => {
     const wrapper = mount(
-      <List width={100} items={items} renderer={CustomComponent} />
+      <List
+        width={100}
+        items={items}
+        renderer={CustomComponent}
+        isLocked={isLocked}
+      />
     );
     const itemsWrapper = wrapper.find(CustomComponent);
     expect(itemsWrapper.length).toBe(2);
@@ -96,7 +106,9 @@ describe("List", () => {
 
   test("click will trigger onClick", () => {
     const onClick = jest.fn();
-    const wrapper = mount(<List width={100} items={items} onClick={onClick} />);
+    const wrapper = mount(
+      <List width={100} items={items} onClick={onClick} isLocked={isLocked} />
+    );
     const itemsWrapper = wrapper.find(Item);
     itemsWrapper.at(0).simulate("click");
     expect(onClick).toHaveBeenCalledTimes(1);
@@ -104,7 +116,9 @@ describe("List", () => {
 
   test("click will trigger onClick with id param", () => {
     const onClick = jest.fn();
-    const wrapper = mount(<List width={100} items={items} onClick={onClick} />);
+    const wrapper = mount(
+      <List width={100} items={items} onClick={onClick} isLocked={isLocked} />
+    );
     const itemsWrapper = wrapper.find(Item);
     itemsWrapper.at(0).simulate("click");
     expect(onClick).toHaveBeenCalledWith(expect.anything(), 5);
@@ -123,7 +137,12 @@ describe("List", () => {
   test("click will not trigger onClick for disabled item", () => {
     const onClick = jest.fn();
     const wrapper = mount(
-      <List width={100} items={itemsWithDisabled} onClick={onClick} />
+      <List
+        width={100}
+        items={itemsWithDisabled}
+        onClick={onClick}
+        isLocked={isLocked}
+      />
     );
     const itemsWrapper = wrapper.find(Item);
     itemsWrapper.at(0).simulate("click");
@@ -139,6 +158,7 @@ describe("List", () => {
         selectedIds={[5]}
         onClick={onClick}
         disabled={true}
+        isLocked={isLocked}
       />
     );
     const itemsWrapper = wrapper.find(Item);
@@ -166,9 +186,48 @@ describe("List", () => {
         items={items.slice(0, 1)}
         disabledItemsTooltip={"You can select up to 4 items"}
         disabled={false}
+        isLocked={isLocked}
       />
     );
     const row = wrapper.find(".list_item");
     expect(row.prop("title")).toBe(undefined);
+  });
+  test("show Item is checked & disabled", () => {
+    const wrapper = mount(
+      <List
+        width={100}
+        items={[{ id: 13, label: "item 13", disabled: true }, ...items]}
+        selectedIds={[12, 13]}
+        selectedItems={[{ id: 13, label: "item 13", disabled: true }]}
+        isLocked={isLocked}
+      />
+    );
+
+    const itemsWrapper = wrapper.find(Item);
+    expect(itemsWrapper.at(0).prop("disabled")).toBe(true);
+    expect(itemsWrapper.at(0).prop("checked")).toBe(true);
+  });
+
+  test("show Item is disabled but dose'nt checked", () => {
+    const wrapper = mount(
+      <List
+        width={100}
+        items={[{ id: 13, label: "item 13", disabled: true }, ...items]}
+        isLocked={isLocked}
+      />
+    );
+
+    const itemsWrapper = wrapper.find(Item);
+    expect(itemsWrapper.at(0).prop("disabled")).toBe(true);
+    expect(itemsWrapper.at(0).prop("checked")).toBe(false);
+  });
+  test("show Item dose'nt disabled & dose'nt checked", () => {
+    const wrapper = mount(
+      <List width={100} items={items} isLocked={isLocked} />
+    );
+
+    const itemsWrapper = wrapper.find(Item);
+    expect(itemsWrapper.at(0).prop("disabled")).toBe(false);
+    expect(itemsWrapper.at(0).prop("checked")).toBe(false);
   });
 });

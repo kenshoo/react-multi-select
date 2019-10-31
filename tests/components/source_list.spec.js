@@ -1,7 +1,7 @@
 import React from "react";
 import ShallowRenderer from "react-test-renderer/shallow";
 
-import SourceList from "../../src/components/source_list";
+import WithSourceList, { SourceList } from "../../src/components/source_list";
 
 const CustomComponent = jest
   .fn(() => <div>Custom Component</div>)
@@ -147,6 +147,26 @@ describe("SourceList", () => {
           { id: 3, label: "item3", group: "group1" }
         ]}
         withGrouping
+      />
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  test("passed source_list wrapped up to HOC withSearch", () => {
+    const renderer = new ShallowRenderer();
+    const tree = renderer.render(
+      <WithSourceList
+        selectAllHeight={60}
+        itemHeight={10}
+        filterItems={filterItems}
+        showSearch={true}
+        filteredItems={[{ id: 1, label: "item1", group: "group1" }]}
+        searchValue="1"
+        selectAllItems={selectAllItems}
+        withGrouping
+        selectedIds={[1]}
+        selectedItems={[1]}
+        itemRenderer={CustomComponent}
+        messages={custom_messages}
       />
     );
     expect(tree).toMatchSnapshot();

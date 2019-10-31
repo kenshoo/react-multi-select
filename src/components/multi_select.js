@@ -38,7 +38,9 @@ export class MultiSelect extends PureComponent {
     maxSelectedItems: PropTypes.number,
     withGrouping: PropTypes.bool,
     listRenderer: PropTypes.func,
-    generateClassName: PropTypes.func
+    generateClassName: PropTypes.func,
+    showSelectedItemsSearch: PropTypes.bool,
+    isLocked: PropTypes.func
   };
 
   static defaultProps = {
@@ -52,7 +54,8 @@ export class MultiSelect extends PureComponent {
     itemHeight: 40,
     loaderRenderer: Loader,
     withGrouping: false,
-    generateClassName: defaultGenerateClassName
+    generateClassName: defaultGenerateClassName,
+    showSelectedItemsSearch: false
   };
 
   calculateHeight() {
@@ -104,7 +107,12 @@ export class MultiSelect extends PureComponent {
       searchValue,
       withGrouping,
       generateClassName,
-      listRenderer
+      listRenderer,
+      showSelectedItemsSearch,
+      searchSelectedItemsValue,
+      filterSelectedItems,
+      filteredSelectedItems,
+      isLocked
     } = this.props;
     const calculatedHeight = this.calculateHeight();
     const selectedIds = selectedItems.map(item => item.id);
@@ -142,6 +150,7 @@ export class MultiSelect extends PureComponent {
               selectAllHeight={selectAllHeight}
               withGrouping={withGrouping}
               listRenderer={listRenderer}
+              isLocked={isLocked}
             />
           )}
           {!loading && showSelectedItems && (
@@ -150,13 +159,18 @@ export class MultiSelect extends PureComponent {
               selectedIds={selectedIds}
               clearAll={clearAll}
               messages={messages}
-              selectedItems={selectedItems}
               itemHeight={selectedItemHeight || itemHeight}
               height={height}
               unselectItems={unselectItems}
               selectedItemRenderer={selectedItemRenderer}
               noItemsRenderer={noItemsRenderer}
               withGrouping={withGrouping}
+              showSearch={showSelectedItemsSearch}
+              searchValue={searchSelectedItemsValue}
+              filteredItems={filteredSelectedItems}
+              searchIcon={searchIcon}
+              filterItems={filterSelectedItems}
+              isLocked={isLocked}
             />
           )}
         </div>

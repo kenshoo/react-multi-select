@@ -435,4 +435,284 @@ describe("withMultiSelectState", () => {
     wrapper.update();
     expect(wrapper.state("filteredItems")).toEqual([ITEM_1]);
   });
+
+  test("selected items  are filtered on searchValue trigger onChange ", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const searchSelectedItemsChanged = jest.fn();
+    const selectedItems = [ITEM_1, ITEM_2, ITEM_3];
+
+    const wrapper = shallow(
+      <ConditionalComponent
+        showSelectedItemsSearch={true}
+        searchSelectedItemsChanged={searchSelectedItemsChanged}
+        selectedItems={selectedItems}
+      />
+    );
+
+    wrapper.props().filterSelectedItems({ target: { value: "2" } });
+    expect(searchSelectedItemsChanged).toHaveBeenCalledWith("2");
+    expect(wrapper.prop("filteredSelectedItems")).toEqual([ITEM_3]);
+  });
+
+  test("unselected selected items for state filteredSelectedItems", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const searchSelectedItemsChanged = jest.fn();
+    const items = [ITEM_1, ITEM_2, ITEM_3];
+
+    const wrapper = shallow(
+      <ConditionalComponent
+        showSelectedItemsSearch={true}
+        searchSelectedItemsChanged={searchSelectedItemsChanged}
+        items={items}
+      />
+    );
+
+    wrapper.props().selectAllItems();
+    wrapper.update();
+    expect(wrapper.prop("filteredSelectedItems")).toEqual([
+      ITEM_1,
+      ITEM_2,
+      ITEM_3
+    ]);
+  });
+
+  test("select all items and filter selected items", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const searchSelectedItemsChanged = jest.fn();
+    const items = [ITEM_1, ITEM_2, ITEM_3];
+
+    const wrapper = shallow(
+      <ConditionalComponent
+        showSelectedItemsSearch={true}
+        searchSelectedItemsChanged={searchSelectedItemsChanged}
+        items={items}
+      />
+    );
+
+    wrapper.props().selectAllItems();
+    wrapper.props().filterSelectedItems({ target: { value: "item 1" } });
+    wrapper.update();
+    expect(wrapper.prop("filteredSelectedItems")).toEqual([ITEM_2]);
+  });
+
+  test("select all items change value and unselect all items for state filteredSelectedItems", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const searchSelectedItemsChanged = jest.fn();
+    const items = [ITEM_1, ITEM_2, ITEM_3, ITEM_4];
+
+    const wrapper = shallow(
+      <ConditionalComponent
+        showSelectedItemsSearch={true}
+        searchSelectedItemsChanged={searchSelectedItemsChanged}
+        items={items}
+      />
+    );
+
+    wrapper.props().selectAllItems();
+    wrapper.update();
+    wrapper.props().filterSelectedItems({ target: { value: "2" } });
+    wrapper.update();
+    wrapper.props().selectAllItems();
+    wrapper.update();
+    expect(wrapper.prop("filteredSelectedItems")).toEqual([]);
+  });
+
+  test("Use user search select all items change value for state filteredSelectedItems", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const searchSelectedItemsChanged = jest.fn();
+    const items = [ITEM_1, ITEM_2, ITEM_3, ITEM_4];
+    const UserSearch = props => <input type="text" {...props} />;
+
+    const wrapper = shallow(
+      <ConditionalComponent
+        showSelectedItemsSearch={true}
+        searchSelectedItemsChanged={searchSelectedItemsChanged}
+        searchRenderer={UserSearch}
+        items={items}
+      />
+    );
+
+    wrapper.props().selectAllItems();
+    wrapper.props().filterSelectedItems({ target: { value: "item 1" } });
+    wrapper.update();
+    expect(wrapper.prop("filteredSelectedItems")).toEqual([ITEM_2]);
+  });
+
+  test("selected item does not match for search value", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const searchSelectedItemsChanged = jest.fn();
+    const items = [ITEM_1, ITEM_2, ITEM_3, ITEM_4];
+
+    const wrapper = shallow(
+      <ConditionalComponent
+        showSelectedItemsSearch={true}
+        searchSelectedItemsChanged={searchSelectedItemsChanged}
+        items={items}
+      />
+    );
+
+    wrapper.props().selectItem(EVENT, ITEM_2.id);
+    wrapper.update();
+    wrapper.props().filterSelectedItems({ target: { value: "4" } });
+    wrapper.update();
+    expect(wrapper.prop("filteredSelectedItems")).toEqual([]);
+  });
+
+  test("items are filtered on searchSelectedItemsValue change", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const items = [ITEM_1, ITEM_2, ITEM_3, ITEM_4];
+    const wrapper = shallow(
+      <ConditionalComponent
+        showSelectedItemsSearch={true}
+        items={items}
+        searchSelectedItemsValue=""
+      />
+    );
+    wrapper.props().selectAllItems();
+    expect(wrapper.state("filteredSelectedItems")).toEqual(items);
+
+    wrapper.props().filterSelectedItems({ target: { value: ITEM_1.label } });
+    wrapper.update();
+    expect(wrapper.state("filteredSelectedItems")).toEqual([ITEM_1]);
+  });
+
+  test("select all for locked items", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const items = [ITEM_1, DISABLED_ITEM_23];
+    const wrapper = shallow(
+      <ConditionalComponent
+        showSelectedItemsSearch={true}
+        items={items}
+        selectedItems={[DISABLED_ITEM_23]}
+        searchSelectedItemsValue=""
+      />
+    );
+    wrapper.props().selectAllItems();
+    expect(wrapper.state("filteredSelectedItems")).toEqual([
+      ITEM_1,
+      DISABLED_ITEM_23
+    ]);
+  });
+
+  test("unselect locked items", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const items = [ITEM_1, DISABLED_ITEM_23];
+
+    const wrapper = shallow(
+      <ConditionalComponent
+        showSelectedItemsSearch={true}
+        items={items}
+        selectedItems={[DISABLED_ITEM_23]}
+        searchSelectedItemsValue=""
+      />
+    );
+
+    wrapper.props().selectAllItems();
+    expect(wrapper.state("filteredSelectedItems")).toEqual([
+      ITEM_1,
+      DISABLED_ITEM_23
+    ]);
+
+    wrapper.props().unselectItems([ITEM_1.id, DISABLED_ITEM_23.id]);
+    expect(wrapper.state("selectedItems")).toEqual([DISABLED_ITEM_23]);
+  });
+
+  test("unselect all items for locked items", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const items = [ITEM_1, ITEM_2, ITEM_3, ITEM_4, DISABLED_ITEM_23];
+
+    const wrapper = shallow(
+      <ConditionalComponent
+        showSelectedItemsSearch={true}
+        items={items}
+        selectedItems={items}
+        searchSelectedItemsValue=""
+      />
+    );
+
+    wrapper.props().selectAllItems();
+    expect(wrapper.state("selectedItems")).toEqual([DISABLED_ITEM_23]);
+  });
+
+  test("filter locked items in source list", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const items = [ITEM_1, ITEM_2, ITEM_3, ITEM_4, DISABLED_ITEM_23];
+
+    const wrapper = shallow(
+      <ConditionalComponent
+        showSelectedItemsSearch={true}
+        items={items}
+        selectedItems={[DISABLED_ITEM_23]}
+        searchSelectedItemsValue=""
+      />
+    );
+
+    wrapper.props().filterItems({ target: { value: DISABLED_ITEM_23.label } });
+    wrapper.update();
+    expect(wrapper.state("filteredItems")).toEqual([DISABLED_ITEM_23]);
+  });
+
+  test("unselect locked items", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const items = [ITEM_1, DISABLED_ITEM_23];
+
+    const wrapper = shallow(
+      <ConditionalComponent
+        showSelectedItemsSearch={true}
+        items={items}
+        selectedItems={[DISABLED_ITEM_23]}
+        searchSelectedItemsValue=""
+      />
+    );
+
+    wrapper.props().unselectItems([DISABLED_ITEM_23.id]);
+    expect(wrapper.state("selectedItems")).toEqual([DISABLED_ITEM_23]);
+  });
+
+  test("filter in destination list locked items", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const items = [ITEM_1, ITEM_2, ITEM_3, ITEM_4, DISABLED_ITEM_23];
+
+    const wrapper = shallow(
+      <ConditionalComponent
+        showSelectedItemsSearch={true}
+        items={items}
+        selectedItems={items}
+        searchSelectedItemsValue=""
+      />
+    );
+
+    wrapper
+      .props()
+      .filterSelectedItems({ target: { value: DISABLED_ITEM_23.label } });
+    wrapper.update();
+    expect(wrapper.state("filteredSelectedItems")).toEqual([DISABLED_ITEM_23]);
+  });
+
+  test("case select with shift items for (selected & disabled) and disabled", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const items = [
+      ITEM_1,
+      { id: 1, label: "item 1", disabled: true },
+      ITEM_3,
+      { id: 3, label: "item 3", disabled: true },
+      { id: 4, label: "item 4" }
+    ];
+
+    const selectedItems = [{ id: 1, label: "item 1", disabled: true }];
+
+    const wrapper = shallow(
+      <ConditionalComponent items={items} selectedItems={selectedItems} />
+    );
+    wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_1.id);
+    wrapper.update();
+    wrapper.props().selectItem(EVENT_WITH_SHIFT, 4);
+    wrapper.update();
+    expect(wrapper.prop("selectedItems")).toEqual([
+      items[0],
+      items[1],
+      items[2],
+      items[4]
+    ]);
+  });
 });

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MultiSelect can remove search 1`] = `
+exports[`MultiSelect Snapshots can remove search 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -124,41 +124,46 @@ exports[`MultiSelect can remove search 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={360}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={undefined}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={Array []}
       showSearch={false}
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -166,7 +171,7 @@ exports[`MultiSelect can remove search 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect can remove select all 1`] = `
+exports[`MultiSelect Snapshots can remove select all 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -290,41 +295,46 @@ exports[`MultiSelect can remove select all 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={355}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={undefined}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={Array []}
       showSearch={true}
       showSelectAll={false}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -332,7 +342,7 @@ exports[`MultiSelect can remove select all 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect can remove selected items 1`] = `
+exports[`MultiSelect Snapshots can remove selected items 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -456,24 +466,25 @@ exports[`MultiSelect can remove selected items 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={315}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={undefined}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={Array []}
       showSearch={true}
@@ -484,7 +495,7 @@ exports[`MultiSelect can remove selected items 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect custom itemRenderer 1`] = `
+exports[`MultiSelect Snapshots custom itemRenderer 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -608,41 +619,46 @@ exports[`MultiSelect custom itemRenderer 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={315}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
       itemRenderer={[MockFunction mockedComponent]}
-      listRenderer={[Function]}
+      listRenderer={undefined}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={undefined}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={Array []}
       showSearch={true}
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -650,7 +666,7 @@ exports[`MultiSelect custom itemRenderer 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect custom listRenderer 1`] = `
+exports[`MultiSelect Snapshots custom listRenderer 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -774,41 +790,46 @@ exports[`MultiSelect custom listRenderer 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={315}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
-      itemRenderer={[Function]}
+      itemRenderer={undefined}
       listRenderer={[MockFunction mockedComponent]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={undefined}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={Array []}
       showSearch={true}
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -816,7 +837,7 @@ exports[`MultiSelect custom listRenderer 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect custom messages 1`] = `
+exports[`MultiSelect Snapshots custom messages 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -940,16 +961,17 @@ exports[`MultiSelect custom messages 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={315}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={
         Object {
           "clearAllMessage": "Uncheck all",
@@ -960,24 +982,26 @@ exports[`MultiSelect custom messages 1`] = `
           "selectedMessage": "Checked",
         }
       }
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={undefined}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={Array []}
       showSearch={true}
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={
         Object {
           "clearAllMessage": "Uncheck all",
@@ -988,11 +1012,13 @@ exports[`MultiSelect custom messages 1`] = `
           "selectedMessage": "Checked",
         }
       }
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -1000,7 +1026,7 @@ exports[`MultiSelect custom messages 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect custom noItemsRenderer 1`] = `
+exports[`MultiSelect Snapshots custom noItemsRenderer 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -1124,41 +1150,46 @@ exports[`MultiSelect custom noItemsRenderer 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={315}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={[MockFunction mockedComponent]}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={undefined}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={Array []}
       showSearch={true}
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
       noItemsRenderer={[MockFunction mockedComponent]}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -1166,7 +1197,7 @@ exports[`MultiSelect custom noItemsRenderer 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect custom searchRenderer 1`] = `
+exports[`MultiSelect Snapshots custom searchRenderer 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -1290,41 +1321,46 @@ exports[`MultiSelect custom searchRenderer 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={315}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
       searchRenderer={[MockFunction mockedComponent]}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={undefined}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={Array []}
       showSearch={true}
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -1332,7 +1368,7 @@ exports[`MultiSelect custom searchRenderer 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect custom selectAllRenderer 1`] = `
+exports[`MultiSelect Snapshots custom selectAllRenderer 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -1456,20 +1492,21 @@ exports[`MultiSelect custom selectAllRenderer 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={315}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={undefined}
@@ -1480,17 +1517,21 @@ exports[`MultiSelect custom selectAllRenderer 1`] = `
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -1498,7 +1539,7 @@ exports[`MultiSelect custom selectAllRenderer 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect default snapshot 1`] = `
+exports[`MultiSelect Snapshots default snapshot 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -1622,41 +1663,46 @@ exports[`MultiSelect default snapshot 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={315}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={undefined}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={Array []}
       showSearch={true}
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -1664,7 +1710,7 @@ exports[`MultiSelect default snapshot 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect displays Loader when loading 1`] = `
+exports[`MultiSelect Snapshots displays Loader when loading 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -1793,7 +1839,7 @@ exports[`MultiSelect displays Loader when loading 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect displays custom Loader when loading 1`] = `
+exports[`MultiSelect Snapshots displays custom Loader when loading 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -1922,7 +1968,7 @@ exports[`MultiSelect displays custom Loader when loading 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect does not pass disabled if maxSelectedItem has passed 1`] = `
+exports[`MultiSelect Snapshots does not pass disabled if maxSelectedItem has passed 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -2046,24 +2092,25 @@ exports[`MultiSelect does not pass disabled if maxSelectedItem has passed 1`] = 
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={360}
       disabled={false}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={undefined}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={
         Array [
@@ -2075,27 +2122,26 @@ exports[`MultiSelect does not pass disabled if maxSelectedItem has passed 1`] = 
       showSelectAll={false}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={
         Array [
           undefined,
           undefined,
         ]
       }
-      selectedItemRenderer={[Function]}
-      selectedItems={
-        Array [
-          1,
-          2,
-        ]
-      }
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -2103,7 +2149,7 @@ exports[`MultiSelect does not pass disabled if maxSelectedItem has passed 1`] = 
 </JssProvider>
 `;
 
-exports[`MultiSelect passed clearAll 1`] = `
+exports[`MultiSelect Snapshots passed clearAll 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -2227,41 +2273,46 @@ exports[`MultiSelect passed clearAll 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={315}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={undefined}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={Array []}
       showSearch={true}
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={[MockFunction clearAll]}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -2269,7 +2320,7 @@ exports[`MultiSelect passed clearAll 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect passed filterItems 1`] = `
+exports[`MultiSelect Snapshots passed filterItems 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -2393,41 +2444,46 @@ exports[`MultiSelect passed filterItems 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={315}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={[MockFunction filterItems]}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={Array []}
       showSearch={true}
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -2435,7 +2491,7 @@ exports[`MultiSelect passed filterItems 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect passed selectAllItems 1`] = `
+exports[`MultiSelect Snapshots passed selectAllItems 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -2559,41 +2615,46 @@ exports[`MultiSelect passed selectAllItems 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={315}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={[MockFunction selectAllItems]}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={Array []}
       showSearch={true}
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -2601,7 +2662,7 @@ exports[`MultiSelect passed selectAllItems 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect passed selectItem 1`] = `
+exports[`MultiSelect Snapshots passed selectItem 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -2725,41 +2786,46 @@ exports[`MultiSelect passed selectItem 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={315}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={[MockFunction selectItem]}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={Array []}
       showSearch={true}
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -2767,7 +2833,7 @@ exports[`MultiSelect passed selectItem 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect passed selectedIds 1`] = `
+exports[`MultiSelect Snapshots passed selectedIds 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -2891,41 +2957,46 @@ exports[`MultiSelect passed selectedIds 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={315}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={undefined}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={Array []}
       showSearch={true}
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -2933,7 +3004,7 @@ exports[`MultiSelect passed selectedIds 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect passed selectedItems 1`] = `
+exports[`MultiSelect Snapshots passed selectedItems 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -3057,24 +3128,25 @@ exports[`MultiSelect passed selectedItems 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={315}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={undefined}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={
         Array [
@@ -3086,27 +3158,26 @@ exports[`MultiSelect passed selectedItems 1`] = `
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={
         Array [
           undefined,
           undefined,
         ]
       }
-      selectedItemRenderer={[Function]}
-      selectedItems={
-        Array [
-          1,
-          2,
-        ]
-      }
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -3114,7 +3185,7 @@ exports[`MultiSelect passed selectedItems 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect passed unselectItems 1`] = `
+exports[`MultiSelect Snapshots passed unselectItems 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -3238,41 +3309,46 @@ exports[`MultiSelect passed unselectItems 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={315}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={undefined}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={Array []}
       showSearch={true}
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={[MockFunction unselectItems]}
       withGrouping={false}
     />
@@ -3280,7 +3356,7 @@ exports[`MultiSelect passed unselectItems 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect passes disabled if maxSelectedItem has passed 1`] = `
+exports[`MultiSelect Snapshots passes disabled if maxSelectedItem has passed 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -3404,24 +3480,25 @@ exports[`MultiSelect passes disabled if maxSelectedItem has passed 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={360}
       disabled={true}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={undefined}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={
         Array [
@@ -3433,27 +3510,26 @@ exports[`MultiSelect passes disabled if maxSelectedItem has passed 1`] = `
       showSelectAll={false}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={
         Array [
           undefined,
           undefined,
         ]
       }
-      selectedItemRenderer={[Function]}
-      selectedItems={
-        Array [
-          1,
-          2,
-        ]
-      }
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -3461,7 +3537,7 @@ exports[`MultiSelect passes disabled if maxSelectedItem has passed 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect will pass itemHeight 1`] = `
+exports[`MultiSelect Snapshots will pass itemHeight 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -3585,41 +3661,46 @@ exports[`MultiSelect will pass itemHeight 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={295}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={60}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={undefined}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={Array []}
       showSearch={true}
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={60}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -3627,7 +3708,7 @@ exports[`MultiSelect will pass itemHeight 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect will pass selectAllHeight 1`] = `
+exports[`MultiSelect Snapshots will pass selectAllHeight 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -3751,41 +3832,46 @@ exports[`MultiSelect will pass selectAllHeight 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={315}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={60}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={40}
       selectAllItems={undefined}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={Array []}
       showSearch={true}
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={60}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -3793,7 +3879,7 @@ exports[`MultiSelect will pass selectAllHeight 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect will pass selectAllHeight without itemHeight 1`] = `
+exports[`MultiSelect Snapshots will pass selectAllHeight without itemHeight 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -3917,41 +4003,46 @@ exports[`MultiSelect will pass selectAllHeight without itemHeight 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={335}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={20}
       selectAllItems={undefined}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={Array []}
       showSearch={true}
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={40}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -3959,7 +4050,7 @@ exports[`MultiSelect will pass selectAllHeight without itemHeight 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect will pass selectedItemHeight 1`] = `
+exports[`MultiSelect Snapshots will pass selectedItemHeight 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -4083,41 +4174,46 @@ exports[`MultiSelect will pass selectedItemHeight 1`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={315}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={undefined}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={Array []}
       showSearch={true}
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
+      isLocked={undefined}
       itemHeight={60}
-      listRenderer={[Function]}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -4125,7 +4221,7 @@ exports[`MultiSelect will pass selectedItemHeight 1`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect will pass selectedItemHeight 2`] = `
+exports[`MultiSelect Snapshots with generateClassName 1`] = `
 <JssProvider
   generateClassName={[Function]}
   jss={
@@ -4249,41 +4345,46 @@ exports[`MultiSelect will pass selectedItemHeight 2`] = `
       }
     }
   >
-    <SourceList
+    <Unknown
       calculatedHeight={315}
-      disabled={false}
+      disabled={undefined}
       filterItems={undefined}
       filteredItems={Array []}
       getList={undefined}
-      isAllSelected={false}
+      isAllSelected={undefined}
+      isLocked={undefined}
       itemHeight={40}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
+      itemRenderer={undefined}
+      listRenderer={undefined}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
       searchIcon={undefined}
-      searchRenderer={[Function]}
+      searchRenderer={undefined}
       searchValue={undefined}
       selectAllHeight={undefined}
       selectAllItems={undefined}
-      selectAllRenderer={[Function]}
+      selectAllRenderer={undefined}
       selectItem={undefined}
       selectedIds={Array []}
       showSearch={true}
       showSelectAll={true}
       withGrouping={false}
     />
-    <DestinationList
+    <Unknown
       clearAll={undefined}
+      filterItems={undefined}
+      filteredItems={undefined}
       height={400}
-      itemHeight={60}
-      listRenderer={[Function]}
+      isLocked={undefined}
+      itemHeight={40}
       messages={Object {}}
-      noItemsRenderer={[Function]}
+      noItemsRenderer={undefined}
+      searchIcon={undefined}
+      searchValue={undefined}
       selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
+      selectedItemRenderer={undefined}
+      selectionStatusRenderer={undefined}
+      showSearch={false}
       unselectItems={undefined}
       withGrouping={false}
     />
@@ -4291,178 +4392,8 @@ exports[`MultiSelect will pass selectedItemHeight 2`] = `
 </JssProvider>
 `;
 
-exports[`MultiSelect with generateClassName 1`] = `
-<JssProvider
-  generateClassName={[Function]}
-  jss={
-    Jss {
-      "generateClassName": [Function],
-      "id": 3,
-      "options": Object {
-        "Renderer": [Function],
-        "createGenerateClassName": [Function],
-        "plugins": Array [
-          Object {
-            "onCreateRule": [Function],
-          },
-          Object {
-            "onCreateRule": [Function],
-          },
-          Object {
-            "onCreateRule": [Function],
-          },
-          Object {
-            "onCreateRule": [Function],
-          },
-          Object {
-            "onCreateRule": [Function],
-          },
-          Object {
-            "onCreateRule": [Function],
-          },
-          Object {
-            "onCreateRule": [Function],
-          },
-          Object {
-            "onCreateRule": [Function],
-          },
-          Object {
-            "onCreateRule": [Function],
-          },
-          Object {
-            "onCreateRule": [Function],
-            "onProcessRule": [Function],
-          },
-          Object {
-            "onCreateRule": [Function],
-            "onProcessStyle": [Function],
-            "onUpdate": [Function],
-          },
-          Object {
-            "onCreateRule": [Function],
-            "onProcessRule": [Function],
-          },
-          Object {
-            "onProcessStyle": [Function],
-          },
-          Object {
-            "onChangeValue": [Function],
-            "onProcessStyle": [Function],
-          },
-          Object {
-            "onChangeValue": [Function],
-            "onProcessStyle": [Function],
-          },
-          Object {
-            "onChangeValue": [Function],
-            "onProcessRule": [Function],
-            "onProcessStyle": [Function],
-          },
-          Object {
-            "onProcessStyle": [Function],
-          },
-        ],
-      },
-      "plugins": PluginsRegistry {
-        "hooks": Object {
-          "onChangeValue": Array [
-            [Function],
-            [Function],
-            [Function],
-          ],
-          "onCreateRule": Array [
-            [Function],
-            [Function],
-            [Function],
-            [Function],
-            [Function],
-            [Function],
-            [Function],
-            [Function],
-            [Function],
-            [Function],
-            [Function],
-            [Function],
-          ],
-          "onProcessRule": Array [
-            [Function],
-            [Function],
-            [Function],
-          ],
-          "onProcessSheet": Array [],
-          "onProcessStyle": Array [
-            [Function],
-            [Function],
-            [Function],
-            [Function],
-            [Function],
-            [Function],
-          ],
-          "onUpdate": Array [
-            [Function],
-          ],
-        },
-      },
-      "version": "9.8.7",
-    }
-  }
->
-  <div
-    className="wrapper"
-    style={
-      Object {
-        "height": 400,
-      }
-    }
-  >
-    <SourceList
-      calculatedHeight={315}
-      disabled={false}
-      filterItems={undefined}
-      filteredItems={Array []}
-      getList={undefined}
-      isAllSelected={false}
-      itemHeight={40}
-      itemRenderer={[Function]}
-      listRenderer={[Function]}
-      messages={Object {}}
-      noItemsRenderer={[Function]}
-      searchIcon={undefined}
-      searchRenderer={[Function]}
-      searchValue={undefined}
-      selectAllHeight={undefined}
-      selectAllItems={undefined}
-      selectAllRenderer={[Function]}
-      selectItem={undefined}
-      selectedIds={Array []}
-      showSearch={true}
-      showSelectAll={true}
-      withGrouping={false}
-    />
-    <DestinationList
-      clearAll={undefined}
-      height={400}
-      itemHeight={40}
-      listRenderer={[Function]}
-      messages={Object {}}
-      noItemsRenderer={[Function]}
-      selectedIds={Array []}
-      selectedItemRenderer={[Function]}
-      selectedItems={Array []}
-      selectionStatusRenderer={[Function]}
-      unselectItems={undefined}
-      withGrouping={false}
-    />
-  </div>
-</JssProvider>
-`;
-
-exports[`MultiSelect with responsiveHeight 1`] = `
-<ReactHeight
-  dirty={true}
-  getElementHeight={[Function]}
-  hidden={false}
-  onHeightReady={[Function]}
+exports[`MultiSelect Snapshots with responsiveHeight 1`] = `
+<div
   style={
     Object {
       "height": "70%",
@@ -4472,18 +4403,15 @@ exports[`MultiSelect with responsiveHeight 1`] = `
   <_class
     filterFunction={[Function]}
     height={400}
+    isLocked={[Function]}
     items={Array []}
     selectedItems={Array []}
   />
-</ReactHeight>
+</div>
 `;
 
-exports[`MultiSelect without responsiveHeight 1`] = `
-<ReactHeight
-  dirty={true}
-  getElementHeight={[Function]}
-  hidden={false}
-  onHeightReady={[Function]}
+exports[`MultiSelect Snapshots without responsiveHeight 1`] = `
+<div
   style={
     Object {
       "height": "400px",
@@ -4493,8 +4421,687 @@ exports[`MultiSelect without responsiveHeight 1`] = `
   <_class
     filterFunction={[Function]}
     height={400}
+    isLocked={[Function]}
     items={Array []}
     selectedItems={Array []}
   />
-</ReactHeight>
+</div>
+`;
+
+exports[`MultiSelect passes properties can remove search 1`] = `
+Object {
+  "calculatedHeight": 360,
+  "children": false,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 40,
+  "itemRenderer": [Function],
+  "listRenderer": [Function],
+  "messages": Object {},
+  "noItemsRenderer": [Function],
+  "selectAllHeight": undefined,
+  "selectAllItems": undefined,
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [],
+  "showSelectAll": true,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties can remove select all 1`] = `
+Object {
+  "calculatedHeight": 355,
+  "children": <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 40,
+  "itemRenderer": [Function],
+  "listRenderer": [Function],
+  "messages": Object {},
+  "noItemsRenderer": [Function],
+  "selectAllHeight": undefined,
+  "selectAllItems": undefined,
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [],
+  "showSelectAll": false,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties can remove selected items 1`] = `
+Object {
+  "calculatedHeight": 315,
+  "children": <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 40,
+  "itemRenderer": [Function],
+  "listRenderer": [Function],
+  "messages": Object {},
+  "noItemsRenderer": [Function],
+  "selectAllHeight": undefined,
+  "selectAllItems": undefined,
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [],
+  "showSelectAll": true,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties custom itemRenderer 1`] = `
+Object {
+  "calculatedHeight": 315,
+  "children": <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 40,
+  "itemRenderer": [MockFunction mockedComponent],
+  "listRenderer": [Function],
+  "messages": Object {},
+  "noItemsRenderer": [Function],
+  "selectAllHeight": undefined,
+  "selectAllItems": undefined,
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [],
+  "showSelectAll": true,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties custom listRenderer 1`] = `
+Object {
+  "calculatedHeight": 315,
+  "children": <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 40,
+  "itemRenderer": [Function],
+  "listRenderer": [MockFunction mockedComponent],
+  "messages": Object {},
+  "noItemsRenderer": [Function],
+  "selectAllHeight": undefined,
+  "selectAllItems": undefined,
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [],
+  "showSelectAll": true,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties custom messages 1`] = `
+Object {
+  "calculatedHeight": 315,
+  "children": <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Find..."
+    value={undefined}
+  />,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 40,
+  "itemRenderer": [Function],
+  "listRenderer": [Function],
+  "messages": Object {
+    "clearAllMessage": "Uncheck all",
+    "noItemsMessage": "No entries available...",
+    "noneSelectedMessage": "Nothing",
+    "searchPlaceholder": "Find...",
+    "selectAllMessage": "Check all",
+    "selectedMessage": "Checked",
+  },
+  "noItemsRenderer": [Function],
+  "selectAllHeight": undefined,
+  "selectAllItems": undefined,
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [],
+  "showSelectAll": true,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties custom noItemsRenderer 1`] = `
+Object {
+  "calculatedHeight": 315,
+  "children": <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 40,
+  "itemRenderer": [Function],
+  "listRenderer": [Function],
+  "messages": Object {},
+  "noItemsRenderer": [MockFunction mockedComponent],
+  "selectAllHeight": undefined,
+  "selectAllItems": undefined,
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [],
+  "showSelectAll": true,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties custom searchRenderer 1`] = `
+Object {
+  "calculatedHeight": 315,
+  "children": <mockConstructor
+    onChange={undefined}
+    searchIcon={undefined}
+    searchPlaceholder={undefined}
+    value={undefined}
+  />,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 40,
+  "itemRenderer": [Function],
+  "listRenderer": [Function],
+  "messages": Object {},
+  "noItemsRenderer": [Function],
+  "selectAllHeight": undefined,
+  "selectAllItems": undefined,
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [],
+  "showSelectAll": true,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties custom selectAllRenderer 1`] = `
+Object {
+  "calculatedHeight": 315,
+  "children": <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 40,
+  "itemRenderer": [Function],
+  "listRenderer": [Function],
+  "messages": Object {},
+  "noItemsRenderer": [Function],
+  "selectAllHeight": undefined,
+  "selectAllItems": undefined,
+  "selectAllRenderer": [MockFunction mockedComponent],
+  "selectItem": undefined,
+  "selectedIds": Array [],
+  "showSelectAll": true,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties default snapshot 1`] = `
+Object {
+  "calculatedHeight": 315,
+  "children": <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 40,
+  "itemRenderer": [Function],
+  "listRenderer": [Function],
+  "messages": Object {},
+  "noItemsRenderer": [Function],
+  "selectAllHeight": undefined,
+  "selectAllItems": undefined,
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [],
+  "showSelectAll": true,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties does not pass disabled if maxSelectedItem has passed 1`] = `
+Object {
+  "calculatedHeight": 360,
+  "children": <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 40,
+  "itemRenderer": [Function],
+  "listRenderer": [Function],
+  "messages": Object {},
+  "noItemsRenderer": [Function],
+  "selectAllHeight": undefined,
+  "selectAllItems": undefined,
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [
+    undefined,
+    undefined,
+  ],
+  "showSelectAll": false,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties passed clearAll 1`] = `
+Object {
+  "calculatedHeight": 315,
+  "children": <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 40,
+  "itemRenderer": [Function],
+  "listRenderer": [Function],
+  "messages": Object {},
+  "noItemsRenderer": [Function],
+  "selectAllHeight": undefined,
+  "selectAllItems": undefined,
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [],
+  "showSelectAll": true,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties passed filterItems 1`] = `
+Object {
+  "calculatedHeight": 315,
+  "children": <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 40,
+  "itemRenderer": [Function],
+  "listRenderer": [Function],
+  "messages": Object {},
+  "noItemsRenderer": [Function],
+  "selectAllHeight": undefined,
+  "selectAllItems": [MockFunction filterItems],
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [],
+  "showSelectAll": true,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties passed selectAllItems 1`] = `
+Object {
+  "calculatedHeight": 315,
+  "children": <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 40,
+  "itemRenderer": [Function],
+  "listRenderer": [Function],
+  "messages": Object {},
+  "noItemsRenderer": [Function],
+  "selectAllHeight": undefined,
+  "selectAllItems": [MockFunction selectAllItems],
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [],
+  "showSelectAll": true,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties passed selectItem 1`] = `
+Object {
+  "calculatedHeight": 315,
+  "children": <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 40,
+  "itemRenderer": [Function],
+  "listRenderer": [Function],
+  "messages": Object {},
+  "noItemsRenderer": [Function],
+  "selectAllHeight": undefined,
+  "selectAllItems": [MockFunction selectItem],
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [],
+  "showSelectAll": true,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties passed selectedIds 1`] = `
+Object {
+  "calculatedHeight": 315,
+  "children": <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 40,
+  "itemRenderer": [Function],
+  "listRenderer": [Function],
+  "messages": Object {},
+  "noItemsRenderer": [Function],
+  "selectAllHeight": undefined,
+  "selectAllItems": undefined,
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [],
+  "showSelectAll": true,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties passed selectedItems 1`] = `
+Object {
+  "calculatedHeight": 315,
+  "children": <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 40,
+  "itemRenderer": [Function],
+  "listRenderer": [Function],
+  "messages": Object {},
+  "noItemsRenderer": [Function],
+  "selectAllHeight": undefined,
+  "selectAllItems": undefined,
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [
+    undefined,
+    undefined,
+  ],
+  "showSelectAll": true,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties passed unselectItems 1`] = `
+Object {
+  "calculatedHeight": 315,
+  "children": <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 40,
+  "itemRenderer": [Function],
+  "listRenderer": [Function],
+  "messages": Object {},
+  "noItemsRenderer": [Function],
+  "selectAllHeight": undefined,
+  "selectAllItems": undefined,
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [],
+  "showSelectAll": true,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties passes disabled if maxSelectedItem has passed 1`] = `
+Object {
+  "calculatedHeight": 360,
+  "children": <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />,
+  "disabled": true,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 40,
+  "itemRenderer": [Function],
+  "listRenderer": [Function],
+  "messages": Object {},
+  "noItemsRenderer": [Function],
+  "selectAllHeight": undefined,
+  "selectAllItems": undefined,
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [
+    undefined,
+    undefined,
+  ],
+  "showSelectAll": false,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties will pass itemHeight 1`] = `
+Object {
+  "calculatedHeight": 295,
+  "children": <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 60,
+  "itemRenderer": [Function],
+  "listRenderer": [Function],
+  "messages": Object {},
+  "noItemsRenderer": [Function],
+  "selectAllHeight": undefined,
+  "selectAllItems": undefined,
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [],
+  "showSelectAll": true,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties will pass selectAllHeight 1`] = `
+Object {
+  "calculatedHeight": 315,
+  "children": <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 60,
+  "itemRenderer": [Function],
+  "listRenderer": [Function],
+  "messages": Object {},
+  "noItemsRenderer": [Function],
+  "selectAllHeight": 40,
+  "selectAllItems": undefined,
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [],
+  "showSelectAll": true,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties will pass selectAllHeight without itemHeight 1`] = `
+Object {
+  "calculatedHeight": 335,
+  "children": <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 40,
+  "itemRenderer": [Function],
+  "listRenderer": [Function],
+  "messages": Object {},
+  "noItemsRenderer": [Function],
+  "selectAllHeight": 20,
+  "selectAllItems": undefined,
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [],
+  "showSelectAll": true,
+  "withGrouping": false,
+}
+`;
+
+exports[`MultiSelect passes properties will pass selectedItemHeight 1`] = `
+Object {
+  "calculatedHeight": 315,
+  "children": <Search
+    onChange={undefined}
+    searchIcon={[Function]}
+    searchPlaceholder="Search..."
+    value={undefined}
+  />,
+  "disabled": false,
+  "filteredItems": Array [],
+  "getList": undefined,
+  "isAllSelected": false,
+  "isLocked": undefined,
+  "itemHeight": 40,
+  "itemRenderer": [Function],
+  "listRenderer": [Function],
+  "messages": Object {},
+  "noItemsRenderer": [Function],
+  "selectAllHeight": undefined,
+  "selectAllItems": undefined,
+  "selectAllRenderer": [Function],
+  "selectItem": undefined,
+  "selectedIds": Array [],
+  "showSelectAll": true,
+  "withGrouping": false,
+}
 `;

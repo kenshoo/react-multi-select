@@ -18,7 +18,8 @@ class InnerList extends PureComponent {
     selectedIds: PropTypes.arrayOf(PropTypes.number),
     items: PropTypes.array,
     disabled: PropTypes.bool,
-    disabledItemsTooltip: PropTypes.string
+    disabledItemsTooltip: PropTypes.string,
+    isLocked: PropTypes.func
   };
 
   static defaultProps = {
@@ -54,12 +55,14 @@ class InnerList extends PureComponent {
       itemHeight,
       items,
       selectedIds,
-      disabledItemsTooltip
+      disabledItemsTooltip,
+      isLocked
     } = this.props;
     const Renderer = renderer;
     const item = items[index];
     const checked = selectedIds.includes(item.id);
-    const disabled = this.props.disabled || item.disabled;
+    const disabled = (this.props.disabled && !checked) || isLocked(item);
+
     return (
       <div
         key={key}
@@ -73,7 +76,7 @@ class InnerList extends PureComponent {
           group={item.isGroup}
           height={itemHeight}
           checked={checked}
-          disabled={disabled && !checked}
+          disabled={disabled}
         />
       </div>
     );
