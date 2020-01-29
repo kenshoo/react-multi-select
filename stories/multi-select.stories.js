@@ -81,6 +81,21 @@ storiesOf("React Multi Select", module)
     })
   )
   .add(
+    "with keep selection order",
+    withReadme(Readme, () => {
+      return (
+        <ReactMultiSelect
+          items={utils.items}
+          loading={boolean("Loading", false)}
+          onChange={action("onChange")}
+          showSearch={boolean("Show search", true)}
+          showSelectAll={boolean("Show select all", true)}
+          keepSelectionOrder={boolean("keep selection order", true)}
+        />
+      );
+    })
+  )
+  .add(
     "With some of the items disabled",
     withReadme(Readme, () => {
       return (
@@ -363,15 +378,12 @@ storiesOf("React Multi Select", module)
     withReadme(Readme, () => {
       class SelectedItemsController extends React.Component {
         SINGLE_ITEM = [{ id: 1, label: "Item 1" }];
-        MULTI_ITEMS = [
-          { id: 2, label: "Item 2" },
-          { id: 4, label: "Item 4" }
-        ]
+        MULTI_ITEMS = [{ id: 2, label: "Item 2" }, { id: 4, label: "Item 4" }];
 
         constructor(props) {
           super(props);
           this.state = {
-            selectedItems: this.SINGLE_ITEM,
+            selectedItems: this.SINGLE_ITEM
           };
         }
 
@@ -384,7 +396,10 @@ storiesOf("React Multi Select", module)
                 type="button"
                 onClick={() => {
                   this.setState({
-                    selectedItems: this.state.selectedItems.length > 1 ? this.SINGLE_ITEM : this.MULTI_ITEMS
+                    selectedItems:
+                      this.state.selectedItems.length > 1
+                        ? this.SINGLE_ITEM
+                        : this.MULTI_ITEMS
                   });
                 }}
               />

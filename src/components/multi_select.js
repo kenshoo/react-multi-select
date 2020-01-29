@@ -26,6 +26,7 @@ export class MultiSelect extends PureComponent {
     showSearch: PropTypes.bool,
     showSelectAll: PropTypes.bool,
     showSelectedItems: PropTypes.bool,
+    keepSelectionOrder: PropTypes.bool,
     searchIcon: PropTypes.string,
     deleteIcon: PropTypes.string,
     searchRenderer: PropTypes.func,
@@ -55,7 +56,8 @@ export class MultiSelect extends PureComponent {
     loaderRenderer: Loader,
     withGrouping: false,
     generateClassName: defaultGenerateClassName,
-    showSelectedItemsSearch: false
+    showSelectedItemsSearch: false,
+    keepSelectionOrder: false
   };
 
   calculateHeight() {
@@ -112,7 +114,8 @@ export class MultiSelect extends PureComponent {
       searchSelectedItemsValue,
       filterSelectedItems,
       filteredSelectedItems,
-      isLocked
+      isLocked,
+      keepSelectionOrder
     } = this.props;
     const calculatedHeight = this.calculateHeight();
     const selectedIds = selectedItems.map(item => item.id);
@@ -151,6 +154,7 @@ export class MultiSelect extends PureComponent {
               withGrouping={withGrouping}
               listRenderer={listRenderer}
               isLocked={isLocked}
+              keepSelectionOrder={keepSelectionOrder}
             />
           )}
           {!loading && showSelectedItems && (

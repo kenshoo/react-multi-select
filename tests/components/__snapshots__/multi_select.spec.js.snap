@@ -134,6 +134,7 @@ exports[`MultiSelect Snapshots can remove search 1`] = `
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -305,6 +306,7 @@ exports[`MultiSelect Snapshots can remove select all 1`] = `
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -476,6 +478,7 @@ exports[`MultiSelect Snapshots can remove selected items 1`] = `
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -629,6 +632,7 @@ exports[`MultiSelect Snapshots custom itemRenderer 1`] = `
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={[MockFunction mockedComponent]}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -800,6 +804,7 @@ exports[`MultiSelect Snapshots custom listRenderer 1`] = `
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={[MockFunction mockedComponent]}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -971,6 +976,7 @@ exports[`MultiSelect Snapshots custom messages 1`] = `
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={
         Object {
@@ -1160,6 +1166,7 @@ exports[`MultiSelect Snapshots custom noItemsRenderer 1`] = `
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={[MockFunction mockedComponent]}
@@ -1331,6 +1338,7 @@ exports[`MultiSelect Snapshots custom searchRenderer 1`] = `
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -1502,6 +1510,7 @@ exports[`MultiSelect Snapshots custom selectAllRenderer 1`] = `
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -1673,6 +1682,7 @@ exports[`MultiSelect Snapshots default snapshot 1`] = `
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -2102,6 +2112,7 @@ exports[`MultiSelect Snapshots does not pass disabled if maxSelectedItem has pas
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -2283,6 +2294,7 @@ exports[`MultiSelect Snapshots passed clearAll 1`] = `
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -2454,6 +2466,7 @@ exports[`MultiSelect Snapshots passed filterItems 1`] = `
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -2625,6 +2638,7 @@ exports[`MultiSelect Snapshots passed selectAllItems 1`] = `
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -2796,6 +2810,7 @@ exports[`MultiSelect Snapshots passed selectItem 1`] = `
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -2967,6 +2982,7 @@ exports[`MultiSelect Snapshots passed selectedIds 1`] = `
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -3138,6 +3154,7 @@ exports[`MultiSelect Snapshots passed selectedItems 1`] = `
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -3319,6 +3336,7 @@ exports[`MultiSelect Snapshots passed unselectItems 1`] = `
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -3490,6 +3508,7 @@ exports[`MultiSelect Snapshots passes disabled if maxSelectedItem has passed 1`]
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -3671,6 +3690,7 @@ exports[`MultiSelect Snapshots will pass itemHeight 1`] = `
       isLocked={undefined}
       itemHeight={60}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -3842,6 +3862,7 @@ exports[`MultiSelect Snapshots will pass selectAllHeight 1`] = `
       isLocked={undefined}
       itemHeight={60}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -4013,6 +4034,7 @@ exports[`MultiSelect Snapshots will pass selectAllHeight without itemHeight 1`] 
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -4184,6 +4206,7 @@ exports[`MultiSelect Snapshots will pass selectedItemHeight 1`] = `
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -4355,6 +4378,7 @@ exports[`MultiSelect Snapshots with generateClassName 1`] = `
       isLocked={undefined}
       itemHeight={40}
       itemRenderer={undefined}
+      keepSelectionOrder={false}
       listRenderer={undefined}
       messages={Object {}}
       noItemsRenderer={undefined}
@@ -4439,6 +4463,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
@@ -4468,6 +4493,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
@@ -4497,6 +4523,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
@@ -4526,6 +4553,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [MockFunction mockedComponent],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
@@ -4555,6 +4583,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [MockFunction mockedComponent],
   "messages": Object {},
   "noItemsRenderer": [Function],
@@ -4584,6 +4613,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {
     "clearAllMessage": "Uncheck all",
@@ -4620,6 +4650,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [MockFunction mockedComponent],
@@ -4649,6 +4680,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
@@ -4678,6 +4710,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
@@ -4707,6 +4740,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
@@ -4736,6 +4770,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
@@ -4768,6 +4803,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
@@ -4797,6 +4833,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
@@ -4826,6 +4863,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
@@ -4855,6 +4893,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
@@ -4884,6 +4923,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
@@ -4913,6 +4953,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
@@ -4945,6 +4986,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
@@ -4974,6 +5016,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
@@ -5006,6 +5049,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 60,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
@@ -5035,6 +5079,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 60,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
@@ -5064,6 +5109,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
@@ -5093,6 +5139,7 @@ Object {
   "isLocked": undefined,
   "itemHeight": 40,
   "itemRenderer": [Function],
+  "keepSelectionOrder": false,
   "listRenderer": [Function],
   "messages": Object {},
   "noItemsRenderer": [Function],
