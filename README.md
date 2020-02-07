@@ -101,6 +101,7 @@ class Example extends Component {
 | `searchValueChanged`          | `function`  |                         | Function to handle the change of search field. Accepts value as a single argument.                      |
 | `responsiveHeight`            | `string`    | 400px                   | Responsive height of the wrapping component, can send percent for example: `70%`                        |
 | `withGrouping`                | `boolean`   | false                   | Your items will be grouped by the group prop values - see "item grouping" section below                 |
+| `withGroupClick`              | `boolean`   | true                    | Allows click on group titles to toggle the selection of group items.                                    |
 | `showSelectedItemsSearch`     | `boolean`   | false                   | toggle to show search option in detination list.                                                        |
 | `searchSelectedItemsValue`    | `string`    |                         | The value of the search field for destination list.                                                     |
 | `searchSelectedItemsChanged`  | `function`  |                         | Function to handle the change of search field for destination list. Accepts value as a single argument. |
