@@ -8,14 +8,14 @@ import styles from "./search.scss";
 const Search = ({ searchPlaceholder, searchIcon, onChange }) => {
   const IconRenderer = searchIcon;
   return (
-    <div className={styles.search}>
+    <div className={`${styles.search} rms-search`}>
       <input
         type="text"
-        className={styles.input}
+        className={`${styles.input} rms-input`}
         placeholder={searchPlaceholder}
         onChange={onChange}
       />
-      <div className={styles.icon}>
+      <div className={`${styles.icon} rms-search_icon`}>
         <IconRenderer />
       </div>
     </div>
@@ -31,15 +31,15 @@ export const SearchWithValue = ({
   const IconRenderer = searchIcon;
 
   return (
-    <div className={styles.search}>
+    <div className={`${styles.search} rms-search`}>
       <input
         value={value}
         type="text"
-        className={styles.input}
+        className={`${styles.input} rms-input`}
         placeholder={searchPlaceholder}
         onChange={onChange}
       />
-      <div className={styles.icon}>
+      <div className={`${styles.icon} rms-search_icon`}>
         <IconRenderer />
       </div>
     </div>

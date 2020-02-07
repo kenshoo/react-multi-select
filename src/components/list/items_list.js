@@ -13,6 +13,8 @@ class ItemsList extends PureComponent {
     height: PropTypes.number,
     offset: PropTypes.number,
     onClick: PropTypes.func,
+    onClickGroup: PropTypes.func,
+    withGroupClick: PropTypes.bool,
     selectedIds: PropTypes.arrayOf(PropTypes.number),
     items: PropTypes.array,
     disabled: PropTypes.bool,
@@ -60,6 +62,8 @@ class ItemsList extends PureComponent {
       renderer,
       listRenderer,
       selectedIds,
+      onClickGroup,
+      withGroupClick,
       onClick,
       disabled,
       disabledItemsTooltip,
@@ -82,6 +86,8 @@ class ItemsList extends PureComponent {
             listRenderer={listRenderer}
             itemHeight={itemHeight}
             onClick={onClick}
+            onClickGroup={onClickGroup}
+            withGroupClick={withGroupClick}
             items={items}
             selectedIds={selectedIds}
             disabled={disabled}

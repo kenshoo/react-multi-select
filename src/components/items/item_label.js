@@ -6,7 +6,7 @@ import styles from "./item_label.scss";
 
 const ItemLabel = ({ label }) => (
   <ReactOverflowTooltip title={label}>
-    <div className={styles.label}>{label}</div>
+    <div className={`${styles.label} rms-label`}>{label}</div>
   </ReactOverflowTooltip>
 );
 

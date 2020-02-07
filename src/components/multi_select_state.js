@@ -5,7 +5,8 @@ import {
   findItem,
   getMinMaxIndexes,
   isWithin,
-  getNewSelectedItems
+  getNewSelectedItems,
+  getSelectedItemsByGroup
 } from "./multi_select_state_utils";
 
 const withMultiSelectState = WrappedComponent =>
@@ -32,6 +33,7 @@ const withMultiSelectState = WrappedComponent =>
       this.getList = this.getList.bind(this);
       this.onKeyUp = this.onKeyUp.bind(this);
       this.filterSelectedItems = this.filterSelectedItems.bind(this);
+      this.selectGroup = this.selectGroup.bind(this);
       this.getNewFilteredSelectedItems = this.getNewFilteredSelectedItems.bind(
         this
       );
@@ -249,13 +251,33 @@ const withMultiSelectState = WrappedComponent =>
       this.list = ref;
     }
 
+    selectGroup(group) {
+      const newSelectedItems = getSelectedItemsByGroup(
+        this.state.items,
+        this.state.selectedItems,
+        group
+      );
+      const newFilteredSelectedItems = this.getNewFilteredSelectedItems(
+        newSelectedItems
+      );
+      this.setState(
+        {
+          selectedItems: newSelectedItems,
+          filteredSelectedItems: newFilteredSelectedItems
+        },
+        this.handleChange
+      );
+    }
+
     render() {
       return (
         <WrappedComponent
           {...this.props}
           {...this.state}
           unselectItems={this.unselectItems}
+          unselectGroup={this.selectGroup}
           selectItem={this.selectItem}
+          selectGroup={this.selectGroup}
           filterItems={this.filterItems}
           selectAllItems={this.selectAllItems}
           isAllSelected={this.isAllSelected()}

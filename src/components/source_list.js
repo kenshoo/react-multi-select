@@ -24,6 +24,8 @@ const SourceList = ({
   filteredItems,
   calculatedHeight,
   selectItem,
+  selectGroup,
+  withGroupClick,
   noItemsRenderer,
   disabled,
   withGrouping,
@@ -33,7 +35,7 @@ const SourceList = ({
 }) => {
   const SelectAllRenderer = selectAllRenderer;
   const updatedFilteredItems = withGrouping
-    ? groupItems(filteredItems)
+    ? groupItems(filteredItems, withGroupClick)
     : filteredItems;
   return (
     <Column>
@@ -55,6 +57,8 @@ const SourceList = ({
         itemHeight={itemHeight}
         height={calculatedHeight}
         onClick={selectItem}
+        onClickGroup={selectGroup}
+        withGroupClick={withGroupClick}
         selectedIds={selectedIds}
         renderer={itemRenderer}
         listRenderer={listRenderer}

@@ -18,7 +18,7 @@ const ListRenderer = ({ items, width, height, className, rowRenderer }) => {
         height,
         position: "absolute"
       }}
-      className={className}
+      className={`${className} rms-list_renderer`}
     >
       <Slider {...settings}>
         {items.map((item, key) => (

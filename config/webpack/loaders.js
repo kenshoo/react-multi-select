@@ -7,14 +7,22 @@ const babelLoader = {
 };
 
 const cssLoader = {
-  test: /(\.scss|\.css)/,
+  test: /(\.s[ac]ss|\.css)/,
   use: [
     { loader: MiniCssExtractPlugin.loader },
     {
       loader:
         "css-loader?modules&importLoaders=true&localIdentName=kn-[name]__[local]___[hash:base64:5]"
     },
-    { loader: "sass-loader" }
+    {
+      loader: "sass-loader",
+      options: {
+        implementation: require("sass"),
+        sassOptions: {
+          fiber: true
+        }
+      }
+    }
   ]
 };
 

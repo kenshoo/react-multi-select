@@ -49,3 +49,42 @@ export const getNewSelectedItems = (itemId, items, selectedItems) => {
   );
   return [...destinationItems, ...sourceItems];
 };
+
+export const getSelectedGroups = selectedItems => {
+  let groups = {};
+  selectedItems.forEach(item => {
+    if (item.group) {
+      groups[item.group] = 1;
+    }
+  });
+  return Object.keys(groups);
+};
+
+export const getSelectedItemsByGroup = (items, selectedItems, group) => {
+  let newSelectedItems = [...selectedItems];
+  let previousSelectedGroups = getSelectedGroups(selectedItems);
+  items.forEach(option => {
+    let indexOption = -1;
+    newSelectedItems.some((item, index) => {
+      if (item.id === option.id) {
+        indexOption = index;
+        return true;
+      }
+      return false;
+    });
+    if (previousSelectedGroups.indexOf(group) > -1) {
+      if (option.group === group) {
+        if (indexOption > -1) {
+          newSelectedItems.splice(indexOption, 1);
+        }
+      }
+    } else {
+      if (option.group === group) {
+        if (indexOption < 0) {
+          newSelectedItems.push(option);
+        }
+      }
+    }
+  });
+  return newSelectedItems;
+};

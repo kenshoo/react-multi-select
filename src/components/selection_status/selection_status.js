@@ -10,13 +10,13 @@ const SelectionStatus = ({
   noneSelectedMessage,
   selectedMessage
 }) => (
-  <div className={styles.selection_status}>
-    <div className={styles.status}>
+  <div className={`${styles.selection_status} rms-selection_status`}>
+    <div className={`${styles.status} rms-status`}>
       {selected.length > 0
         ? `${selected.length} ${selectedMessage}`
         : noneSelectedMessage}
     </div>
-    <div className={styles.clear_all} onClick={clearAll}>
+    <div className={`${styles.clear_all} rms-clear_all`} onClick={clearAll}>
       {selected.length > 0 ? clearAllMessage : ""}
     </div>
   </div>

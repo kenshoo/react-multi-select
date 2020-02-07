@@ -21,13 +21,15 @@ const DestinationList = ({
   selectedItemRenderer,
   noItemsRenderer,
   withGrouping,
+  unselectGroup,
+  withGroupClick,
   filteredItems,
   children,
   isLocked
 }) => {
   const SelectionStatusRenderer = selectionStatusRenderer;
   const updatedSelectedItems = withGrouping
-    ? groupItems(filteredItems)
+    ? groupItems(filteredItems, withGroupClick)
     : filteredItems;
 
   return (
@@ -45,7 +47,9 @@ const DestinationList = ({
         itemHeight={itemHeight}
         height={height - 45}
         onClick={(event, id) => unselectItems([id])}
+        onClickGroup={unselectGroup}
         renderer={selectedItemRenderer}
+        withGroupClick={withGroupClick}
         noItemsRenderer={noItemsRenderer}
         noItemsMessage={messages.noItemsMessage}
         isLocked={isLocked}

@@ -6,12 +6,17 @@ import ItemLabel from "./item_label";
 import classnames from "classnames";
 import styles from "./selected_item.scss";
 
-const SelectedItem = ({ item, height, group, disabled }) => (
+const SelectedItem = ({ item, height, group, disabled, withGroupClick }) => (
   <div
     className={classnames({
       [styles.with_grouping]: group,
+      "rms-selected_item_with_grouping": group,
+      [styles.with_grouping_click]: withGroupClick,
+      "rms-with_grouping_click": withGroupClick,
       [styles.selected_item]: !group,
-      [styles.disabled]: disabled
+      "rms-selected_item": !group,
+      [styles.disabled]: disabled,
+      "rms-selected_item_disabled": disabled
     })}
     style={{ height }}
   >

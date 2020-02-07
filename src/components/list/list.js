@@ -15,6 +15,8 @@ class InnerList extends PureComponent {
     height: PropTypes.number,
     offset: PropTypes.number,
     onClick: PropTypes.func,
+    selectGroup: PropTypes.func,
+    withGroupClick: PropTypes.bool,
     selectedIds: PropTypes.arrayOf(PropTypes.number),
     items: PropTypes.array,
     disabled: PropTypes.bool,
@@ -49,12 +51,13 @@ class InnerList extends PureComponent {
     }
   }
 
-  rowRenderer({ index, isScrolling, key, style }) {
+  rowRenderer({ index, key, style }) {
     const {
       renderer,
       itemHeight,
-      onClick,
       items,
+      withGroupClick,
+      onClickGroup,
       selectedIds,
       disabledItemsTooltip,
       isLocked
@@ -68,11 +71,16 @@ class InnerList extends PureComponent {
       <div
         key={key}
         style={style}
-        className={styles.list_item}
-        onClick={event => this.onClick(event, item.id, disabled)}
+        className={`${styles.list_item} rms-list_item`}
+        onClick={event =>
+          item.isGroup && withGroupClick
+            ? onClickGroup(item.id)
+            : this.onClick(event, item.id, disabled)
+        }
         title={disabled ? disabledItemsTooltip : undefined}
       >
         <Renderer
+          withGroupClick={withGroupClick}
           item={item}
           group={item.isGroup}
           height={itemHeight}
@@ -103,7 +111,7 @@ class InnerList extends PureComponent {
     return (
       <ListRenderer
         ref={getlistRef}
-        className={styles.list}
+        className={`${styles.list} rms-list`}
         rowRenderer={this.rowRenderer}
         noRowsRenderer={this.noRowsRenderer}
         width={width - offset}

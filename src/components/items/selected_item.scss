@@ -19,6 +19,10 @@
   color: $color-black;
 }
 
+.with_grouping_click {
+  pointer-events: auto;
+}
+
 .disabled {
   color: $disabled-color;
   background-color: $selected-background-color;

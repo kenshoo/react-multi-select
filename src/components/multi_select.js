@@ -37,6 +37,7 @@ export class MultiSelect extends PureComponent {
     loaderRenderer: PropTypes.any,
     maxSelectedItems: PropTypes.number,
     withGrouping: PropTypes.bool,
+    withGroupClick: PropTypes.bool,
     listRenderer: PropTypes.func,
     generateClassName: PropTypes.func,
     showSelectedItemsSearch: PropTypes.bool,
@@ -54,6 +55,7 @@ export class MultiSelect extends PureComponent {
     itemHeight: 40,
     loaderRenderer: Loader,
     withGrouping: false,
+    withGroupClick: true,
     generateClassName: defaultGenerateClassName,
     showSelectedItemsSearch: false
   };
@@ -95,6 +97,8 @@ export class MultiSelect extends PureComponent {
       clearAll,
       selectItem,
       unselectItems,
+      unselectGroup,
+      selectGroup,
       searchIcon,
       searchRenderer,
       selectAllRenderer,
@@ -106,6 +110,7 @@ export class MultiSelect extends PureComponent {
       maxSelectedItems,
       searchValue,
       withGrouping,
+      withGroupClick,
       generateClassName,
       listRenderer,
       showSelectedItemsSearch,
@@ -122,7 +127,11 @@ export class MultiSelect extends PureComponent {
     return (
       <JssProvider jss={jss} generateClassName={generateClassName}>
         <div
-          className={classnames(styles.wrapper, wrapperClassName)}
+          className={classnames(
+            styles.wrapper,
+            wrapperClassName,
+            "rms-wrapper"
+          )}
           style={{ height }}
         >
           {loading && <LoaderRenderer />}
@@ -145,10 +154,12 @@ export class MultiSelect extends PureComponent {
               filteredItems={filteredItems}
               calculatedHeight={calculatedHeight}
               selectItem={selectItem}
+              selectGroup={selectGroup}
               noItemsRenderer={noItemsRenderer}
               disabled={disabled}
               selectAllHeight={selectAllHeight}
               withGrouping={withGrouping}
+              withGroupClick={withGroupClick}
               listRenderer={listRenderer}
               isLocked={isLocked}
             />
@@ -165,6 +176,8 @@ export class MultiSelect extends PureComponent {
               selectedItemRenderer={selectedItemRenderer}
               noItemsRenderer={noItemsRenderer}
               withGrouping={withGrouping}
+              unselectGroup={unselectGroup}
+              withGroupClick={withGroupClick}
               showSearch={showSelectedItemsSearch}
               searchValue={searchSelectedItemsValue}
               filteredItems={filteredSelectedItems}

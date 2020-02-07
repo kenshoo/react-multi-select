@@ -64,7 +64,6 @@
     "jsdom": "^11.3.0",
     "lint-staged": "^7.0.0",
     "mini-css-extract-plugin": "^0.5.0",
-    "node-sass": "^4.5.0",
     "nodemon": "^1.9.1",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.8.2",
@@ -75,6 +74,7 @@
     "react-dom": "^16.0.0",
     "react-slick": "^0.23.2",
     "react-test-renderer": "^16.0.0",
+    "sass": "^1.25.0",
     "sass-loader": "^7.1.0",
     "semantic-release": "^8.2.0",
     "skin-deep": "^1.2.0",
@@ -92,6 +92,7 @@
   "dependencies": {
     "@material-ui/core": "^1.0.0",
     "classnames": "2.2.5",
+    "fibers": "^4.0.2",
     "jss": "^9.8.7",
     "prop-types": "^15.6.2",
     "react-icons": "^2.2.7",
