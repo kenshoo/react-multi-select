@@ -7,7 +7,7 @@ const babelLoader = {
 };
 
 const cssLoader = {
-  test: /(\.scss|\.css)/,
+  test: /(\.s[ac]ss|\.css)/,
   use: [
     { loader: MiniCssExtractPlugin.loader },
     {
@@ -17,8 +17,10 @@ const cssLoader = {
     {
       loader: "sass-loader",
       options: {
-        // Prefer `dart-sass`
-        implementation: require("sass")
+        implementation: require("sass"),
+        sassOptions: {
+          fiber: true
+        }
       }
     }
   ]

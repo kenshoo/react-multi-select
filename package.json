@@ -92,6 +92,7 @@
   "dependencies": {
     "@material-ui/core": "^1.0.0",
     "classnames": "2.2.5",
+    "fibers": "^4.0.2",
     "jss": "^9.8.7",
     "prop-types": "^15.6.2",
     "react-icons": "^2.2.7",
