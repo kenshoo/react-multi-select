@@ -127,7 +127,11 @@ export class MultiSelect extends PureComponent {
     return (
       <JssProvider jss={jss} generateClassName={generateClassName}>
         <div
-          className={classnames(styles.wrapper, wrapperClassName)}
+          className={classnames(
+            styles.wrapper,
+            wrapperClassName,
+            "rms-wrapper"
+          )}
           style={{ height }}
         >
           {loading && <LoaderRenderer />}

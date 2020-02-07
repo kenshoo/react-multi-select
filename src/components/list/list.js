@@ -71,7 +71,7 @@ class InnerList extends PureComponent {
       <div
         key={key}
         style={style}
-        className={styles.list_item}
+        className={`${styles.list_item} rms-list_item`}
         onClick={event =>
           item.isGroup && withGroupClick
             ? onClickGroup(item.id)
@@ -111,7 +111,7 @@ class InnerList extends PureComponent {
     return (
       <ListRenderer
         ref={getlistRef}
-        className={styles.list}
+        className={`${styles.list} rms-list`}
         rowRenderer={this.rowRenderer}
         noRowsRenderer={this.noRowsRenderer}
         width={width - offset}

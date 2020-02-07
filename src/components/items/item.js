@@ -17,12 +17,20 @@ const Item = ({
   disabled
 }) => (
   <div
-    className={classnames(styles.item, {
-      [styles.with_border]: withBorder,
-      [styles.selected]: checked,
-      [styles.disabled]: disabled,
-      [styles.with_grouping]: group
-    })}
+    className={classnames(
+      styles.item,
+      {
+        [styles.with_border]: withBorder,
+        "rms-with_border": withBorder,
+        [styles.selected]: checked,
+        "rms-selected": checked,
+        [styles.disabled]: disabled,
+        "rms-disabled": disabled,
+        [styles.with_grouping]: group,
+        "rms-with_grouping": group
+      },
+      "rms-item"
+    )}
     style={{ height }}
     onClick={onClick}
   >
