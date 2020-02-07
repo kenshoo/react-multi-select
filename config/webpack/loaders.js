@@ -14,7 +14,13 @@ const cssLoader = {
       loader:
         "css-loader?modules&importLoaders=true&localIdentName=kn-[name]__[local]___[hash:base64:5]"
     },
-    { loader: "sass-loader" }
+    {
+      loader: "sass-loader",
+      options: {
+        // Prefer `dart-sass`
+        implementation: require("sass")
+      }
+    }
   ]
 };
 
