@@ -1,6 +1,8 @@
 import {
   filterUnselectedByIds,
-  getSelectedByAllItems
+  getSelectedByAllItems,
+  getSelectedItemsOutsideInterval,
+  getAvailableIntervalForSelection
 } from "../../src/components/multi_select_state_utils";
 
 const items = [
@@ -75,5 +77,53 @@ describe("testing utils for multi select state", () => {
       [...items, ...disabledItems]
     );
     expect(allSelectedItems).toEqual([]);
+  });
+
+  test("filter selectedItems that not in interval", () => {
+    const selectedItemsOutsideInterval = getSelectedItemsOutsideInterval(
+      items,
+      selectedItems,
+      { minIndex: 1, maxIndex: 3 }
+    );
+    expect(selectedItemsOutsideInterval.length).toEqual(1);
+    expect(selectedItemsOutsideInterval[0]).toEqual(selectedItems[0]);
+  });
+
+  test("filter itemsToSelect that not in interval", () => {
+    const selectedItemsOutsideInterval = getSelectedItemsOutsideInterval(
+      items,
+      itemsToSelect,
+      { minIndex: 0, maxIndex: 3 }
+    );
+    expect(selectedItemsOutsideInterval.length).toEqual(0);
+  });
+
+  test("available interval when minIndex == firstItemShiftSelected", () => {
+    const initialInterval = { minIndex: 0, maxIndex: 3 };
+    const maxSelectedItems = 3;
+    const selectedItemsOutsideInterval = 0;
+    const firstItemShiftSelected = 0;
+    const availableInterval = getAvailableIntervalForSelection(
+      initialInterval,
+      selectedItemsOutsideInterval,
+      maxSelectedItems,
+      firstItemShiftSelected
+    );
+    expect(availableInterval).toEqual({ minIndex: 0, maxIndex: 2 });
+  });
+
+  test("available interval when maxIndex == firstItemShiftSelected", () => {
+    const initialInterval = { minIndex: 1, maxIndex: 3 };
+    const maxSelectedItems = 3;
+    const selectedItemsOutsideInterval = 1;
+    const firstItemShiftSelected = 3;
+
+    const availableInterval = getAvailableIntervalForSelection(
+      initialInterval,
+      selectedItemsOutsideInterval,
+      maxSelectedItems,
+      firstItemShiftSelected
+    );
+    expect(availableInterval).toEqual({ minIndex: 2, maxIndex: 3 });
   });
 });

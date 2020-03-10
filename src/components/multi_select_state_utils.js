@@ -32,10 +32,70 @@ export const getSelectedByAllItems = (itemsToSelect, selectedItems, items) => {
   return [...destinationItems, ...sourceItems];
 };
 
-export const getMinMaxIndexes = (currentIndex, firstItemShiftSelected) =>
+export const getMinMaxIndexes = (
+  currentIndex,
+  firstItemShiftSelected,
+  items,
+  selectedItems,
+  maxSelected
+) => {
+  const numberOfItemsOutsideSelected = getSelectedItemsOutsideInterval(
+    currentIndex,
+    firstItemShiftSelected,
+    items,
+    selectedItems
+  ).length;
+  const sumItemsShouldBeSelect =
+    numberOfItemsOutsideSelected +
+    Math.abs(firstItemShiftSelected - currentIndex) +
+    1;
+
+  if (maxSelected && maxSelected <= sumItemsShouldBeSelect) {
+    return getIndexesWhenShiftSelected(
+      currentIndex,
+      firstItemShiftSelected,
+      maxSelected,
+      numberOfItemsOutsideSelected
+    );
+  }
+  return getInputInterval(currentIndex, firstItemShiftSelected);
+};
+
+const getIndexesWhenShiftSelected = (
+  currentIndex,
+  firstItemShiftSelected,
+  maxSelected,
+  numberOfItemsOutsideSelected
+) => {
+  const sumItemsAllowToSelect = maxSelected - numberOfItemsOutsideSelected - 1;
+  return firstItemShiftSelected > currentIndex
+    ? {
+        minIndex: firstItemShiftSelected - sumItemsAllowToSelect,
+        maxIndex: firstItemShiftSelected
+      }
+    : {
+        minIndex: firstItemShiftSelected,
+        maxIndex: firstItemShiftSelected + sumItemsAllowToSelect
+      };
+};
+
+const getInputInterval = (currentIndex, firstItemShiftSelected) =>
   firstItemShiftSelected > currentIndex
     ? { minIndex: currentIndex, maxIndex: firstItemShiftSelected }
     : { minIndex: firstItemShiftSelected, maxIndex: currentIndex };
+
+export const getSelectedItemsOutsideInterval = (
+  currentIndex,
+  firstItemShiftSelected,
+  sourceItems,
+  selectedItems
+) => {
+  const interval = getInputInterval(currentIndex, firstItemShiftSelected);
+  return selectedItems.filter(selectedItem => {
+    const index = sourceItems.findIndex(item => item.id === selectedItem.id);
+    return !isWithin(index, interval) || selectedItem.disabled;
+  });
+};
 
 export const isWithin = (index, { minIndex, maxIndex }) =>
   index >= minIndex && index <= maxIndex;
