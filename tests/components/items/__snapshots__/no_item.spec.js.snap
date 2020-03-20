@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`NoItem default snapshot 1`] = `
-<div
-  className="no_items"
->
-  No Items...
-</div>
-`;
