@@ -6,106 +6,25 @@
   "author": "Kenshoo",
   "license": "MIT",
   "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "build": "webpack --config config/webpack/webpack.dev.js --mode development",
-    "build:stats": "NODE_ENV=production webpack  --config config/webpack/webpack.prod.js -p --bail --json > stats.json  --mode production",
-    "build:production": "webpack --config config/webpack/webpack.prod.js --mode production",
-    "test": "cross-env BABEL_DISABLE_CACHE=1 jest --config config/jest/jest.config.json --coverage",
-    "test:updateSnapshot": "cross-env BABEL_DISABLE_CACHE=1 jest --config config/jest/jest.config.json --updateSnapshot",
-    "test:watch": "cross-env BABEL_DISABLE_CACHE=1 jest --watchAll --config config/jest/jest.config.json",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "lint:dev": "eslint --ext js --ext jsx ./src --fix",
-    "lint:jenkins": "eslint --ext js --ext jsx ./src",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "precommit": "lint-staged",
-    "postcommit": "git update-index -g"
-  },
-  "lint-staged": {
-    "*.{js,scss}": [
-      "prettier --write",
-      "git add"
-    ]
+    "postinstall": "preconstruct dev",
+    "build": "preconstruct build",
+    "release": "auto shipit"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
-    "@babel/plugin-proposal-class-properties": "^7.3.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/preset-react": "^7.0.0",
-    "@kadira/react-storybook-addon-info": "^3.4.0",
-    "@storybook/addon-knobs": "^3.3.15",
-    "@storybook/addon-options": "^3.3.15",
-    "@storybook/addons": "^3.3.15",
-    "@storybook/react": "^3.3.15",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.4.2",
-    "babel-loader": "^8.0.5",
-    "chai-enzyme": "^0.8.0",
-    "cheerio": "^1.0.0-rc.2",
-    "cross-env": "^5.0.5",
-    "css-loader": "^0.28.7",
-    "enzyme": "^3.1.0",
-    "enzyme-adapter-react-16": "^1.1.0",
-    "eslint": "^4.8.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.3.1",
-    "eslint-plugin-react": "^7.5.1",
-    "husky": "^0.14.3",
-    "identity-obj-proxy": "^3.0.0",
-    "ignore-styles": "^5.0.1",
-    "isomorphic-fetch": "^2.2.1",
-    "jest": "^22.4.3",
-    "jest-cli": "^22.4.3",
-    "jest-junit": "^3.6.0",
-    "jest-sandbox": "^1.1.2",
-    "jsdom": "^11.3.0",
-    "lint-staged": "^7.0.0",
-    "mini-css-extract-plugin": "^0.5.0",
-    "node-sass": "^4.5.0",
-    "nodemon": "^1.9.1",
-    "postcss-loader": "^3.0.0",
-    "prettier": "^1.8.2",
-    "raw-loader": "^1.0.0",
-    "react": "^16.0.0",
-    "react-addons-test-utils": "^15.0.0",
-    "react-addons-update": "^15.4.1",
-    "react-dom": "^16.0.0",
-    "react-slick": "^0.23.2",
-    "react-test-renderer": "^16.0.0",
-    "sass-loader": "^7.1.0",
-    "semantic-release": "^8.2.0",
-    "skin-deep": "^1.2.0",
-    "storybook-readme": "3.0.6",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.29.0",
-    "webpack-cli": "^3.2.1",
-    "webpack-merge": "^4.1.2",
-    "webpack-strip": "^0.1.0"
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3",
+    "@preconstruct/cli": "^1.1.8",
+    "auto": "^9.20.1",
+    "lerna": "^3.20.2"
   },
-  "peerDependencies": {
-    "react": "^15.0.0-0 || ^16.0.0",
-    "react-dom": "^15.0.0-0 || ^16.0.0"
-  },
-  "dependencies": {
-    "@material-ui/core": "^1.0.0",
-    "classnames": "2.2.5",
-    "jss": "^9.8.7",
-    "prop-types": "^15.6.2",
-    "react-icons": "^2.2.7",
-    "react-jss": "^8.6.1",
-    "react-overflow-tooltip": "^2.0.1",
-    "react-virtualized": "^9.18.5"
-  },
-  "release": {
-    "debug": false,
-    "analyzeCommits": "./semantic_release/analyzeCommits",
-    "verifyConditions": {
-      "path": "./semantic_release/verifyConditions"
-    }
-  },
+  "peerDependencies": {},
+  "dependencies": {},
   "publishConfig": {
     "access": "public"
   },
@@ -119,5 +38,11 @@
     "select",
     "ui",
     "multi-select"
-  ]
+  ],
+  "preconstruct": {
+    "packages": [
+      "packages/*",
+      "!packages/demo"
+    ]
+  }
 }

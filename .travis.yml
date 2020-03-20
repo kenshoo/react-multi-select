@@ -1,30 +1,26 @@
 language: node_js
 node_js:
-  - "8"
+  - "12"
+cache: yarn
 
-before_script:
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
+env:
+  global:
+    - GIT_NAME="uikenshoo"
+    - GIT_EMAIL="ui@kenshoo.com"
 
 script:
- - yarn build:production
- - yarn test
+  - export BRANCH=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo $TRAVIS_BRANCH; else echo $TRAVIS_PULL_REQUEST_BRANCH; fi)
+  - yarn build
 
-after_success:
- - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
- - yarn build-storybook
+before_deploy:
+  - if [ "$BRANCH" == "master" ]; then
+      git checkout master;
+    fi;
+
 
 deploy:
   - provider: script
-    script: yarn semantic-release
+    script: if [ "$GH_TOKEN" != "false" ]; then npx auto shipit; fi;
     skip-cleanup: true
     on:
-      branch: master
-  - provider: pages
-    local-dir: "./storybook-static"
-    skip-cleanup: true
-    github-token: $GH_TOKEN
-    keep-history: true
-    on:
-      branch: master
+      all_branches: true

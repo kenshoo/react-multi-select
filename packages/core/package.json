@@ -1,0 +1,17 @@
+{
+  "name": "@kenshooui/react-multi-select",
+  "version": "2.0.0",
+  "description": "React Multi Select",
+  "main": "dist/react-multi-select.cjs.js",
+  "module": "dist/react-multi-select.esm.js",
+  "repository": "https://github.com/kenshoo/react-multi-select.git",
+  "author": "Kenshoo",
+  "license": "MIT",
+  "private": false,
+  "peerDependencies": {
+    "react": "^16.13.1"
+  },
+  "devDependencies": {
+    "react": "^16.13.1"
+  }
+}
