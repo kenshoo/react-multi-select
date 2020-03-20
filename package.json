@@ -7,9 +7,6 @@
   "license": "MIT",
   "main": "index.js",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
     "postinstall": "preconstruct dev",
     "build": "preconstruct build",
@@ -23,8 +20,6 @@
     "auto": "^9.20.1",
     "lerna": "^3.20.2"
   },
-  "peerDependencies": {},
-  "dependencies": {},
   "publishConfig": {
     "access": "public"
   },
