@@ -16,6 +16,7 @@
     "@babel/preset-env": "^7.8.7",
     "@babel/preset-react": "^7.8.3",
     "@preconstruct/cli": "^1.1.8",
+    "auto": "^9.20.1",
     "lerna": "^3.20.2"
   },
   "publishConfig": {
@@ -46,7 +47,5 @@
       "prerelease": true
     }
   },
-  "dependencies": {
-    "auto": "9.13.0"
-  }
+  "dependencies": {}
 }
