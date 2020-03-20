@@ -9,8 +9,7 @@
   "private": true,
   "scripts": {
     "postinstall": "preconstruct dev",
-    "build": "preconstruct build",
-    "release": "auto shipit"
+    "build": "preconstruct build"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",
@@ -38,6 +37,11 @@
     "packages": [
       "packages/*",
       "!packages/demo"
+    ]
+  },
+  "auto": {
+    "plugins": [
+      "npm"
     ]
   }
 }
