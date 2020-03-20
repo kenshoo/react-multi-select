@@ -42,6 +42,9 @@
   "auto": {
     "plugins": [
       "npm"
-    ]
+    ],
+    "release": {
+      "prerelease": true
+    }
   }
 }
