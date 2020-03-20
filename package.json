@@ -7,6 +7,9 @@
   "license": "MIT",
   "main": "index.js",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "postinstall": "preconstruct dev",
     "build": "preconstruct build"
@@ -46,6 +49,5 @@
     "release": {
       "prerelease": true
     }
-  },
-  "dependencies": {}
+  }
 }
