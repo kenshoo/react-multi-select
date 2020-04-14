@@ -23,12 +23,14 @@ const DestinationList = ({
   withGrouping,
   filteredItems,
   children,
-  isLocked
+  isLocked,
+  showSearch
 }) => {
   const SelectionStatusRenderer = selectionStatusRenderer;
   const updatedSelectedItems = withGrouping
     ? groupItems(filteredItems)
     : filteredItems;
+  const calculatedHeight = showSearch ? height - 90 : height - 45;
 
   return (
     <Column>
@@ -43,7 +45,7 @@ const DestinationList = ({
       <ItemsList
         items={updatedSelectedItems}
         itemHeight={itemHeight}
-        height={height - 45}
+        height={calculatedHeight}
         onClick={(event, id) => unselectItems([id])}
         renderer={selectedItemRenderer}
         noItemsRenderer={noItemsRenderer}
@@ -67,7 +69,8 @@ DestinationList.propTypes = {
   withGrouping: PropTypes.bool,
   filteredItems: PropTypes.arrayOf(PropTypes.object),
   children: PropTypes.node,
-  isLocked: PropTypes.func
+  isLocked: PropTypes.func,
+  showSearch: PropTypes.bool
 };
 
 DestinationList.defaultProps = {
@@ -80,7 +83,8 @@ DestinationList.defaultProps = {
   selectedItemRenderer: SelectedItem,
   noItemsRenderer: NoItems,
   withGrouping: false,
-  filteredItems: []
+  filteredItems: [],
+  showSearch: false
 };
 
 export { DestinationList };
