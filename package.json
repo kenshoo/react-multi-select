@@ -97,7 +97,7 @@
     "react-icons": "^2.2.7",
     "react-jss": "^8.6.1",
     "react-overflow-tooltip": "^2.0.1",
-    "react-virtualized": "^9.18.5"
+    "react-virtualized": "^9.22.2"
   },
   "release": {
     "debug": false,
