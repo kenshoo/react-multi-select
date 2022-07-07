@@ -11,7 +11,6 @@ exports[`SelectionStatus default snapshot 1`] = `
   </div>
   <div
     className="clear_all"
-    onClick={undefined}
   >
     
   </div>
@@ -29,7 +28,6 @@ exports[`SelectionStatus snapshot with custom noneSelectedMessage 1`] = `
   </div>
   <div
     className="clear_all"
-    onClick={undefined}
   >
     
   </div>
@@ -47,7 +45,6 @@ exports[`SelectionStatus snapshot with selected item 1`] = `
   </div>
   <div
     className="clear_all"
-    onClick={undefined}
   >
     Clear All
   </div>
@@ -65,7 +62,6 @@ exports[`SelectionStatus snapshot with selected items and custom clearAllMessage
   </div>
   <div
     className="clear_all"
-    onClick={undefined}
   >
     custom message
   </div>
@@ -83,7 +79,6 @@ exports[`SelectionStatus snapshot with selected items and custom selectedMessage
   </div>
   <div
     className="clear_all"
-    onClick={undefined}
   >
     Clear All
   </div>

@@ -11,7 +11,6 @@ exports[`SelectAll default snapshot 1`] = `
       "label": "Select All",
     }
   }
-  onClick={undefined}
   withBorder={true}
 />
 `;
@@ -27,7 +26,6 @@ exports[`SelectAll snapshot with empty selectedIds with select all 1`] = `
       "label": "Select All",
     }
   }
-  onClick={undefined}
   withBorder={true}
 />
 `;
@@ -43,7 +41,6 @@ exports[`SelectAll snapshot with empty selectedIds without select all 1`] = `
       "label": "Select All",
     }
   }
-  onClick={undefined}
   withBorder={true}
 />
 `;
@@ -59,7 +56,6 @@ exports[`SelectAll snapshot with height 1`] = `
       "label": "Select All",
     }
   }
-  onClick={undefined}
   withBorder={true}
 />
 `;
@@ -75,7 +71,6 @@ exports[`SelectAll snapshot with isSelectAll 1`] = `
       "label": "Select All",
     }
   }
-  onClick={undefined}
   withBorder={true}
 />
 `;
@@ -91,7 +86,6 @@ exports[`SelectAll snapshot with isSelectAll false 1`] = `
       "label": "Select All",
     }
   }
-  onClick={undefined}
   withBorder={true}
 />
 `;
@@ -107,7 +101,6 @@ exports[`SelectAll snapshot with selectAllMessage 1`] = `
       "label": "some test message",
     }
   }
-  onClick={undefined}
   withBorder={true}
 />
 `;
@@ -123,7 +116,6 @@ exports[`SelectAll snapshot with selectedIds with select all should be indetermi
       "label": "Select All",
     }
   }
-  onClick={undefined}
   withBorder={true}
 />
 `;
@@ -139,7 +131,6 @@ exports[`SelectAll snapshot with selectedIds without select all should be indete
       "label": "Select All",
     }
   }
-  onClick={undefined}
   withBorder={true}
 />
 `;

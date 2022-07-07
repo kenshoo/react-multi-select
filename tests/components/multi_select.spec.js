@@ -4,7 +4,7 @@ import skinDeep from "skin-deep";
 import { mount } from "enzyme";
 
 import MultiSelectWithState, {
-  MultiSelect
+  MultiSelect,
 } from "../../src/components/multi_select";
 import { SearchWithValue } from "../../src/components/search/search";
 import { createGenerateClassName } from "@material-ui/core/styles";
@@ -12,7 +12,7 @@ import SourceList from "../../src/components/source_list";
 
 const generateClassName = createGenerateClassName({
   dangerouslyUseGlobalCSS: true,
-  productionPrefix: "c"
+  productionPrefix: "c",
 });
 
 const CustomComponent = jest
@@ -25,7 +25,7 @@ const custom_messages = {
   noneSelectedMessage: "Nothing",
   selectedMessage: "Checked",
   selectAllMessage: "Check all",
-  clearAllMessage: "Uncheck all"
+  clearAllMessage: "Uncheck all",
 };
 
 const selectAllItems = jest.fn().mockName("selectAllItems");
@@ -233,6 +233,7 @@ describe("MultiSelect", () => {
       const tree = renderer.render(<MultiSelectWithState />);
       expect(tree).toMatchSnapshot();
     });
+
     test("with responsiveHeight", () => {
       const renderer = new ShallowRenderer();
       const tree = renderer.render(

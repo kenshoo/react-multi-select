@@ -1,4 +1,4 @@
-@import "../../resources/globals";
+@import "../../resources/globals.scss";
 
 .list {
   outline: none;
@@ -42,7 +42,8 @@
     border-right: none;
   }
 
-  &::-webkit-scrollbar-track:horizontal, &::-webkit-scrollbar-corner {
+  &::-webkit-scrollbar-track:horizontal,
+  &::-webkit-scrollbar-corner {
     border-top: 1px solid $scroll_border_color;
     border-bottom: none;
   }

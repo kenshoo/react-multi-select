@@ -4,7 +4,7 @@ exports[`Loader default snapshot 1`] = `
 <div
   className="loader"
 >
-  <WithStyles(CircularProgress)
+  <WithStyles(ForwardRef(CircularProgress))
     style={
       Object {
         "width": 100,

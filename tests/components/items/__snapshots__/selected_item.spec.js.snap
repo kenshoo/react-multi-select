@@ -12,9 +12,9 @@ exports[`SelectedItem default snapshot 1`] = `
   <ItemLabel
     label=""
   />
-  <WithStyles(IconButton)>
+  <WithStyles(ForwardRef(IconButton))>
     <MdClose />
-  </WithStyles(IconButton)>
+  </WithStyles(ForwardRef(IconButton))>
 </div>
 `;
 
@@ -30,9 +30,9 @@ exports[`SelectedItem snapshot with disabled item 1`] = `
   <ItemLabel
     label="item 1"
   />
-  <WithStyles(IconButton)>
+  <WithStyles(ForwardRef(IconButton))>
     <MdClose />
-  </WithStyles(IconButton)>
+  </WithStyles(ForwardRef(IconButton))>
 </div>
 `;
 
@@ -63,9 +63,9 @@ exports[`SelectedItem snapshot with height 1`] = `
   <ItemLabel
     label=""
   />
-  <WithStyles(IconButton)>
+  <WithStyles(ForwardRef(IconButton))>
     <MdClose />
-  </WithStyles(IconButton)>
+  </WithStyles(ForwardRef(IconButton))>
 </div>
 `;
 
@@ -81,8 +81,8 @@ exports[`SelectedItem snapshot with valid item 1`] = `
   <ItemLabel
     label="Hi"
   />
-  <WithStyles(IconButton)>
+  <WithStyles(ForwardRef(IconButton))>
     <MdClose />
-  </WithStyles(IconButton)>
+  </WithStyles(ForwardRef(IconButton))>
 </div>
 `;

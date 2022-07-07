@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { List } from "react-virtualized/dist/commonjs/List";
+import { List } from "@enykeev/react-virtualized";
 
 import Column from "./column/column";
 import ItemsList from "./list/items_list";
@@ -23,7 +23,7 @@ const DestinationList = ({
   withGrouping,
   filteredItems,
   children,
-  isLocked
+  isLocked,
 }) => {
   const SelectionStatusRenderer = selectionStatusRenderer;
   const updatedSelectedItems = withGrouping
@@ -67,7 +67,7 @@ DestinationList.propTypes = {
   withGrouping: PropTypes.bool,
   filteredItems: PropTypes.arrayOf(PropTypes.object),
   children: PropTypes.node,
-  isLocked: PropTypes.func
+  isLocked: PropTypes.func,
 };
 
 DestinationList.defaultProps = {
@@ -80,7 +80,7 @@ DestinationList.defaultProps = {
   selectedItemRenderer: SelectedItem,
   noItemsRenderer: NoItems,
   withGrouping: false,
-  filteredItems: []
+  filteredItems: [],
 };
 
 export { DestinationList };

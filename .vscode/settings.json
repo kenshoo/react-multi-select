@@ -1,0 +1,6 @@
+{
+  "jest.jestCommandLine": "npx yarn test",
+  "jest.testExplorer": {
+    "enabled": true
+  }
+}

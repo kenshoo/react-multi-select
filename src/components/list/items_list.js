@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
-import { AutoSizer } from "react-virtualized/dist/commonjs/AutoSizer";
+import { AutoSizer } from "@enykeev/react-virtualized";
 
 import InnerList from "./list";
 
@@ -17,7 +17,7 @@ class ItemsList extends PureComponent {
     items: PropTypes.array,
     disabled: PropTypes.bool,
     disabledItemsTooltip: PropTypes.string,
-    isLocked: PropTypes.func
+    isLocked: PropTypes.func,
   };
 
   static defaultProps = {
@@ -26,7 +26,7 @@ class ItemsList extends PureComponent {
     offset: 0,
     selectedIds: [],
     items: [],
-    disabled: false
+    disabled: false,
   };
 
   constructor(props) {
@@ -63,7 +63,7 @@ class ItemsList extends PureComponent {
       onClick,
       disabled,
       disabledItemsTooltip,
-      isLocked
+      isLocked,
     } = this.props;
     return (
       <AutoSizer>

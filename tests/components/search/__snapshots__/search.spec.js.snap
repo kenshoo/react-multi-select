@@ -6,7 +6,6 @@ exports[`Search default snapshot 1`] = `
 >
   <input
     className="input"
-    onChange={undefined}
     placeholder="Search..."
     type="text"
   />
@@ -24,7 +23,6 @@ exports[`Search snapshot with custom search icon 1`] = `
 >
   <input
     className="input"
-    onChange={undefined}
     placeholder="Search..."
     type="text"
   />
@@ -42,7 +40,6 @@ exports[`Search snapshot with placeholder 1`] = `
 >
   <input
     className="input"
-    onChange={undefined}
     placeholder="new placeholder text"
     type="text"
   />

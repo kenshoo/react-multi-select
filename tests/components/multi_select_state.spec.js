@@ -1,9 +1,10 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow } from "./Utils";
+import { create } from "react-test-renderer";
 
 import withMultiSelectState from "../../src/components/multi_select_state";
 
-const CustomComponent = props => <div {...props} />;
+const CustomComponent = (props) => <div {...props} />;
 
 const ITEM_1 = { id: 0, label: "item 0" };
 const ITEM_2 = { id: 1, label: "item 1" };
@@ -25,24 +26,25 @@ describe("withMultiSelectState", () => {
 
   test("default initial state", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
-    const wrapper = shallow(<ConditionalComponent />);
-    expect(wrapper.prop("selectedItems")).toEqual([]);
-    expect(wrapper.prop("filteredItems")).toEqual([]);
+    const { tree } = shallow(<ConditionalComponent />);
+    expect(tree.props.selectedItems).toEqual([]);
+    expect(tree.props.filteredItems).toEqual([]);
   });
 
   test("initial state with items", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
-    const wrapper = shallow(<ConditionalComponent items={items} />);
-    expect(wrapper.prop("selectedItems")).toEqual([]);
-    expect(wrapper.prop("filteredItems")).toEqual(items);
+    const { tree } = shallow(<ConditionalComponent items={items} />);
+    expect(tree.props.selectedItems).toEqual([]);
+    expect(tree.props.filteredItems).toEqual(items);
   });
 
   test("can select all items", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
-    const wrapper = shallow(<ConditionalComponent items={items} />);
-    wrapper.props().selectAllItems();
-    wrapper.update();
-    expect(wrapper.prop("selectedItems")).toEqual(items);
+    const { tree, instance, renderer } = shallow(
+      <ConditionalComponent items={items} />
+    );
+    instance.selectAllItems();
+    expect(tree.props.selectedItems).toEqual(items);
   });
 
   test("can select all items except disabled", () => {
@@ -275,7 +277,7 @@ describe("withMultiSelectState", () => {
       ITEM_1,
       ITEM_2,
       ITEM_3,
-      ITEM_4
+      ITEM_4,
     ]);
   });
 
@@ -472,7 +474,7 @@ describe("withMultiSelectState", () => {
     expect(wrapper.prop("filteredSelectedItems")).toEqual([
       ITEM_1,
       ITEM_2,
-      ITEM_3
+      ITEM_3,
     ]);
   });
 
@@ -521,7 +523,7 @@ describe("withMultiSelectState", () => {
     const ConditionalComponent = withMultiSelectState(CustomComponent);
     const searchSelectedItemsChanged = jest.fn();
     const items = [ITEM_1, ITEM_2, ITEM_3, ITEM_4];
-    const UserSearch = props => <input type="text" {...props} />;
+    const UserSearch = (props) => <input type="text" {...props} />;
 
     const wrapper = shallow(
       <ConditionalComponent
@@ -590,7 +592,7 @@ describe("withMultiSelectState", () => {
     wrapper.props().selectAllItems();
     expect(wrapper.state("filteredSelectedItems")).toEqual([
       ITEM_1,
-      DISABLED_ITEM_23
+      DISABLED_ITEM_23,
     ]);
   });
 
@@ -610,7 +612,7 @@ describe("withMultiSelectState", () => {
     wrapper.props().selectAllItems();
     expect(wrapper.state("filteredSelectedItems")).toEqual([
       ITEM_1,
-      DISABLED_ITEM_23
+      DISABLED_ITEM_23,
     ]);
 
     wrapper.props().unselectItems([ITEM_1.id, DISABLED_ITEM_23.id]);
@@ -696,7 +698,7 @@ describe("withMultiSelectState", () => {
       { id: 1, label: "item 1", disabled: true },
       ITEM_3,
       { id: 3, label: "item 3", disabled: true },
-      { id: 4, label: "item 4" }
+      { id: 4, label: "item 4" },
     ];
 
     const selectedItems = [{ id: 1, label: "item 1", disabled: true }];
@@ -712,7 +714,7 @@ describe("withMultiSelectState", () => {
       items[0],
       items[1],
       items[2],
-      items[4]
+      items[4],
     ]);
   });
 });

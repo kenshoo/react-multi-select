@@ -3,14 +3,13 @@
 exports[`Item default snapshot 1`] = `
 <div
   className="item"
-  onClick={undefined}
   style={
     Object {
       "height": 40,
     }
   }
 >
-  <WithStyles(Checkbox)
+  <WithStyles(ForwardRef(Checkbox))
     checked={false}
     color="primary"
     disabled={false}
@@ -27,14 +26,13 @@ exports[`Item default snapshot 1`] = `
 exports[`Item snapshot with border 1`] = `
 <div
   className="item with_border"
-  onClick={undefined}
   style={
     Object {
       "height": 40,
     }
   }
 >
-  <WithStyles(Checkbox)
+  <WithStyles(ForwardRef(Checkbox))
     checked={false}
     color="primary"
     disabled={false}
@@ -51,14 +49,13 @@ exports[`Item snapshot with border 1`] = `
 exports[`Item snapshot with checked status 1`] = `
 <div
   className="item selected"
-  onClick={undefined}
   style={
     Object {
       "height": 40,
     }
   }
 >
-  <WithStyles(Checkbox)
+  <WithStyles(ForwardRef(Checkbox))
     checked={true}
     color="primary"
     disabled={false}
@@ -75,14 +72,13 @@ exports[`Item snapshot with checked status 1`] = `
 exports[`Item snapshot with disabled 1`] = `
 <div
   className="item disabled"
-  onClick={undefined}
   style={
     Object {
       "height": 40,
     }
   }
 >
-  <WithStyles(Checkbox)
+  <WithStyles(ForwardRef(Checkbox))
     checked={false}
     color="primary"
     disabled={true}
@@ -99,7 +95,6 @@ exports[`Item snapshot with disabled 1`] = `
 exports[`Item snapshot with group item 1`] = `
 <div
   className="item with_grouping"
-  onClick={undefined}
   style={
     Object {
       "height": 40,
@@ -115,14 +110,13 @@ exports[`Item snapshot with group item 1`] = `
 exports[`Item snapshot with height 1`] = `
 <div
   className="item"
-  onClick={undefined}
   style={
     Object {
       "height": 20,
     }
   }
 >
-  <WithStyles(Checkbox)
+  <WithStyles(ForwardRef(Checkbox))
     checked={false}
     color="primary"
     disabled={false}
@@ -139,14 +133,13 @@ exports[`Item snapshot with height 1`] = `
 exports[`Item snapshot with indeterminate and checked status 1`] = `
 <div
   className="item selected"
-  onClick={undefined}
   style={
     Object {
       "height": 40,
     }
   }
 >
-  <WithStyles(Checkbox)
+  <WithStyles(ForwardRef(Checkbox))
     checked={true}
     color="primary"
     disabled={false}
@@ -163,14 +156,13 @@ exports[`Item snapshot with indeterminate and checked status 1`] = `
 exports[`Item snapshot with indeterminate status 1`] = `
 <div
   className="item"
-  onClick={undefined}
   style={
     Object {
       "height": 40,
     }
   }
 >
-  <WithStyles(Checkbox)
+  <WithStyles(ForwardRef(Checkbox))
     checked={false}
     color="primary"
     disabled={false}
@@ -187,14 +179,13 @@ exports[`Item snapshot with indeterminate status 1`] = `
 exports[`Item snapshot with item without id 1`] = `
 <div
   className="item"
-  onClick={undefined}
   style={
     Object {
       "height": 40,
     }
   }
 >
-  <WithStyles(Checkbox)
+  <WithStyles(ForwardRef(Checkbox))
     checked={false}
     color="primary"
     disabled={false}
@@ -211,14 +202,13 @@ exports[`Item snapshot with item without id 1`] = `
 exports[`Item snapshot with valid item 1`] = `
 <div
   className="item"
-  onClick={undefined}
   style={
     Object {
       "height": 40,
     }
   }
 >
-  <WithStyles(Checkbox)
+  <WithStyles(ForwardRef(Checkbox))
     checked={false}
     color="primary"
     disabled={false}

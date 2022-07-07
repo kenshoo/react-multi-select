@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
-import { List } from "react-virtualized/dist/commonjs/List";
+import { List } from "@enykeev/react-virtualized";
 
 import styles from "./list.scss";
 import Item from "../items/item";
@@ -19,7 +19,7 @@ class InnerList extends PureComponent {
     items: PropTypes.array,
     disabled: PropTypes.bool,
     disabledItemsTooltip: PropTypes.string,
-    isLocked: PropTypes.func
+    isLocked: PropTypes.func,
   };
 
   static defaultProps = {
@@ -31,7 +31,7 @@ class InnerList extends PureComponent {
     offset: 0,
     selectedIds: [],
     items: [],
-    disabled: false
+    disabled: false,
   };
 
   constructor(props) {
@@ -57,7 +57,7 @@ class InnerList extends PureComponent {
       items,
       selectedIds,
       disabledItemsTooltip,
-      isLocked
+      isLocked,
     } = this.props;
     const Renderer = renderer;
     const item = items[index];
@@ -69,7 +69,7 @@ class InnerList extends PureComponent {
         key={key}
         style={style}
         className={styles.list_item}
-        onClick={event => this.onClick(event, item.id, disabled)}
+        onClick={(event) => this.onClick(event, item.id, disabled)}
         title={disabled ? disabledItemsTooltip : undefined}
       >
         <Renderer
@@ -97,7 +97,7 @@ class InnerList extends PureComponent {
       offset,
       width,
       getlistRef,
-      listRenderer
+      listRenderer,
     } = this.props;
     const ListRenderer = listRenderer;
     return (

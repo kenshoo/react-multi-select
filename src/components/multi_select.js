@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
-import JssProvider from "react-jss/lib/JssProvider";
+import { JssProvider } from "react-jss";
 import { create } from "jss";
 import { createGenerateClassName, jssPreset } from "@material-ui/core/styles";
 
@@ -40,7 +40,7 @@ export class MultiSelect extends PureComponent {
     listRenderer: PropTypes.func,
     generateClassName: PropTypes.func,
     showSelectedItemsSearch: PropTypes.bool,
-    isLocked: PropTypes.func
+    isLocked: PropTypes.func,
   };
 
   static defaultProps = {
@@ -55,7 +55,7 @@ export class MultiSelect extends PureComponent {
     loaderRenderer: Loader,
     withGrouping: false,
     generateClassName: defaultGenerateClassName,
-    showSelectedItemsSearch: false
+    showSelectedItemsSearch: false,
   };
 
   calculateHeight() {
@@ -65,7 +65,7 @@ export class MultiSelect extends PureComponent {
       showSelectAll,
       itemHeight,
       selectAllHeight,
-      maxSelectedItems
+      maxSelectedItems,
     } = this.props;
     height = showSearch && !maxSelectedItems ? height - 45 : height;
     height = showSelectAll
@@ -112,10 +112,10 @@ export class MultiSelect extends PureComponent {
       searchSelectedItemsValue,
       filterSelectedItems,
       filteredSelectedItems,
-      isLocked
+      isLocked,
     } = this.props;
     const calculatedHeight = this.calculateHeight();
-    const selectedIds = selectedItems.map(item => item.id);
+    const selectedIds = selectedItems.map((item) => item.id);
     const disabled =
       maxSelectedItems && maxSelectedItems <= selectedItems.length;
     const LoaderRenderer = loaderRenderer;

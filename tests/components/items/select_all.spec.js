@@ -1,10 +1,7 @@
 import React from "react";
 import ShallowRenderer from "react-test-renderer/shallow";
-import { shallow } from "enzyme";
 
 import SelectAll from "../../../src/components/items/select_all";
-
-//   selectedIds
 
 describe("SelectAll", () => {
   test("default snapshot", () => {
@@ -69,12 +66,5 @@ describe("SelectAll", () => {
     const renderer = new ShallowRenderer();
     const tree = renderer.render(<SelectAll height={20} />);
     expect(tree).toMatchSnapshot();
-  });
-
-  test("click will trigger onClick", () => {
-    const onClick = jest.fn();
-    const item = shallow(<SelectAll onClick={onClick} />);
-    item.simulate("click");
-    expect(onClick).toHaveBeenCalledTimes(1);
   });
 });

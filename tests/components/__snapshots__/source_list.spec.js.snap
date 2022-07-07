@@ -5,23 +5,18 @@ exports[`SourceList can remove search 1`] = `
   <SelectAll
     height={40}
     isAllSelected={false}
-    onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Select All"
     selectedIds={Array []}
   />
   <ItemsList
     disabled={false}
-    disabledItemsTooltip={undefined}
     height={400}
-    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     listRenderer={[Function]}
-    noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
-    onClick={undefined}
     renderer={[Function]}
     selectedIds={Array []}
   />
@@ -32,16 +27,12 @@ exports[`SourceList can remove select all 1`] = `
 <Column>
   <ItemsList
     disabled={false}
-    disabledItemsTooltip={undefined}
     height={400}
-    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     listRenderer={[Function]}
-    noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
-    onClick={undefined}
     renderer={[Function]}
     selectedIds={Array []}
   />
@@ -53,23 +44,18 @@ exports[`SourceList custom itemRenderer 1`] = `
   <SelectAll
     height={40}
     isAllSelected={false}
-    onClick={undefined}
     renderer={[MockFunction mockedComponent]}
     selectAllMessage="Select All"
     selectedIds={Array []}
   />
   <ItemsList
     disabled={false}
-    disabledItemsTooltip={undefined}
     height={400}
-    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     listRenderer={[Function]}
-    noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
-    onClick={undefined}
     renderer={[MockFunction mockedComponent]}
     selectedIds={Array []}
   />
@@ -81,23 +67,19 @@ exports[`SourceList custom messages 1`] = `
   <SelectAll
     height={40}
     isAllSelected={false}
-    onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Check all"
     selectedIds={Array []}
   />
   <ItemsList
     disabled={false}
-    disabledItemsTooltip={undefined}
     height={400}
-    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     listRenderer={[Function]}
     noItemsMessage="No entries available..."
     noItemsRenderer={[Function]}
     offset={1}
-    onClick={undefined}
     renderer={[Function]}
     selectedIds={Array []}
   />
@@ -109,23 +91,18 @@ exports[`SourceList custom noItemsRenderer 1`] = `
   <SelectAll
     height={40}
     isAllSelected={false}
-    onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Select All"
     selectedIds={Array []}
   />
   <ItemsList
     disabled={false}
-    disabledItemsTooltip={undefined}
     height={400}
-    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     listRenderer={[Function]}
-    noItemsMessage={undefined}
     noItemsRenderer={[MockFunction mockedComponent]}
     offset={1}
-    onClick={undefined}
     renderer={[Function]}
     selectedIds={Array []}
   />
@@ -137,23 +114,18 @@ exports[`SourceList custom searchRenderer 1`] = `
   <SelectAll
     height={40}
     isAllSelected={false}
-    onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Select All"
     selectedIds={Array []}
   />
   <ItemsList
     disabled={false}
-    disabledItemsTooltip={undefined}
     height={400}
-    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     listRenderer={[Function]}
-    noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
-    onClick={undefined}
     renderer={[Function]}
     selectedIds={Array []}
   />
@@ -165,23 +137,17 @@ exports[`SourceList custom selectAllRenderer 1`] = `
   <mockConstructor
     height={40}
     isAllSelected={false}
-    onClick={undefined}
     renderer={[Function]}
-    selectAllMessage={undefined}
     selectedIds={Array []}
   />
   <ItemsList
     disabled={false}
-    disabledItemsTooltip={undefined}
     height={400}
-    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     listRenderer={[Function]}
-    noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
-    onClick={undefined}
     renderer={[Function]}
     selectedIds={Array []}
   />
@@ -193,23 +159,18 @@ exports[`SourceList default snapshot 1`] = `
   <SelectAll
     height={40}
     isAllSelected={false}
-    onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Select All"
     selectedIds={Array []}
   />
   <ItemsList
     disabled={false}
-    disabledItemsTooltip={undefined}
     height={400}
-    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     listRenderer={[Function]}
-    noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
-    onClick={undefined}
     renderer={[Function]}
     selectedIds={Array []}
   />
@@ -228,16 +189,12 @@ exports[`SourceList passed filterItems 1`] = `
   />
   <ItemsList
     disabled={false}
-    disabledItemsTooltip={undefined}
     height={400}
-    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     listRenderer={[Function]}
-    noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
-    onClick={undefined}
     renderer={[Function]}
     selectedIds={Array []}
   />
@@ -249,16 +206,13 @@ exports[`SourceList passed filteredItems with group 1`] = `
   <SelectAll
     height={40}
     isAllSelected={false}
-    onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Select All"
     selectedIds={Array []}
   />
   <ItemsList
     disabled={false}
-    disabledItemsTooltip={undefined}
     height={400}
-    isLocked={undefined}
     itemHeight={40}
     items={
       Array [
@@ -292,10 +246,8 @@ exports[`SourceList passed filteredItems with group 1`] = `
       ]
     }
     listRenderer={[Function]}
-    noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
-    onClick={undefined}
     renderer={[Function]}
     selectedIds={Array []}
   />
@@ -314,16 +266,12 @@ exports[`SourceList passed selectAllItems 1`] = `
   />
   <ItemsList
     disabled={false}
-    disabledItemsTooltip={undefined}
     height={400}
-    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     listRenderer={[Function]}
-    noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
-    onClick={undefined}
     renderer={[Function]}
     selectedIds={Array []}
   />
@@ -342,16 +290,12 @@ exports[`SourceList passed selectItem 1`] = `
   />
   <ItemsList
     disabled={false}
-    disabledItemsTooltip={undefined}
     height={400}
-    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     listRenderer={[Function]}
-    noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
-    onClick={undefined}
     renderer={[Function]}
     selectedIds={Array []}
   />
@@ -363,7 +307,6 @@ exports[`SourceList passed selectedIds 1`] = `
   <SelectAll
     height={40}
     isAllSelected={false}
-    onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Select All"
     selectedIds={
@@ -375,16 +318,12 @@ exports[`SourceList passed selectedIds 1`] = `
   />
   <ItemsList
     disabled={false}
-    disabledItemsTooltip={undefined}
     height={400}
-    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     listRenderer={[Function]}
-    noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
-    onClick={undefined}
     renderer={[Function]}
     selectedIds={
       Array [
@@ -401,23 +340,18 @@ exports[`SourceList passed selectedItems 1`] = `
   <SelectAll
     height={40}
     isAllSelected={false}
-    onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Select All"
     selectedIds={Array []}
   />
   <ItemsList
     disabled={false}
-    disabledItemsTooltip={undefined}
     height={400}
-    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     listRenderer={[Function]}
-    noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
-    onClick={undefined}
     renderer={[Function]}
     selectedIds={Array []}
   />
@@ -482,7 +416,6 @@ exports[`SourceList show max selection tooltip 1`] = `
   <SelectAll
     height={40}
     isAllSelected={false}
-    onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Select All"
     selectedIds={Array []}
@@ -491,14 +424,11 @@ exports[`SourceList show max selection tooltip 1`] = `
     disabled={false}
     disabledItemsTooltip="You can select up to 4 items"
     height={400}
-    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     listRenderer={[Function]}
-    noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
-    onClick={undefined}
     renderer={[Function]}
     selectedIds={Array []}
   />
@@ -510,23 +440,18 @@ exports[`SourceList will pass itemHeight 1`] = `
   <SelectAll
     height={10}
     isAllSelected={false}
-    onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Select All"
     selectedIds={Array []}
   />
   <ItemsList
     disabled={false}
-    disabledItemsTooltip={undefined}
     height={400}
-    isLocked={undefined}
     itemHeight={10}
     items={Array []}
     listRenderer={[Function]}
-    noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
-    onClick={undefined}
     renderer={[Function]}
     selectedIds={Array []}
   />
@@ -538,23 +463,18 @@ exports[`SourceList will pass selectAllHeight 1`] = `
   <SelectAll
     height={60}
     isAllSelected={false}
-    onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Select All"
     selectedIds={Array []}
   />
   <ItemsList
     disabled={false}
-    disabledItemsTooltip={undefined}
     height={400}
-    isLocked={undefined}
     itemHeight={10}
     items={Array []}
     listRenderer={[Function]}
-    noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
-    onClick={undefined}
     renderer={[Function]}
     selectedIds={Array []}
   />
@@ -566,23 +486,18 @@ exports[`SourceList will pass selectAllHeight without itemHeight 1`] = `
   <SelectAll
     height={60}
     isAllSelected={false}
-    onClick={undefined}
     renderer={[Function]}
     selectAllMessage="Select All"
     selectedIds={Array []}
   />
   <ItemsList
     disabled={false}
-    disabledItemsTooltip={undefined}
     height={400}
-    isLocked={undefined}
     itemHeight={40}
     items={Array []}
     listRenderer={[Function]}
-    noItemsMessage={undefined}
     noItemsRenderer={[Function]}
     offset={1}
-    onClick={undefined}
     renderer={[Function]}
     selectedIds={Array []}
   />

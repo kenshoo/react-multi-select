@@ -1,12 +1,11 @@
 import React from "react";
-import ShallowRenderer from "react-test-renderer/shallow";
+import { shallow } from "../Utils";
 
 import Loader from "../../../src/components/loader/loader";
 
 describe("Loader", () => {
   test("default snapshot", () => {
-    const renderer = new ShallowRenderer();
-    const tree = renderer.render(<Loader />);
+    const { tree } = shallow(<Loader />);
     expect(tree).toMatchSnapshot();
   });
 });

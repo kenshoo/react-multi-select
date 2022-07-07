@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { List } from "react-virtualized/dist/commonjs/List";
+import { List } from "@enykeev/react-virtualized";
 import Column from "./column/column";
 import ItemsList from "./list/items_list";
 import NoItems from "./items/no_items";
@@ -29,7 +29,7 @@ const SourceList = ({
   withGrouping,
   listRenderer,
   children,
-  isLocked
+  isLocked,
 }) => {
   const SelectAllRenderer = selectAllRenderer;
   const updatedFilteredItems = withGrouping
@@ -88,7 +88,7 @@ SourceList.propTypes = {
   disabled: PropTypes.bool,
   withGrouping: PropTypes.bool,
   listRenderer: PropTypes.func,
-  isLocked: PropTypes.func
+  isLocked: PropTypes.func,
 };
 
 SourceList.defaultProps = {
@@ -104,7 +104,7 @@ SourceList.defaultProps = {
   filteredItems: [],
   messages: {},
   disabled: false,
-  withGrouping: false
+  withGrouping: false,
 };
 export { SourceList };
 export default withSearch(SourceList);

@@ -1,7 +1,7 @@
 {
 	"verbose": true,
 	"setupFiles": [
-		"./config/enzyme/enzyme_setup"
+
 	],
 	"testResultsProcessor": "jest-junit",
 	"rootDir": "../../",
@@ -28,5 +28,8 @@
 		"!**/stories/**",
 		"!**/coverage/**"
 	],
-	"testURL": "http://localhost/"
+  "testEnvironment": "jsdom",
+  "testEnvironmentOptions": {
+    "url": "http://localhost/"
+  }
 }

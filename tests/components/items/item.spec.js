@@ -1,6 +1,6 @@
 import React from "react";
 import ShallowRenderer from "react-test-renderer/shallow";
-import { shallow } from "enzyme";
+import { fireEvent, render } from "@testing-library/react";
 
 import Item from "../../../src/components/items/item";
 
@@ -65,8 +65,8 @@ describe("Item", () => {
 
   test("click will trigger onClick", () => {
     const onClick = jest.fn();
-    const item = shallow(<Item onClick={onClick} />);
-    item.simulate("click");
+    const { container } = render(<Item onClick={onClick} />);
+    fireEvent.click(container.querySelector("div.item"));
     expect(onClick).toHaveBeenCalledTimes(1);
   });
 

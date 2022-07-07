@@ -1,6 +1,6 @@
 import React from "react";
-import StarOIcon from "react-icons/lib/md/star-outline";
-import StarIcon from "react-icons/lib/md/star";
+import { MdStarOutline as StarOIcon } from "react-icons/md";
+import { MdStar as StarIcon } from "react-icons/md";
 
 const Item = ({ item, checked }) => (
   <div
@@ -9,7 +9,7 @@ const Item = ({ item, checked }) => (
       alignItems: "center",
       lineHeight: "14px",
       height: "100%",
-      margin: "12px"
+      margin: "12px",
     }}
   >
     <div style={{ fontSize: "24px", margin: "0 12px 0 0" }}>
