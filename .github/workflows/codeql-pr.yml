@@ -1,0 +1,10 @@
+name: 'CodeQL review'
+on:
+  pull_request:
+    branches: ['master']
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    uses: kenshoo/actions/.github/workflows/callable_codeql.yml@master
+    secrets: inherit
