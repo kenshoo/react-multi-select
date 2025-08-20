@@ -1,0 +1,11 @@
+name: 'CodeQL master'
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    uses: kenshoo/actions/.github/workflows/callable_codeql.yml@master
+    secrets: inherit
