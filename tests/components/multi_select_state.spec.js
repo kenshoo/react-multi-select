@@ -17,6 +17,7 @@ const EVENT_WITH_SHIFT = { keyCode: 16, shiftKey: true };
 const EVENT_WITH_CTRL = { keyCode: 17, shiftKey: true };
 
 const items = [ITEM_1, ITEM_2, ITEM_3];
+const manyItems = [ITEM_1, ITEM_2, ITEM_3, ITEM_4, ITEM_12, ITEM_22];
 const itemsWithDisabled = [ITEM_1, ITEM_2, DISABLED_ITEM_23, ITEM_3];
 
 describe("withMultiSelectState", () => {
@@ -179,7 +180,58 @@ describe("withMultiSelectState", () => {
     wrapper.update();
     wrapper.props().selectItem(EVENT, ITEM_1.id);
     wrapper.update();
-    expect(wrapper.prop("selectedItems")).toEqual([ITEM_1, ITEM_2]);
+    wrapper.props().selectItem(EVENT, ITEM_3.id);
+    wrapper.update();
+    expect(wrapper.prop("selectedItems")).toEqual([ITEM_1, ITEM_2, ITEM_3]);
+  });
+
+  test("keep selection order", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const wrapper = shallow(
+      <ConditionalComponent items={manyItems} keepSelectionOrder />
+    );
+    wrapper.props().selectItem(EVENT, ITEM_2.id);
+    wrapper.update();
+    wrapper.props().selectItem(EVENT, ITEM_1.id);
+    wrapper.update();
+    wrapper.props().selectItem(EVENT, ITEM_3.id);
+    wrapper.update();
+    wrapper.props().selectItem(EVENT, ITEM_22.id);
+    wrapper.update();
+    wrapper.props().selectItem(EVENT, ITEM_12.id);
+    wrapper.update();
+    expect(wrapper.prop("selectedItems")).toEqual([
+      ITEM_2,
+      ITEM_1,
+      ITEM_3,
+      ITEM_22,
+      ITEM_12
+    ]);
+  });
+
+  test("select some items with selection order and then click on select all", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const wrapper = shallow(
+      <ConditionalComponent items={manyItems} keepSelectionOrder />
+    );
+    wrapper.props().selectItem(EVENT, ITEM_2.id);
+    wrapper.update();
+    wrapper.props().selectItem(EVENT, ITEM_1.id);
+    wrapper.update();
+    wrapper.props().selectItem(EVENT, ITEM_22.id);
+    wrapper.update();
+    wrapper.props().selectItem(EVENT, ITEM_3.id);
+    wrapper.update();
+    wrapper.props().selectAllItems();
+    wrapper.update();
+    expect(wrapper.prop("selectedItems")).toEqual([
+      ITEM_1,
+      ITEM_2,
+      ITEM_3,
+      ITEM_4,
+      ITEM_12,
+      ITEM_22
+    ]);
   });
 
   test("can filter items", () => {

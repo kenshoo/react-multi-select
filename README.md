@@ -105,6 +105,7 @@ class Example extends Component {
 | `responsiveHeight`            | `string`    | 400px          | Responsive height of the wrapping component, can send percent for example: `70%`                        |
 | `withGrouping`                | `boolean`   | false          | Your items will be grouped by the group prop values - see "item grouping" section below                 |
 | `showSelectedItemsSearch`     | `boolean`   | false          | toggle to show search option in detination list.                                                        |
+| `keepSelectionOrder`          | `boolean`   | false          | keep selection order in the detination list                                                             |
 | `searchSelectedItemsValue`    | `string`    |                | The value of the search field for destination list.                                                     |
 | `searchSelectedItemsChanged`  | `function`  |                | Function to handle the change of search field for destination list. Accepts value as a single argument. |
 | `selectedItemsFilterFunction` | `function`  | based on label | Is the same as filterFunction by default to filter items based on the search query in destination list. |

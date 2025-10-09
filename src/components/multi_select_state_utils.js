@@ -40,12 +40,26 @@ export const getMinMaxIndexes = (currentIndex, firstItemShiftSelected) =>
 export const isWithin = (index, { minIndex, maxIndex }) =>
   index >= minIndex && index <= maxIndex;
 
-export const getNewSelectedItems = (itemId, items, selectedItems) => {
-  const sourceItems = items.filter(
-    item => item.id === itemId || findItem(item, selectedItems)
-  );
-  const destinationItems = selectedItems.filter(
-    selectedItem => !findItem(selectedItem, items)
-  );
-  return [...destinationItems, ...sourceItems];
+export const getNewSelectedItems = (
+  itemId,
+  items,
+  selectedItems,
+  keepSelectionOrder
+) => {
+  let alreadySelectedItems = [];
+  let sourceItems = [];
+  let destinationItems = [];
+
+  if (keepSelectionOrder) {
+    // In order to keep selection order on the list,
+    // First, iterate threw already selectedItems
+    alreadySelectedItems = selectedItems.filter(item => findItem(item, items));
+    sourceItems = items.filter(item => item.id === itemId);
+  } else {
+    sourceItems = items.filter(
+      item => item.id === itemId || findItem(item, selectedItems)
+    );
+  }
+
+  return [...alreadySelectedItems, ...sourceItems];
 };
