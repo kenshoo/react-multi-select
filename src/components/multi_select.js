@@ -58,6 +58,10 @@ export class MultiSelect extends PureComponent {
     showSelectedItemsSearch: false
   };
 
+  componentWillReceiveProps(props) {
+    this.forceUpdate();
+  }
+
   calculateHeight() {
     let {
       height,
