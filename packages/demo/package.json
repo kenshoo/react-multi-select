@@ -1,0 +1,24 @@
+{
+  "name": "@kenshooui/react-multi-select-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kenshoo/react-multi-select.git",
+  "author": "Kenshoo",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@storybook/addon-actions": "^5.3.17",
+    "@storybook/addon-links": "^5.3.17",
+    "@storybook/addons": "^5.3.17",
+    "@storybook/react": "^5.3.17",
+    "babel-loader": "^8.0.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  }
+}
