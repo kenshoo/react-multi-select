@@ -715,4 +715,40 @@ describe("withMultiSelectState", () => {
       items[4]
     ]);
   });
+
+  test("case select with shift items where shouldBeSelect > maxSelectedItems", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const items = [ITEM_1, ITEM_2, ITEM_3, ITEM_4, ITEM_12];
+
+    const wrapper = shallow(
+      <ConditionalComponent
+        items={items}
+        selectedItems={[ITEM_1]}
+        maxSelectedItems={3}
+      />
+    );
+    wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_12.id);
+    wrapper.update();
+    wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_3.id);
+    wrapper.update();
+    expect(wrapper.prop("selectedItems")).toEqual([ITEM_1, ITEM_4, ITEM_12]);
+  });
+
+  test("case select with shift items where shouldBeSelect < maxSelectedItems", () => {
+    const ConditionalComponent = withMultiSelectState(CustomComponent);
+    const items = [ITEM_1, ITEM_2, ITEM_3, ITEM_4];
+
+    const wrapper = shallow(
+      <ConditionalComponent
+        items={items}
+        selectedItems={[]}
+        maxSelectedItems={4}
+      />
+    );
+    wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_1.id);
+    wrapper.update();
+    wrapper.props().selectItem(EVENT_WITH_SHIFT, ITEM_3.id);
+    wrapper.update();
+    expect(wrapper.prop("selectedItems")).toEqual([ITEM_1, ITEM_2, ITEM_3]);
+  });
 });
